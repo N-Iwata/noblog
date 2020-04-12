@@ -8,10 +8,11 @@ import { rhythm } from "../utils/typography"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
+  const author = data.site.siteMetadata.author.name
   const posts = data.allMarkdownRemark.edges
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle} author={author}>
       <SEO title="All posts" />
       <Bio />
       {posts.map(({ node }) => {
@@ -51,6 +52,9 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        author {
+          name
+        }
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
