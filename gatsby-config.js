@@ -3,7 +3,7 @@ module.exports = {
     title: `RPF NoBlog`,
     author: {
       name: `RPFN`,
-      summary: `名古屋生まれの麻雀大好きサラリーマンwebエンジニア`,
+      summary: `東京上野で働く名古屋生まれの麻雀と芝生管理が大好きなサラリーマンwebエンジニア（兼なんちゃってデータサイエンティスト）`,
     },
     description: `A blog powered by Gatsby`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,

@@ -60,7 +60,7 @@ const Layout = ({ location, title, author, children }) => {
       <main>{children}</main>
       <footer>
         {/* ©2020-{new Date().getFullYear()}.{author}All Rights Reserved. */}
-        ©2020. {author}. All Rights Reserved.
+        ©2020  {author}  All Rights Reserved.
       </footer>
     </div>
   )
