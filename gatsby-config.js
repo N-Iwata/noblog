@@ -3,7 +3,7 @@ module.exports = {
     title: `RPF NoBlog`,
     author: {
       name: `@rpf-nob`,
-      summary: `東京上野で働く名古屋生まれの麻雀と芝生管理が大好きなサラリーマンwebエンジニア（兼なんちゃってデータサイエンティスト）`,
+      summary: `東京上野で働く名古屋生まれの麻雀と芝生管理が大好きな正社員webエンジニア（兼なんちゃってデータサイエンティスト）`,
     },
     description: `A blog powered by Gatsby`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
@@ -66,7 +66,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/profile-pic.jpg`,
       },
     },
     `gatsby-plugin-react-helmet`,
