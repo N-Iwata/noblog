@@ -6,7 +6,7 @@ module.exports = {
       summary: `東京上野で働く名古屋生まれの麻雀と芝生管理が大好きな正社員webエンジニア（兼なんちゃってデータサイエンティスト）`,
     },
     description: `A blog powered by Gatsby`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://rpf-noblog.com/`,
     social: {
       twitter: ``,
     },
@@ -26,6 +26,7 @@ module.exports = {
         name: `assets`,
       },
     },
+    `gatsby-plugin-slug`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -80,4 +81,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
