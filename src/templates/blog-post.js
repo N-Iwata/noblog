@@ -13,7 +13,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const siteTitle = data.site.siteMetadata.title;
   const author = data.site.siteMetadata.author.name;
   const { previous, next } = pageContext;
-
+  console.log(post);
   return (
     <Layout location={location} title={siteTitle} author={author}>
       <SEO
@@ -104,6 +104,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "YYYY-MM-DD")
         description
+        slug
       }
     }
   }

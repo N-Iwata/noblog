@@ -1,3 +1,7 @@
+* {
+  font-family: sans-serif;
+}
+
 .blog-section h2 {
   background-color: #43e6fc;
   color: #3b07f8;
@@ -12,7 +16,7 @@
   margin-bottom: 10px;
   text-decoration: underline;
   -webkit-text-decoration-color: #aaa;
-  text-decoration-color: #aaa;
+          text-decoration-color: #aaa;
 }
 
 .blog-section h4 {

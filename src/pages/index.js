@@ -10,7 +10,8 @@ const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
   const author = data.site.siteMetadata.author.name;
   const posts = data.allMarkdownRemark.edges;
-
+  console.log("posts");
+  console.log(posts);
   return (
     <Layout location={location} title={siteTitle} author={author}>
       <SEO title="All posts" />
@@ -25,7 +26,7 @@ const BlogIndex = ({ data, location }) => {
                   marginBottom: rhythm(1 / 4),
                 }}
               >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                <Link style={{ boxShadow: `none` }} to={node.frontmatter.slug}>
                   {title}
                 </Link>
               </h3>
@@ -68,6 +69,7 @@ export const pageQuery = graphql`
             date(formatString: "YYYY-MM-DD")
             title
             description
+            slug
           }
         }
       }
