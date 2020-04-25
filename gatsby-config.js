@@ -3,7 +3,7 @@ module.exports = {
     title: `RPF NoBlog`,
     author: {
       name: `@rpf-nob`,
-      summary: `東京上野で働く名古屋生まれの麻雀と芝生管理が大好きな正社員webエンジニア（兼なんちゃってデータサイエンティスト）`,
+      summary: `東京上野で働く名古屋生まれの麻雀と芝生管理が大好きな職業不詳アラフォーエンジニア`,
     },
     description: `A blog powered by Gatsby`,
     siteUrl: `https://rpf-noblog.com/`,
