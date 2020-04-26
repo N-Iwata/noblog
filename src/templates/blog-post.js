@@ -6,14 +6,14 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { rhythm, scale } from "../utils/typography";
 
-import "../styles/blog-section.css";
+import "../styles/style.css";
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark;
   const siteTitle = data.site.siteMetadata.title;
   const author = data.site.siteMetadata.author.name;
   const { previous, next } = pageContext;
-  console.log(post);
+
   return (
     <Layout location={location} title={siteTitle} author={author}>
       <SEO

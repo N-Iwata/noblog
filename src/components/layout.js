@@ -31,7 +31,7 @@ const Layout = ({ location, title, author, children }) => {
     header = (
       <h3
         style={{
-          fontFamily: `Montserrat, sans-serif`,
+          fontFamily: `sans-serif`,
           marginTop: 0,
         }}
       >
@@ -54,6 +54,8 @@ const Layout = ({ location, title, author, children }) => {
         marginRight: `auto`,
         maxWidth: rhythm(30),
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+        backgroundColor: `#fff`,
+        boxShadow: `0 0 10px rgba(0,0,0,0.2)`,
       }}
     >
       <header>{header}</header>
