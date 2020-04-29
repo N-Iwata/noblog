@@ -3,6 +3,8 @@ import { Link } from "gatsby";
 
 import { rhythm, scale } from "../utils/typography";
 
+import NavBar from "../components/navbar";
+
 const Layout = ({ location, title, author, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`;
   let header;
@@ -59,6 +61,7 @@ const Layout = ({ location, title, author, children }) => {
         boxShadow: `0 0 10px rgba(0,0,0,0.2)`,
       }}
     >
+      <NavBar />
       <header>{header}</header>
       <main>{children}</main>
       <footer>

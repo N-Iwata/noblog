@@ -4,7 +4,6 @@ import { Link, graphql } from "gatsby";
 import Bio from "../components/bio";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import NavBar from "../components/navbar";
 import { rhythm } from "../utils/typography";
 
 const BlogIndex = ({ data, location }) => {
@@ -14,7 +13,6 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <div>
-      <NavBar />
       <Layout location={location} title={siteTitle} author={author}>
         <SEO title="All posts" />
         <Bio />

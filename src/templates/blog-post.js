@@ -4,20 +4,16 @@ import { Link, graphql } from "gatsby";
 import Bio from "../components/bio";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import NavBar from "../components/navbar";
 import { rhythm, scale } from "../utils/typography";
-
-import "../styles/style.css";
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark;
   const siteTitle = data.site.siteMetadata.title;
   const author = data.site.siteMetadata.author.name;
   const { previous, next } = pageContext;
-
+  //  console.log(data.markdownRemark.tableOfContents);
   return (
     <div>
-      <NavBar />
       <Layout location={location} title={siteTitle} author={author}>
         <SEO
           title={post.frontmatter.title}
@@ -104,6 +100,7 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      tableOfContents
       frontmatter {
         title
         date(formatString: "YYYY-MM-DD")
