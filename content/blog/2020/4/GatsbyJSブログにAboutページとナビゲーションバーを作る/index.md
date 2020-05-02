@@ -25,8 +25,7 @@ tags: [GatsbyJS]
 
 ## src/pages/about.jsを作成する
 
-[src/pages/about.js]
-```javascript
+```javascript:title=src/pages/about.js
 import React from "react";
 import { Link, graphql } from "gatsby";
 
@@ -81,8 +80,7 @@ Aboutページができたので、こちらにジャンプできるようにリ
 
 [src/components/navbar.js]を新規作成して、[src/styles/style.scss]に以下追記します。
 
-[src/components/navbar.js]
-```javascript
+```javascript:title=src/components/navbar.js
 import React from "react";
 import { Link } from "gatsby";
 
@@ -103,7 +101,7 @@ const NavBar = () => {
 
 export default NavBar;
 ```
-```scss
+```scss:title=src/styles/style.scss
 .navbar {
   position: fixed;
   padding: 0;
@@ -148,8 +146,7 @@ export default NavBar;
 ナビゲーションバーはすべてのページに設置したいので、[src/components/layout.js]の[Layout]コンポーネントに↑で作った[NavBar]コンポーネントを設置します。
 [NavBar]コンポーネントは画面の上部に固定しているので、marginTopを少し大きくとるように修正しました。
 
-[src/components/layout.js]
-```javascript
+```javascript{18}:title=src/components/layout.js
 import NavBar from "../components/navbar";
 
 const Layout = ({ location, title, author, children }) => {

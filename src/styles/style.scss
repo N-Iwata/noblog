@@ -12,6 +12,7 @@ body {
     color: black;
     padding: 10px 10px;
     margin: 0;
+    margin-top: 30px;
     margin-bottom: 30px;
     position: relative;
   }
@@ -30,7 +31,8 @@ body {
   & h3 {
     padding: 5px 10px;
     margin: 0;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     text-decoration: underline;
     text-decoration-color: #aaa;
     font-size: 1.3em;
@@ -97,4 +99,24 @@ body {
       }
     }
   }
+}
+
+.gatsby-code-title {
+  background: #555;
+  color: #fff;
+  margin: 20px 0px -24px;
+  padding: 8px 12px 20px;
+  font-size: 0.8em;
+  line-height: 1;
+  display: table;
+}
+
+.gatsby-highlight-code-line {
+  background-color: #444444;
+  display: block;
+  margin-right: -1em;
+  margin-left: -16px;
+  padding-right: 1em;
+  padding-left: 10px;
+  border-left: 6px solid rgb(8, 216, 243);
 }
