@@ -1,7 +1,7 @@
 ---
 title: GatsbyJSブログにAboutページとナビゲーションバーを作る
 date: "2020-04-29"
-description: このブログはGatsbyJSで作成していますが、[gatsby-starter-blog](https://gatsby-starter-blog-demo.netlify.app/)のテンプレートから作成しているので、結構見た目は普通な感じだし、ナビゲーションバーとかAboutページとかタグページとかの機能もなく最低限しかないんですよね。なので今回はAboutページとそこに遷移するためのナビゲーションバーを作成したので、実装した部分を書いていきたいと思います。
+description: このブログはGatsbyJSで作成していますが、gatsby-starter-blogのテンプレートから作成しているので、ナビゲーションバーとかAboutページとかタグページとかの機能もなく最低限しかないんですよね。なので今回はAboutページとそこに遷移するためのナビゲーションバーを作成したので実装した部分を書いていきたいと思います。
 slug: 2020-04-29/gatsby-about-navbar
 tags: [GatsbyJS]
 ---
