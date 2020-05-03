@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby";
 import Bio from "../components/bio";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import Toc from "../components/toc";
 import { rhythm, scale } from "../utils/typography";
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
@@ -11,7 +12,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const siteTitle = data.site.siteMetadata.title;
   const author = data.site.siteMetadata.author.name;
   const { previous, next } = pageContext;
-  //  console.log(data.markdownRemark.tableOfContents);
+  console.log(data.markdownRemark.tableOfContents);
   return (
     <div>
       <Layout location={location} title={siteTitle} author={author}>
@@ -39,6 +40,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               {post.frontmatter.date}
             </p>
           </header>
+          <Toc data={data.markdownRemark.tableOfContents} />
           <section
             className="blog-section"
             dangerouslySetInnerHTML={{ __html: post.html }}

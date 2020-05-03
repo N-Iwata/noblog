@@ -67,6 +67,31 @@ body {
   margin-bottom: 0px;
 }
 
+.toc {
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+.toc__title {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.toc__content ul {
+  margin-left: 30px;
+}
+
+.toc__content ul li {
+  font-size: 0.9em;
+  margin: 10px 0;
+}
+
+.toc__content ul li a {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: black;
+}
+
 .navbar {
   position: fixed;
   padding: 0;
@@ -99,12 +124,15 @@ body {
   padding-bottom: 1px;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .navbar__li a:hover {
   color: red;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  background-color: #f2f2f2;
 }
 
 .gatsby-code-title {
