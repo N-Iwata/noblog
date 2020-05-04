@@ -5,6 +5,7 @@ import Bio from "../components/bio";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Toc from "../components/toc";
+import Tag from "../components/tag";
 import { rhythm, scale } from "../utils/typography";
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
@@ -12,7 +13,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const siteTitle = data.site.siteMetadata.title;
   const author = data.site.siteMetadata.author.name;
   const { previous, next } = pageContext;
-  console.log(data.markdownRemark.tableOfContents);
+
   return (
     <div>
       <Layout location={location} title={siteTitle} author={author}>
@@ -34,12 +35,13 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               style={{
                 ...scale(-1 / 5),
                 display: `block`,
-                marginBottom: rhythm(1),
+                marginBottom: 0,
               }}
             >
               {post.frontmatter.date}
             </p>
           </header>
+          <Tag tags={post.frontmatter.tags} />
           <Toc data={data.markdownRemark.tableOfContents} />
           <section
             className="blog-section"
@@ -108,6 +110,7 @@ export const pageQuery = graphql`
         date(formatString: "YYYY-MM-DD")
         description
         slug
+        tags
       }
     }
   }

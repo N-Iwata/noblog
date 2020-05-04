@@ -64,6 +64,21 @@ body {
     }
   }
 }
+
+.tag {
+  margin-bottom: 20px;
+
+  &__list {
+    margin-right: 10px;
+    box-shadow: none;
+    border: 1px solid #555;
+    padding: 0 5px;
+    border-radius: 3px;
+    color: blue;
+    background-color: #f2f2f2;
+  }
+}
+
 .toc {
   background-color: #f2f2f2;
   padding: 10px;
