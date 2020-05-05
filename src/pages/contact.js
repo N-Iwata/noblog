@@ -62,7 +62,14 @@ const Contact = ({ data, location }) => {
           お名前・メールアドレス・件名・問い合わせ内容を記載して送信ボタンをクリックしてください。
         </p>
         <div className="contact">
-          <form name="contact" method="POST" data-netlify="true">
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="bot-field" />
             <div className="contact__area">
               <TextField
                 id="outlined-basic"
