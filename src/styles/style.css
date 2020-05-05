@@ -109,6 +109,14 @@ body {
   color: black;
 }
 
+.contact__area {
+  margin-bottom: 20px;
+}
+
+.contact__field {
+  width: 100%;
+}
+
 .navbar {
   position: fixed;
   padding: 0;
