@@ -66,7 +66,7 @@ const Contact = ({ data, location }) => {
             <input type="hidden" name="bot-field" />
             <div className="contact__area">
               <TextField
-                id="outlined-basic"
+                id="name"
                 className="contact__field"
                 name="name"
                 label="お名前"
@@ -78,7 +78,7 @@ const Contact = ({ data, location }) => {
             </div>
             <div className="contact__area">
               <TextField
-                id="outlined-basic"
+                id="email"
                 className="contact__field"
                 name="email"
                 label="メールアドレス"
@@ -90,7 +90,7 @@ const Contact = ({ data, location }) => {
             </div>
             <div className="contact__area">
               <TextField
-                id="outlined-basic"
+                id="subject"
                 className="contact__field"
                 name="subject"
                 label="件名"
@@ -102,7 +102,7 @@ const Contact = ({ data, location }) => {
             </div>
             <div className="contact__area">
               <TextField
-                id="outlined-multiline-static"
+                id="message"
                 className="contact__field"
                 name="message"
                 label="問い合わせ内容"
