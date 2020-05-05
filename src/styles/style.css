@@ -43,6 +43,8 @@ body {
   padding: 5px 10px;
   margin: 0;
   margin-bottom: 5px;
+  font-size: 1.2em;
+  text-transform: none;
 }
 
 .blog-section p {
