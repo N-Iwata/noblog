@@ -16,7 +16,6 @@ const Contact = ({ data, location }) => {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
-  const [loading, setLoading] = useState(0);
 
   const handleChange = event => {
     switch (event.target.name) {
@@ -37,16 +36,11 @@ const Contact = ({ data, location }) => {
     }
   };
 
-  const handleSubmit = () => {
-    setLoading(1);
-  };
-
   const canSubmit = () => {
     if (name === "") return true;
     if (email === "") return true;
     if (subject === "") return true;
     if (message === "") return true;
-    if (loading === 1) return true;
 
     return false;
   };
@@ -125,7 +119,6 @@ const Contact = ({ data, location }) => {
                 variant="contained"
                 color="primary"
                 disabled={canSubmit()}
-                // onClick={() => handleSubmit()}
               >
                 送信
               </Button>
