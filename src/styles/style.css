@@ -10,18 +10,9 @@ body {
   margin-top: 30px;
   margin-bottom: 30px;
   position: relative;
-}
-
-.blog-section h2::before {
-  content: "";
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  background: #f2f2f2;
-  left: 20px;
-  bottom: -7px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  border-left: 6px solid #fc1ab1;
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
 .blog-section h3 {
@@ -29,10 +20,8 @@ body {
   margin: 0;
   margin-top: 20px;
   margin-bottom: 20px;
-  text-decoration: underline;
-  -webkit-text-decoration-color: #aaa;
-          text-decoration-color: #aaa;
   font-size: 1.3em;
+  border-left: 3px solid #fc1ab1;
 }
 
 .blog-section h4 {
@@ -41,6 +30,7 @@ body {
   margin-bottom: 5px;
   font-size: 1.2em;
   text-transform: none;
+  text-decoration: underline;
 }
 
 .blog-section p {
@@ -58,10 +48,13 @@ body {
 }
 
 .blog-section ul {
-  margin-left: 30px;
+  border: 2px dotted #fc1ab1;
+  border-radius: 10px;
+  padding: 5px;
 }
 
 .blog-section ul li {
+  margin-left: 30px;
   margin-bottom: 0px;
 }
 
@@ -83,6 +76,8 @@ body {
 .toc {
   background-color: #f2f2f2;
   padding: 10px;
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
 .toc__title {
@@ -173,6 +168,17 @@ body {
   margin-left: -16px;
   padding-right: 1em;
   padding-left: 10px;
-  border-left: 6px solid #08d8f3;
+  border-left: 6px solid #fc1ab1;
+}
+
+.gatsby-resp-image-background-image {
+  border-radius: 5px;
+}
+
+.gatsby-resp-image-image {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f2f2f2;
 }
 /*# sourceMappingURL=style.css.map */

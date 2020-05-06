@@ -201,6 +201,7 @@ export const pageQuery = graphql`
 * formタグに[name="contact"]と[data-netlify="true"]を指定する
 * `<input type="hidden" name="form-name" value="contact" />`が必要
 * [name="contact]と[value="contact"]の値は一致
+
 ```
 <form
   name="contact"
