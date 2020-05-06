@@ -1,7 +1,7 @@
 ---
 title: GatsbyJSブログにNetlify Formsでお問い合わせページを追加した
 date: "2020-05-06"
-description: 今回はGatsbyJSブログの記事ページを、Qiitaのようにコードブロックにタイトルを付けられるようにして、さらに指定した行をハイライトできるようにします。
+description: 今回はGatsbyJSブログにNetlify Formsでお問い合わせページを追加します。公式ページの内容とおりやれば簡単にできるのでおススメです！
 slug: 2020-05-06/gatsby-contact-netlify-forms
 tags: [GatsbyJS, Netlify]
 ---
