@@ -15,6 +15,7 @@ const Aboutpage = ({ data, location }) => {
         <h1>About</h1>
         <p>
           こんにちは！東京上野で働く名古屋生まれの麻雀と芝生管理が大好きな職業不詳アラフォーエンジニアの
+          <br></br>
           <b>@rpf-nob</b>と申します！！
         </p>
         <p>
