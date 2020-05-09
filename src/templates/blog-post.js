@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
+//import Image from "gatsby-image";
 
 import Bio from "../components/bio";
 import Layout from "../components/layout";
@@ -42,6 +43,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             </p>
           </header>
           <Tag tags={post.frontmatter.tags} />
+          {/* <Image
+            fluid={data.markdownRemark.frontmatter.hero.childImageSharp.fluid}
+          /> */}
           <Toc data={data.markdownRemark.tableOfContents} />
           <section
             className="blog-section"
@@ -111,6 +115,13 @@ export const pageQuery = graphql`
         description
         slug
         tags
+        hero {
+          childImageSharp {
+            fluid(maxWidth: 1280) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

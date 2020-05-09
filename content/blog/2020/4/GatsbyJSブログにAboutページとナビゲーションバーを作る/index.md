@@ -4,6 +4,7 @@ date: "2020-04-29"
 description: このブログはGatsbyJSで作成していますが、gatsby-starter-blogのテンプレートから作成しているので、ナビゲーションバーとかAboutページとかタグページとかの機能もなく最低限しかないんですよね。なので今回はAboutページとそこに遷移するためのナビゲーションバーを作成したので実装した部分を書いていきたいと思います。
 slug: 2020-04-29/gatsby-about-navbar
 tags: [GatsbyJS]
+hero: ./hero.png
 ---
 
 ## はじめに 

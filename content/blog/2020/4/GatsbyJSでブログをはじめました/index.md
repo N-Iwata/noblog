@@ -4,6 +4,7 @@ date: "2020-04-12T22:12:03.284Z"
 description: GatsbyJSとGitHubとNetlifyでブログを始めました。
 slug: start-blog
 tags: [GatsbyJS, Netlify]
+hero: ./hero.png
 ---
 
 ## はじめに 

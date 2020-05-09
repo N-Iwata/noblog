@@ -4,6 +4,7 @@ date: "2020-05-03"
 description: 今回はGatsbyJSブログの記事ページに目次をつけて、記事の全体構成を把握してもらえるような構成にします。
 slug: 2020-05-03/gatsby-toc
 tags: [GatsbyJS]
+hero: ./hero.png
 ---
 
 ## はじめに 

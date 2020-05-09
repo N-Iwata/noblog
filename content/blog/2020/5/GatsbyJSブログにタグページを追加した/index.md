@@ -4,6 +4,7 @@ date: "2020-05-04"
 description: 今回はGatsbyJSブログにタグページを追加して、タグごとに記事一覧が表示できるようにします。
 slug: 2020-05-04/gatsby-tag
 tags: [GatsbyJS]
+hero: ./hero.png
 ---
 
 ## はじめに 
