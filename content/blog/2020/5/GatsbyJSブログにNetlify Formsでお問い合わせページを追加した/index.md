@@ -3,7 +3,7 @@ title: GatsbyJSブログにNetlify Formsでお問い合わせページを追加�
 date: "2020-05-06"
 description: 今回はGatsbyJSブログにNetlify Formsでお問い合わせページを追加します。公式ページの内容とおりやれば簡単にできるのでおススメです！
 slug: 2020-05-06/gatsby-contact-netlify-forms
-tags: [GatsbyJS, Netlify]
+tags: [GatsbyJS, gatsby-starter-blog, Netlify, material-ui, Slack]
 hero: ./hero.png
 ---
 
@@ -31,7 +31,7 @@ Netlify FormsはNetlifyのサービスの一つで、バックエンドの実装
 
 ### その他機能
 
-その他にもファイルアップロードやメールやslackへの通知機能などもありかなり便利です。
+その他にもファイルアップロードやメールやSlackへの通知機能などもありかなり便利です。
 
 ## 問い合わせページ作成
 

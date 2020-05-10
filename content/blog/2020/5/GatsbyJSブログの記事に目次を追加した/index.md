@@ -3,7 +3,7 @@ title: GatsbyJSブログの記事に目次を追加した
 date: "2020-05-03"
 description: 今回はGatsbyJSブログの記事ページに目次をつけて、記事の全体構成を把握してもらえるような構成にします。
 slug: 2020-05-03/gatsby-toc
-tags: [GatsbyJS]
+tags: [GatsbyJS, gatsby-starter-blog, gatsby-remark-autolink-headers, GraphQL]
 hero: ./hero.png
 ---
 

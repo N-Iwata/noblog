@@ -3,7 +3,7 @@ title: GatsbyJSブログにGoogleAnalyticsを導入した
 date: "2020-05-05"
 description: 今回はGatsbyJSブログにGoogleAnalyticsを導入して、訪問者数などの情報を取得してみたいと思います。せっかくブログやるなら訪問者数とか意識していきたいですよね。
 slug: 2020-05-05/gatsby-google-analytics
-tags: [GatsbyJS]
+tags: [GatsbyJS, gatsby-starter-blog, gatsby-plugin-google-analytics, GoogleAnalytics]
 hero: ./hero.png
 ---
 

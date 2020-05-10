@@ -1,10 +1,10 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
+import Image from "gatsby-image";
 
 import Bio from "../components/bio";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import { rhythm } from "../utils/typography";
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
@@ -19,30 +19,41 @@ const BlogIndex = ({ data, location }) => {
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug;
           return (
-            <article key={node.fields.slug}>
-              <header>
-                <h3
-                  style={{
-                    marginBottom: rhythm(1 / 4),
-                  }}
-                >
-                  <Link
-                    style={{ boxShadow: `none` }}
-                    to={node.frontmatter.slug}
-                  >
-                    {title}
-                  </Link>
-                </h3>
-                <small>{node.frontmatter.date}</small>
-              </header>
-              <section>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
-              </section>
-            </article>
+            <div className="posts">
+              <article key={node.fields.slug}>
+                <header>
+                  <h3 className="posts__title">
+                    <Link
+                      className="posts__title__a"
+                      to={node.frontmatter.slug}
+                    >
+                      {title}
+                    </Link>
+                  </h3>
+                  <small className="posts__date">{node.frontmatter.date}</small>
+                </header>
+                <Link to={node.frontmatter.slug}>
+                  <Image
+                    className="posts__image"
+                    fluid={node.frontmatter.hero.childImageSharp.fluid}
+                  />
+                </Link>
+
+                <section>
+                  <p
+                    className="posts__desc"
+                    dangerouslySetInnerHTML={{
+                      __html: node.frontmatter.description || node.excerpt,
+                    }}
+                  />
+                  <div className="posts_more">
+                    <Link className="posts__more__a" to={node.frontmatter.slug}>
+                      続きを読む＞
+                    </Link>
+                  </div>
+                </section>
+              </article>
+            </div>
           );
         })}
       </Layout>
@@ -74,6 +85,13 @@ export const pageQuery = graphql`
             title
             description
             slug
+            hero {
+              childImageSharp {
+                fluid(maxWidth: 1280) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

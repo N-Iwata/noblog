@@ -1,0 +1,242 @@
+---
+title: GatsbyJSブログの記事のトップ画像と記事一覧のサムネイル画像を追加した
+date: "2020-05-10"
+description: 今回はGatsbyJSブログの記事ページにヒーロー画像をつけて、記事一覧にもサムネイルとして画像を表示できるようにします。記事のトップや一覧のサムネイルに画像があるだけで、印象が変わりますからね。
+slug: 2020-05-10/gatsby-hero
+tags: [GatsbyJS, gatsby-starter-blog, gatsby-image]
+hero: ./hero.png
+---
+
+## はじめに 
+
+今回はGatsbyJSブログの記事ページにヒーロー画像をつけて、記事一覧にもサムネイルとして画像を表示できるようにします。<br>
+記事のトップや一覧のサムネイルに画像があるだけで、印象が変わりますからね。
+
+## 前提
+
+このブログはGatsbyJSの[gatsby-starter-blog](https://gatsby-starter-blog-demo.netlify.app/)のテンプレートから作成しています。
+
+## プラグインのインストール
+
+以下コマンドで[gatsby-image]をインストールします。<br>
+
+[公式サイト](https://www.gatsbyjs.org/docs/gatsby-image/)によると[gatsby-image]は、GraphQLと[gatsby-plugin-sharp]が提供するGatsbyのネイティブ画像処理機能とシームレスに連携して、サイトの画像読み込みを簡単かつ完全に最適化するように設計されたReactコンポーネントです。
+
+[gatsby-plugin-sharp]と[gatsby-transformer-sharp]も必要なので、インストールされていなかったらインストールしてください。<br>
+今回はインストールされていたので、省略しています。
+
+```cmd:title=コマンド
+npm install --save gatsby-image
+```
+
+## 記事のマークダウンファイルにヒーローを追加する
+
+各記事のマークダウンファイルの上部のメタ情報の部分に[hero]を追加し、読み込みたいファイルを指定します。
+マークダウンファイルと同じディレクトリに置いています。
+
+```markdown{7}:title=markdown
+---
+title: GatsbyJSブログの記事のトップ画像と記事一覧のサムネイル画像を追加した
+date: "2020-05-10"
+description: 今回はGatsbyJSブログの記事ページにヒーロー画像をつけて、記事一覧にもサムネイルとして画像を表示できるようにします。記事のトップや一覧のサムネイルに画像があるだけで、印象が変わりますからね。
+slug: 2020-05-10/gatsby-hero
+tags: [GatsbyJS, gatsby-starter-blog, gatsby-image]
+hero: ./hero.png
+---　
+```
+
+## 記事にヒーロー画像を追加する
+
+### GraphQLのクエリ追加
+
+[src/templates/blog-posts.js]にGraphQLのクエリを以下のように追加します。<br>
+heroで指定した画像を[fluid]で抽出することで、画像のサイズを最適化（srcset）できるようにしてくれます。
+
+```js{9-15}:title=src/templates/blog-posts.js
+export const pageQuery = graphql`
+  query BlogPostBySlug($slug: String!) {
+    ・・・省略
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      ・・・省略
+      frontmatter {
+        title
+        ・・・省略
+        hero {
+          childImageSharp {
+            fluid(maxWidth: 1280) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+```
+
+### BlogPostTemplateに抽出した画像を挿入
+
+まず、[gatsby-image]をインポートします。
+
+```js:title=src/templates/blog-posts.js
+import Image from "gatsby-image";
+```
+
+次に、画像を挿入したい場所に以下を追記します。<br>
+今回はタグの下に挿入しています。
+
+```js:title=src/templates/blog-posts.js
+<Image
+  fluid={data.markdownRemark.frontmatter.hero.childImageSharp.fluid}
+/>
+```
+
+すると以下のように挿入されます。
+
+![img](img1.png)
+
+## 記事一覧にサムネイル画像を追加する
+
+基本的にはヒーロー追加と同じです。
+
+### GraphQLのクエリ追加
+
+[src/pages/index.js]にGraphQLのクエリを以下のように追加します。<br>
+サムネイルでも[fluid]で抽出します。
+
+```js{11-17}:title=src/pages/index.js
+export const pageQuery = graphql`
+  query {
+    ・・・省略
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          ・・・省略
+          frontmatter {
+            date(formatString: "YYYY-MM-DD")
+            ・・・省略
+            hero {
+              childImageSharp {
+                fluid(maxWidth: 1280) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+```
+
+### BlogIndexに抽出した画像を挿入
+
+まず、[gatsby-image]をインポートします。
+
+```js:title=src/pages/index.js
+import Image from "gatsby-image";
+```
+
+次に、画像を挿入したい場所に以下を追記します。<br>
+今回は日付の下に挿入しています。また、画像クリックでもページ遷移したいので、[Link to]を追加しています。
+
+```js{27-32}:title=src/pages/index.js
+const BlogIndex = ({ data, location }) => {
+  const siteTitle = data.site.siteMetadata.title;
+  const author = data.site.siteMetadata.author.name;
+  const posts = data.allMarkdownRemark.edges;
+
+  return (
+    <div>
+      <Layout location={location} title={siteTitle} author={author}>
+        <SEO title="All posts" />
+        <Bio />
+        {posts.map(({ node }) => {
+          const title = node.frontmatter.title || node.fields.slug;
+          return (
+            <div className="posts">
+              <article key={node.fields.slug}>
+                <header>
+                  <h3 className="posts__title">
+                    <Link
+                      className="posts__title__a"
+                      to={node.frontmatter.slug}
+                    >
+                      {title}
+                    </Link>
+                  </h3>
+                  <small className="posts__date">{node.frontmatter.date}</small>
+                </header>
+                <Link to={node.frontmatter.slug}>
+                  <Image
+                    className="posts__image"
+                    fluid={node.frontmatter.hero.childImageSharp.fluid}
+                  />
+                </Link>
+
+                <section>
+                  <p
+                    className="posts__desc"
+                    dangerouslySetInnerHTML={{
+                      __html: node.frontmatter.description || node.excerpt,
+                    }}
+                  />
+                  <div className="posts_more">
+                    <Link className="posts__more__a" to={node.frontmatter.slug}>
+                      続きを読む
+                    </Link>
+                  </div>
+                </section>
+              </article>
+            </div>
+          );
+        })}
+      </Layout>
+    </div>
+  );
+};
+```
+
+### スタイル調整
+
+今回は以下のようにスタイル調整しています。
+
+```scss:title=src/styles/style.scss
+.posts {
+  border: 2px dotted #eee;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 10px;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 1.6em;
+
+    &__a {
+      box-shadow: none;
+    }
+  }
+  &__desc {
+    margin-bottom: 5px;
+  }
+  &__more {
+    &__a {
+      display: block;
+      text-align: right;
+      box-shadow: none;
+    }
+  }
+}
+```
+
+すると以下のように挿入されます。
+
+![img](img2.png)
+
+## まとめ
+
+今回はGatsbyJSブログの記事ページにヒーロー画像をつけて、記事一覧にもサムネイルとして画像を表示できるようにしました。
+
+かなり印象が変わりましたね！！

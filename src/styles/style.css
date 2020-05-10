@@ -6,6 +6,35 @@ body {
   background-color: #f2f2f2;
 }
 
+.posts {
+  border: 2px dotted #eee;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.posts__title {
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 1.6em;
+}
+
+.posts__title__a {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.posts__desc {
+  margin-bottom: 5px;
+}
+
+.posts__more__a {
+  display: block;
+  text-align: right;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .blog-section h2 {
   background-color: #f2f2f2;
   color: black;

@@ -5,6 +5,33 @@ body {
   background-color: #f2f2f2;
 }
 
+.posts {
+  border: 2px dotted #eee;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 10px;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 1.6em;
+
+    &__a {
+      box-shadow: none;
+    }
+  }
+  &__desc {
+    margin-bottom: 5px;
+  }
+  &__more {
+    &__a {
+      display: block;
+      text-align: right;
+      box-shadow: none;
+    }
+  }
+}
+
 .blog-section {
   & h2 {
     background-color: #f2f2f2;
@@ -17,17 +44,6 @@ body {
     border-left: 6px solid #fc1ab1;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
   }
-
-  // & h2::before {
-  //   content: "";
-  //   position: absolute;
-  //   width: 14px;
-  //   height: 14px;
-  //   background: #f2f2f2;
-  //   left: 20px;
-  //   bottom: -7px;
-  //   transform: rotate(45deg);
-  // }
 
   & h3 {
     padding: 5px 10px;
