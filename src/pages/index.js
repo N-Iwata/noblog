@@ -40,7 +40,6 @@ const BlogIndex = ({ data, location }) => {
                     />
                   </Link>
                 </div>
-
                 <section>
                   <p
                     className="posts__desc"

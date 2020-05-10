@@ -168,12 +168,14 @@ const BlogIndex = ({ data, location }) => {
                   </h3>
                   <small className="posts__date">{node.frontmatter.date}</small>
                 </header>
-                <Link to={node.frontmatter.slug}>
-                  <Image
-                    className="posts__image"
-                    fluid={node.frontmatter.hero.childImageSharp.fluid}
-                  />
-                </Link>
+                <div className="posts__image_container">
+                  <Link to={node.frontmatter.slug}>
+                    <Image
+                      className="posts__image"
+                      fluid={node.frontmatter.hero.childImageSharp.fluid}
+                    />
+                  </Link>
+                </div>
 
                 <section>
                   <p
@@ -218,6 +220,27 @@ const BlogIndex = ({ data, location }) => {
       box-shadow: none;
     }
   }
+  &__image_container {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #eee;
+  }
+  &__image {
+    margin-bottom: 5px;
+    transition: all ease-in 0.5s;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &:hover {
+      transform: scale(1.1);
+      overflow: hidden;
+    }
+  }
+
   &__desc {
     margin-bottom: 5px;
   }
@@ -228,6 +251,11 @@ const BlogIndex = ({ data, location }) => {
       box-shadow: none;
     }
   }
+}
+
+.blog__hero {
+  border: 1px solid #eee;
+  margin-bottom: 5px;
 }
 ```
 
