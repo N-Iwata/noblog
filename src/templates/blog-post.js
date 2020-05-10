@@ -43,9 +43,12 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             </p>
           </header>
           <Tag tags={post.frontmatter.tags} />
-          <Image
-            fluid={data.markdownRemark.frontmatter.hero.childImageSharp.fluid}
-          />
+          <div>
+            <Image
+              className="blog__hero"
+              fluid={data.markdownRemark.frontmatter.hero.childImageSharp.fluid}
+            />
+          </div>
           <Toc data={data.markdownRemark.tableOfContents} />
           <section
             className="blog-section"

@@ -32,12 +32,14 @@ const BlogIndex = ({ data, location }) => {
                   </h3>
                   <small className="posts__date">{node.frontmatter.date}</small>
                 </header>
-                <Link to={node.frontmatter.slug}>
-                  <Image
-                    className="posts__image"
-                    fluid={node.frontmatter.hero.childImageSharp.fluid}
-                  />
-                </Link>
+                <div className="posts__image_container">
+                  <Link to={node.frontmatter.slug}>
+                    <Image
+                      className="posts__image"
+                      fluid={node.frontmatter.hero.childImageSharp.fluid}
+                    />
+                  </Link>
+                </div>
 
                 <section>
                   <p

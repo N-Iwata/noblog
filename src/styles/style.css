@@ -24,6 +24,30 @@ body {
           box-shadow: none;
 }
 
+.posts__image_container {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #eee;
+}
+
+.posts__image {
+  margin-bottom: 5px;
+  -webkit-transition: all ease-in 0.5s;
+  transition: all ease-in 0.5s;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.posts__image:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  overflow: hidden;
+}
+
 .posts__desc {
   margin-bottom: 5px;
 }
@@ -33,6 +57,11 @@ body {
   text-align: right;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.blog__hero {
+  border: 1px solid #eee;
+  margin-bottom: 5px;
 }
 
 .blog-section h2 {
