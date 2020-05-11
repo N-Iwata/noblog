@@ -120,6 +120,15 @@ body {
   margin-bottom: 0px;
 }
 
+.social-links {
+  margin-bottom: 40px;
+}
+
+.social-links__icon {
+  display: inline;
+  margin-right: 10px;
+}
+
 .tag {
   margin-bottom: 20px;
 }
@@ -175,7 +184,7 @@ body {
   padding: 0;
   margin: 0;
   margin-bottom: 10px;
-  background: white;
+  background-color: #fc1ab1;
   height: 60px;
   width: 100%;
   top: 0;
@@ -197,17 +206,20 @@ body {
 }
 
 .navbar__li a {
-  color: black;
+  color: white;
   padding: 7px 13px;
   padding-bottom: 1px;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   -webkit-box-shadow: none;
           box-shadow: none;
+  font-weight: 600;
+  border-radius: 20px;
+  vertical-align: middle;
 }
 
 .navbar__li a:hover {
-  color: red;
+  color: #fc1ab1;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   background-color: #f2f2f2;

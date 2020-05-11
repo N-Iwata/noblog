@@ -7,13 +7,15 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Toc from "../components/toc";
 import Tag from "../components/tag";
+import Share from "../components/share";
 import { rhythm, scale } from "../utils/typography";
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark;
   const siteTitle = data.site.siteMetadata.title;
+  const siteUrl = data.site.siteMetadata.siteUrl;
   const author = data.site.siteMetadata.author.name;
-  const { previous, next } = pageContext;
+  const { slug, previous, next } = pageContext;
 
   return (
     <div>
@@ -58,6 +60,11 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             style={{
               marginBottom: rhythm(1),
             }}
+          />
+          <Share
+            title={post.frontmatter.title}
+            url={`${siteUrl}${slug}`}
+            description={post.excerpt}
           />
           <footer>
             <Bio />
@@ -105,6 +112,7 @@ export const pageQuery = graphql`
         author {
           name
         }
+        siteUrl
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
