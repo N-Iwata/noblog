@@ -27,21 +27,18 @@ const Tags = ({ pageContext, data, location }) => {
         {edges.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug;
           return (
-            <div className="posts">
-              <article key={node.fields.slug}>
+            <div key={node.fields.slug} className="posts">
+              <article>
                 <header>
                   <h3 className="posts__title">
-                    <Link
-                      className="posts__title__a"
-                      to={node.frontmatter.slug}
-                    >
+                    <Link className="posts__title__a" to={node.fields.slug}>
                       {title}
                     </Link>
                   </h3>
                   <small className="posts__date">{node.frontmatter.date}</small>
                 </header>
                 <div className="posts__image_container">
-                  <Link to={node.frontmatter.slug}>
+                  <Link to={node.fields.slug}>
                     <Image
                       className="posts__image"
                       fluid={node.frontmatter.hero.childImageSharp.fluid}
@@ -56,7 +53,7 @@ const Tags = ({ pageContext, data, location }) => {
                     }}
                   />
                   <div className="posts_more">
-                    <Link className="posts__more__a" to={node.frontmatter.slug}>
+                    <Link className="posts__more__a" to={node.fields.slug}>
                       続きを読む
                     </Link>
                   </div>

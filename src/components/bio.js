@@ -8,6 +8,9 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Image from "gatsby-image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import image from "../images/qiita.png";
 
 import { rhythm } from "../utils/typography";
 
@@ -56,11 +59,83 @@ const Bio = () => {
           borderRadius: `50%`,
         }}
       />
-      <p>
+      <div>
         Written by <strong>{author.name}</strong>
         <br />
         <span>{author.summary}</span>
-      </p>
+        <div
+          style={{
+            position: "relative",
+            marginTop: "10px",
+          }}
+        >
+          <div
+            style={{
+              position: "absolute",
+              width: "100%",
+              top: "0",
+              left: "0",
+            }}
+          >
+            <a
+              style={{
+                boxShadow: "none",
+              }}
+              href="https://twitter.com/rpf_nob"
+            >
+              <FontAwesomeIcon
+                style={{
+                  height: "1.5em",
+                  width: "1.5em",
+                  marginRight: "5",
+                }}
+                color="#3eaded"
+                icon={faTwitter}
+              />
+            </a>
+            <a
+              style={{
+                boxShadow: "none",
+              }}
+              href="https://github.com/N-Iwata"
+            >
+              <FontAwesomeIcon
+                style={{
+                  height: "1.5em",
+                  width: "1.5em",
+                  marginRight: "5",
+                }}
+                color="#333"
+                icon={faGithub}
+              />
+            </a>
+          </div>
+          <div
+            style={{
+              position: "absolute",
+              width: "100%",
+              top: "-4px",
+              left: "56px",
+            }}
+          >
+            <a
+              style={{
+                boxShadow: "none",
+              }}
+              href="https://qiita.com/rpf-nob"
+            >
+              <img
+                src={image}
+                alt="Qiita"
+                style={{
+                  height: "2em",
+                  width: "2em",
+                }}
+              />
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
