@@ -25,7 +25,7 @@ hero: ./hero.png
 [gatsby-plugin-sharp]と[gatsby-transformer-sharp]も必要なので、インストールされていなかったらインストールしてください。<br>
 今回はインストールされていたので、省略しています。
 
-```cmd:title=コマンド
+```
 npm install --save gatsby-image
 ```
 

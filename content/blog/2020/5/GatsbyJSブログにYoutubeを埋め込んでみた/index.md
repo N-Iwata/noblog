@@ -22,7 +22,7 @@ hero: ./hero.png
 
 以下コマンドで[gatsby-remark-embed-youtube]をインストールします。<br>
 
-```cmd:title=コマンド
+```
 npm install --save gatsby-remark-embed-youtube
 ```
 
