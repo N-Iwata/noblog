@@ -22,7 +22,7 @@ hero: ./hero.png
 
 以下コマンドで[react-share]をインストールします。<br>
 
-```title=コマンド
+```
 npm install --save react-share
 ```
 

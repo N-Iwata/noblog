@@ -45,7 +45,9 @@ const BlogIndex = ({ data, location }) => {
                     }}
                   />
                   <div className="posts_more">
-                    <Link to={node.fields.slug}>続きを読む＞</Link>
+                    <Link className="posts__more__a" to={node.fields.slug}>
+                      続きを読む＞
+                    </Link>
                   </div>
                 </section>
               </article>
