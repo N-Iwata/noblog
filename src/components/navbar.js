@@ -14,9 +14,9 @@ const NavBar = () => {
         <li className="navbar__li">
           <Link to="/contact">CONTACT</Link>
         </li>
-        <li className="navbar__li">
+        {/* <li className="navbar__li">
           <Link to="/privacy_policy">PRIVACY POLICY</Link>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );
