@@ -113,7 +113,7 @@ const Bio = () => {
           <div
             style={{
               position: "absolute",
-              width: "100%",
+              width: "32px",
               top: "-4px",
               left: "56px",
             }}

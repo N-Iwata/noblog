@@ -32,8 +32,8 @@ body {
 
 .posts__image {
   margin-bottom: 5px;
-  -webkit-transition: all ease-in 0.5s;
-  transition: all ease-in 0.5s;
+  -webkit-transition: all ease-in 0.2s;
+  transition: all ease-in 0.2s;
   position: absolute;
   overflow: hidden;
   top: 0;
@@ -43,8 +43,8 @@ body {
 }
 
 .posts__image:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
   overflow: hidden;
 }
 
@@ -194,6 +194,20 @@ body {
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+.navbar .checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+.navbar #check {
+  display: none;
+}
+
 .navbar__ul {
   float: right;
   margin-right: 20px;
@@ -254,5 +268,40 @@ body {
   border: 1px solid #ddd;
   border-radius: 5px;
   background-color: #f2f2f2;
+}
+
+@media (max-width: 767px) {
+  .navbar .checkbtn {
+    display: block;
+    line-height: 70px;
+    margin-right: 20px;
+  }
+  .navbar__ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 60px;
+    left: -100%;
+    text-align: center;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    margin: 0;
+  }
+  .navbar__li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  .navbar__li a {
+    font-size: 20px;
+  }
+  .navbar__li a:hover {
+    background: none;
+    color: #0082e6;
+  }
+  .navbar #check:checked ~ ul {
+    left: 0%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

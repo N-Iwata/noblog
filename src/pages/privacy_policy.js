@@ -12,7 +12,7 @@ const PrivacyPolicy = ({ data, location }) => {
       <Layout location={location} title={siteTitle} author={author}>
         <SEO title="About" />
         <h1>Privacy Policy</h1>
-        <h2>広告の配信について</h2>
+        {/* <h2>広告の配信について</h2>
         <p>
           当サイトは第三者配信の広告サービス「Google
           Adsenseグーグルアドセンス」を利用しています。
@@ -22,7 +22,7 @@ const PrivacyPolicy = ({ data, location }) => {
             「広告 – ポリシーと規約 – Google」
           </a>
           をご覧ください。
-        </p>
+        </p> */}
         <h2>アクセス解析ツールについて</h2>
         <p>
           当サイトでは、Googleによるアクセス解析ツール「Googleアナリティクス」を利用しています。
