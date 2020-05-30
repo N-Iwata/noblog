@@ -3,6 +3,8 @@ import { Link, graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import Bio from "../components/bio";
+import { rhythm } from "../utils/typography";
 import image from "../images/about.png";
 
 const Aboutpage = ({ data, location }) => {
@@ -19,16 +21,25 @@ const Aboutpage = ({ data, location }) => {
           <b>麻雀と芝生大好きおじさん</b>と申します！！
         </p>
         <p>
-          最近はweb開発系の仕事をメインにしていますが、以前は遊技機（パチスロ）の開発をしていました。
-          また、現在は個人開発も隙間時間におこなっていたり、機械学習とかデータ分析などにも興味があるので勉強しています。
+          以前は遊技機（パチスロ）の開発をしていましたが、最近はweb開発系の仕事をメインにしています。
+          また、機械学習とかデータ分析などにも興味があるので勉強しています。
         </p>
         <p>
-          このブログは主に趣味の麻雀と芝生管理の話と、GatsbyJSでのブログのカスタマイズや個人開発している際の気づきや手順、機械学習やデータ分析などを勉強している際に学んだことなどをメインに書いていきますが、
-          買ったもののレビューや時事ネタなどいろいろなものを発信していけたらと思います。
+          このブログは<b>web開発で学んだことに関する技術やネタ</b>
+          をメインに発信し、趣味の麻雀と芝生管理の話や、機械学習やデータ分析など、
+          また買ったもののレビューや時事ネタなどいろいろなものサブ的に発信していけたらと思います。
         </p>
         <p>今後ともどうぞよろしくお願いします！！</p>
         <span>[自宅の芝生(2019年8月撮影)]</span>
         <img src={image} alt="自宅の芝生(2019年8月撮影)" />
+        <hr
+          style={{
+            marginBottom: rhythm(1),
+          }}
+        />
+        <footer>
+          <Bio />
+        </footer>
         <Link to="/">← Home</Link>
       </Layout>
     </div>

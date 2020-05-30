@@ -3,7 +3,8 @@ import { Link, graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-//import image from "../images/about.png";
+import Bio from "../components/bio";
+import { rhythm } from "../utils/typography";
 
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
@@ -51,9 +52,9 @@ const Contact = ({ data, location }) => {
         <SEO title="Contact" />
         <h1>Contact</h1>
         <p>
-          各種お問い合わせはこちらのフォームよりお願いいたします。
+          各種お問い合わせはTwitterのDM、またはこちらのフォームよりお願いいたします。
           <br></br>
-          お名前・メールアドレス・件名・問い合わせ内容を記載して送信ボタンをクリックしてください。
+          お名前・メールアドレス・件名・お問い合わせ内容を記載して送信ボタンをクリックしてください。
         </p>
         <div className="contact">
           <form
@@ -105,7 +106,7 @@ const Contact = ({ data, location }) => {
                 id="message"
                 className="contact__field"
                 name="message"
-                label="問い合わせ内容"
+                label="お問い合わせ内容"
                 multiline
                 rows={4}
                 variant="outlined"
@@ -125,6 +126,14 @@ const Contact = ({ data, location }) => {
             </div>
           </form>
         </div>
+        <hr
+          style={{
+            marginBottom: rhythm(1),
+          }}
+        />
+        <footer>
+          <Bio />
+        </footer>
         <Link to="/">← Home</Link>
       </Layout>
     </div>

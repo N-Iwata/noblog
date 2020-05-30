@@ -7,8 +7,7 @@ body {
 }
 
 .posts {
-  border: 2px dotted #eee;
-  border-radius: 20px;
+  border-bottom: 1px solid #fc1ab1;
   padding: 20px;
   margin-bottom: 10px;
 }
@@ -50,6 +49,7 @@ body {
 
 .posts__desc {
   margin-bottom: 5px;
+  float: left;
 }
 
 .posts__more__a {

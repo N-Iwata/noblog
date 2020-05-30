@@ -3,6 +3,8 @@ import { Link, graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import Bio from "../components/bio";
+import { rhythm } from "../utils/typography";
 
 const PrivacyPolicy = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
@@ -43,6 +45,14 @@ const PrivacyPolicy = ({ data, location }) => {
         <p>
           当サイトに掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。
         </p>
+        <hr
+          style={{
+            marginBottom: rhythm(1),
+          }}
+        />
+        <footer>
+          <Bio />
+        </footer>
         <Link to="/">← Home</Link>
       </Layout>
     </div>
