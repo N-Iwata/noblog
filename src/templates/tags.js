@@ -54,7 +54,7 @@ const Tags = ({ pageContext, data, location }) => {
                   />
                   <div className="posts_more">
                     <Link className="posts__more__a" to={node.fields.slug}>
-                      続きを読む
+                      続きを読む＞
                     </Link>
                   </div>
                 </section>

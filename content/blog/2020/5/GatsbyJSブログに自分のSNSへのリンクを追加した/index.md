@@ -64,7 +64,7 @@ class Bio extends React.Component {
             />
           </a>
         </div>
-        <div style={{ position: "absolute", width: "100%", top: "-4px", left: "56px", }} >
+        <div style={{ position: "absolute", width: "32px", top: "-4px", left: "56px", }} >
           <a style={{ boxShadow: "none", }} href="https://qiita.com/rpf-nob" >
             <img
               src={image}
