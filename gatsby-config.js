@@ -7,6 +7,7 @@ module.exports = {
     },
     description: `東京上野で働くアラフォーエンジニアの雑記ブログです。`,
     siteUrl: `https://rpf-noblog.com/`,
+    image: "/images/about.png",
     social: {
       twitter: `rpf_nob`,
     },
