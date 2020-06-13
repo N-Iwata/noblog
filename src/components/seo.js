@@ -10,6 +10,8 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
+import ogp_image from "../images/about.png";
+
 const SEO = ({ description, lang, meta, title, image }) => {
   const { site } = useStaticQuery(
     graphql`
@@ -19,7 +21,6 @@ const SEO = ({ description, lang, meta, title, image }) => {
             title
             description
             siteUrl
-            defaultImage: image
             social {
               twitter
             }
@@ -57,7 +58,7 @@ const SEO = ({ description, lang, meta, title, image }) => {
         },
         {
           property: "og:image",
-          content: `${siteUrl}${image || defaultImage}`,
+          content: `${siteUrl}${image}`,
         },
         {
           property: `og:type`,
@@ -88,7 +89,7 @@ SEO.defaultProps = {
   lang: `ja`,
   meta: [],
   description: ``,
-  image: null,
+  image: ogp_image,
 };
 
 SEO.propTypes = {
