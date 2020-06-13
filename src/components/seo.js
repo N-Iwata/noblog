@@ -10,7 +10,7 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-import ogp_image from "../images/about.png";
+import ogp_image from "../images/RPF_NoBlog.png";
 
 const SEO = ({ description, lang, meta, title, image }) => {
   const { site } = useStaticQuery(
@@ -31,11 +31,10 @@ const SEO = ({ description, lang, meta, title, image }) => {
   );
 
   const metaDescription = description || site.siteMetadata.description;
-  const defaultImage = site.siteMetadata.defaultImage;
   const siteUrl = site.siteMetadata.siteUrl;
+  const defaultImage = ogp_image;
 
-  console.log(site);
-
+  const img = `${siteUrl}${defaultImage}`;
   return (
     <Helmet
       htmlAttributes={{
@@ -58,7 +57,7 @@ const SEO = ({ description, lang, meta, title, image }) => {
         },
         {
           property: "og:image",
-          content: `${siteUrl}${image}`,
+          content: img,
         },
         {
           property: `og:type`,
@@ -89,7 +88,7 @@ SEO.defaultProps = {
   lang: `ja`,
   meta: [],
   description: ``,
-  image: ogp_image,
+  image: null,
 };
 
 SEO.propTypes = {

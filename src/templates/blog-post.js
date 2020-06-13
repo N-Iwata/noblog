@@ -16,14 +16,12 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const siteUrl = data.site.siteMetadata.siteUrl;
   const author = data.site.siteMetadata.author.name;
   const { slug, previous, next } = pageContext;
-  console.log(post.frontmatter.hero.relativePath);
   return (
     <div>
       <Layout location={location} title={siteTitle} author={author}>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
-          image={post.frontmatter.hero.relativePath}
         />
         <article>
           <header>
@@ -133,7 +131,6 @@ export const pageQuery = graphql`
               ...GatsbyImageSharpFluid
             }
           }
-          relativePath
         }
       }
     }
