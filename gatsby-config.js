@@ -3,11 +3,10 @@ module.exports = {
     title: `RPF NoBlog`,
     author: {
       name: `麻雀と芝生大好きエンジニアおじさん`,
-      summary: `東京上野で働く名古屋生まれの麻雀と芝生管理が大好きな職業不詳アラフォーエンジニア`,
+      summary: `東京上野で働く名古屋生まれの麻雀と芝生を愛するアラフォーエンジニア`,
     },
     description: `東京上野で働くアラフォーエンジニアの雑記ブログです。`,
     siteUrl: `https://rpf-noblog.com/`,
-    image: "/images/about.png",
     social: {
       twitter: `rpf_nob`,
     },
