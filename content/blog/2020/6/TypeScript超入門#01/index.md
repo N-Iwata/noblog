@@ -42,7 +42,7 @@ TypeScriptはMicrosoft社によって開発され、2012年10月頃に外部公�
 > TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
 
 日本語に訳すと以下のようになります。
-> TypescriptはプレーンなJavascriptにコンパイルされるJavascripの型付きのスーパーセット（部分集合）です。
+> TypescriptはプレーンなJavascriptにコンパイルされるJavascripの型付きのスーパーセット（上位集合）です。
 
 つまり下の画像のような関係性ということになります。<br>
 型(Type)の概念をJavaScriptに取り入れて拡張したのが、TypeScriptというイメージですね。
