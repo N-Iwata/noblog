@@ -1,0 +1,327 @@
+---
+title: 【初心者向け】TypeScript超入門#01 
+date: "2020-06-17"
+description: エンジニアの皆さん（特にフロントエンドエンジニア）、TypeScriptを使っていますか？？使っていない人はこんな疑問持ってませんか？？
+slug: 2020-06-17/start-typescript-01
+tags: [TypeScript]
+hero: ./hero.png
+---
+
+## はじめに 
+
+おはようございます！こんにちは！こんばんは！
+
+麻雀と芝生大好きエンジニアおじさん(@rpf_nob)です。
+
+エンジニア（特にフロントエンドエンジニア）の皆さん、TypeScriptを使っていますか？？<br>使っていない人はこんな疑問持ってませんか？？
+
+* JavaScriptと何が違うの？
+* 何がそんなにいいの？
+* 簡単？
+
+というわけで今回から、【TypeScript超入門】としまして、上記のような疑問を持っていた**私自身**がTypeScriptについて学んだこと・調べたことをまとめて解説していきたいと思います。
+
+自分の備忘録的に書いていきますが、誰かの役に立てば幸いです。
+
+今回は以下5つで書いていきます！！
+
+* TypeScriptとは？
+* TypeScriptのメリット・デメリットは？
+* なぜ今TypeScript学習するのか？
+* 環境構築方法
+* もっと環境構築
+
+## TypeScriptとは？
+
+![画像5](img5.png)
+
+TypeScriptはMicrosoft社によって開発され、2012年10月頃に外部公開された、JavaScriptを拡張して作られたプログラミング言語です。
+
+[公式サイト](https://www.typescriptlang.org)には以下のように書かれています。
+
+> TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
+
+日本語に訳すと以下のようになります。
+> TypescriptはプレーンなJavascriptにコンパイルされるJavascripの型付きのスーパーセット（部分集合）です。
+
+つまり下の画像のような関係性ということになります。<br>
+型(Type)の概念をJavaScriptに取り入れて拡張したのが、TypeScriptというイメージですね。
+
+また、TypeScriptはJavaScriptにコンパイルされるので、JavaScriptが動く環境（ブラウザやNode.js）であれば問題なく使えます。
+
+![画像1](img1.png)
+
+## TypeScriptのメリット・デメリットは？
+
+![画像6](img6.png)
+
+メリット・デメリットについて解説していきます。
+
+### メリット
+
+#### 個人開発時
+
+まず、個人開発時におけるメリットですが、何といっても**型の概念**でしょう。
+
+[公式サイト](https://www.typescriptlang.org/index.html)にも以下のように書かれています。
+
+>Types enable JavaScript developers to use highly-productive development tools and practices like static checking and code refactoring when developing JavaScript applications.
+
+日本語に訳すと以下のようになります。
+
+> 型により、JavaScript開発者は、JavaScriptアプリケーションの開発時に、静的チェックやコードリファクタリングなどの生産性の高い開発ツールや手法を使用できます。
+
+簡単に言うと、コードを実行しなくても、コードを書いている最中に型をチェックしてくれてエラーを出してくれるツールを使用できるということですね。
+
+JavaScriptは動的型付け言語なので、数値が入っている変数に文字列を代入してもエラーにならないですし、静的チェックもできません。
+
+こういったエラーを事前にチェックできるということが最大のメリットということですね。
+
+#### チーム開発時
+
+また、多人数でのチーム開発時において、他者の作成したコードを修正したり、レビューしたりする時ありますよね。
+
+型があることによって、この変数がどういった値が入っているのかとか、この関数の戻り値はどういった値なのかが一目でわかるようになるので、ソースの可読性がかなり上がります。
+
+結果、ソースの可読性が上がることによって、開発の生産性やソースの保守性が上がります。
+
+#### まとめると
+
+* 事前にエラーをチェックでき、生産性と保守性が上がる！
+* 多人数チーム開発において、ソースの可読性が上がることによって、生産性と保守性が上がる！
+
+いいことずくめですね！！
+
+### デメリット
+
+あまりデメリットが思い浮かばなかったのですが、いろいろサイトを調べてみたところ以下の内容が多くがあげられていました。
+
+* 学習コストがかかる
+* 日本語の情報が少ない
+* JavaScriptより複雑さが増す
+* ・・・
+
+学習コストについては、個人的にはそれほど高くないように思えます。
+基本的には、JavaScriptを先に勉強していれば、型の概念の追加分だけですしね。
+
+日本語の情報が少ないことについては、他の言語やライブラリでも同じことが言えるので、しょうがないですよね。エンジニアなら英語のドキュメントを読めるスキルはあったほうがいいですね。
+
+## なぜ今TypeScript学習するのか？
+
+![画像4](img4.png)
+
+### Googleが社内標準言語へ
+
+2017年4月に開催された「Angular」のイベント「ng-conf 2017」でTypeScriptがGoogle社内の標準言語（フロントエンドにおける）に初めて採用されたことを発表しています。
+
+このことからもかなり将来性がある言語ということがわかりますね。
+
+[→参考にしたサイト](https://www.publickey1.jp/blog/17/googletypescriptng-conf_2017.html)
+
+### 世界的にアクティブユーザーの伸びがやばい
+
+下の図は[GitHubのMonthly Active Usersのグラフ](http://www.benfrederickson.com/ranking-programming-languages-by-github-users/)ですが、TypescriptはGoに続いて2位となっていて、急激に成長し、伸びていることがわかりますね。
+
+世界で伸びている言語は数年後に日本でも主流になることが予想されるので、学習すべき理由になりますよね。
+
+![画像2](img2.png)
+
+### フロントエンド開発においてはJavaScript一択
+
+webアプリケーション開発において、フロントエンド開発はJavaScript一択の状況であり、TypeScriptはJavascriptの弱いところを補い、JavaScriptと互換性がある。
+
+また、フロントエンドの3大フレームワーク（Reactはライブラリですが）のAngularJS・React・Vue.jsでも使用できます。
+
+このことからも今後TypeScriptの需要が伸びていくことが予想されています。
+
+### まとめると
+
+* 将来性がある
+* アクティブユーザーの伸びがすごい
+* フロントエンドではJavaScript一択
+
+上記のことから、今勉強しなければならない理由がわかりますね！
+
+## 環境構築方法
+
+![画像3](img3.png)
+
+ここからは環境構築からHello Worldまでを解説していきます。
+
+### Node.jsインストール
+
+[公式サイト](https://nodejs.org/ja/download/)からLTS版をインストールしてください。
+
+インストールが完了し、以下コマンドをターミナルで実行してバージョンが表示されれば、問題ありません。
+```
+$ node -v
+v12.15.0
+
+$ npm -v
+6.13.4
+```
+
+### package.jsonを生成する
+
+まずはpackage.jsonを作成します。適当なディレクトリに移動して、以下コマンドで作成します。ここでは-yをつけて全てデフォルトでいきます。
+
+```
+$ npm init -y
+```
+
+### TypeScriptインストール
+
+次にnpmを使用しTypescriptをインストールしていきます。<br>
+ここでは[--save-dev]をつけて、ローカル環境にインストールします。
+
+```
+$ npm install typescript --save-dev
+```
+
+インストールが完了し、以下コマンドをターミナルで実行してバージョンが表示されれば、問題ありません。
+
+ローカル環境にインストールした場合は[npx]をつけてやらないとコマンドが使えないので注意してください。node_modulesディレクトリ配下にあるコマンドを自動で検索してくれるものらしいです。
+
+```
+$ npx tsc -v
+Version 3.9.5
+```
+
+### tsconfig.jsonを生成する
+
+以下コマンドを実行すれば、tsconfig.jsonを生成できます。
+
+とりあえず生成したもののままで大丈夫でしょう。この辺りはプロジェクトによって変更してください。
+
+```
+$ npx tsc --init
+```
+
+### 動作確認する
+
+動作確認のためにとりあえずsrcディレクトリとTypeScriptファイルを作成します。
+
+```
+$ mkdir src
+$ touch src/01_hello-world.ts
+```
+
+ファイルができたらHello World!を出力するプログラムを以下のように書きます。
+
+```ts:title=src/01_hello-world.ts
+const message: string = "Hello World!";
+console.log(message);
+```
+
+ファイルを保存したら以下コマンドで、TypeScriptファイルをJavaScriptファイルにコンパイルできます。
+
+```
+$ npx tsc src/01_hello-world.ts
+```
+
+srcディレクトリに[01_hello-world.js]ができあがるので、以下コマンドで実行してみましょう。[Hello World!]と表示されればOKです！！
+
+```
+$ node src/01_hello-world.js
+Hello World!
+```
+
+## もっと環境構築
+
+動作確認はできましたが、コードに変更があるたびに[tsc]コマンドでコンパイルして、[node]コマンドで実行するのはめんどくさいですよね。
+
+ここではもっといい環境構築を解説していきます！
+
+### ts-nodeをインストール
+
+以下コマンドで、[ts-node]をインストールします。
+
+```
+$ npm install ts-node --save-dev
+```
+
+[ts-node]はTypeScriptからJavaScriptにコンパイルしたものをそのまま実行できます。<br>
+
+次のコマンドで試してみましょう。[Hellow World!]と出力されればOKです！
+ちなみに[01_hello-world.js]は作成されません。
+
+```
+$ npx ts-node src/01_hello-world.ts
+Hello World!
+```
+
+### ts-node-devをインストール
+
+[ts-node]で少し楽になりましたが、まだコード修正のたびにコマンドを実行しなければなりません。そこで登場するのが[ts-node-dev]パッケージです！
+
+以下コマンドで、[ts-node-dev]をインストールします。
+
+```
+$ npm install ts-node-dev --save-dev
+```
+
+パッケージのインストールが完了したら以下コマンドを実行します。<br>
+すると[Hello World!]がまずは出力されます。
+
+```
+$ npx ts-node-dev --respawn src/01_hello-world.ts
+Hello World!
+```
+
+では次に[src/01_hello-world.ts]を少し修正して保存してみましょう。
+
+```typescript{1}:title=src/01_hello-world.ts
+const message: string = "Hello Japan!";
+console.log(message);
+```
+
+保存した瞬間にコードの修正を反映して、実行されたことがわかりますね！！
+
+```
+Hello Japan!
+```
+
+これでコンパイル→実行までがだいぶ楽になりました！！<br>
+基本的には[ts-node-dev]で開発するといいと思います。
+
+### npm-scriptsに実行コマンドを追加
+
+最後に[ts-node-dev]を簡単に呼び出せるように[package.json]の[scripts]に実行コマンドを追加します。
+
+```js{3}:title=package.json
+"scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "dev": "ts-node-dev --respawn"
+}
+```
+
+これで以下コマンドで動作確認します。
+
+```
+$ npm run dev src/01_hello-world.ts
+```
+
+上と同じように出力されれば問題ありません。
+
+これでTypeScriptの環境構築が完了です！！
+
+### まとめ
+
+今回はTypeScriptを以下のように解説しました！！
+
+* TypeScriptとは？
+* TypeScriptのメリット・デメリットは？
+* なぜ今TypeScript学習するのか？
+* 環境構築方法
+* もっと環境構築
+
+TypeScriptをいつ学ぶの？？今でしょ！！！（古いっ！）<br>
+冗談はおいといて、今学ぶべき言語であることがお判りいただけたでしょうか？
+
+環境構築もそれほど大変ではないので、勉強もしやすいですね！
+
+今後は、TypeScriptの基本的な型の部分から高度な型まで解説するのと、Reactに適用した場合など解説していけたらと思っています。
+
+私自身も勉強中ですが、勉強しながらしっかりまとめていきますので、続きを見ていただければ幸いです。間違いとかありましたら、TwitterのDMかCONTACTページからお問い合わせしていただければと思います。
+
+最後まで見ていただきありがとうございました！！
