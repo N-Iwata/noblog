@@ -2,8 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `RPF NoBlog`,
     author: {
-      name: `麻雀と芝生大好きエンジニアおじさん`,
-      summary: `東京上野で働く名古屋生まれの麻雀と芝生を愛するアラフォーエンジニア`,
+      name: `麻雀と芝生大好きwebエンジニアおじさん`,
+      summary: `東京上野で働く名古屋生まれの麻雀と芝生と娘（妻も）を愛するアラフォーエンジニア`,
     },
     description: `東京上野で働くアラフォーエンジニアの雑記ブログです。`,
     siteUrl: `https://rpf-noblog.com/`,
