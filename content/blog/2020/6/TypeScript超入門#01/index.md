@@ -31,6 +31,8 @@ hero: ./hero.png
 * 環境構築方法
 * もっと環境構築
 
+GitHubのリポジトリは[こちら](https://github.com/N-Iwata/start-typescript)にあります。
+
 ## TypeScriptとは？
 
 ![画像5](img5.png)
@@ -325,3 +327,6 @@ TypeScriptをいつ学ぶの？？今でしょ！！！（古いっ！）<br>
 私自身も勉強中ですが、勉強しながらしっかりまとめていきますので、続きを見ていただければ幸いです。間違いとかありましたら、TwitterのDMかCONTACTページからお問い合わせしていただければと思います。
 
 最後まで見ていただきありがとうございました！！
+
+[【初心者向け】TypeScript超入門#01 概要説明~環境構築編](https://rpf-noblog.com/2020-06-17/start-typescript-01) ←今ここ<br>
+[【初心者向け】TypeScript超入門#02 基本的な型編](https://rpf-noblog.com/2020-06-17/start-typescript-02)
