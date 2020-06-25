@@ -15,13 +15,13 @@ hero: ./hero.png
 
 この記事はTypeScript超入門シリーズの第3回目として、TypeScriptの関数についてまとめて解説していきます！
 
-
 [【初心者向け】TypeScript超入門#01 概要説明~環境構築編](https://rpf-noblog.com/2020-06-17/start-typescript-01)<br>
 [【初心者向け】TypeScript超入門#02 基本的な型編](https://rpf-noblog.com/2020-06-22/start-typescript-02)<br>
 [【初心者向け】TypeScript超入門#03 関数編](https://rpf-noblog.com/2020-06-25/start-typescript-03) ←今ここ
 
 * 関数の基本的な書き方
-* パラメータ
+* パラメータ関連
+* オーバーロード
 
 GitHubのリポジトリは[こちら](https://github.com/N-Iwata/start-typescript)にあります。
 
@@ -93,7 +93,7 @@ function error(message: string): never {
 error("Error!");
 ```
 
-## パラメータ
+## パラメータ関連
 
 ### オプショナルパラメータ
 
