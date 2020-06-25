@@ -13,24 +13,12 @@ hero: ./hero.png
 
 麻雀と芝生大好きwebエンジニアおじさん(@rpf_nob)です。
 
-今回はTypeScriptの基本的な型についてまとめていきます！
+この記事はTypeScript超入門シリーズの第2回目として、TypeScriptの基本的な型についてまとめて解説していきます！
 
-* boolean型
-* number型
-* string型
-* array型
-* tuple型
-* any型
-* unknown型
-* void型
-* null/undefine型
-* never型
-* object型
-* 型エイリアスとinterface
-* intersection型（交差型）
-* union型（共用体型）
-* literal型
-* enum型（列挙型）
+[【初心者向け】TypeScript超入門#01 概要説明~環境構築編](https://rpf-noblog.com/2020-06-17/start-typescript-01)<br>
+[【初心者向け】TypeScript超入門#02 基本的な型編](https://rpf-noblog.com/2020-06-22/start-typescript-02) ←今ここ<br>
+[【初心者向け】TypeScript超入門#03 関数編](https://rpf-noblog.com/2020-06-25/start-typescript-03)
+
 
 GitHubのリポジトリは[こちら](https://github.com/N-Iwata/start-typescript)にあります。
 
@@ -431,11 +419,11 @@ console.log(Day3.Sun);  //→日曜日
 このあたりはあまり難しくないと思うので、理解はしやすいですね！！<br>
 実際にコードを書くときに調べながらやれば、簡単に覚えるられると思います。
 
-次回は型推論と型安全についてまとめていきたいと思います。
+次回は関数についてまとめていきたいと思います。
 
 最後まで見ていただきありがとうございました！！
 
 [【初心者向け】TypeScript超入門#01 概要説明~環境構築編](https://rpf-noblog.com/2020-06-17/start-typescript-01)<br>
-[【初心者向け】TypeScript超入門#02 基本的な型編](https://rpf-noblog.com/2020-06-17/start-typescript-02) ←今ここ
-
+[【初心者向け】TypeScript超入門#02 基本的な型編](https://rpf-noblog.com/2020-06-22/start-typescript-02) ←今ここ<br>
+[【初心者向け】TypeScript超入門#03 関数編](https://rpf-noblog.com/2020-06-25/start-typescript-03)
 

@@ -329,4 +329,5 @@ TypeScriptをいつ学ぶの？？今でしょ！！！（古いっ！）<br>
 最後まで見ていただきありがとうございました！！
 
 [【初心者向け】TypeScript超入門#01 概要説明~環境構築編](https://rpf-noblog.com/2020-06-17/start-typescript-01) ←今ここ<br>
-[【初心者向け】TypeScript超入門#02 基本的な型編](https://rpf-noblog.com/2020-06-17/start-typescript-02)
+[【初心者向け】TypeScript超入門#02 基本的な型編](https://rpf-noblog.com/2020-06-22/start-typescript-02)<br>
+[【初心者向け】TypeScript超入門#03 関数編](https://rpf-noblog.com/2020-06-25/start-typescript-03)
