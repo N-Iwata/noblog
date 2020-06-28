@@ -1,9 +1,9 @@
 ---
-title: 【初心者向け】TypeScript超入門#03
+title: 【初心者向け】TypeScript超入門#03 関数編
 date: "2020-06-25"
-description: 今回はTypeScriptの関数について解説します。
+description: この記事はTypeScript超入門シリーズの第3回目として、TypeScriptの関数についてまとめて解説していきます！
 slug: 2020-06-25/start-typescript-03
-tags: [TypeScript]
+tags: [TypeScript,TypeScript入門]
 hero: ./hero.png
 ---
 
@@ -17,7 +17,8 @@ hero: ./hero.png
 
 [【初心者向け】TypeScript超入門#01 概要説明~環境構築編](https://rpf-noblog.com/2020-06-17/start-typescript-01)<br>
 [【初心者向け】TypeScript超入門#02 基本的な型編](https://rpf-noblog.com/2020-06-22/start-typescript-02)<br>
-[【初心者向け】TypeScript超入門#03 関数編](https://rpf-noblog.com/2020-06-25/start-typescript-03) ←今ここ
+[【初心者向け】TypeScript超入門#03 関数編](https://rpf-noblog.com/2020-06-25/start-typescript-03) ←今ここ<br>
+[【初心者向け】TypeScript超入門#04 クラス編](https://rpf-noblog.com/2020-06-28/start-typescript-04)
 
 * 関数の基本的な書き方
 * パラメータ関連
@@ -190,6 +191,6 @@ console.log(sum7(false)); //→NG
 
 [【初心者向け】TypeScript超入門#01 概要説明~環境構築編](https://rpf-noblog.com/2020-06-17/start-typescript-01)<br>
 [【初心者向け】TypeScript超入門#02 基本的な型編](https://rpf-noblog.com/2020-06-22/start-typescript-02) <br>
-[【初心者向け】TypeScript超入門#03 関数編](https://rpf-noblog.com/2020-06-25/start-typescript-03) ←今ここ
-
+[【初心者向け】TypeScript超入門#03 関数編](https://rpf-noblog.com/2020-06-25/start-typescript-03) ←今ここ<br>
+[【初心者向け】TypeScript超入門#04 クラス編](https://rpf-noblog.com/2020-06-28/start-typescript-04)
 

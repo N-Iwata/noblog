@@ -1,9 +1,9 @@
 ---
-title: 【初心者向け】TypeScript超入門#01 
+title: 【初心者向け】TypeScript超入門#01 概要説明~環境構築編
 date: "2020-06-17"
 description: エンジニアの皆さん（特にフロントエンドエンジニア）、TypeScriptを使っていますか？？使っていない人はこんな疑問持ってませんか？？
 slug: 2020-06-17/start-typescript-01
-tags: [TypeScript]
+tags: [TypeScript,TypeScript入門]
 hero: ./hero.png
 ---
 
@@ -84,6 +84,8 @@ JavaScriptは動的型付け言語なので、数値が入っている変数に�
 また、多人数でのチーム開発時において、他者の作成したコードを修正したり、レビューしたりする時ありますよね。
 
 型があることによって、この変数がどういった値が入っているのかとか、この関数の戻り値はどういった値なのかが一目でわかるようになるので、ソースの可読性がかなり上がります。
+
+言うなれば、ソース自体がドキュメントになるということですね。
 
 結果、ソースの可読性が上がることによって、開発の生産性やソースの保守性が上がります。
 
@@ -330,4 +332,5 @@ TypeScriptをいつ学ぶの？？今でしょ！！！（古いっ！）<br>
 
 [【初心者向け】TypeScript超入門#01 概要説明~環境構築編](https://rpf-noblog.com/2020-06-17/start-typescript-01) ←今ここ<br>
 [【初心者向け】TypeScript超入門#02 基本的な型編](https://rpf-noblog.com/2020-06-22/start-typescript-02)<br>
-[【初心者向け】TypeScript超入門#03 関数編](https://rpf-noblog.com/2020-06-25/start-typescript-03)
+[【初心者向け】TypeScript超入門#03 関数編](https://rpf-noblog.com/2020-06-25/start-typescript-03)<br>
+[【初心者向け】TypeScript超入門#04 クラス編](https://rpf-noblog.com/2020-06-28/start-typescript-04)
