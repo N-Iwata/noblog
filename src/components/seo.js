@@ -32,9 +32,10 @@ const SEO = ({ description, lang, meta, title, image }) => {
 
   const metaDescription = description || site.siteMetadata.description;
   const siteUrl = site.siteMetadata.siteUrl;
-  const defaultImage = ogp_image;
+  const defaultImage = `${siteUrl}${ogp_image}`;
+  console.log("defaultImage: ", defaultImage);
+  console.log("image: ", image);
 
-  const img = `${siteUrl}${defaultImage}`;
   return (
     <Helmet
       htmlAttributes={{
@@ -57,7 +58,7 @@ const SEO = ({ description, lang, meta, title, image }) => {
         },
         {
           property: "og:image",
-          content: img,
+          content: image || defaultImage,
         },
         {
           property: `og:type`,

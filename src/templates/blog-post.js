@@ -16,12 +16,16 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const siteUrl = data.site.siteMetadata.siteUrl;
   const author = data.site.siteMetadata.author.name;
   const { slug, previous, next } = pageContext;
+
+  const hero = post.frontmatter.hero.childImageSharp.fluid.src;
+  const image = `${siteUrl}${hero}`;
   return (
     <div>
       <Layout location={location} title={siteTitle} author={author}>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
+          image={image}
         />
         <article>
           <header>
@@ -51,10 +55,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             />
           </div>
           <Toc data={data.markdownRemark.tableOfContents} />
-          <section
-            className="blog-section"
-            dangerouslySetInnerHTML={{ __html: post.html }}
-          />
+          <section className="blog-section" dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr
             style={{
               marginBottom: rhythm(1),
