@@ -18,7 +18,8 @@ hero: ./hero.png
 [【初心者向け】TypeScript超入門#01 概要説明~環境構築編](https://rpf-noblog.com/2020-06-17/start-typescript-01)<br>
 [【初心者向け】TypeScript超入門#02 基本的な型編](https://rpf-noblog.com/2020-06-22/start-typescript-02)<br>
 [【初心者向け】TypeScript超入門#03 関数編](https://rpf-noblog.com/2020-06-25/start-typescript-03)<br>
-[【初心者向け】TypeScript超入門#04 クラス編](https://rpf-noblog.com/2020-06-28/start-typescript-04) ←今ここ
+[【初心者向け】TypeScript超入門#04 クラス編](https://rpf-noblog.com/2020-06-28/start-typescript-04) ←今ここ<br>
+[【初心者向け】TypeScript超入門#05 ジェネリクス編](https://rpf-noblog.com/2020-07-05/start-typescript-05)
 
 * 基本的なクラスの書き方
 * クラスメンバー修飾子（アクセシビリティ）
@@ -308,13 +309,14 @@ otani.pitching(); //→ピッチング！
 
 クラスはオブジェクト指向プログラミングの柱みたいなものなので、しっかり理解したいですね！！
 
-次回は型推論についてまとめていきたいと思います。
+次回はジェネリクスについてまとめていきたいと思います。
 
 最後まで見ていただきありがとうございました！！
 
 [【初心者向け】TypeScript超入門#01 概要説明~環境構築編](https://rpf-noblog.com/2020-06-17/start-typescript-01)<br>
 [【初心者向け】TypeScript超入門#02 基本的な型編](https://rpf-noblog.com/2020-06-22/start-typescript-02)<br>
 [【初心者向け】TypeScript超入門#03 関数編](https://rpf-noblog.com/2020-06-25/start-typescript-03)<br>
-[【初心者向け】TypeScript超入門#04 クラス編](https://rpf-noblog.com/2020-06-28/start-typescript-04) ←今ここ
+[【初心者向け】TypeScript超入門#04 クラス編](https://rpf-noblog.com/2020-06-28/start-typescript-04) ←今ここ<br>
+[【初心者向け】TypeScript超入門#05 ジェネリクス編](https://rpf-noblog.com/2020-07-05/start-typescript-05)
 
 
