@@ -97,9 +97,9 @@ console.log(echo2<boolean>(false)); //false
 
 ### extendsによる制約
 
-[extends]を付与することで、ジェネリクスに指定できる型を制約することができます。
+**extends**を付与することで、ジェネリクスに指定できる型を制約することができます。
 
-次の例ではジェネリクスに指定できる型を[string型]のみに制約をつけているため、[number型]や[boolean型]は指定できません。
+次の例ではジェネリクスに指定できる型を**string型**のみに制約をつけているため、**number型**や**boolean型**は指定できません。
 
 ```ts:title=src/05_generics-types.ts
 const echo3 = <T extends string>(prm: T): T => {
@@ -110,7 +110,7 @@ console.log(echo3<number>(32)); //NG→型 'number' は制約 'string' を満た
 console.log(echo3<boolean>(false)); //NG→型 'number' は制約 'string' を満たしていません。
 ```
 
-複数に制約を付けたい場合は`string | number`のように共用型にします。
+複数に制約を付けたい場合は**string | number**のように共用型にします。
 
 ```ts:title=src/05_generics-types.ts
 const echo4 = <T extends string | number>(prm: T): T => {
@@ -138,7 +138,7 @@ console.log(echo5({ message: "Hello", id: 32 }, "message"));  //{ message: 'Hell
 
 関数定義にジェネリクスが含まれていても、実行時の型指定は必須ではなく、省略していてもパラメータの値から推論されて実行することができます。
 
-以下のように、直接文字列をパラメータとして渡すと、`echo`関数はその文字列リテラル型に型推論され、オブジェクトとしてパラメータを渡すと、[string型]に型推論されていることがわかります。
+以下のように、直接文字列をパラメータとして渡すと、**echo**関数はその文字列リテラル型に型推論され、オブジェクトとしてパラメータを渡すと、**string型**に型推論されていることがわかります。
 
 ```ts:title=src/05_generics-types.ts
 console.log(echo("Hello")); //Hello
@@ -156,7 +156,7 @@ console.log(echo({ value: "Hello" }));
 
 ## クラスのジェネリクス
 
-クラスの宣言にジェネリクスを使用すると、コンストラクターの引数の型を制約することができます。次の例ではインスタンス生成時に[string型]と[number型]の引数をしていできます。
+クラスの宣言にジェネリクスを使用すると、コンストラクターの引数の型を制約することができます。次の例ではインスタンス生成時に**string型**と**number型**の引数をしていできます。
 
 ```ts:title=src/05_generics-types.ts
 class Echo<T extends string | number> {

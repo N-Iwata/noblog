@@ -67,7 +67,7 @@ body {
     margin-bottom: 30px;
     position: relative;
     border-left: 6px solid #fc1ab1;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   }
 
   & h3 {
@@ -99,6 +99,10 @@ body {
       border-image: linear-gradient(to right, #f2f2f2 0%, #fc1ab1 100%);
       border-image-slice: 1;
     }
+  }
+
+  & strong {
+    background: linear-gradient(transparent 60%, #f86eca 60%) !important;
   }
 
   blockquote {
@@ -144,12 +148,15 @@ body {
 .toc {
   background-color: #f2f2f2;
   padding: 10px;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  margin: 0 auto;
 
   &__title {
     margin: 0;
     margin-bottom: 10px;
     padding: 5px;
+    text-align: center;
   }
 
   &__content {
@@ -162,6 +169,12 @@ body {
 
         & a {
           color: black;
+          box-shadow: none;
+          transition: ease 0.3s all;
+
+          &:hover {
+            color: #fc1ab1;
+          }
         }
       }
     }
@@ -252,14 +265,6 @@ body {
   padding-right: 1em;
   padding-left: 10px;
   border-left: 6px solid #fc1ab1;
-
-  // margin-left: -62px;
-  // padding-left: 56px;
-  // margin-right: -1em;
-  // margin-left: -1em;
-  // padding-right: 1em;
-  // padding-left: 0.75em;
-  // border-left: 0.25em solid #f99;
 }
 .gatsby-resp-image-background-image {
   border-radius: 5px;
@@ -272,6 +277,15 @@ body {
 }
 
 @media (max-width: 767px) {
+  .blog-section {
+    & h2 {
+      font-size: 1.2em;
+    }
+
+    & h3 {
+      font-size: 1.1em;
+    }
+  }
   .navbar {
     .checkbtn {
       display: block;

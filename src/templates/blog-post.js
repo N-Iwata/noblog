@@ -33,6 +33,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               style={{
                 marginTop: rhythm(1),
                 marginBottom: 0,
+                fontSize: "2em",
               }}
             >
               {post.frontmatter.title}

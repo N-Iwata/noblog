@@ -77,7 +77,7 @@ console.log(sum3(5, 6));  //→11
 
 ### 値を返さない関数
 
-前回の[void型]の時に少し解説しましたが、値を返さない関数には[void型]を指定します。
+前回の**void型**の時に少し解説しましたが、値を返さない関数には**void型**を指定します。
 
 ```ts:title=src/02_basic-types.ts
 function logger(message: string): void {
@@ -86,7 +86,7 @@ function logger(message: string): void {
 logger("Hello World!");
 ```
 
-また、前回の[never型]の時に少し解説しましたが、エラーを投げるだけの関数など、戻り値を得られない関数には[never型]を指定します。
+また、前回の**never型**の時に少し解説しましたが、エラーを投げるだけの関数など、戻り値を得られない関数には**never型**を指定します。
 
 ```ts:title=src/02_basic-types.ts
 function error(message: string): never {

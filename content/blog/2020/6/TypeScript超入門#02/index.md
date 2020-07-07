@@ -25,9 +25,9 @@ GitHubのリポジトリは[こちら](https://github.com/N-Iwata/start-typescri
 
 ## boolean型
 
-[boolean型]は真偽値を格納するデータ型であり、取りうる値は[false]と[true]の二つです。
+**boolean型**は真偽値を格納するデータ型であり、取りうる値は**false**と**true**の二つです。
 
-基本的にはJavaScriptでの変数宣言に[: boolean]と追記するだけで宣言できます。
+基本的にはJavaScriptでの変数宣言に**[: boolean]**と追記するだけで宣言できます。
 
 ```ts:title=src/02_basic-types.ts
 let isOpen: boolean = false;
@@ -37,7 +37,7 @@ isOpen = true;
 console.log(isOpen); //→true
 ```
 
-[false]と[true]の2つ以外のデータを代入するとエラーになります。
+**false**と**true**の2つ以外のデータを代入するとエラーになります。
 
 ```ts:title=src/02_basic-types.ts
 isOpen = 1;
@@ -51,7 +51,7 @@ isOpen = "Hello world";
 
 ## number型
 
-[number型]は浮動小数点値を格納するデータ型です。<br>
+**number型**は浮動小数点値を格納するデータ型です。<br>
 以下4つがサポートされています。
 
 * 2進数
@@ -84,7 +84,7 @@ console.log(counter); //→15
 
 ## string型
 
-[string型]は文字列を格納するデータ型です。<br>
+**string型**は文字列を格納するデータ型です。<br>
 JavaScriptと同じように二重引用符(")、一重引用符(')又はバッククォート(`)で囲みます。
 
 ```ts:title=src/02_basic-types.ts
@@ -100,7 +100,7 @@ console.log(message); //→Hello My Name is Mike
 
 ## array型
 
-[array型]は配列を格納するデータ型です。<br>
+**array型**は配列を格納するデータ型です。<br>
 
 ```ts:title=src/02_basic-types.ts
 let counters: number[] = [0, 1, 2, 3, 4];
@@ -135,7 +135,7 @@ console.log(array); //→[ 0, false, 'Tom' ]
 
 ## tuple型
 
-[tuple型]は固定数の要素の型がわかっている配列を表現するデータ型です。<br>
+**tuple型**は固定数の要素の型がわかっている配列を表現するデータ型です。<br>
 
 ```ts:title=src/02_basic-types.ts
 let profile: [string, number] = ["Tom", 20];
@@ -152,12 +152,12 @@ profile = [2, "Tom"];
 
 ## any型
 
-[any型]は型の不明な変数を扱うことができるデータ型です。
+**any型**は型の不明な変数を扱うことができるデータ型です。
 
 * JavaScriptのコードをTypeScriptに置き換える時
 * APIからデータを取得する時
 
-などにおいてコンパイルを通過させる時には有効ですが、TypeScriptのメリットを享受できません。ですので、最終的には[any]型の現れない、型安全なコードを書くようにしましょう。
+などにおいてコンパイルを通過させる時には有効ですが、TypeScriptのメリットを享受できません。ですので、最終的には**any型**の現れない、型安全なコードを書くようにしましょう。
 
 ```ts:title=src/02_basic-types.ts
 let anyVariable: any = 0;
@@ -172,9 +172,9 @@ console.log(anyVariable); //→false
 
 ## unknown型
 
-[unknown型]は[any型]に似ていますが、型安全な[any]を表したいときに使用します。
+**unknown型**は**any型**に似ていますが、型安全な**any型**を表したいときに使用します。
 
-数値を返す[getAge]関数の戻り値を[any型]と[unknown型]で受け取った場合に、その値にさらに10を加算する処理をする場合に[unknown型]だとエラーになります。
+数値を返すgetAge]関数の戻り値を[any型]と[unknown型]で受け取った場合に、その値にさらに10を加算する処理をする場合に[unknown型]だとエラーになります。
 
 ```ts:title=src/02_basic-types.ts
 const getAge = (): number => 25;
@@ -185,7 +185,7 @@ console.log(ageUnknown + 10); //→NG
 // オブジェクト型は 'unknown' です。
 ```
 
-以下のようにタイプガードをしてあげれば、実行することができます。
+以下のように**タイプガード**をしてあげれば、実行することができます。
 
 ```ts:title=src/02_basic-types.ts
 if( typeof ageUnknown === "number"){
@@ -195,7 +195,7 @@ if( typeof ageUnknown === "number"){
 
 ## void型
 
-[void型]は型をないことを表し、通常は値を返さない関数の戻り値の型として利用します。
+**void型**は型をないことを表し、通常は値を返さない関数の戻り値の型として利用します。
 
 ```ts:title=src/02_basic-types.ts
 function logger(message: string): void {
@@ -204,11 +204,11 @@ function logger(message: string): void {
 logger("Hello World!");
 ```
 
-変数に[void型]を使用した場合は、[undefined]しか代入できません。
+変数に**void型**を使用した場合は、**undefined**しか代入できません。
 
 ## null/undefine型
 
-[null型]と[undefined型]も[void型]と同じように、単体ではあまり役に立ちません。
+**null型**と**undefined型**も**void型**と同じように、単体ではあまり役に立ちません。
 
 ```ts:title=src/02_basic-types.ts
 let u: undefined = undefined;
@@ -220,11 +220,11 @@ console.log(n); //→null
 
 デフォルト設定では[null]と[undefined]は全ての型のサブタイプであり、全ての型で代入できます。
 
-ただし、[--strictNullChecks]をtrueに設定すると、[null]と[undefined]は[void型]と[null型]・[undefined型]のどちらかのみ代入できます。
+ただし、**[--strictNullChecks]**をtrueに設定すると、[null]と[undefined]は[void型]と[null型]・[undefined型]のどちらかのみ代入できます。
 
 ## never型
 
-[never型]は発生しえない値の型を表します。次のようにエラーを投げるだけの関数など、戻り値を得られない時に使用します。
+**never型**は発生しえない値の型を表します。次のようにエラーを投げるだけの関数など、戻り値を得られない時に使用します。
 
 ```ts:title=src/02_basic-types.ts
 function error(message: string): never {
@@ -235,7 +235,7 @@ error("Error!");
 
 ## object型
 
-[object型]はJavaScriptのオブジェクトを格納するデータ型です。
+**object型**はJavaScriptのオブジェクトを格納するデータ型です。
 
 次のコードで[object型]を宣言できます。
 
@@ -300,7 +300,7 @@ let profile4: Profile2 = {
 
 ## intersection型（交差型）
 
-[intersection型]は複数の型を1つに結合します。書き方は[&]で型エイリアスを連結します。
+**intersection型**は複数の型を1つに結合します。書き方は[&]で型エイリアスを連結します。
 
 ```ts:title=src/02_basic-types.ts
 type Profile3 = {
@@ -325,7 +325,7 @@ console.log(profile5);
 
 ## union型（共用体型）
 
-[union型]は複数の型のうち、1つの型が成立することを表します。書き方は[|]を用いて、複数の型を連結します。
+**union型**は複数の型のうち、1つの型が成立することを表します。書き方は[|]を用いて、複数の型を連結します。
 
 ```ts:title=src/02_basic-types.ts
 let value1: number = 1; //→OK
@@ -338,7 +338,7 @@ value2 = "Tom"; //→OK
 
 ## literal型
 
-[文字列literal型]と[数値literal型]と[真偽値literal型]があり、それぞれ正確な値を指定できます。
+**文字列literal型**と**数値literal型**と**真偽値literal型**があり、それぞれ正確な値を指定できます。
 
 文字列literal型
 ```ts:title=src/02_basic-types.ts
@@ -366,7 +366,7 @@ isTruth = false;  //→NG
 
 ## enum型（列挙型）
 
-[数値列挙]と[文字列列挙]の2つを使用できます。
+**数値列挙**と**文字列列挙**の2つを使用できます。
 
 数値列挙は次のように記載します。値を記載しない場合は、0からの連番の値がふられます。
 

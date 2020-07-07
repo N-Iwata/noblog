@@ -78,7 +78,7 @@ class Person {
 
 ## クラスメンバー修飾子（アクセシビリティ）
 
-基本的には他の言語と同じようpublic・private・protected修飾子を付与することができます。
+基本的には他の言語と同じよう**public・private・protected**修飾子を付与することができます。
 
 * public→どこからでも参照・実行が可能
 * private→同一クラス内のみ参照・実行が可能
@@ -135,11 +135,9 @@ console.log(suzuki.introduce());  //→NG(ageがprivateなのでメソッド自�
 
 ## getterとsetter
 
-オブジェクト指向プログラミングの定石であるgetterとsetterはTypeScriptにもあります。getterとsetterについては他の言語でもいろいろと賛否があるみたいですが、言語仕様としてあるので理解はしておいたほうがいいです。
+オブジェクト指向プログラミングの定石である**getterとsetter**はTypeScriptにもあります。getterとsetterについては他の言語でもいろいろと賛否があるみたいですが、言語仕様としてあるので理解はしておいたほうがいいです。
 
-getterとsetterの必要性を知りたい方は[オブジェクト指向プログラムで
-getter/setterメソッドを使わなければならない
-10の理由](http://fukumori.org/oo/why_use_getters_and_setters_j.html)が参考になると思います。
+getterとsetterの必要性を知りたい方は[オブジェクト指向プログラムでgetter/setterメソッドを使わなければならない10の理由](http://fukumori.org/oo/why_use_getters_and_setters_j.html)が参考になると思います。
 
 とりあえず簡単に言うと、getterとsetterを使うことによって、アクセス制御ができるようにして、どこでメンバ変数の参照や書き換えをしているかをコード中で見やすくするようなことです。
 
@@ -185,7 +183,7 @@ yamada.age = 30;  //→OK
 
 ## static(静的メンバ)
 
-[static]を使用することによって、クラスのインスタンスを作成しなくてもメンバ変数やメソッドにアクセスすることができます。
+**static**を使用することによって、クラスのインスタンスを作成しなくてもメンバ変数やメソッドにアクセスすることができます。
 
 次の例では直接[Person4]クラスのメンバ変数やメソッドにアクセスして使用しています。
 
