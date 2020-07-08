@@ -41,6 +41,10 @@ TypeScriptはMicrosoft社によって開発され、2012年10月頃に外部公�
 
 [公式サイト](https://www.typescriptlang.org)には以下のように書かれています。
 
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.typescriptlang.org" data-iframely-url="//cdn.iframe.ly/Dlsd1vH"></a></div></div>
+
+<br>
+
 > TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
 
 日本語に訳すと以下のようになります。
@@ -121,6 +125,8 @@ JavaScriptは動的型付け言語なので、数値が入っている変数に�
 このことからもかなり将来性がある言語ということがわかりますね。
 
 [→参考にしたサイト](https://www.publickey1.jp/blog/17/googletypescriptng-conf_2017.html)
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.publickey1.jp/blog/17/googletypescriptng-conf_2017.html" data-iframely-url="//cdn.iframe.ly/iDzidf8?iframe=card-small"></a></div></div>
 
 ### 世界的にアクティブユーザーの伸びがやばい
 
@@ -335,3 +341,4 @@ TypeScriptをいつ学ぶの？？今でしょ！！！（古いっ！）<br>
 [【初心者向け】TypeScript超入門#03 関数編](https://rpf-noblog.com/2020-06-25/start-typescript-03)<br>
 [【初心者向け】TypeScript超入門#04 クラス編](https://rpf-noblog.com/2020-06-28/start-typescript-04)<br>
 [【初心者向け】TypeScript超入門#05 ジェネリクス編](https://rpf-noblog.com/2020-07-05/start-typescript-05)
+

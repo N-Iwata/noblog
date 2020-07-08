@@ -14,9 +14,13 @@ hero: ./hero.png
 基本的には[GatsbyJSの公式ページ](https://www.gatsbyjs.org/packages/gatsby-remark-embed-youtube/)の内容通りやれば簡単にできます。<br>
 自分のYouTubeチャンネル（ないけど・・・そのうちポチりたい）の動画をブログに埋め込んだり、好きな動画やブログの参考にした動画などを埋め込んだりできるのでおススメです！
 
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.gatsbyjs.org/packages/gatsby-remark-embed-youtube/" data-iframely-url="//cdn.iframe.ly/Ze9WqwN"></a></div></div>
+
 ## 前提
 
-このブログはGatsbyJSの[gatsby-starter-blog](https://gatsby-starter-blog-demo.netlify.app/)のテンプレートから作成しています。
+このブログはGatsbyJSの[gatsby-starter-blog](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/)のテンプレートから作成しています。
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/" data-iframely-url="//cdn.iframe.ly/qjUJkBu?iframe=card-small"></a></div></div>
 
 ## プラグインのインストール
 

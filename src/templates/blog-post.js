@@ -8,6 +8,7 @@ import SEO from "../components/seo";
 import Toc from "../components/toc";
 import Tag from "../components/tag";
 import Share from "../components/share";
+import Iframely from "../components/iframely";
 import { rhythm, scale } from "../utils/typography";
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
@@ -21,6 +22,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const image = `${siteUrl}${hero}`;
   return (
     <div>
+      <Iframely />
       <Layout location={location} title={siteTitle} author={author}>
         <SEO
           title={post.frontmatter.title}
