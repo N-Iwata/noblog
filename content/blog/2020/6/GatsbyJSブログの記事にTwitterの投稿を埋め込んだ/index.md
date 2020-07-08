@@ -19,7 +19,7 @@ Twitterでつぶやいたことをそのままブログの記事にしたり、�
 
 基本的には[公式ページ](https://www.gatsbyjs.org/packages/gatsby-plugin-twitter/)の内容通りやればできます。
 
-<!-- <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.gatsbyjs.org/packages/gatsby-plugin-twitter/" data-iframely-url="//cdn.iframe.ly/KT2GG84&omit_script=1"></a></div></div> -->
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.gatsbyjs.org/packages/gatsby-plugin-twitter/" data-iframely-url="//cdn.iframe.ly/KT2GG84"></a></div></div>
 
 * 前提
 * プラグインのインストルール
