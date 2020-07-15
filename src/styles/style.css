@@ -82,8 +82,9 @@ body {
   margin: 0;
   margin-top: 20px;
   margin-bottom: 20px;
-  font-size: 1.3em;
+  font-size: 1.4em;
   border-left: 3px solid #fc1ab1;
+  border-bottom: 1px solid #777;
 }
 
 .blog-section h4 {
@@ -92,7 +93,8 @@ body {
   margin-bottom: 5px;
   font-size: 1.2em;
   text-transform: none;
-  text-decoration: underline;
+  letter-spacing: normal;
+  border-left: 2px solid #fc1ab1;
 }
 
 .blog-section p {
@@ -110,8 +112,8 @@ body {
 }
 
 .blog-section strong {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), color-stop(60%, #f86eca)) !important;
-  background: linear-gradient(transparent 60%, #f86eca 60%) !important;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), color-stop(60%, #f86eca)) !important;
+  background: linear-gradient(transparent 70%, #f86eca 60%) !important;
 }
 
 .blog-section blockquote {
@@ -121,9 +123,18 @@ body {
   border-left: 0.32813rem solid rgba(0, 0, 0, 0.2);
 }
 
+.blog-section ol {
+  border: 2px dashed #fc1ab1;
+  padding: 5px;
+}
+
+.blog-section ol li {
+  margin-left: 30px;
+  margin-bottom: 0px;
+}
+
 .blog-section ul {
   border: 2px dotted #fc1ab1;
-  border-radius: 10px;
   padding: 5px;
 }
 
@@ -157,19 +168,38 @@ body {
 }
 
 .toc {
-  background-color: #f2f2f2;
+  background-color: #fdfdfd;
   padding: 10px;
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   max-width: 500px;
-  margin: 0 auto;
+  margin: 10px auto;
+  border-top: #fc1ab1 3px solid;
 }
 
 .toc__title {
   margin: 0;
-  margin-bottom: 10px;
+  margin: 5px 0;
   padding: 5px;
   text-align: center;
+}
+
+.toc__open {
+  margin-left: 10px;
+  cursor: pointer;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  font-size: 0.9em;
+  border: none;
+  background-color: #fdfdfd;
+}
+
+.toc__open:hover {
+  color: #fc1ab1;
+}
+
+.toc__open:focus {
+  outline: 0;
 }
 
 .toc__content ul {
@@ -183,8 +213,6 @@ body {
 
 .toc__content ul li a {
   color: black;
-  -webkit-box-shadow: none;
-          box-shadow: none;
   -webkit-transition: ease 0.3s all;
   transition: ease 0.3s all;
 }

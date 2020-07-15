@@ -75,9 +75,9 @@ body {
     margin: 0;
     margin-top: 20px;
     margin-bottom: 20px;
-
-    font-size: 1.3em;
+    font-size: 1.4em;
     border-left: 3px solid #fc1ab1;
+    border-bottom: 1px solid #777;
   }
 
   & h4 {
@@ -86,7 +86,9 @@ body {
     margin-bottom: 5px;
     font-size: 1.2em;
     text-transform: none;
-    text-decoration: underline;
+    letter-spacing: normal;
+    border-left: 2px solid #fc1ab1;
+    // font-weight: 600 !important;
   }
 
   & p {
@@ -102,7 +104,7 @@ body {
   }
 
   & strong {
-    background: linear-gradient(transparent 60%, #f86eca 60%) !important;
+    background: linear-gradient(transparent 70%, #f86eca 60%) !important;
   }
 
   blockquote {
@@ -112,9 +114,17 @@ body {
     border-left: 0.32813rem solid rgba(0, 0, 0, 0.2);
   }
 
+  & ol {
+    border: 2px dashed #fc1ab1;
+    padding: 5px;
+
+    & li {
+      margin-left: 30px;
+      margin-bottom: 0px;
+    }
+  }
   & ul {
     border: 2px dotted #fc1ab1;
-    border-radius: 10px;
     padding: 5px;
 
     & li {
@@ -146,19 +156,33 @@ body {
 }
 
 .toc {
-  background-color: #f2f2f2;
+  background-color: #fdfdfd;
   padding: 10px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   max-width: 500px;
-  margin: 0 auto;
+  margin: 10px auto;
+  border-top: #fc1ab1 3px solid;
 
   &__title {
     margin: 0;
-    margin-bottom: 10px;
+    margin: 5px 0;
     padding: 5px;
     text-align: center;
   }
-
+  &__open {
+    margin-left: 10px;
+    cursor: pointer;
+    transition: 0.3s all ease;
+    font-size: 0.9em;
+    border: none;
+    background-color: #fdfdfd;
+    &:hover {
+      color: #fc1ab1;
+    }
+    &:focus {
+      outline: 0;
+    }
+  }
   &__content {
     & ul {
       margin-left: 30px;
@@ -169,7 +193,6 @@ body {
 
         & a {
           color: black;
-          box-shadow: none;
           transition: ease 0.3s all;
 
           &:hover {
