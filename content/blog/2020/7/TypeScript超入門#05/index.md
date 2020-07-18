@@ -3,7 +3,7 @@ title: 【初心者向け】TypeScript超入門#05 ジェネリクス編
 date: "2020-07-05"
 description: この記事はTypeScript超入門シリーズの第5回目として、TypeScriptのジェネリクスについてまとめて解説していきます！
 slug: 2020-07-05/start-typescript-05
-tags: [TypeScript,TypeScript入門]
+tags: [TypeScript,TypeScript入門,ジェネリクス]
 hero: ./hero.png
 ---
 

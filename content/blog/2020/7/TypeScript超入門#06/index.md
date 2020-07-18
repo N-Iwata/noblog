@@ -3,7 +3,7 @@ title: 【初心者向け】TypeScript超入門#06 型推論基礎編
 date: "2020-07-15"
 description: この記事はTypeScript超入門シリーズの第6回目として、TypeScriptの型推論の基礎についてまとめて解説していきます！
 slug: 2020-07-15/start-typescript-06
-tags: [TypeScript,TypeScript入門]
+tags: [TypeScript,TypeScript入門,型推論]
 hero: ./hero.png
 ---
 
@@ -494,7 +494,7 @@ function a(num: any): "Taro" | undefined
 
 今回はTypeScriptの型推論についての基礎を解説を行いました。<br>
 
-基本的には冗長にならないように型注釈をなるべくしないほうがいいので、型推論のルールを知っておくのが重要になります。
+基本的には冗長にならないように型注釈をなるべくしないほうがいいので、型推論のルールを知っておくのが重要になりますのでしっかり勉強したいですね！！
 
 最後まで見ていただきありがとうございました！！
 
