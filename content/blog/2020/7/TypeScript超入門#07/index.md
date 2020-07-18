@@ -24,6 +24,12 @@ hero: ./hero.png
 [【初心者向け】TypeScript 超入門#07 型の互換性編](https://rpf-noblog.com/2020-07-18/start-typescript-07) ← 今ここ
 
 - 型の互換性とは
+- any型とプリミティブ型
+- プリミティブ型←プリミティブ型
+- プリミティブ型とプリミティブリテラル型
+- enum型とnumber型
+- 関数←関数
+- クラス←クラス
 
 GitHub のリポジトリは[こちら](https://github.com/N-Iwata/start-typescript)にあります。
 
@@ -296,9 +302,11 @@ targetClass4 = sourceClass4; //NG
 
 今回はTypeScriptの型の互換性について解説を行いました。<br>
 
+TypeScriptは全体的に構造的部分型という概念が重要な気がします。しっかり理解しておきたいですね！！
+
 最後まで見ていただきありがとうございました！！
 
-超入門シリーズの他の記事もご覧いただければうれしいので是非お願いします！！
+TypeScript超入門シリーズの他の記事もご覧いただければうれしいので是非お願いします！！
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/2020-06-17/start-typescript-01/" data-iframely-url="//cdn.iframe.ly/tmxszMy?iframe=card-small"></a></div></div>
 
@@ -312,3 +320,4 @@ targetClass4 = sourceClass4; //NG
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/2020-07-15/start-typescript-06/" data-iframely-url="//cdn.iframe.ly/pnXu3dX?iframe=card-small"></a></div></div>
 
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/2020-07-18/start-typescript-07/" data-iframely-url="//cdn.iframe.ly/zWpJ6LT?iframe=card-small"></a></div></div>
