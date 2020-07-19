@@ -1,7 +1,7 @@
 ---
 title: 【初心者向け】TypeScript超入門#07 型の互換性編
 date: "2020-07-18"
-description: この記事はTypeScript超入門シリーズの第6回目として、TypeScriptの型の互換性についてまとめて解説していきます！
+description: この記事はTypeScript超入門シリーズの第7回目として、TypeScriptの型の互換性についてまとめて解説していきます！
 slug: 2020-07-18/start-typescript-07
 tags: [TypeScript, TypeScript入門, 型の互換性]
 hero: ./hero.png
@@ -11,9 +11,9 @@ hero: ./hero.png
 
 おはようございます！こんにちは！こんばんは！
 
-麻雀と芝生大好き web エンジニアおじさん(@rpf_nob)です。
+麻雀と芝生大好きwebエンジニアおじさん(@rpf_nob)です。
 
-この記事は TypeScript 超入門シリーズの第 7 回目として、TypeScript の型の互換性についてまとめて解説していきます！
+この記事はTypeScript超入門シリーズの第7回目として、TypeScriptの型の互換性についてまとめて解説していきます！
 
 [【初心者向け】TypeScript 超入門#01 概要説明~環境構築編](https://rpf-noblog.com/2020-06-17/start-typescript-01)<br>
 [【初心者向け】TypeScript 超入門#02 基本的な型編](https://rpf-noblog.com/2020-06-22/start-typescript-02)<br>
