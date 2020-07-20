@@ -9,12 +9,14 @@ const Toc = props => {
   };
   return (
     <div className="toc">
-      <h4 className="toc__title">
-        Content
-        <button className="toc__open" onClick={handleClick}>
-          [{message}]
-        </button>
-      </h4>
+      <div className="toc__top">
+        <h4 className="toc__title">
+          Content
+          <button className="toc__open" onClick={handleClick}>
+            [{message}]
+          </button>
+        </h4>
+      </div>
       {isOpen && (
         <div
           className="toc__content"

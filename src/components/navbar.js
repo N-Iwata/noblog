@@ -11,9 +11,12 @@ const NavBar = () => {
       <label htmlFor="check" className="checkbtn">
         <FontAwesomeIcon icon={faBars} />
       </label>
+      <span className="navbar__title">
+        <Link to="/">RPF NoBlog</Link>
+      </span>
       <ul className="navbar__ul">
         <li className="navbar__li">
-          <Link to="/">HOME</Link>
+          <Link to="/">BLOG</Link>
         </li>
         <li className="navbar__li">
           <Link to="/about">ABOUT</Link>
