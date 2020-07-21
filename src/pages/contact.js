@@ -4,7 +4,6 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Bio from "../components/bio";
-import { rhythm } from "../utils/typography";
 
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
@@ -57,12 +56,7 @@ const Contact = ({ data, location }) => {
           お名前・メールアドレス・件名・お問い合わせ内容を記載して送信ボタンをクリックしてください。
         </p>
         <div className="contact">
-          <form
-            name="contact"
-            method="POST"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-          >
+          <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="contact" />
             <input type="hidden" name="bot-field" />
             <div className="contact__area">
@@ -115,25 +109,17 @@ const Contact = ({ data, location }) => {
               />
             </div>
             <div className="contact__btn">
-              <Button
-                type="submit"
-                variant="contained"
-                color="primary"
-                disabled={canSubmit()}
-              >
+              <Button type="submit" variant="contained" color="primary" disabled={canSubmit()}>
                 送信
               </Button>
             </div>
           </form>
         </div>
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
+
         <footer>
           <Bio />
         </footer>
+
         <Link to="/">← Home</Link>
       </Layout>
     </div>

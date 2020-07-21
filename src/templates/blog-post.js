@@ -20,6 +20,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 
   const hero = post.frontmatter.hero.childImageSharp.fluid.src;
   const image = `${siteUrl}${hero}`;
+
   return (
     <div>
       <Iframely />

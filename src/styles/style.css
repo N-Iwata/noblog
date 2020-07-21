@@ -154,7 +154,14 @@ body {
 }
 
 .social-links {
-  margin-bottom: 40px;
+  margin: 0 0 20px 0;
+}
+
+.social-links__title {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #fc1ab1;
 }
 
 .social-links__icon {

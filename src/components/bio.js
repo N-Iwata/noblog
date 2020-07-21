@@ -40,102 +40,114 @@ const Bio = () => {
 
   const { author } = data.site.siteMetadata;
   return (
-    <div
-      style={{
-        display: `flex`,
-        marginBottom: rhythm(2.5),
-      }}
-    >
-      <Image
-        fixed={data.avatar.childImageSharp.fixed}
-        alt={author.name}
+    <div>
+      <hr
         style={{
-          marginRight: rhythm(1 / 2),
-          marginBottom: 0,
-          minWidth: 50,
-          borderRadius: `100%`,
-        }}
-        imgStyle={{
-          borderRadius: `50%`,
+          marginBottom: rhythm(1),
         }}
       />
-      <div>
-        Written by <strong>{author.name}</strong>
-        <br />
-        <span>{author.summary}</span>
-        <div
+      <div
+        style={{
+          display: `flex`,
+          marginBottom: rhythm(2.5),
+        }}
+      >
+        <Image
+          fixed={data.avatar.childImageSharp.fixed}
+          alt={author.name}
           style={{
-            position: "relative",
-            marginTop: "10px",
+            marginRight: rhythm(1 / 2),
+            marginBottom: 0,
+            minWidth: 50,
+            borderRadius: `100%`,
           }}
-        >
+          imgStyle={{
+            borderRadius: `50%`,
+          }}
+        />
+        <div>
+          Written by <strong>{author.name}</strong>
+          <br />
+          <span>{author.summary}</span>
           <div
             style={{
-              position: "absolute",
-              width: "100%",
-              top: "0",
-              left: "0",
+              position: "relative",
+              marginTop: "10px",
             }}
           >
-            <a
+            <div
               style={{
-                boxShadow: "none",
+                position: "absolute",
+                width: "100%",
+                top: "0",
+                left: "0",
               }}
-              href="https://twitter.com/rpf_nob"
             >
-              <FontAwesomeIcon
+              <a
                 style={{
-                  height: "1.5em",
-                  width: "1.5em",
-                  marginRight: "5",
+                  boxShadow: "none",
                 }}
-                color="#3eaded"
-                icon={faTwitter}
-              />
-            </a>
-            <a
+                href="https://twitter.com/rpf_nob"
+              >
+                <FontAwesomeIcon
+                  style={{
+                    height: "1.5em",
+                    width: "1.5em",
+                    marginRight: "5",
+                  }}
+                  color="#3eaded"
+                  icon={faTwitter}
+                />
+              </a>
+              <a
+                style={{
+                  boxShadow: "none",
+                }}
+                href="https://github.com/N-Iwata"
+              >
+                <FontAwesomeIcon
+                  style={{
+                    height: "1.5em",
+                    width: "1.5em",
+                    marginRight: "5",
+                  }}
+                  color="#333"
+                  icon={faGithub}
+                />
+              </a>
+            </div>
+            <div
               style={{
-                boxShadow: "none",
+                position: "absolute",
+                width: "32px",
+                top: "-4px",
+                left: "56px",
               }}
-              href="https://github.com/N-Iwata"
             >
-              <FontAwesomeIcon
+              <a
                 style={{
-                  height: "1.5em",
-                  width: "1.5em",
-                  marginRight: "5",
+                  boxShadow: "none",
                 }}
-                color="#333"
-                icon={faGithub}
-              />
-            </a>
-          </div>
-          <div
-            style={{
-              position: "absolute",
-              width: "32px",
-              top: "-4px",
-              left: "56px",
-            }}
-          >
-            <a
-              style={{
-                boxShadow: "none",
-              }}
-              href="https://qiita.com/rpf-nob"
-            >
-              <img
-                src={image}
-                alt="Qiita"
-                style={{
-                  height: "2em",
-                  width: "2em",
-                }}
-              />
-            </a>
+                href="https://qiita.com/rpf-nob"
+              >
+                <img
+                  src={image}
+                  alt="Qiita"
+                  style={{
+                    height: "2em",
+                    width: "2em",
+                  }}
+                />
+              </a>
+            </div>
           </div>
         </div>
       </div>
+      <hr
+        style={{
+          marginBottom: rhythm(1),
+        }}
+      />
     </div>
   );
 };

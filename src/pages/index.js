@@ -53,6 +53,7 @@ const BlogIndex = ({ data, location }) => {
             </div>
           );
         })}
+
         <Bio />
       </Layout>
     </div>

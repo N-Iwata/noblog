@@ -4,7 +4,6 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Bio from "../components/bio";
-import { rhythm } from "../utils/typography";
 import image from "../images/about.png";
 
 const Aboutpage = ({ data, location }) => {
@@ -34,14 +33,11 @@ const Aboutpage = ({ data, location }) => {
         <p>今後ともどうぞよろしくお願いします！！</p>
         <span>[自宅の芝生(2019年8月撮影)]</span>
         <img src={image} alt="自宅の芝生(2019年8月撮影)" />
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
+
         <footer>
           <Bio />
         </footer>
+
         <Link to="/">← Home</Link>
       </Layout>
     </div>
