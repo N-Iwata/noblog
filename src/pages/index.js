@@ -20,7 +20,6 @@ const BlogIndex = ({ data, location }) => {
     let items = [];
     for (let i = 0; i < records; i++) {
       if (posts[i] !== undefined) {
-        // items.push(<li key={i}> {posts[i].node.frontmatter.title}</li>);
         let node = posts[i].node;
         const title = node.frontmatter.title || node.fields.slug;
         items.push(
@@ -80,9 +79,8 @@ const BlogIndex = ({ data, location }) => {
         <SEO title="All posts" />
         <div
           style={{
-            height: "600px",
+            height: "800px",
             overflow: "auto",
-            // backgroundColor: "#FF9900",
             padding: "15px",
           }}
         >
