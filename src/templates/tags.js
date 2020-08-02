@@ -18,11 +18,7 @@ const Tags = ({ pageContext, data, location }) => {
   return (
     <div>
       <Layout location={location} author={author}>
-        <SEO
-          title={`Tag: ${tag}`}
-          description={`${tag}タグを含む記事の一覧ページです`}
-        />
-        <Bio />
+        <SEO title={`Tag: ${tag}`} description={`${tag}タグを含む記事の一覧ページです`} />
         <h2>{tagHeader}</h2>
         {edges.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug;
@@ -62,6 +58,7 @@ const Tags = ({ pageContext, data, location }) => {
             </div>
           );
         })}
+        <Bio />
       </Layout>
     </div>
   );
