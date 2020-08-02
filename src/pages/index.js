@@ -79,7 +79,7 @@ const BlogIndex = ({ data, location }) => {
         <SEO title="All posts" />
         <div
           style={{
-            height: "800px",
+            height: "700px",
             overflow: "auto",
             padding: "15px",
           }}
