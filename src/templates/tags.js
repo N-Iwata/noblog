@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "gatsby-image";
+import Pagination from "@material-ui/lab/Pagination";
+import { makeStyles } from "@material-ui/core/styles";
 
 import Bio from "../components/bio";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-// Components
 import { Link, graphql } from "gatsby";
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    "& > *": {
+      margin: "0 auto",
+      width: 300,
+    },
+  },
+}));
 
 const Tags = ({ pageContext, data, location }) => {
   const { tag } = pageContext;
@@ -15,12 +25,25 @@ const Tags = ({ pageContext, data, location }) => {
 
   const tagHeader = `[${tag}]タグの記事一覧（全${totalCount}件）`;
 
+  const classes = useStyles();
+  const [currentPage, setCurrentPage] = useState(1);
+  const postsPerPage = 6;
+  const pageCnt = Math.ceil(edges.length / postsPerPage);
+  const handleChange = (event, value) => {
+    setCurrentPage(value);
+    window.scrollTo(0, 0);
+  };
+
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = edges.slice(indexOfFirstPost, indexOfLastPost);
+
   return (
     <div>
       <Layout location={location} author={author}>
         <SEO title={`Tag: ${tag}`} description={`${tag}タグを含む記事の一覧ページです`} />
         <h2>{tagHeader}</h2>
-        {edges.map(({ node }) => {
+        {currentPosts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug;
           return (
             <div key={node.fields.slug} className="posts">
@@ -58,6 +81,17 @@ const Tags = ({ pageContext, data, location }) => {
             </div>
           );
         })}
+        <div className={classes.root}>
+          <Pagination
+            count={pageCnt}
+            page={currentPage}
+            onChange={handleChange}
+            color="secondary"
+            size="small"
+            variant="outlined"
+          />
+        </div>
+
         <Bio />
       </Layout>
     </div>
