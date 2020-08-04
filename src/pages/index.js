@@ -2,25 +2,16 @@ import React, { useState } from "react";
 import { Link, graphql } from "gatsby";
 import Image from "gatsby-image";
 import Pagination from "@material-ui/lab/Pagination";
-import { makeStyles } from "@material-ui/core/styles";
 
 import Bio from "../components/bio";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    margin: "0 auto",
-    width: 300,
-  },
-}));
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
   const author = data.site.siteMetadata.author.name;
   const posts = data.allMarkdownRemark.edges;
 
-  const classes = useStyles();
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 6;
   const pageCnt = Math.ceil(posts.length / postsPerPage);
@@ -77,7 +68,7 @@ const BlogIndex = ({ data, location }) => {
           );
         })}
 
-        <div className={classes.root}>
+        <div className="pagenation">
           <Pagination
             count={pageCnt}
             page={currentPage}

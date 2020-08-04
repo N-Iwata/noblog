@@ -1,20 +1,12 @@
 import React, { useState } from "react";
 import Image from "gatsby-image";
 import Pagination from "@material-ui/lab/Pagination";
-import { makeStyles } from "@material-ui/core/styles";
 
 import Bio from "../components/bio";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 import { Link, graphql } from "gatsby";
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    margin: "0 auto",
-    width: 300,
-  },
-}));
 
 const Tags = ({ pageContext, data, location }) => {
   const { tag } = pageContext;
@@ -23,7 +15,6 @@ const Tags = ({ pageContext, data, location }) => {
 
   const tagHeader = `[${tag}]タグの記事一覧（全${totalCount}件）`;
 
-  const classes = useStyles();
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 6;
   const pageCnt = Math.ceil(edges.length / postsPerPage);
@@ -79,7 +70,7 @@ const Tags = ({ pageContext, data, location }) => {
             </div>
           );
         })}
-        <div className={classes.root}>
+        <div className="pagenation">
           <Pagination
             count={pageCnt}
             page={currentPage}
