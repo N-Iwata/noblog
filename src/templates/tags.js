@@ -11,10 +11,8 @@ import { Link, graphql } from "gatsby";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    "& > *": {
-      margin: "0 auto",
-      width: 300,
-    },
+    margin: "0 auto",
+    width: 300,
   },
 }));
 
