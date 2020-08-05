@@ -1,7 +1,7 @@
 ---
-title: GatsbyJSブログの記事にInfiniteScrollを実装してみた
+title: GatsbyJSブログにInfiniteScrollを実装してみた
 date: "2020-08-06"
-description: 今回はGatsbyJSブログの記事にInfiniteScrollを実装してみたので解説します！！
+description: 今回はGatsbyJSブログにInfiniteScrollを実装してみたので解説します！！
 slug: 2020-08-06/gatsby-infinite-scroll
 tags: [GatsbyJS,react-infinite-scroller,InfiniteScroll,無限スクロール]
 hero: ./hero.png
@@ -13,7 +13,7 @@ hero: ./hero.png
 
 麻雀と芝生大好きwebエンジニアおじさん(@rpf_nob)です。
 
-今回はGatsbyJSブログの記事に**InfiniteScroll**を実装してみたので解説します！！
+今回はGatsbyJSブログに**InfiniteScroll**を実装してみたので解説します！！
 
 * 前提
 * InfiniteScrollとは
@@ -184,7 +184,7 @@ const loadMore = () => {
 
 ## まとめ
 
-今回はGatsbyJSブログの記事に**InfiniteScroll**を実装してみたので解説しました！！
+今回はGatsbyJSブログに**InfiniteScroll**を実装してみたので解説しました！！
 
 InfiniteScrollがあるだけで結構良い感じになるので是非参考にしていただければと思います！！
 
