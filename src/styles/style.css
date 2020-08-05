@@ -153,9 +153,11 @@ body {
   margin-bottom: 0px;
 }
 
-.pagenation {
-  width: 300px;
-  margin: 0 auto;
+.loader {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #aaa;
 }
 
 .social-links {

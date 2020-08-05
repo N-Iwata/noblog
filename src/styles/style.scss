@@ -142,10 +142,13 @@ body {
     }
   }
 }
-.pagenation {
-  width: 300px;
-  margin: 0 auto;
+.loader {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #aaa;
 }
+
 .social-links {
   margin: 0 0 20px 0;
   &__title {
