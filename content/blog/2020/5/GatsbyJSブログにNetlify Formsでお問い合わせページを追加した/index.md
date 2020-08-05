@@ -294,3 +294,13 @@ Netlify Formsを使用しているHTMLファイルがデプロイされると、
 
 今回はGatsbyJSブログにNetlify Formsでお問い合わせページを追加しました。<br>
 GatsbyJS + Netlify でブログを構築している方にはかなりのおススメなので、今回の記事が参考になればうれしいです。
+
+他にもGatsbyJSのブログカスタマイズをいろいろやっているので、以下もあわせてご覧いただければと思います。
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/tags/gatsby-js/" data-iframely-url="//cdn.iframe.ly/5j7eIPT"></a></div></div>
+
+
+<br>
+<br>
+
+最後まで見ていただきありがとうございます！！

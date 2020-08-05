@@ -116,3 +116,12 @@ module.exports = {
 今回はGoogleAnalyticsを導入しました。<br>
 今後訪問者が増えていくように、いろいろ試行錯誤したいと思います！！
 
+他にもGatsbyJSのブログカスタマイズをいろいろやっているので、以下もあわせてご覧いただければと思います。
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/tags/gatsby-js/" data-iframely-url="//cdn.iframe.ly/5j7eIPT"></a></div></div>
+
+
+<br>
+<br>
+
+最後まで見ていただきありがとうございます！！

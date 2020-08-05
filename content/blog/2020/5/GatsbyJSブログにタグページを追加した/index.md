@@ -348,3 +348,13 @@ GraphQLで取得したdata.frontmatter.tagsをpropsとして渡します。
 
 今回はGatsbyJSブログにタグページを追加して、タグごとに記事一覧が表示できるようにしました。<br>
 記事が増えてきたときに、タグページがあると読みたいタグを一気に見れるのでいいですよね。
+
+他にもGatsbyJSのブログカスタマイズをいろいろやっているので、以下もあわせてご覧いただければと思います。
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/tags/gatsby-js/" data-iframely-url="//cdn.iframe.ly/5j7eIPT"></a></div></div>
+
+
+<br>
+<br>
+
+最後まで見ていただきありがとうございます！！

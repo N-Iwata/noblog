@@ -149,3 +149,13 @@ import Share from "../components/share";
 
 今回はGatsbyJSブログの記事ページにSNS等のシェアボタンを追加しました。<br>
 自分もこのブログだけではなく、いろいろなSNSを用いて情報を発信していきたいと思います！
+
+他にもGatsbyJSのブログカスタマイズをいろいろやっているので、以下もあわせてご覧いただければと思います。
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/tags/gatsby-js/" data-iframely-url="//cdn.iframe.ly/5j7eIPT"></a></div></div>
+
+
+<br>
+<br>
+
+最後まで見ていただきありがとうございます！！

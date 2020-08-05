@@ -270,3 +270,13 @@ const BlogIndex = ({ data, location }) => {
 今回はGatsbyJSブログの記事ページにヒーロー画像をつけて、記事一覧にもサムネイルとして画像を表示できるようにしました。
 
 かなり印象が変わりましたね！！
+
+他にもGatsbyJSのブログカスタマイズをいろいろやっているので、以下もあわせてご覧いただければと思います。
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/tags/gatsby-js/" data-iframely-url="//cdn.iframe.ly/5j7eIPT"></a></div></div>
+
+
+<br>
+<br>
+
+最後まで見ていただきありがとうございます！！
