@@ -69,7 +69,7 @@ const BlogIndex = ({ data, location }) => {
     } else {
       setTimeout(() => {
         setrecords(records + itemsPerPage);
-      }, 1000);
+      }, 300);
     }
   };
 
