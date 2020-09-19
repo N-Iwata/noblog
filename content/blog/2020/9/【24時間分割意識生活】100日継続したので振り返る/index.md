@@ -1,0 +1,196 @@
+---
+title: 【24時間分割意識生活】100日継続したので振り返る
+date: "2020-09-19"
+description: 今回は24時間分割意識生活を開始して100日継続したのでやったことや感じたことを振り返っていきます！！
+slug: 2020-09-19/24hour-split-life-100day
+tags: [24時間分割意識生活,TypeScript,React,Redux]
+hero: ./hero.png
+---
+
+## はじめに 
+
+おはようございます！こんにちは！こんばんは！
+
+麻雀と芝生大好きwebエンジニアおじさん(@rpf_nob)です。
+
+今回は**24時間分割意識生活**を開始して100日継続したのでやったことや感じたことを振り返っていきます！！
+
+<br>
+<br>
+
+実行を決意表明した記事はこちら↓
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/2020-06-11/24hour-split-life-start/" data-iframely-url="//cdn.iframe.ly/EjpcRto?iframe=card-small"></a></div></div>
+
+今回は以下4つで書いていきます！！
+
+* 24時間分割意識生活のおさらい
+* 24時間分割意識生活中にやったこと
+* 24時間分割意識生活中に感じたこと
+* 次の30日に向けて
+
+## 24時間分割意識生活のおさらい
+
+2014年5月に開催されたTEDxSakuで長岡秀貴さんによる「時間という財産」という発表の中で24時間分割意識生活の話をされています。
+
+`youtube:https://www.youtube.com/embed/EzXvih454dM`
+
+
+何回見てもこの動画には心を動かされますね。ほんと素敵なプレゼンだと思います。  
+皆さんも一度でいいから見たほうがいいと絶対に思います！！
+
+詳細はこちら↓
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/2020-06-11/24hour-split-life-start/" data-iframely-url="//cdn.iframe.ly/EjpcRto?iframe=card-small"></a></div></div>
+
+
+## 24時間分割意識生活中にやったこと
+
+調べものなど細かいところまで書くときりがないので、大きいところだけ書いていきます！！
+
+### TypeScript関連
+
+TypeScriptに関してはUdemyの講座2つと書籍1冊をやりました。
+
+#### 超TypeScript入門 完全パック(2020) - もう他の教材は買わなくてOK！
+
+<br>
+
+こちらの講座は前回の記事（30日継続）執筆時点では修了してませんでしたので、今回詳細を書いていきます。
+
+前回の記事でも書きましたが、タイトルの通り**もう他の教材を買わなくてOK**と思えるほど内容が幅広く、かつ、丁寧に解説されています。
+
+**tsconfig.json**の各種設定及び動作の変化まで解説されていますし、ReactやNode.jsと一緒に使うレクチャーなど実際に使う場面を想定して勉強ができる点で、本当にいい講座だと思いました。
+
+14時間くらいの講座で、かつ、しゃべるのが速い（1.25倍くらいがちょうどいい）、かつ、レクチャーの導入と最後に無駄な部分がないので、どっしり腰を据えて勉強する必要があります。
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.udemy.com/course/typescript-complete/" data-iframely-url="//cdn.iframe.ly/xXbIX29?iframe=card-small"></a></div></div>
+
+<br>
+
+### React関連
+
+こちらはトラハックさん(@torahack_)のYouTube講座とはむさんさんのUdemy講座の２つやりました。
+
+#### React+Redux実践編
+
+React+Redux+Firebase+Material-UIを用いたECアプリケーション開発の実践動画です。
+
+ECアプリを作成する中で、HooksとReduxの本格的な使い方を学ぶことができます。
+
+動画ではJavaScriptでの実装で解説されていますが、今回私はあえて**TypeScriptで実装**してみました。
+
+Udemyでも同じことですが教材をそのまま実装してしまうと、何も考えずに実装して写経みたいになってしまうので、あえてTypeScriptで実装することによってものすごく勉強になったと思います。
+
+バックエンドはFirebaseにおまかせしているので、Authentication、Cloud Firestore、Storageが学べますので、初めてFirebaseを学ぶ方にもおすすめな動画教材です。
+
+`youtube:https://www.youtube.com/embed/8fNgXnVTULU`
+
+<br>
+
+#### React Hooks 入門
+
+こちらの講座はHooksの基本をTodoアプリを作りながら学べる動画です。
+
+Hooksの基本からContextを使用した複雑な状態管理の手法などをわかりやすく解説されています。
+
+こちらの講座もJavaScriptでの実装でしたが、あえて**TypeScriptで実装**してみました。
+
+また、スタイルにはBootstrapを使用していましたが、MaterialUIで実装しました。
+
+これもそのまま写経だと脳死で実装してしまうため、あえて実践できる方法ととってみました。
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.udemy.com/course/react-hooks-101/" data-iframely-url="//cdn.iframe.ly/sIsgNce?iframe=card-small"></a></div></div>
+
+
+### Linux関連
+
+Linuxに関しては山浦さん（@kiyotoyamaura）の講座を受講しました。
+
+こちらは仕事だとReactだけやるマンでは無理なので、インフラに関する知識も習得する必要があったので、受講しました。
+
+基本的なファイル操作やディレクトリ操作はなんと使っていたので知っていたが、知らない部分も多々あったので勉強になりました。
+
+今後AWSを勉強していく中でも必須の知識なので、もっと手を動かしながら理解していく必要があると感じています。
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.udemy.com/course/unscared_linux/" data-iframely-url="//cdn.iframe.ly/ZyrkHqQ?iframe=card-small"></a></div></div>
+
+
+### AWS関連
+
+AWSに関しても山浦さん（@kiyotoyamaura）の講座を受講しました。
+
+AWSはやはり習得必須になるので勉強せざるを得ませんよね。  
+今まで食わず嫌い的に遠ざけていた感がありましたが、いざやってみるとそんなに難しい・怖いものではなかったです。
+
+入門講座だけではく、手を動かしながらもっと勉強が必要なので、頑張っていきたいですね。
+
+講座自体はWordpressをEC2に入れて、RDSでMySQL、S3に画像を保存するような、本当に基本的なAWSサービスを学べる講座です。  
+他にもネットワークやサーバーなどの知識も程よく学べるので初心者にはものすごくいい講座だと思います。
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.udemy.com/course/aws-and-infra/" data-iframely-url="//cdn.iframe.ly/IqgsVE0?iframe=card-small"></a></div></div>
+
+
+### ブログ・Qiita関連
+
+ブログ・Qiitaに関しては以下執筆しました。
+
+* TypeScript超入門の記事
+* GatsbyJSブログのカスタマイズ解説記事
+* TypeScriptの学習方法の記事
+
+などなど
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/2020-07-15/start-typescript-06/" data-iframely-url="//cdn.iframe.ly/pnXu3dX?iframe=card-small"></a></div></div>
+
+<br>
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://qiita.com/rpf-nob/items/8a0d642cda6a56d82ae9" data-iframely-url="//cdn.iframe.ly/zwGihrg?iframe=card-small"></a></div></div>
+
+
+## 24時間分割意識生活中に感じたこと
+
+### 朝６時に起きるのが寝坊になる
+
+基本的に朝5時起きで時間を作るようにしているのですが、ちょっと6時くらいに起きてしまうと寝坊してしまったと思ってしまうほど、5時起きが日常になってきます。
+
+また、Twitterで毎朝今日のスケジュールをつぶやくようにすると、やらなきゃという気持ちが強くなります。こういう生活を始めるためには、Twitterなどの発信で自分を一旦縛るのも大切だと思います。すぐやめてしまうとちょっと恥ずかしい感じもしてしまいますしね。
+
+### 早朝はアウトプットに限る
+
+これは前回も書きましたが、本当に早朝はアウトプットに限ります。  
+プログラミングやブログ執筆などアウトプットしていると早朝の2・3時間なんてあっという間なので、ものすごい集中力の高い、生産性の高い時間だと思います。
+
+### 残業しないように頑張る
+
+これも前回書きましたが、明確にスケジュールを立てると残業しないように、考えて効率的に仕事するようになります。
+
+何回か残業しましたが、この生活を始める前よりは格段に減っていると思います。
+
+生産性も高くなるし、自分のやりたいことをやる時間も作れるし、本当にいいことずくめです。
+
+## 今後に向けて
+
+基本的に以下をしばらくやっていく予定
+
+* 個人アプリ開発
+* React&TypeScript
+* AWS（Linuxやネットワークやサーバーの知識含む）
+
+個人アプリ開発に関してはネタの宝庫になりそうなので、今後のブログのメインにしたいですね！！
+
+## まとめ
+
+今回は24時間分割意識生活を開始して100日継続した振り返りをしました。
+
+振り返ってみるとまだインプットが多くアウトプットが少ないですね。
+
+仕事でアウトプットできているとはいえ、やはり仕事以外のアウトプットももっと増やして自分の価値を高めていきたいと思います。
+
+<br>
+
+みなさんも**24時間分割意識生活**を始めてみませんか？？
+
+朝活をするだけでもいいと思うので、まずは朝活だけでもどうでしょうか？？？
+
+最後まで見ていただきありがとうございました！！！！！
