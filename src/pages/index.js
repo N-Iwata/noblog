@@ -2,22 +2,12 @@ import React from "react";
 import { Link, graphql } from "gatsby";
 import Image from "gatsby-image";
 import Button from "@material-ui/core/Button";
-import { makeStyles } from "@material-ui/core/styles";
 
 import Bio from "../components/bio";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-const useStyles = makeStyles({
-  button: {
-    fontSize: 12,
-    float: "right",
-    height: 24,
-  },
-});
-
 const BlogIndex = ({ data, location }) => {
-  const classes = useStyles();
   const siteTitle = data.site.siteMetadata.title;
   const author = data.site.siteMetadata.author.name;
   const posts = data.allMarkdownRemark.edges;
@@ -55,11 +45,13 @@ const BlogIndex = ({ data, location }) => {
                     }}
                   />
 
-                  <Button variant="contained" color={"default"} className={classes.button}>
-                    <Link className="posts__more" to={node.fields.slug}>
-                      READ MORE
-                    </Link>
-                  </Button>
+                  <div className="posts__more">
+                    <Button variant="contained" color={"default"}>
+                      <Link className="posts__more__a" to={node.fields.slug}>
+                        READ MORE
+                      </Link>
+                    </Button>
+                  </div>
                 </section>
               </article>
             </div>

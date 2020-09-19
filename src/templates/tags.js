@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "gatsby-image";
 import Button from "@material-ui/core/Button";
-import { makeStyles } from "@material-ui/core/styles";
 
 import Bio from "../components/bio";
 import Layout from "../components/layout";
@@ -10,16 +9,7 @@ import SEO from "../components/seo";
 // Components
 import { Link, graphql } from "gatsby";
 
-const useStyles = makeStyles({
-  button: {
-    fontSize: 12,
-    float: "right",
-    height: 24,
-  },
-});
-
 const Tags = ({ pageContext, data, location }) => {
-  const classes = useStyles();
   const { tag } = pageContext;
   const { edges, totalCount } = data.allMarkdownRemark;
   const author = data.site.siteMetadata.author.name;
@@ -59,11 +49,13 @@ const Tags = ({ pageContext, data, location }) => {
                       __html: node.frontmatter.description || node.excerpt,
                     }}
                   />
-                  <Button variant="contained" color={"default"} className={classes.button}>
-                    <Link className="posts__more" to={node.fields.slug}>
-                      READ MORE
-                    </Link>
-                  </Button>
+                  <div className="posts__more">
+                    <Button variant="contained" color={"default"}>
+                      <Link className="posts__more__a" to={node.fields.slug}>
+                        READ MORE
+                      </Link>
+                    </Button>
+                  </div>
                 </section>
               </article>
             </div>

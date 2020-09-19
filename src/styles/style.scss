@@ -49,9 +49,16 @@ body {
     margin-bottom: 5px;
   }
   &__more {
-    box-shadow: none;
-    color: #fc1ab1;
-    text-transform: none;
+    float: right;
+
+    &__a {
+      color: #fc1ab1;
+      box-shadow: none;
+      height: 12px;
+      line-height: 12px;
+      display: block;
+      font-size: 12px;
+    }
   }
 }
 .blog__hero {

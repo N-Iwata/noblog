@@ -57,10 +57,17 @@ body {
 }
 
 .posts__more {
+  float: right;
+}
+
+.posts__more__a {
+  color: #fc1ab1;
   -webkit-box-shadow: none;
           box-shadow: none;
-  color: #fc1ab1;
-  text-transform: none;
+  height: 12px;
+  line-height: 12px;
+  display: block;
+  font-size: 12px;
 }
 
 .blog__hero {
