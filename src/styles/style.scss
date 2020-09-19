@@ -7,7 +7,7 @@ body {
 
 .posts {
   padding: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 
   &__title {
     margin: 0;
@@ -33,13 +33,13 @@ body {
     left: 0;
     width: 100%;
     max-height: 350px;
-    border: 1px solid #eee;
+    border: 1px solid #ccc;
 
     & img {
       transition: all ease-in 0.3s !important;
       &:hover {
-        opacity: 0.9 !important;
-        transform: scale(1.05) !important;
+        opacity: 0.8 !important;
+        transform: scale(1.01) !important;
         overflow: hidden !important;
       }
     }
@@ -49,19 +49,13 @@ body {
     margin-bottom: 5px;
   }
   &__more {
-    &__a {
-      box-shadow: none;
-      float: right;
-      transition: all ease-in 0.3s;
-
-      &:hover {
-        color: #fc1ab1;
-      }
-    }
+    box-shadow: none;
+    color: #fc1ab1;
+    text-transform: none;
   }
 }
 .blog__hero {
-  border: 1px solid #eee;
+  border: 1px solid #ccc;
   margin-bottom: 5px;
   max-height: 350px;
 }
@@ -166,13 +160,9 @@ body {
   margin-bottom: 20px;
 
   &__list {
-    margin-right: 10px;
     box-shadow: none;
-    border: 1px solid #555;
-    padding: 0 5px;
-    border-radius: 3px;
-    color: blue;
-    background-color: #f2f2f2;
+    color: #fc1ab1;
+    text-transform: none;
   }
 }
 
@@ -190,6 +180,7 @@ body {
     padding: 10px;
     text-align: center;
     color: #fff;
+    text-transform: none;
   }
   &__open {
     margin-left: 10px;
@@ -282,7 +273,7 @@ body {
   &__li {
     display: inline-block;
     line-height: 50px;
-    margin: 0 5px;
+    margin: 0;
 
     & a {
       color: white;
@@ -378,4 +369,16 @@ body {
       left: 0%;
     }
   }
+}
+.c-section-wrapin {
+  margin: 0 auto;
+
+  position: relative;
+  padding: 0 1rem;
+  text-align: center;
+  width: 100%;
+}
+.p-grid__row {
+  display: flex;
+  flex-flow: row wrap;
 }

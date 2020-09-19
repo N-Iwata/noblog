@@ -17,16 +17,16 @@ const NavBar = () => {
       </span>
       <ul className="navbar__ul">
         <li className="navbar__li">
-          <Link to="/">BLOG</Link>
+          <Link to="/">Blog</Link>
         </li>
         <li className="navbar__li">
-          <Link to="/about">ABOUT</Link>
+          <Link to="/about">About</Link>
         </li>
         <li className="navbar__li">
-          <Link to="/contact">CONTACT</Link>
+          <Link to="/contact">Contact</Link>
         </li>
         <li className="navbar__li">
-          <Link to="/privacy_policy">PRIVACY POLICY</Link>
+          <Link to="/privacy_policy">Privacy Policy</Link>
         </li>
       </ul>
     </nav>

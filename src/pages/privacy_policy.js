@@ -13,17 +13,16 @@ const PrivacyPolicy = ({ data, location }) => {
       <Layout location={location} title={siteTitle} author={author}>
         <SEO title="About" />
         <h1>Privacy Policy</h1>
-        {/* <h2>広告の配信について</h2>
+        <h2>広告の配信について</h2>
         <p>
-          当サイトは第三者配信の広告サービス「Google
-          Adsenseグーグルアドセンス」を利用しています。
+          当サイトは第三者配信の広告サービス「Google Adsenseグーグルアドセンス」を利用しています。
           広告配信事業者は、ユーザーの興味に応じた広告を表示するためにCookie（クッキー）を使用することがあります。
           Cookie（クッキー）を無効にする設定およびGoogleアドセンスに関する詳細は
           <a href="https://policies.google.com/technologies/ads?hl=ja">
             「広告 – ポリシーと規約 – Google」
           </a>
           をご覧ください。
-        </p> */}
+        </p>
         <h2>アクセス解析ツールについて</h2>
         <p>
           当サイトでは、Googleによるアクセス解析ツール「Googleアナリティクス」を利用しています。
