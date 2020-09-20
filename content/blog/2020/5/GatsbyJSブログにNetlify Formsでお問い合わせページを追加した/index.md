@@ -9,6 +9,9 @@ hero: ./hero.png
 
 ## はじめに 
 
+おはようございます！こんにちは！こんばんは！<br>
+麻雀と芝生大好きwebエンジニアおじさんこと**のふのふ**(@rpf_nob)です！！
+
 今回はGatsbyJSブログにNetlify Formsでお問い合わせページを追加します。<br>
 
 基本的には[GatsbyJSの公式ページ](https://www.gatsbyjs.org/docs/building-a-contact-form/)と[netlifyのドキュメント](https://docs.netlify.com/forms/setup/)の内容通りやれば簡単にできるのでおススメです！

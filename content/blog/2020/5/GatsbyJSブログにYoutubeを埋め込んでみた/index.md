@@ -9,6 +9,9 @@ hero: ./hero.png
 
 ## はじめに 
 
+おはようございます！こんにちは！こんばんは！<br>
+麻雀と芝生大好きwebエンジニアおじさんこと**のふのふ**(@rpf_nob)です！！
+
 今回はGatsbyJSブログの記事内にYouTubeを埋め込めるようにします。<br>
 
 基本的には[GatsbyJSの公式ページ](https://www.gatsbyjs.org/packages/gatsby-remark-embed-youtube/)の内容通りやれば簡単にできます。<br>

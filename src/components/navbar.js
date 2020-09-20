@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = () => {
-  console.log("test");
   return (
     <nav className="navbar">
       <input type="checkbox" id="check" />

@@ -203,19 +203,76 @@ body {
     }
   }
   &__content {
-    & ul {
+    margin-top: 10px;
+    & > ul {
       margin-left: 30px;
 
-      & li {
-        font-size: 0.9em;
-        margin: 10px 0;
+      & > li {
+        margin: 0;
 
-        & a {
+        & > a {
           color: black;
-          transition: ease 0.3s all;
+          box-shadow: none;
+          margin: 0;
 
           &:hover {
             color: #fc1ab1;
+          }
+        }
+
+        & > p {
+          line-height: 0%;
+          color: black;
+          & > a {
+            color: black;
+            box-shadow: none;
+            &:hover {
+              color: #fc1ab1;
+            }
+          }
+        }
+        & > ul {
+          margin-left: 15px;
+
+          & > li {
+            margin: 0;
+            color: black;
+            & > a {
+              color: black;
+              box-shadow: none;
+              &:hover {
+                color: #fc1ab1;
+              }
+            }
+
+            & > p {
+              line-height: 0%;
+              color: black;
+
+              & > a {
+                color: black;
+                box-shadow: none;
+                &:hover {
+                  color: #fc1ab1;
+                }
+              }
+            }
+            & > ul {
+              margin-left: 15px;
+
+              & > li {
+                margin: 0;
+                color: black;
+
+                & > a {
+                  color: black;
+                  box-shadow: none;
+                  &:hover {
+                    color: #fc1ab1;
+                  }
+                }
+              }
+            }
           }
         }
       }

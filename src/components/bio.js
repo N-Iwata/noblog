@@ -41,15 +41,12 @@ const Bio = () => {
   const { author } = data.site.siteMetadata;
   return (
     <div>
-      <hr
-        style={{
-          marginBottom: rhythm(1),
-        }}
-      />
       <div
         style={{
           display: `flex`,
           marginBottom: rhythm(2.5),
+          padding: "20px 30px 40px 30px",
+          border: "#ccc 3px solid",
         }}
       >
         <Image
@@ -66,7 +63,14 @@ const Bio = () => {
           }}
         />
         <div>
-          Written by <strong>{author.name}</strong>
+          <span
+            style={{
+              fontSize: 18,
+            }}
+          >
+            Written by <strong>{author.name}</strong>
+          </span>
+
           <br />
           <span>{author.summary}</span>
           <div
@@ -143,11 +147,6 @@ const Bio = () => {
           </div>
         </div>
       </div>
-      <hr
-        style={{
-          marginBottom: rhythm(1),
-        }}
-      />
     </div>
   );
 };

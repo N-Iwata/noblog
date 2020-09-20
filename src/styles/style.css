@@ -223,22 +223,94 @@ body {
   outline: 0;
 }
 
-.toc__content ul {
+.toc__content {
+  margin-top: 10px;
+}
+
+.toc__content > ul {
   margin-left: 30px;
 }
 
-.toc__content ul li {
-  font-size: 0.9em;
-  margin: 10px 0;
+.toc__content > ul > li {
+  margin: 0;
 }
 
-.toc__content ul li a {
+.toc__content > ul > li > a {
   color: black;
-  -webkit-transition: ease 0.3s all;
-  transition: ease 0.3s all;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin: 0;
 }
 
-.toc__content ul li a:hover {
+.toc__content > ul > li > a:hover {
+  color: #fc1ab1;
+}
+
+.toc__content > ul > li > p {
+  line-height: 0%;
+  color: black;
+}
+
+.toc__content > ul > li > p > a {
+  color: black;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.toc__content > ul > li > p > a:hover {
+  color: #fc1ab1;
+}
+
+.toc__content > ul > li > ul {
+  margin-left: 15px;
+}
+
+.toc__content > ul > li > ul > li {
+  margin: 0;
+  color: black;
+}
+
+.toc__content > ul > li > ul > li > a {
+  color: black;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.toc__content > ul > li > ul > li > a:hover {
+  color: #fc1ab1;
+}
+
+.toc__content > ul > li > ul > li > p {
+  line-height: 0%;
+  color: black;
+}
+
+.toc__content > ul > li > ul > li > p > a {
+  color: black;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.toc__content > ul > li > ul > li > p > a:hover {
+  color: #fc1ab1;
+}
+
+.toc__content > ul > li > ul > li > ul {
+  margin-left: 15px;
+}
+
+.toc__content > ul > li > ul > li > ul > li {
+  margin: 0;
+  color: black;
+}
+
+.toc__content > ul > li > ul > li > ul > li > a {
+  color: black;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.toc__content > ul > li > ul > li > ul > li > a:hover {
   color: #fc1ab1;
 }
 

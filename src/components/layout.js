@@ -55,7 +55,7 @@ const Layout = ({ location, title, author, children }) => {
       style={{
         marginLeft: `auto`,
         marginRight: `auto`,
-        marginTop: 50,
+        marginTop: 40,
         maxWidth: rhythm(30),
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         backgroundColor: `#fff`,

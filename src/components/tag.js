@@ -18,7 +18,7 @@ const Tag = props => {
     <div className="tag">
       {props.tags.map((tag, index) => {
         return (
-          <Button variant="contained" color={"default"} className={classes.button}>
+          <Button key={index} variant="contained" color={"default"} className={classes.button}>
             <Link to={`/tags/${_.kebabCase(tag)}/`} key={index} className="tag__list">
               {tag}
             </Link>
