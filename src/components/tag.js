@@ -3,6 +3,8 @@ import { Link } from "gatsby";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import _ from "lodash";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTag } from "@fortawesome/free-solid-svg-icons";
 
 const useStyles = makeStyles({
   button: {
@@ -20,7 +22,8 @@ const Tag = props => {
         return (
           <Button key={index} variant="contained" color={"default"} className={classes.button}>
             <Link to={`/tags/${_.kebabCase(tag)}/`} key={index} className="tag__list">
-              {tag}
+              <FontAwesomeIcon icon={faTag} />
+              　{tag}
             </Link>
           </Button>
         );

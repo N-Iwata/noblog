@@ -44,7 +44,7 @@ const Bio = () => {
       <div
         style={{
           display: `flex`,
-          marginBottom: rhythm(2.5),
+          marginBottom: rhythm(1.5),
           padding: "20px 30px 40px 30px",
           border: "#ccc 3px solid",
         }}

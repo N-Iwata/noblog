@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -119,8 +119,6 @@ const Contact = ({ data, location }) => {
         <footer>
           <Bio />
         </footer>
-
-        <Link to="/">← Home</Link>
       </Layout>
     </div>
   );

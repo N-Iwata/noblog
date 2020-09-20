@@ -1,6 +1,8 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 import Image from "gatsby-image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClock } from "@fortawesome/free-solid-svg-icons";
 
 import Bio from "../components/bio";
 import Layout from "../components/layout";
@@ -49,7 +51,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
                 marginBottom: 0,
               }}
             >
-              {post.frontmatter.date}
+              <FontAwesomeIcon icon={faClock} />
+              <span style={{ marginLeft: 5 }}>{post.frontmatter.date}</span>
             </p>
           </header>
           <Tag tags={post.frontmatter.tags} />

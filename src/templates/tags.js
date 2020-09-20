@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "gatsby-image";
 import Button from "@material-ui/core/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClock } from "@fortawesome/free-solid-svg-icons";
 
 import Bio from "../components/bio";
 import Layout from "../components/layout";
@@ -32,7 +34,10 @@ const Tags = ({ pageContext, data, location }) => {
                       {title}
                     </Link>
                   </h3>
-                  <small className="posts__date">{node.frontmatter.date}</small>
+                  <small className="posts__date">
+                    <FontAwesomeIcon icon={faClock} />
+                    <span style={{ marginLeft: 5 }}>{node.frontmatter.date}</span>
+                  </small>
                 </header>
                 <div className="posts__image_container">
                   <Link to={node.fields.slug}>
