@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "gatsby-image";
 import Button from "@material-ui/core/Button";
+import { config, library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 
@@ -10,6 +11,9 @@ import SEO from "../components/seo";
 
 // Components
 import { Link, graphql } from "gatsby";
+
+config.autoAddCss = false;
+library.add(faClock);
 
 const Tags = ({ pageContext, data, location }) => {
   const { tag } = pageContext;

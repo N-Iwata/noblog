@@ -2,12 +2,16 @@ import React from "react";
 import { Link, graphql } from "gatsby";
 import Image from "gatsby-image";
 import Button from "@material-ui/core/Button";
+import { config, library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 
 import Bio from "../components/bio";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+
+config.autoAddCss = false;
+library.add(faClock);
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;

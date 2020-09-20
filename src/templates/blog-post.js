@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 import Image from "gatsby-image";
+import { config, library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 
@@ -12,6 +13,9 @@ import Tag from "../components/tag";
 import Share from "../components/share";
 import Iframely from "../components/iframely";
 import { rhythm, scale } from "../utils/typography";
+
+config.autoAddCss = false;
+library.add(faClock);
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark;
