@@ -93,6 +93,7 @@ body {
 
 .social-links {
   margin: 0 0 20px 0;
+  text-align: center;
 }
 
 .social-links__title {
@@ -100,6 +101,7 @@ body {
   font-weight: bold;
   font-size: 1.2em;
   color: #fc1ab1;
+  text-align: center;
 }
 
 .social-links__icon {
@@ -380,7 +382,6 @@ body {
 
 .toc {
   background-color: #fdfdfd;
-  max-width: 500px;
   margin: 10px auto;
   border: 1px solid #aaa;
 }
@@ -501,5 +502,11 @@ body {
 
 .toc__content > ul > li > ul > li > ul > li > a:hover {
   color: #fc1ab1;
+}
+
+@media (max-width: 767px) {
+  .toc__content {
+    font-size: 0.9em;
+  }
 }
 /*# sourceMappingURL=style.css.map */

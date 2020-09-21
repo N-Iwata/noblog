@@ -1,6 +1,5 @@
 .toc {
   background-color: #fdfdfd;
-  max-width: 500px;
   margin: 10px auto;
   border: 1px solid #aaa;
 
@@ -101,6 +100,14 @@
           }
         }
       }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .toc {
+    &__content {
+      font-size: 0.9em;
     }
   }
 }

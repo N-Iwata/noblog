@@ -28,6 +28,7 @@ module.exports = {
     },
     `gatsby-plugin-material-ui`,
     `gatsby-plugin-slug`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
