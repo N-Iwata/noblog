@@ -1,5 +1,5 @@
 .navbar {
-  // position: fixed;
+  position: fixed;
   padding: 0;
   margin-bottom: 10px;
   background-color: #fc1ab1;
@@ -7,10 +7,10 @@
 
   height: 50px;
   width: 100%;
-  // top: 0;
-  // left: 50%;
-  // transform: translateX(-50%);
-  // z-index: 1000;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
   .checkbtn {

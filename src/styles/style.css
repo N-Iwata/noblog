@@ -194,11 +194,17 @@ body {
 }
 
 .navbar {
+  position: fixed;
   padding: 0;
   margin-bottom: 10px;
   background-color: #fc1ab1;
   height: 50px;
   width: 100%;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 1000;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
