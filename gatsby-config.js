@@ -26,6 +26,13 @@ module.exports = {
         name: `assets`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/images`,
+        name: `images`,
+      },
+    },
     `gatsby-plugin-material-ui`,
     `gatsby-plugin-slug`,
     `gatsby-plugin-sitemap`,

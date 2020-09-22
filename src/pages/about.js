@@ -1,14 +1,15 @@
 import React from "react";
 import { graphql } from "gatsby";
-
+import Img from "gatsby-image";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Bio from "../components/bio";
-import image from "../images/about.png";
+// import image from "../images/about.png";
 
 const Aboutpage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
   const author = data.site.siteMetadata.author.name;
+  const image = data.file.childImageSharp.fluid;
   return (
     <div>
       <Layout location={location} title={siteTitle} author={author}>
@@ -32,8 +33,8 @@ const Aboutpage = ({ data, location }) => {
         </p>
         <p>今後ともどうぞよろしくお願いします！！</p>
         <span>[自宅の芝生(2019年8月撮影)]</span>
-        <img src={image} alt="自宅の芝生(2019年8月撮影)" />
-
+        <Img fluid={image} alt="自宅の芝生(2019年8月撮影)" />
+        <br />
         <footer>
           <Bio />
         </footer>
@@ -51,6 +52,13 @@ export const pageQuery = graphql`
         title
         author {
           name
+        }
+      }
+    }
+    file(relativePath: { eq: "about.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000, quality: 100) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
