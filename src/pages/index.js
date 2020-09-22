@@ -40,7 +40,7 @@ const BlogIndex = ({ data, location }) => {
                     <span style={{ marginLeft: 5 }}>{node.frontmatter.date}</span>
                   </small>
                 </header>
-                <div className="posts__image_container">
+                {/* <div className="posts__image_container">
                   <Link to={node.fields.slug}>
                     <Img
                       className="posts__image"
@@ -49,7 +49,7 @@ const BlogIndex = ({ data, location }) => {
                       durationFadeIn={100}
                     />
                   </Link>
-                </div>
+                </div> */}
                 <section>
                   <p
                     className="posts__desc"
