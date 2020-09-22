@@ -21,7 +21,12 @@ const Tag = props => {
       {props.tags.map((tag, index) => {
         return (
           <Button key={index} variant="contained" color={"default"} className={classes.button}>
-            <Link to={`/tags/${_.kebabCase(tag)}/`} key={index} className="tag__list">
+            <Link
+              to={`/tags/${_.kebabCase(tag)}/`}
+              key={index}
+              className="tag__list"
+              title={`${tag}のtagページに移動します。`}
+            >
               <FontAwesomeIcon icon={faTag} />
               　{tag}
             </Link>

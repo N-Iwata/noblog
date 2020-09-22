@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-// import Image from "gatsby-image";
 import Img from "gatsby-image";
 import Button from "@material-ui/core/Button";
 import { config, library } from "@fortawesome/fontawesome-svg-core";
@@ -30,7 +29,11 @@ const BlogIndex = ({ data, location }) => {
               <article>
                 <header>
                   <h3 className="posts__title">
-                    <Link className="posts__title__a" to={node.fields.slug}>
+                    <Link
+                      className="posts__title__a"
+                      to={node.fields.slug}
+                      title={`${title}のページに移動します。`}
+                    >
                       {title}
                     </Link>
                   </h3>
@@ -41,7 +44,7 @@ const BlogIndex = ({ data, location }) => {
                   </small>
                 </header>
                 <div className="posts__image_container">
-                  <Link to={node.fields.slug}>
+                  <Link to={node.fields.slug} title={`${title}のページに移動します。`}>
                     <Img
                       className="posts__image"
                       fluid={node.frontmatter.hero.childImageSharp.fluid}
@@ -60,7 +63,11 @@ const BlogIndex = ({ data, location }) => {
 
                   <div className="posts__more">
                     <Button variant="contained" color={"default"}>
-                      <Link className="posts__more__a" to={node.fields.slug}>
+                      <Link
+                        className="posts__more__a"
+                        to={node.fields.slug}
+                        title={`${title}のページに移動します。`}
+                      >
                         READ MORE
                       </Link>
                     </Button>

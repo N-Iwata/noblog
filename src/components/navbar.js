@@ -12,20 +12,30 @@ const NavBar = () => {
         <FontAwesomeIcon icon={faBars} />
       </label>
       <span className="navbar__title">
-        <Link to="/">RPF NoBlog</Link>
+        <Link to="/" title={"ブログトップに移動します。"}>
+          RPF NoBlog
+        </Link>
       </span>
       <ul className="navbar__ul">
         <li className="navbar__li">
-          <Link to="/">Blog</Link>
+          <Link to="/" title={"ブログトップに移動します。"}>
+            Blog
+          </Link>
         </li>
         <li className="navbar__li">
-          <Link to="/about">About</Link>
+          <Link to="/about" title={"Aboutページに移動します。"}>
+            About
+          </Link>
         </li>
         <li className="navbar__li">
-          <Link to="/contact">Contact</Link>
+          <Link to="/contact" title={"お問い合わせページに移動します。"}>
+            Contact
+          </Link>
         </li>
         <li className="navbar__li">
-          <Link to="/privacy_policy">Privacy Policy</Link>
+          <Link to="/privacy_policy" title={"PrivacyPolicyページに移動します。"}>
+            Privacy Policy
+          </Link>
         </li>
       </ul>
     </nav>

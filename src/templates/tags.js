@@ -35,7 +35,11 @@ const Tags = ({ pageContext, data, location }) => {
               <article>
                 <header>
                   <h3 className="posts__title">
-                    <Link className="posts__title__a" to={node.fields.slug}>
+                    <Link
+                      className="posts__title__a"
+                      to={node.fields.slug}
+                      title={`${title}のページに移動します。`}
+                    >
                       {title}
                     </Link>
                   </h3>
@@ -45,7 +49,7 @@ const Tags = ({ pageContext, data, location }) => {
                   </small>
                 </header>
                 <div className="posts__image_container">
-                  <Link to={node.fields.slug}>
+                  <Link to={node.fields.slug} title={`${title}のページに移動します。`}>
                     <Img
                       className="posts__image"
                       fluid={node.frontmatter.hero.childImageSharp.fluid}
@@ -63,7 +67,11 @@ const Tags = ({ pageContext, data, location }) => {
                   />
                   <div className="posts__more">
                     <Button variant="contained" color={"default"}>
-                      <Link className="posts__more__a" to={node.fields.slug}>
+                      <Link
+                        className="posts__more__a"
+                        to={node.fields.slug}
+                        title={`${title}のページに移動します。`}
+                      >
                         READ MORE
                       </Link>
                     </Button>

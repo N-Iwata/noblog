@@ -7,7 +7,7 @@ const Footer = props => {
   return (
     <footer className="footer">
       <div className="footer__home">
-        <Link to={"/"}>
+        <Link to={"/"} title={"ブログトップに移動します。"}>
           <i>
             <FontAwesomeIcon icon={faHome} />
             <span>HOME</span>
