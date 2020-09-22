@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import Image from "gatsby-image";
+// import Image from "gatsby-image";
+import Img from "gatsby-image";
 import { config, library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
@@ -61,9 +62,11 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </header>
           <Tag tags={post.frontmatter.tags} />
           <div>
-            <Image
+            <Img
               className="blog__hero"
               fluid={data.markdownRemark.frontmatter.hero.childImageSharp.fluid}
+              loading="eager"
+              durationFadeIn={100}
             />
           </div>
           <Toc data={data.markdownRemark.tableOfContents} />

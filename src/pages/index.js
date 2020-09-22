@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import Image from "gatsby-image";
+// import Image from "gatsby-image";
+import Img from "gatsby-image";
 import Button from "@material-ui/core/Button";
 import { config, library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -41,9 +42,11 @@ const BlogIndex = ({ data, location }) => {
                 </header>
                 <div className="posts__image_container">
                   <Link to={node.fields.slug}>
-                    <Image
+                    <Img
                       className="posts__image"
                       fluid={node.frontmatter.hero.childImageSharp.fluid}
+                      loading="eager"
+                      durationFadeIn={100}
                     />
                   </Link>
                 </div>
