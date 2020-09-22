@@ -72,7 +72,7 @@ const Tags = ({ pageContext, data, location }) => {
                         to={node.fields.slug}
                         title={`${title}のページに移動します。`}
                       >
-                        続きを読む
+                        READ MORE
                       </Link>
                     </Button>
                   </div>
