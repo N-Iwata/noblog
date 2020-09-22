@@ -7,10 +7,10 @@
 
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import Image from "gatsby-image";
+import Img from "gatsby-image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
-import image from "../images/qiita.png";
+// import image from "../images/qiita.png";
 
 import { rhythm } from "../utils/typography";
 
@@ -21,6 +21,13 @@ const Bio = () => {
         childImageSharp {
           fixed(width: 50, height: 50) {
             ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      qiita: file(relativePath: { regex: "/qiita.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 2000) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -49,7 +56,7 @@ const Bio = () => {
           border: "#ccc 3px solid",
         }}
       >
-        <Image
+        <Img
           fixed={data.avatar.childImageSharp.fixed}
           alt={author.name}
           style={{
@@ -117,30 +124,6 @@ const Bio = () => {
                   }}
                   color="#333"
                   icon={faGithub}
-                />
-              </a>
-            </div>
-            <div
-              style={{
-                position: "absolute",
-                width: "32px",
-                top: "-4px",
-                left: "56px",
-              }}
-            >
-              <a
-                style={{
-                  boxShadow: "none",
-                }}
-                href="https://qiita.com/rpf-nob"
-              >
-                <img
-                  src={image}
-                  alt="Qiita"
-                  style={{
-                    height: "2em",
-                    width: "2em",
-                  }}
                 />
               </a>
             </div>
