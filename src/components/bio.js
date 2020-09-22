@@ -24,13 +24,6 @@ const Bio = () => {
           }
         }
       }
-      qiita: file(relativePath: { regex: "/qiita.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 2000) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       site {
         siteMetadata {
           author {
