@@ -2,7 +2,7 @@ import React from "react";
 import AdSense from "react-adsense";
 
 const Adsense = () => (
-  <div>
+  <ins>
     <AdSense.Google
       client="ca-pub-5904636905001908"
       slot=""
@@ -11,7 +11,7 @@ const Adsense = () => (
       responsive="true"
       layoutKey="-gw-1+2a-9x+5c"
     />
-  </div>
+  </ins>
 );
 
 export default Adsense;
