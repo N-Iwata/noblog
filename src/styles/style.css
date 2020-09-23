@@ -11,6 +11,11 @@ body {
   border: 1px solid #ccc;
   margin-bottom: 5px;
   max-height: 350px;
+  max-width: 800px;
+}
+
+.blog-section {
+  max-width: 800px;
 }
 
 .blog-section h2 {
