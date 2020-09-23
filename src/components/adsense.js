@@ -5,7 +5,7 @@ const Adsense = () => (
   <div>
     <AdSense.Google
       client="ca-pub-5904636905001908"
-      slot="7640754857"
+      slot="5904636905001908"
       style={{ display: "block" }}
       format="auto"
       responsive="true"
