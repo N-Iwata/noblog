@@ -399,6 +399,14 @@ body {
   margin-top: 28px;
 }
 
+.adsense {
+  background: #fff !important;
+}
+
+.adsense ins {
+  background: #fff !important;
+}
+
 @media screen and (min-width: 768px) {
   /* デスクトップ用CSS */
   .sidebar {

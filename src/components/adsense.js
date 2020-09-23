@@ -2,7 +2,7 @@ import React from "react";
 import AdSense from "react-adsense";
 
 const Adsense = () => (
-  <ins>
+  <ins className="adsense">
     <AdSense.Google
       client="ca-pub-5904636905001908"
       slot=""

@@ -4,6 +4,13 @@
   margin-top: 28px;
 }
 
+.adsense {
+  background: #fff !important;
+  & ins {
+    background: #fff !important;
+  }
+}
+
 @media screen and (min-width: 768px) {
   /* デスクトップ用CSS */
   .sidebar {
