@@ -6,14 +6,13 @@ import { config, library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 
-import Bio from "../components/bio";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Toc from "../components/toc";
 import Tag from "../components/tag";
 import Share from "../components/share";
 import Iframely from "../components/iframely";
-import { rhythm, scale } from "../utils/typography";
+import { rhythm } from "../utils/typography";
 
 config.autoAddCss = false;
 library.add(faClock);
@@ -49,16 +48,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             >
               {post.frontmatter.title}
             </h1>
-            <p
-              style={{
-                ...scale(-1 / 5),
-                display: `block`,
-                marginBottom: 0,
-              }}
-            >
+            <small>
               <FontAwesomeIcon icon={faClock} />
               <span style={{ marginLeft: 5 }}>{post.frontmatter.date}</span>
-            </p>
+            </small>
           </header>
           <Tag tags={post.frontmatter.tags} />
           <div>
@@ -81,9 +74,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             url={`${siteUrl}${slug}`}
             description={post.excerpt}
           />
-          <footer>
-            <Bio />
-          </footer>
         </article>
 
         <nav>

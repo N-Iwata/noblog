@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: Helvetica Neue, Helvetica Sans, sans-serif !important;
 }
@@ -16,9 +17,6 @@ body {
   background-color: #f2f2f2;
   color: black;
   padding: 10px 10px;
-  margin: 0;
-  margin-top: 30px;
-  margin-bottom: 30px;
   position: relative;
   border: 1px solid #aaa;
   border-left: 6px solid #fc1ab1;
@@ -195,6 +193,30 @@ body {
   }
 }
 
+.layout {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  max-width: 1200px;
+  padding: 30px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.main {
+  -ms-flex-preferred-size: 75%;
+      flex-basis: 75%;
+}
+
+@media screen and (min-width: 768px) {
+  .layout {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .navbar {
   position: fixed;
   padding: 0;
@@ -306,13 +328,12 @@ body {
 }
 
 .posts {
-  padding: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 70px;
 }
 
 .posts__title {
   margin: 0;
-  margin-bottom: 5px;
+  margin-top: 28px;
   font-size: 1.4em;
   border-bottom: 7px solid #edf6ff;
 }
@@ -352,11 +373,12 @@ body {
 }
 
 .posts__desc {
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 
 .posts__more {
   float: right;
+  margin-bottom: 15px;
 }
 
 .posts__more__a {
@@ -368,6 +390,21 @@ body {
   display: block;
   font-size: 14px;
   font-weight: bold;
+}
+
+.sidebar {
+  width: 100%;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  margin-top: 28px;
+}
+
+@media screen and (min-width: 768px) {
+  /* デスクトップ用CSS */
+  .sidebar {
+    min-width: 300px;
+    margin-left: 30px;
+  }
 }
 
 .tag {

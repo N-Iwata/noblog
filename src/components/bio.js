@@ -43,36 +43,36 @@ const Bio = () => {
     <div>
       <div
         style={{
-          display: `flex`,
           marginBottom: rhythm(1.5),
           padding: "20px 30px 40px 30px",
-          border: "#ccc 3px solid",
+          border: "#ccc 1px solid",
         }}
       >
-        <Image
-          fixed={data.avatar.childImageSharp.fixed}
-          alt={author.name}
-          style={{
-            marginRight: rhythm(1 / 2),
-            marginBottom: 0,
-            minWidth: 50,
-            borderRadius: `100%`,
-          }}
-          imgStyle={{
-            borderRadius: `50%`,
-          }}
-        />
+        <div style={{ textAlign: "center" }}>
+          <Image
+            fixed={data.avatar.childImageSharp.fixed}
+            alt={author.name}
+            style={{
+              minWidth: 50,
+              borderRadius: `100%`,
+            }}
+            imgStyle={{
+              borderRadius: `50%`,
+            }}
+          />
+        </div>
         <div>
-          <span
+          <p
             style={{
               fontSize: 18,
+              textAlign: "center",
+              marginBottom: 5,
             }}
           >
             Written by <strong>{author.name}</strong>
-          </span>
-
-          <br />
+          </p>
           <span>{author.summary}</span>
+
           <div
             style={{
               position: "relative",

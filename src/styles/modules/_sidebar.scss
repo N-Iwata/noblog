@@ -1,0 +1,13 @@
+.sidebar {
+  width: 100%;
+  flex-basis: 25%;
+  margin-top: 28px;
+}
+
+@media screen and (min-width: 768px) {
+  /* デスクトップ用CSS */
+  .sidebar {
+    min-width: 300px;
+    margin-left: 30px;
+  }
+}

@@ -3,7 +3,6 @@ import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import Bio from "../components/bio";
 
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
@@ -115,10 +114,6 @@ const Contact = ({ data, location }) => {
             </div>
           </form>
         </div>
-
-        <footer>
-          <Bio />
-        </footer>
       </Layout>
     </div>
   );

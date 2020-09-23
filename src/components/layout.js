@@ -2,10 +2,11 @@ import React from "react";
 // import { Link } from "gatsby";
 
 // import { rhythm, scale } from "../utils/typography";
-import { rhythm } from "../utils/typography";
+// import { rhythm } from "../utils/typography";
 
 import NavBar from "./navbar";
 import Footer from "./footer";
+import SideBar from "./sidebar";
 
 const Layout = ({ location, title, author, children }) => {
   // const rootPath = `${__PATH_PREFIX__}/`;
@@ -54,19 +55,10 @@ const Layout = ({ location, title, author, children }) => {
   return (
     <div>
       <NavBar />
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          marginTop: 20,
-          maxWidth: rhythm(30),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-          backgroundColor: `#fff`,
-          boxShadow: `0 0 10px rgba(0,0,0,0.2)`,
-        }}
-      >
+      <div className="layout">
         {/* <header>{header}</header> */}
-        <main>{children}</main>
+        <main className="main">{children}</main>
+        <SideBar />
       </div>
       <Footer author={author} />
     </div>

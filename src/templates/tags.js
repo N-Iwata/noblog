@@ -6,9 +6,9 @@ import { config, library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 
-import Bio from "../components/bio";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import Tag from "../components/tag";
 
 // Components
 import { Link, graphql } from "gatsby";
@@ -27,7 +27,7 @@ const Tags = ({ pageContext, data, location }) => {
     <div>
       <Layout location={location} author={author}>
         <SEO title={`Tag: ${tag}`} description={`${tag}タグを含む記事の一覧ページです`} />
-        <h2>{tagHeader}</h2>
+        <h2 style={{ marginTop: 28 }}>{tagHeader}</h2>
         {edges.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug;
           return (
@@ -48,6 +48,7 @@ const Tags = ({ pageContext, data, location }) => {
                     <span style={{ marginLeft: 5 }}>{node.frontmatter.date}</span>
                   </small>
                 </header>
+                <Tag tags={node.frontmatter.tags} />
                 <div className="posts__image_container">
                   <Link to={node.fields.slug} title={`${title}のページに移動します。`}>
                     <Img
@@ -81,7 +82,6 @@ const Tags = ({ pageContext, data, location }) => {
             </div>
           );
         })}
-        <Bio />
       </Layout>
     </div>
   );
@@ -115,6 +115,7 @@ export const pageQuery = graphql`
             date(formatString: "YYYY-MM-DD")
             description
             slug
+            tags
             hero {
               childImageSharp {
                 fluid(maxWidth: 1280) {

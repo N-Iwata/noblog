@@ -6,9 +6,9 @@ import { config, library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 
-import Bio from "../components/bio";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import Tag from "../components/tag";
 
 config.autoAddCss = false;
 library.add(faClock);
@@ -43,6 +43,7 @@ const BlogIndex = ({ data, location }) => {
                     <span style={{ marginLeft: 5 }}>{node.frontmatter.date}</span>
                   </small>
                 </header>
+                <Tag tags={node.frontmatter.tags} />
                 <div className="posts__image_container">
                   <Link to={node.fields.slug} title={`${title}のページに移動します。`}>
                     <Img
@@ -77,8 +78,6 @@ const BlogIndex = ({ data, location }) => {
             </div>
           );
         })}
-
-        <Bio />
       </Layout>
     </div>
   );
@@ -108,6 +107,7 @@ export const pageQuery = graphql`
             title
             description
             slug
+            tags
             hero {
               childImageSharp {
                 fluid(maxWidth: 1280) {
