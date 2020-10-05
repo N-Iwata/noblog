@@ -53,6 +53,9 @@ const Contact = ({ data, location }) => {
           各種お問い合わせはこちらのフォームよりお願いいたします。
           <br></br>
           お名前・メールアドレス・件名・お問い合わせ内容を記載して送信ボタンをクリックしてください。
+          <br></br>
+          <br></br>
+          できる限り対応させていただきますが、内容によっては返信を控えさせて頂きますのでご了承ください。
         </p>
         <div className="contact">
           <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
@@ -101,14 +104,20 @@ const Contact = ({ data, location }) => {
                 name="message"
                 label="お問い合わせ内容"
                 multiline
-                rows={4}
+                rows={6}
                 variant="outlined"
                 value={message}
                 onChange={handleChange}
               />
             </div>
             <div className="contact__btn">
-              <Button type="submit" variant="contained" color="primary" disabled={canSubmit()}>
+              <Button
+                type="submit"
+                variant="contained"
+                color="primary"
+                fullWidth
+                disabled={canSubmit()}
+              >
                 送信
               </Button>
             </div>
