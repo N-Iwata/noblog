@@ -10,7 +10,7 @@ hero: ./hero.png
 ## はじめに 
 
 おはようございます！こんにちは！こんばんは！<br>
-麻雀と芝生大好きwebエンジニアおじさんこと**のふのふ**(@rpf_nob)です！！
+麻雀と芝生大好きおじさんこと**のふのふ**(@rpf_nob)です！！
 
 今回はGatsbyJSブログの記事にTwitterの投稿を埋め込めるようにしたので解説します。
 
@@ -85,7 +85,7 @@ Twitterで表示するツイートを見つけ、右上隅にある**キャレ�
     <a href="https://t.co/76MI5olUFa">https://t.co/76MI5olUFa</a>
   </p>
   &mdash;
-  麻雀と芝生大好きwebエンジニアおじさん (@rpf_nob) 
+  麻雀と芝生大好きおじさん (@rpf_nob) 
   <a href="https://twitter.com/rpf_nob/status/1270856164289343488?ref_src=twsrc%5Etfw">June 10, 2020</a>
 </blockquote> 
 ```
@@ -100,7 +100,7 @@ Twitterで表示するツイートを見つけ、右上隅にある**キャレ�
 
 簡単ですね！！
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">24時間分割意識生活を開始した話をブログに上げましたので、よかったら見てください🙏<br><br>YouTubeの動画を見るだけでもおススメです😀<br><br>【決意表明】24時間分割意識生活を開始した<br> <a href="https://t.co/76MI5olUFa">https://t.co/76MI5olUFa</a></p>&mdash; 麻雀と芝生大好きwebエンジニアおじさん (@rpf_nob) <a href="https://twitter.com/rpf_nob/status/1270856164289343488?ref_src=twsrc%5Etfw">June 10, 2020</a></blockquote> 
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">24時間分割意識生活を開始した話をブログに上げましたので、よかったら見てください🙏<br><br>YouTubeの動画を見るだけでもおススメです😀<br><br>【決意表明】24時間分割意識生活を開始した<br> <a href="https://t.co/76MI5olUFa">https://t.co/76MI5olUFa</a></p>&mdash; 麻雀と芝生大好きおじさん (@rpf_nob) <a href="https://twitter.com/rpf_nob/status/1270856164289343488?ref_src=twsrc%5Etfw">June 10, 2020</a></blockquote> 
 
 ## まとめ
 
