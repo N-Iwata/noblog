@@ -202,24 +202,11 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
-  max-width: 1200px;
+  max-width: 800px;
   padding: 30px;
   background-color: #fff;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.main {
-  -ms-flex-preferred-size: 75%;
-      flex-basis: 75%;
-}
-
-@media screen and (min-width: 768px) {
-  .layout {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
 }
 
 .navbar {

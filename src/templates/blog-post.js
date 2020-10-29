@@ -10,6 +10,8 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Toc from "../components/toc";
 import Tag from "../components/tag";
+import Adsense from "../components/adsense";
+import Bio from "../components/bio";
 import Share from "../components/share";
 import Iframely from "../components/iframely";
 import { rhythm } from "../utils/typography";
@@ -63,6 +65,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             />
           </div>
           <Toc data={data.markdownRemark.tableOfContents} />
+          <Adsense />
           <section className="blog-section" dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr
             style={{
@@ -102,6 +105,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             </li>
           </ul>
         </nav>
+        <Bio />
+        <Adsense />
       </Layout>
     </div>
   );

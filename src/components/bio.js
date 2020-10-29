@@ -1,16 +1,8 @@
-/**
- * Bio component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Image from "gatsby-image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
-import image from "../images/qiita.png";
 
 import { rhythm } from "../utils/typography";
 
@@ -71,8 +63,15 @@ const Bio = () => {
           >
             Written by <strong>{author.name}</strong>
           </p>
-          <span>{author.summary}</span>
-
+          <p
+            style={{
+              fontSize: 14,
+              textAlign: "center",
+              marginBottom: 5,
+            }}
+          >
+            {author.summary}
+          </p>
           <div
             style={{
               position: "relative",
@@ -84,7 +83,7 @@ const Bio = () => {
                 position: "absolute",
                 width: "100%",
                 top: "0",
-                left: "0",
+                left: "47%",
               }}
             >
               <a
@@ -117,30 +116,6 @@ const Bio = () => {
                   }}
                   color="#333"
                   icon={faGithub}
-                />
-              </a>
-            </div>
-            <div
-              style={{
-                position: "absolute",
-                width: "32px",
-                top: "-4px",
-                left: "56px",
-              }}
-            >
-              <a
-                style={{
-                  boxShadow: "none",
-                }}
-                href="https://qiita.com/rpf-nob"
-              >
-                <img
-                  src={image}
-                  alt="Qiita"
-                  style={{
-                    height: "2em",
-                    width: "2em",
-                  }}
                 />
               </a>
             </div>

@@ -9,6 +9,8 @@ import { faClock } from "@fortawesome/free-solid-svg-icons";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Tag from "../components/tag";
+import Adsense from "../components/adsense";
+import Bio from "../components/bio";
 
 config.autoAddCss = false;
 library.add(faClock);
@@ -78,6 +80,8 @@ const BlogIndex = ({ data, location }) => {
             </div>
           );
         })}
+        <Bio />
+        <Adsense />
       </Layout>
     </div>
   );
