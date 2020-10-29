@@ -71,55 +71,39 @@ const Bio = () => {
             }}
           >
             {author.summary}
-          </p>
-          <div
-            style={{
-              position: "relative",
-              marginTop: "10px",
-            }}
-          >
-            <div
+            <a
               style={{
-                position: "absolute",
-                width: "100%",
-                top: "0",
-                left: "47%",
+                boxShadow: "none",
+                marginLeft: 5,
               }}
+              href="https://twitter.com/rpf_nob"
             >
-              <a
+              <FontAwesomeIcon
                 style={{
-                  boxShadow: "none",
+                  height: "1.5em",
+                  width: "1.5em",
                 }}
-                href="https://twitter.com/rpf_nob"
-              >
-                <FontAwesomeIcon
-                  style={{
-                    height: "1.5em",
-                    width: "1.5em",
-                    marginRight: "5",
-                  }}
-                  color="#3eaded"
-                  icon={faTwitter}
-                />
-              </a>
-              <a
+                color="#3eaded"
+                icon={faTwitter}
+              />
+            </a>
+            <a
+              style={{
+                boxShadow: "none",
+                marginLeft: 5,
+              }}
+              href="https://github.com/N-Iwata"
+            >
+              <FontAwesomeIcon
                 style={{
-                  boxShadow: "none",
+                  height: "1.5em",
+                  width: "1.5em",
                 }}
-                href="https://github.com/N-Iwata"
-              >
-                <FontAwesomeIcon
-                  style={{
-                    height: "1.5em",
-                    width: "1.5em",
-                    marginRight: "5",
-                  }}
-                  color="#333"
-                  icon={faGithub}
-                />
-              </a>
-            </div>
-          </div>
+                color="#333"
+                icon={faGithub}
+              />
+            </a>
+          </p>
         </div>
       </div>
     </div>
