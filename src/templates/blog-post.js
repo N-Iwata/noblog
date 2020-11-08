@@ -106,7 +106,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </ul>
         </nav>
         <Bio />
-        <Adsense />
+        {/* <Adsense /> */}
       </Layout>
     </div>
   );
