@@ -65,7 +65,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             />
           </div>
           <Toc data={data.markdownRemark.tableOfContents} />
-          <Adsense />
+          {/* <Adsense /> */}
           <section className="blog-section" dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr
             style={{
@@ -106,7 +106,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </ul>
         </nav>
         <Bio />
-        {/* <Adsense /> */}
+        <Adsense />
       </Layout>
     </div>
   );
