@@ -66,7 +66,7 @@ const Bio = () => {
           <p
             style={{
               fontSize: 14,
-              textAlign: "center",
+              // textAlign: "center",
               marginBottom: 5,
             }}
           >

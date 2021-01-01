@@ -19,7 +19,7 @@ const Share = props => {
   return (
     <React.Fragment>
       <div className="social-links">
-        <p className="social-links__title">SHARE!!</p>
+        <p className="social-links__title">／ SHARE!! ＼</p>
         <div className="social-links__icon">
           <TwitterShareButton url={articleUrl} title={articleTitle}>
             <TwitterIcon round size={iconSize} />
