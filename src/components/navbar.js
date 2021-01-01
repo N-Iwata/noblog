@@ -13,7 +13,7 @@ const NavBar = () => {
       </label>
       <span className="navbar__title">
         <Link to="/" title={"ブログトップに移動します。"}>
-          RPF NoBlog
+          のふのふろぐ
         </Link>
       </span>
       <ul className="navbar__ul">

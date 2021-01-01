@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `RPF NoBlog`,
+    title: `のふのふろぐ`,
     author: {
       name: `のふのふ`,
       summary: `東京で働く名古屋生まれの麻雀と芝生と娘と妻を愛するアラフォーエンジニア`,
