@@ -87,6 +87,7 @@ body {
 .blog-section ul {
   border: 2px dotted #fc1ab1;
   padding: 5px;
+  margin-left: 0;
 }
 
 .blog-section ul li {
