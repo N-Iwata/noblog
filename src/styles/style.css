@@ -476,7 +476,7 @@ body {
 }
 
 .toc__content > ul > li > p {
-  line-height: 0%;
+  margin-bottom: 0;
   color: black;
 }
 
@@ -492,6 +492,7 @@ body {
 
 .toc__content > ul > li > ul {
   margin-left: 15px;
+  margin-top: 0;
 }
 
 .toc__content > ul > li > ul > li {
