@@ -4,10 +4,12 @@ import {
   TwitterShareButton,
   LineShareButton,
   LinkedinShareButton,
+  HatenaShareButton,
   FacebookIcon,
   TwitterIcon,
   LineIcon,
   LinkedinIcon,
+  HatenaIcon,
 } from "react-share";
 
 const Share = props => {
@@ -15,7 +17,7 @@ const Share = props => {
   const articleUrl = props.url;
   const articleDescription = props.description;
   const iconSize = 32;
-
+  console.log("articleTitle: ", articleTitle);
   return (
     <React.Fragment>
       <div className="social-links">
@@ -39,6 +41,11 @@ const Share = props => {
           <LinkedinShareButton url={articleUrl} quote={articleDescription}>
             <LinkedinIcon round size={iconSize} />
           </LinkedinShareButton>
+        </div>
+        <div className="social-links__icon">
+          <HatenaShareButton url={articleUrl} title={articleTitle}>
+            <HatenaIcon round size={iconSize} />
+          </HatenaShareButton>
         </div>
       </div>
     </React.Fragment>
