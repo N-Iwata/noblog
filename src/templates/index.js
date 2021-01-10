@@ -11,11 +11,12 @@ import SEO from "../components/seo";
 import Tag from "../components/tag";
 import Adsense from "../components/adsense";
 import Bio from "../components/bio";
+import Pagenation from "../components/pagenation";
 
 config.autoAddCss = false;
 library.add(faClock);
 
-const BlogIndex = ({ data, location }) => {
+const BlogIndex = ({ data, location, pageContext }) => {
   const siteTitle = data.site.siteMetadata.title;
   const author = data.site.siteMetadata.author.name;
   const posts = data.allMarkdownRemark.edges;
@@ -80,6 +81,7 @@ const BlogIndex = ({ data, location }) => {
             </div>
           );
         })}
+        <Pagenation pageContext={pageContext} />
         <Bio />
         <Adsense />
       </Layout>
@@ -90,7 +92,7 @@ const BlogIndex = ({ data, location }) => {
 export default BlogIndex;
 
 export const pageQuery = graphql`
-  query {
+  query($skip: Int!, $limit: Int!) {
     site {
       siteMetadata {
         title
@@ -99,7 +101,11 @@ export const pageQuery = graphql`
         }
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      skip: $skip
+      limit: $limit
+    ) {
       edges {
         node {
           excerpt
