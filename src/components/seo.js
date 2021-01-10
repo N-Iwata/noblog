@@ -33,8 +33,6 @@ const SEO = ({ description, lang, meta, title, image }) => {
   const metaDescription = description || site.siteMetadata.description;
   const siteUrl = site.siteMetadata.siteUrl;
   const defaultImage = `${siteUrl}${ogp_image}`;
-  // console.log("defaultImage: ", defaultImage);
-  // console.log("image: ", image);
 
   return (
     <Helmet
@@ -44,42 +42,15 @@ const SEO = ({ description, lang, meta, title, image }) => {
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: "og:image",
-          content: image || defaultImage,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary_large_image`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.social.twitter,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
+        { name: `description`, content: metaDescription },
+        { property: `og:title`, content: title },
+        { property: `og:description`, content: metaDescription },
+        { property: "og:image", content: image || defaultImage },
+        { property: `og:type`, content: `website` },
+        { name: `twitter:card`, content: `summary_large_image` },
+        { name: `twitter:creator`, content: site.siteMetadata.social.twitter },
+        { name: `twitter:title`, content: title },
+        { name: `twitter:description`, content: metaDescription },
       ].concat(meta)}
     />
   );
