@@ -215,6 +215,7 @@ body {
   padding: 0;
   margin-bottom: 10px;
   background-color: #fc1ab1;
+  max-width: 800px;
   height: 50px;
   width: 100%;
   top: 0;
