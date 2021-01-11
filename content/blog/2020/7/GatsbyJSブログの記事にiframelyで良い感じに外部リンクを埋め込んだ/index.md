@@ -3,7 +3,7 @@ title: GatsbyJSブログの記事にiframelyで良い感じに外部リンクを
 date: "2020-07-08"
 description: 今回はGatsbyJSブログの記事にiframeryで良い感じに外部リンクを埋め込めるようにしたので解説します。外部リンクが良い感じになるだけで良い感じのブログになりますね！！
 slug: 2020-07-08/gatsby-iframely
-tags: [GatsbyJS,gatsby-remark-responsive-iframe,iframely]
+tags: [GatsbyJS,gatsby-starter-blog,gatsby-remark-responsive-iframe,iframely]
 hero: ./hero.png
 ---
 

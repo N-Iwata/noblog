@@ -63,8 +63,8 @@ body {
 }
 
 .blog-section strong {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), color-stop(60%, #f86eca)) !important;
-  background: linear-gradient(transparent 70%, #f86eca 60%) !important;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(90%, transparent), color-stop(60%, #f86eca)) !important;
+  background: linear-gradient(transparent 90%, #f86eca 60%) !important;
 }
 
 .blog-section blockquote {
