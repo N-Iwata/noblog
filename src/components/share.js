@@ -17,7 +17,7 @@ const Share = props => {
   const articleUrl = props.url;
   const articleDescription = props.description;
   const iconSize = 32;
-  console.log("articleTitle: ", articleTitle);
+
   return (
     <React.Fragment>
       <div className="social-links">

@@ -22,6 +22,7 @@ exports.createPages = async ({ graphql, actions }) => {
               frontmatter {
                 title
                 slug
+                date(formatString: "YYYY-MM-DD")
               }
             }
           }
@@ -52,6 +53,11 @@ exports.createPages = async ({ graphql, actions }) => {
   posts.forEach((post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node;
     const next = index === 0 ? null : posts[index - 1].node;
+    const new1 = posts[0].node;
+    const new2 = posts[1].node;
+    const new3 = posts[2].node;
+    const new4 = posts[3].node;
+    const new5 = posts[4].node;
 
     createPage({
       path: `/${post.node.frontmatter.slug}/`,
@@ -60,6 +66,11 @@ exports.createPages = async ({ graphql, actions }) => {
         slug: post.node.fields.slug,
         previous,
         next,
+        new1,
+        new2,
+        new3,
+        new4,
+        new5,
       },
     });
   });

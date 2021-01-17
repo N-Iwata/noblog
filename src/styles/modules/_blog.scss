@@ -95,6 +95,50 @@
   }
 }
 
+.prevnext-ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+}
+.prevnext-li {
+  padding: 5px 10px;
+  background-color: #fc1ab1;
+
+  & a {
+    box-shadow: none;
+    color: #fff;
+  }
+}
+
+.new {
+  background-color: #fdfdfd;
+  margin: 10px auto;
+  border: 1px solid #aaa;
+
+  &__title {
+    background-color: #fc1ab1;
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    color: #fff;
+    text-transform: none;
+  }
+
+  &__ul {
+    list-style: none;
+    padding: 10px 10px 0;
+  }
+  &__li {
+    border-bottom: 1px dotted #fc1ab1;
+    & a {
+      box-shadow: none;
+      color: #000;
+    }
+  }
+}
+
 @media (max-width: 767px) {
   .blog-section {
     & h2 {
