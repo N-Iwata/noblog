@@ -25,7 +25,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const siteUrl = data.site.siteMetadata.siteUrl;
   const author = data.site.siteMetadata.author.name;
   const { slug, previous, next, new1, new2, new3, new4, new5 } = pageContext;
-  console.log("previous: ", previous);
 
   const hero = post.frontmatter.hero.childImageSharp.fluid.src;
   const image = `${siteUrl}${hero}`;
@@ -82,60 +81,60 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 
         <nav>
           <ul className={"prevnext-ul"}>
-            <li className={"prevnext-li"}>
-              {previous && (
+            {previous && (
+              <li className={"prevnext-li"}>
                 <Link to={previous.fields.slug} rel="prev">
                   ← 前の記事
                 </Link>
-              )}
-            </li>
-            <li className={"prevnext-li"}>
-              {next && (
+              </li>
+            )}
+            {next && (
+              <li className={"prevnext-li"}>
                 <Link to={next.fields.slug} rel="next">
                   次の記事 →
                 </Link>
-              )}
-            </li>
+              </li>
+            )}
           </ul>
         </nav>
         <nav className={"new"}>
           <div className={"new__title"}>最近の記事</div>
           <ul className={"new__ul"}>
-            <li className={"new__li"}>
-              {new1 && (
+            {new1 && (
+              <li className={"new__li"}>
                 <Link to={new1.fields.slug} rel="new1">
                   {new1.frontmatter.date}: {new1.frontmatter.title}
                 </Link>
-              )}
-            </li>
-            <li className={"new__li"}>
-              {new2 && (
+              </li>
+            )}
+            {new2 && (
+              <li className={"new__li"}>
                 <Link to={new2.fields.slug} rel="new2">
                   {new2.frontmatter.date}: {new2.frontmatter.title}
                 </Link>
-              )}
-            </li>
-            <li className={"new__li"}>
-              {new3 && (
+              </li>
+            )}
+            {new3 && (
+              <li className={"new__li"}>
                 <Link to={new3.fields.slug} rel="new3">
                   {new3.frontmatter.date}: {new3.frontmatter.title}
                 </Link>
-              )}
-            </li>
-            <li className={"new__li"}>
-              {new4 && (
+              </li>
+            )}
+            {new4 && (
+              <li className={"new__li"}>
                 <Link to={new4.fields.slug} rel="new4">
                   {new4.frontmatter.date}: {new4.frontmatter.title}
                 </Link>
-              )}
-            </li>
-            <li className={"new__li"}>
-              {new5 && (
+              </li>
+            )}
+            {new5 && (
+              <li className={"new__li"}>
                 <Link to={new5.fields.slug} rel="new5">
                   {new5.frontmatter.date}: {new5.frontmatter.title}
                 </Link>
-              )}
-            </li>
+              </li>
+            )}
           </ul>
         </nav>
         <Bio />
