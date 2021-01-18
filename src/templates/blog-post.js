@@ -79,17 +79,17 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           />
         </article>
 
-        <nav>
-          <ul className={"prevnext-ul"}>
+        <nav className={"prevnext"}>
+          <ul className={"prevnext__ul"}>
             {previous && (
-              <li className={"prevnext-li"}>
+              <li className={"prevnext__li"}>
                 <Link to={previous.fields.slug} rel="prev">
                   ← 前の記事
                 </Link>
               </li>
             )}
             {next && (
-              <li className={"prevnext-li"}>
+              <li className={"prevnext__li"}>
                 <Link to={next.fields.slug} rel="next">
                   次の記事 →
                 </Link>

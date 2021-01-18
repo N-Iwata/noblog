@@ -113,7 +113,7 @@ body {
   margin-right: 10px;
 }
 
-.prevnext-ul {
+.prevnext__ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -126,15 +126,31 @@ body {
   padding: 0;
 }
 
-.prevnext-li {
+.prevnext__li {
   padding: 5px 10px;
   background-color: #fc1ab1;
 }
 
-.prevnext-li a {
+.prevnext__li a {
   -webkit-box-shadow: none;
           box-shadow: none;
   color: #fff;
+}
+
+@media only screen and (max-width: 480px) {
+  .prevnext__ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin-left: 0;
+  }
 }
 
 .new {
