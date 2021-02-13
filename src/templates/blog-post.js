@@ -15,12 +15,15 @@ import Bio from "../components/bio";
 import Share from "../components/share";
 import Iframely from "../components/iframely";
 import { rhythm } from "../utils/typography";
+import NewPost from "../components/newPost";
+import TagList from "../components/tagList";
 
 config.autoAddCss = false;
 library.add(faClock);
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark;
+  const postList = data.allMarkdownRemark.edges;
   const siteTitle = data.site.siteMetadata.title;
   const siteUrl = data.site.siteMetadata.siteUrl;
   const author = data.site.siteMetadata.author.name;
@@ -97,46 +100,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             )}
           </ul>
         </nav>
-        <nav className={"new"}>
-          <div className={"new__title"}>最近の記事</div>
-          <ul className={"new__ul"}>
-            {new1 && (
-              <li className={"new__li"}>
-                <Link to={new1.fields.slug} rel="new1">
-                  {new1.frontmatter.date}: {new1.frontmatter.title}
-                </Link>
-              </li>
-            )}
-            {new2 && (
-              <li className={"new__li"}>
-                <Link to={new2.fields.slug} rel="new2">
-                  {new2.frontmatter.date}: {new2.frontmatter.title}
-                </Link>
-              </li>
-            )}
-            {new3 && (
-              <li className={"new__li"}>
-                <Link to={new3.fields.slug} rel="new3">
-                  {new3.frontmatter.date}: {new3.frontmatter.title}
-                </Link>
-              </li>
-            )}
-            {new4 && (
-              <li className={"new__li"}>
-                <Link to={new4.fields.slug} rel="new4">
-                  {new4.frontmatter.date}: {new4.frontmatter.title}
-                </Link>
-              </li>
-            )}
-            {new5 && (
-              <li className={"new__li"}>
-                <Link to={new5.fields.slug} rel="new5">
-                  {new5.frontmatter.date}: {new5.frontmatter.title}
-                </Link>
-              </li>
-            )}
-          </ul>
-        </nav>
+        <Adsense />
+        <NewPost new1={new1} new2={new2} new3={new3} new4={new4} new5={new5} />
+        <TagList postList={postList} />
         <Bio />
         <Adsense />
       </Layout>
@@ -172,6 +138,30 @@ export const pageQuery = graphql`
           childImageSharp {
             fluid(maxWidth: 1280) {
               ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+    allMarkdownRemark(limit: 2000, sort: { fields: [frontmatter___date], order: DESC }) {
+      totalCount
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            date(formatString: "YYYY-MM-DD")
+            description
+            slug
+            tags
+            hero {
+              childImageSharp {
+                fluid(maxWidth: 1280) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
             }
           }
         }
