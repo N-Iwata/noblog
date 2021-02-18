@@ -76,8 +76,8 @@ const Aboutpage = ({ data, location }) => {
             <li>Python</li>
             <li>C</li>
             <li>C++</li>
-            <li>C#</li>
             <li>VC++(MFC)</li>
+            <li>C#（触っただけ）</li>
             <li>VB,VBA</li>
           </ul>
           <h3>JavaScript Framework</h3>
@@ -167,7 +167,7 @@ const Aboutpage = ({ data, location }) => {
           <ul>
             <li>Apache</li>
           </ul>
-          <h3>Version Controk system</h3>
+          <h3>Version Control system</h3>
           <ul>
             <li>Git/GitHub</li>
             <li>Subversion</li>
