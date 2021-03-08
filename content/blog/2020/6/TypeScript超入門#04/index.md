@@ -30,7 +30,8 @@ hero: ./hero.png
 * 継承
 * 抽象クラス
 
-GitHubのリポジトリは[こちら](https://github.com/N-Iwata/start-typescript)にあります。
+ソースコードは以下GitHubを参照してください。
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/N-Iwata/start-typescript" data-iframely-url="//cdn.iframe.ly/mWiO3U9"></a></div></div>
 
 ## 基本的なクラスの書き方
 

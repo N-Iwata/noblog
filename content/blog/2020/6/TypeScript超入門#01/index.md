@@ -30,7 +30,8 @@ hero: ./hero.png
 * 環境構築方法
 * もっと環境構築
 
-GitHubのリポジトリは[こちら](https://github.com/N-Iwata/start-typescript)にあります。
+ソースコードは以下GitHubを参照してください。
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/N-Iwata/start-typescript" data-iframely-url="//cdn.iframe.ly/mWiO3U9"></a></div></div>
 
 ## TypeScriptとは？
 
@@ -181,7 +182,7 @@ $ npm init -y
 ### TypeScriptインストール
 
 次にnpmを使用しTypescriptをインストールしていきます。<br>
-ここでは[--save-dev]をつけて、ローカル環境にインストールします。
+ここでは **--save-dev** をつけて、ローカル環境にインストールします。
 
 ```
 $ npm install typescript --save-dev
@@ -189,7 +190,7 @@ $ npm install typescript --save-dev
 
 インストールが完了し、以下コマンドをターミナルで実行してバージョンが表示されれば、問題ありません。
 
-ローカル環境にインストールした場合は[npx]をつけてやらないとコマンドが使えないので注意してください。node_modulesディレクトリ配下にあるコマンドを自動で検索してくれるものらしいです。
+ローカル環境にインストールした場合は**npx**をつけてやらないとコマンドが使えないので注意してください。node_modulesディレクトリ配下にあるコマンドを自動で検索してくれるものらしいです。
 
 ```
 $ npx tsc -v
@@ -198,7 +199,7 @@ Version 3.9.5
 
 ### tsconfig.jsonを生成する
 
-以下コマンドを実行すれば、tsconfig.jsonを生成できます。
+以下コマンドを実行すれば、**tsconfig.json**を生成できます。
 
 とりあえず生成したもののままで大丈夫でしょう。この辺りはプロジェクトによって変更してください。
 
@@ -212,12 +213,12 @@ $ npx tsc --init
 
 ```
 $ mkdir src
-$ touch src/01_hello-world.ts
+$ touch src/01_hello-world/010_hello-world.ts
 ```
 
-ファイルができたらHello World!を出力するプログラムを以下のように書きます。
+ファイルができたら**Hello World!**を出力するプログラムを以下のように書きます。
 
-```ts:title=src/01_hello-world.ts
+```ts:title=src/01_hello-world/010_hello-world.ts
 const message: string = "Hello World!";
 console.log(message);
 ```
@@ -225,45 +226,45 @@ console.log(message);
 ファイルを保存したら以下コマンドで、TypeScriptファイルをJavaScriptファイルにコンパイルできます。
 
 ```
-$ npx tsc src/01_hello-world.ts
+$ npx tsc src/01_hello-world/010_hello-world.ts
 ```
 
-srcディレクトリに[01_hello-world.js]ができあがるので、以下コマンドで実行してみましょう。[Hello World!]と表示されればOKです！！
+**src/01_hello-world**ディレクトリに**010_hello-world.js**ができあがるので、以下コマンドで実行してみましょう。**Hello World!**と表示されればOKです！！
 
 ```
-$ node src/01_hello-world.js
+$ node src/01_hello-world/010_hello-world.js
 Hello World!
 ```
 
 ## もっと環境構築
 
-動作確認はできましたが、コードに変更があるたびに[tsc]コマンドでコンパイルして、[node]コマンドで実行するのはめんどくさいですよね。
+動作確認はできましたが、コードに変更があるたびに**tsc**コマンドでコンパイルして、**node**コマンドで実行するのはめんどくさいですよね。
 
 ここではもっといい環境構築を解説していきます！
 
 ### ts-nodeをインストール
 
-以下コマンドで、[ts-node]をインストールします。
+以下コマンドで、**ts-node**をインストールします。
 
 ```
 $ npm install ts-node --save-dev
 ```
 
-[ts-node]はTypeScriptからJavaScriptにコンパイルしたものをそのまま実行できます。<br>
+**ts-node**はTypeScriptからJavaScriptにコンパイルしたものをそのまま実行できます。<br>
 
-次のコマンドで試してみましょう。[Hellow World!]と出力されればOKです！
-ちなみに[01_hello-world.js]は作成されません。
+次のコマンドで試してみましょう。**Hellow World!**と出力されればOKです！
+ちなみに**010_hello-world.js**は作成されません。
 
 ```
-$ npx ts-node src/01_hello-world.ts
+$ npx ts-node src/01_hello-world/010_hello-world.ts
 Hello World!
 ```
 
 ### ts-node-devをインストール
 
-[ts-node]で少し楽になりましたが、まだコード修正のたびにコマンドを実行しなければなりません。そこで登場するのが[ts-node-dev]パッケージです！
+**ts-node**で少し楽になりましたが、まだコード修正のたびにコマンドを実行しなければなりません。そこで登場するのが**ts-node-dev**パッケージです！
 
-以下コマンドで、[ts-node-dev]をインストールします。
+以下コマンドで、**ts-node-dev**をインストールします。
 
 ```
 $ npm install ts-node-dev --save-dev
@@ -273,13 +274,13 @@ $ npm install ts-node-dev --save-dev
 すると[Hello World!]がまずは出力されます。
 
 ```
-$ npx ts-node-dev --respawn src/01_hello-world.ts
+$ npx ts-node-dev --respawn src/01_hello-world/010_hello-world.ts
 Hello World!
 ```
 
-では次に[src/01_hello-world.ts]を少し修正して保存してみましょう。
+では次に**010_hello-world.ts**を少し修正して保存してみましょう。
 
-```typescript{1}:title=src/01_hello-world.ts
+```typescript{1}:title=src/01_hello-world/010_hello-world.ts
 const message: string = "Hello Japan!";
 console.log(message);
 ```
@@ -291,11 +292,11 @@ Hello Japan!
 ```
 
 これでコンパイル→実行までがだいぶ楽になりました！！<br>
-基本的には[ts-node-dev]で開発するといいと思います。
+基本的には**ts-node-dev**を使うと開発しやすいと思います。
 
 ### npm-scriptsに実行コマンドを追加
 
-最後に[ts-node-dev]を簡単に呼び出せるように[package.json]の[scripts]に実行コマンドを追加します。
+最後に**ts-node-dev**を簡単に呼び出せるように**package.json**の**scripts**に実行コマンドを追加します。
 
 ```js{3}:title=package.json
 "scripts": {
@@ -307,7 +308,7 @@ Hello Japan!
 これで以下コマンドで動作確認します。
 
 ```
-$ npm run dev src/01_hello-world.ts
+$ npm run dev src/01_hello-world/010_hello-world.ts
 ```
 
 上と同じように出力されれば問題ありません。

@@ -29,7 +29,8 @@ webエンジニアおじさんこと**のふのふ**(@rpf_nob)です！！
 * クラスのジェネリクス
 * インターフェースのジェネリクス
 
-GitHubのリポジトリは[こちら](https://github.com/N-Iwata/start-typescript)にあります。
+ソースコードは以下GitHubを参照してください。
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/N-Iwata/start-typescript" data-iframely-url="//cdn.iframe.ly/mWiO3U9"></a></div></div>
 
 ## ジェネリクスとは
 

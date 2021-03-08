@@ -31,7 +31,8 @@ hero: ./hero.png
 - 関数←関数
 - クラス←クラス
 
-GitHub のリポジトリは[こちら](https://github.com/N-Iwata/start-typescript)にあります。
+ソースコードは以下GitHubを参照してください。
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/N-Iwata/start-typescript" data-iframely-url="//cdn.iframe.ly/mWiO3U9"></a></div></div>
 
 ## 型の互換性とは
 
