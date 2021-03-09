@@ -41,17 +41,14 @@ hero: ./hero.png
 
 ```ts:title=src/04_class-types.ts
 class Person {
-  // メンバー変数の宣言
   name: string;
   age: number;
 
-  // コンストラクタ
   constructor(name: string, age: number) {
     this.name = name;
     this.age = age;
   }
 
-  // メソッド
   introduce(): string {
     return `私の名前は${this.name}です。年齢は${this.age}歳です。`;
   }
@@ -65,59 +62,57 @@ console.log(sato.introduce()); // →私の名前は佐藤太郎です。年齢�
 
 後述するクラスメンバー修飾子をコンストラクタで受け取る引数に付与してあげることで、メンバー変数の初期化もしてくれます。
 
-次のコードは上の[Person]クラスと同一のものになります。
+次のコードは上記の**Person**クラスと同一のものになります。
 
-```ts:title=src/04_class-types.ts
-class Person {
-  // コンストラクタ
+```ts:title=src/04_class-types/040_basic-clas/.ts
+class Person2 {
   constructor(public name: string, public age: number) {}
 
-  // メソッド
   introduce(): string {
     return `私の名前は${this.name}です。年齢は${this.age}歳です。`;
   }
 }
+const tanaka = new Person2("田中次郎", 25);
+console.log(tanaka.name); //→田中次郎
+console.log(tanaka.age);  //→25
+console.log(tanaka.introduce()); // →私の名前は田中次郎です。年齢は25歳です。
 ```
 
 ## クラスメンバー修飾子（アクセシビリティ）
 
-基本的には他の言語と同じよう**public・private・protected**修飾子を付与することができます。
+基本的には他の言語と同じように**public・private・protected**修飾子を付与することができます。
 
 * public→どこからでも参照・実行が可能
 * private→同一クラス内のみ参照・実行が可能
 * protected→継承されたサブクラス内でも参照・実行が可能
 
-次の場合は[age]に[private]を付与しているので、[age]には[Person1クラス]からしか直接アクセスはできません。継承している[Person2クラス]からもアクセスできません。
+次の場合は**age**に**private**を付与しているので、**age**には**Person1クラス**からしか直接アクセスはできません。継承している**Person2クラス**からもアクセスできません。
 
-[gender]には[protected]を付与しているので、継承している[Person2クラス]からもアクセスできます。
+**gender**には**protected**を付与しているので、継承している**Person2クラス**からもアクセスできます。
 
-修飾子を付与しない場合は[public]と同じになります。基本的には[public]は書かないのが普通のようです。
+修飾子を付与しない場合は**public**と同じになります。基本的には**public**は書かないのが普通のようです。
 
-```ts:title=src/04_class-types.ts
+```ts:title=src/04_class-types/041_member-accessibility.ts
 class Person1 {
-  // メンバー変数の宣言
   public name: string;
   private age: number;
   protected gender: string;
 
-  // コンストラクタ
   constructor(name: string, age: number, gender: string) {
     this.name = name;
     this.age = age;
     this.gender = gender;
   }
 
-  // メソッド
   introduce(): string {
     return `私の名前は${this.name}です。年齢は${this.age}歳です。`;
   }
 }
 class Person2 extends Person1 {
-  // コンストラクタ
   constructor(name: string, age: number, gender: string) {
     super(name, age, gender);
   }
-  // メソッド
+
   introduce(): string {
     return `私の名前は${this.name}です。${this.age}歳の${this.gender}です。`;  
     //→NG 親クラス(Person1)のageがprivateなので[age]にアクセスできない
@@ -146,13 +141,11 @@ getterとsetterの必要性を知りたい方は[オブジェクト指向プロ�
 
 それでは簡単な例を見てみましょう。
 
-```ts:title=src/04_class-types.ts
-class Person3 {
-  // メンバー変数の宣言
+```ts:title=src/04_class-types/042_getter-setter.ts
+class Person {
   private _name: string;
   private _age: number;
 
-  // コンストラクタ
   constructor(name: string, age: number) {
     this._name = name;
     this._age = age;
@@ -165,7 +158,7 @@ class Person3 {
     this._age = num;
   }
 }
-const yamada = new Person3("山田三郎", 20);
+const yamada = new Person("山田三郎", 20);
 
 console.log(yamada._name);  //→NG(privateなので直接アクセスできない)
 console.log(yamada.name); // 山田三郎
@@ -177,7 +170,6 @@ yamada.age = 30;  //→OK
 この場合、以下のようなアクセス制御になっています。
 
 * メンバ変数の[_name]には直接参照できないが、[getter]を通して[_name]にアクセスしている。
-
 * メンバ変数の[_age]は直接書き換えできないが、[setter]を通して[_age]を書き換えている。
 
 このように、直接外部からアクセスできないようにして、[getter]や[setter]を介すことによって、アクセスの追跡をしやすくできます。
@@ -190,9 +182,8 @@ yamada.age = 30;  //→OK
 
 次の例では直接[Person4]クラスのメンバ変数やメソッドにアクセスして使用しています。
 
-```ts:title=src/04_class-types.ts
-class Person4 {
-  // メンバ変数
+```ts:title=src/04_class-types/043_static-member.ts
+class Person {
   static firstName: string = "太郎";
   static lastName: string = "山田";
   static age: number = 18;
@@ -202,22 +193,21 @@ class Person4 {
     return `私の名前は${this.lastName}${this.firstName}です。${this.age}歳です。`;
   }
 }
-console.log(Person4.firstName); //→太郎
-console.log(Person4.lastName);  //→山田
-console.log(Person4.age); //→18
-console.log(Person4.introduce()); //→私の名前は山田太郎です。18歳です。
+console.log(Person.firstName); //→太郎
+console.log(Person.lastName);  //→山田
+console.log(Person.age); //→18
+console.log(Person.introduce()); //→私の名前は山田太郎です。18歳です。
 ```
 
 ## 継承
 
 クラスの継承に関しては基本的にはJavaScriptと同じになります。
-
-子クラス内のconstructerで[super]メソッドを呼んであげれば、親クラスのメンバ変数を初期化できます。
+子クラス内のconstructerで**super**メソッドを呼んであげれば、親クラスのメンバ変数を初期化できます。
 
 また、親クラスのメソッドを子クラスでも使用できます。<br>
-次の例ではDogクラス(子クラス)でAnimalクラス(親クラス)の[cry]メソッドを[super.cry()]で実行しています。
+次の例ではDogクラス(子クラス)でAnimalクラス(親クラス)の**cry**メソッドを**super.cry()**で実行しています。
 
-```ts:title=src/04_class-types.ts
+```ts:title=src/04_class-types/044_Inheritance.ts
 class Animal {
   constructor(public name: string) {}
   cry(): string {
@@ -242,10 +232,10 @@ console.log(dog.cry()); //→シロはわんわんと鳴く
 
 抽象クラスは先にこういうメンバ変数やメソッドがありますよというのを宣言しておいて、そのクラスを継承した子クラス内でメンバ変数やメソッドを実装する必要があると伝えるためのものです。
 
-次の例では[Animal2]クラスに[name]プロパティと[cry]メソッドが必要ですよと、子クラスに伝えるものです。
+次の例では**Animal**クラスに**name**プロパティと**cry**メソッドが必要ですよと、子クラスに伝えるものです。
 
-```ts:title=src/04_class-types.ts
-abstract class Animal2 {
+```ts:title=src/04_class-types/045_abstract-class.ts
+abstract class Animal {
   abstract name: string;
   abstract cry(): string;
 }
@@ -253,18 +243,18 @@ abstract class Animal2 {
 
 クラスを継承しただけの状態だと、次のようなエラーが出て、実装のし忘れなどを防ぐことができます。
 
-```ts:title=src/04_class-types.ts
-class Dog2 extends Animal2 {
+```ts:title=src/04_class-types/045_abstract-class.ts
+class Dog extends Animal {
 }
 ```
 
->非抽象クラス 'Dog2' はクラス 'Animal2' からの継承抽象メンバー 'cry' を実装しません。ts(2515)<br>
-非抽象クラス 'Dog2' はクラス 'Animal2' からの継承抽象メンバー 'name' を実装しません。ts(2515)
+>非抽象クラス 'Dog' はクラス 'Animal' からの継承抽象メンバー 'cry' を実装しません。ts(2515)<br>
+非抽象クラス 'Dog' はクラス 'Animal' からの継承抽象メンバー 'name' を実装しません。ts(2515)
 
 なので、次のように実装してあげます。
 
-```ts:title=src/04_class-types.ts
-class Dog2 extends Animal2 {
+```ts:title=src/04_class-types/045_abstract-class.ts
+class Dog extends Animal {
   name = "ポチ";
   cry() {
     return "わんわん";
@@ -276,7 +266,7 @@ class Dog2 extends Animal2 {
 
 インターフェースを使用すれば、複数のクラスを継承（実際は実装）することができます。
 
-```ts:title=src/04_class-types.ts
+```ts:title=src/04_class-types/046_interface.ts
 interface Pitcher {
   pitching(): void;
 }
@@ -295,7 +285,7 @@ const otani = new TwoWay();
 otani.pitching(); //→ピッチング！
 ```
 
-上の例で[TwoWay]クラス内に[batting]メソッドを書き忘れていた場合には以下のようにエラーがでます。
+上の例で**TwoWay**クラス内に**batting**メソッドを書き忘れていた場合には以下のようにエラーがでます。
 
 >クラス 'TwoWay' はインターフェイス 'Batter' を正しく実装していません。<br>プロパティ 'batting' は型 'TwoWay' にありませんが、型'Batter' では必須です。ts(2420)
 

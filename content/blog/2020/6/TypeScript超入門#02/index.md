@@ -234,16 +234,16 @@ logger("Hello World!");
 **null型**と**undefined型**も**void型**と同じように、単体ではあまり役に立ちません。
 
 ```ts:title=src/02_basic-types/023_void-null-undefined.ts
-let u: undefined = undefined;
-let n: null = null;
+let nullVar: null = null;
+console.log(nullVar); //→null
 
-console.log(u); //→undefined
-console.log(n); //→null
+let undefVar: undefined = undefined;
+console.log(undefVar); //→undefined
 ```
 
 デフォルト設定では**null**と**undefined**は全ての型のサブタイプであり、全ての型で代入できます。
 
-ただし、**--strictNullChecks**をtrueに設定すると、**null**と**undefined**は**void型**と**null型**・**undefined型**のどちらかのみ代入できます。
+ただし、**--strictNullChecks**をtrueに設定すると、**null**と**undefined**は**void型**と**null型**・**undefined型**のどちらかのみ代入できます。基本的には strictNullChecksをtrueに設定しておきましょう。
 
 ## never型
 

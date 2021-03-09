@@ -36,7 +36,7 @@ hero: ./hero.png
 
 ### function
 
-```ts:title=src/03_function-types.ts
+```ts:title=src/03_function-types/030_function-declaration-statement.ts
 function sum1(a: number, b: number): number {
   return a + b;
 }
@@ -45,22 +45,23 @@ console.log(sum1(1, 2));  //→3
 
 ### 無名関数
 
-```ts:title=src/03_function-types.ts
-const sum2 = function (a: number, b: number): number {
+```ts:title=src/03_function-types/031_function-expression/.ts
+const sum = function (a: number, b: number): number {
   return a + b;
 };
-console.log(sum2(3, 4));  //→7
+console.log(sum(3, 4));  //→7
 ```
 
 無名関数を変数に入れておく場合の変数のほうにも型を設定しておきたい場合は以下のように書きます。
 
-```ts:title=src/03_function-types.ts
+```ts:title=src/03_function-types/031_function-expression/.ts
 const sum2: (a: number, b: number) => number = function (
   a: number,
   b: number
 ): number {
   return a + b;
 };
+console.log(sum2(3, 4));  //→7
 ```
 
 VSCodeだとsum2のところにカーソルを合わすと↓の画像のように推論されるので、これの型の部分を変数につけてあげれば終わりです。
@@ -69,11 +70,11 @@ VSCodeだとsum2のところにカーソルを合わすと↓の画像のよう�
 
 ### アロー関数
 
-```ts:title=src/03_function-types.ts
-const sum3 = (a: number, b: number): number => {
+```ts:title=src/03_function-types/032_arrow-functio/.ts
+const sum = (a: number, b: number): number => {
   return a + b;
 };
-console.log(sum3(5, 6));  //→11
+console.log(sum(5, 6));  //→11
 ```
 
 アロー関数も無名関数と同じように、変数のほうにも型を設定しておくことができます。
@@ -82,7 +83,7 @@ console.log(sum3(5, 6));  //→11
 
 前回の**void型**の時に少し解説しましたが、値を返さない関数には**void型**を指定します。
 
-```ts:title=src/02_basic-types.ts
+```ts:title=src/02_basic-types/033_void-function.ts
 function logger(message: string): void {
   console.log(message); //→Hello World!
 }
@@ -91,7 +92,7 @@ logger("Hello World!");
 
 また、前回の**never型**の時に少し解説しましたが、エラーを投げるだけの関数など、戻り値を得られない関数には**never型**を指定します。
 
-```ts:title=src/02_basic-types.ts
+```ts:title=src/02_basic-types/033_void-function.ts
 function error(message: string): never {
   throw new Error(message);
 }
@@ -104,20 +105,20 @@ error("Error!");
 
 引数の後ろに[?]を付けることで、引数を指定しなくても関数が動作するようになります。
 
-指定していない引数は[undefined]になります。
+指定していない引数は**undefined**になります。
 
-次の場合は[isLog]が[undefined]になるため、if文ではじかれてコンソールに表示されません。
+次の場合は**isLog**が**undefined**になるため、if文ではじかれてコンソールに表示されません。
 
-```ts:title=src/03_function-types.ts
-const sum4 = (a: number, b: number, isLog?: boolean): number => {
+```ts:title=src/03_function-types/034_optional-paramete/.ts
+const sum = (a: number, b: number, isLog?: boolean): number => {
   if (isLog) {
     console.log(a + b);
   }
   return a + b;
 };
-sum4(7, 8, true);   //→15
-sum4(7, 8, false);  //→何も表示されない
-sum4(7, 8);       　//→何も表示されない
+sum(7, 8, true);   //→15
+sum(7, 8, false);  //→何も表示されない
+sum(7, 8);       　//→何も表示されない
 ```
 
 ### デフォルトパラメータ
@@ -128,12 +129,12 @@ sum4(7, 8);       　//→何も表示されない
 
 次の場合は引数を指定してあげれば、その値で計算を実行し、指定しなければ、デフォルトの[1.1]で計算を実行しています。
 
-```ts:title=src/03_function-types.ts
-const sum5 = (a: number, b: number, rate: number = 1.1): number => {
+```ts:title=src/03_function-types/035_default-parameter.ts
+const sum = (a: number, b: number, rate: number = 1.1): number => {
   return (a + b) * rate;
 };
-console.log(sum5(500, 500, 1.05));  //→1050
-console.log(sum5(500, 500));  //→1100
+console.log(sum(500, 500, 1.05));  //→1050
+console.log(sum(500, 500));  //→1100
 ```
 
 ### Restパラメータ
@@ -142,8 +143,8 @@ console.log(sum5(500, 500));  //→1100
 
 次の場合は引数を1~10までRestパラメータで受け取って、合計値を[reduce]を使用して求めています。
 
-```ts:title=src/03_function-types.ts
-const sum6 = (...values: number[]): number => {
+```ts:title=src/03_function-types/036_rest-parameter.ts
+const sum = (...values: number[]): number => {
   console.log(values);  //→[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   const ret: number = values.reduce((acc: number, cur: number): number => {
     return acc + cur;
@@ -151,37 +152,78 @@ const sum6 = (...values: number[]): number => {
   return ret;
 };
 
-console.log(sum6(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));　//→55
+console.log(sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));　//→55
 ```
 
 ## オーバーロード
 
 c++やJavaなど他の静的型付け言語にもある関数のオーバーロードの機能はTypeScriptにもあります。
 
-先に関数の型だけを宣言してあげて、実態のところは[any型]を指定してあげます。
+先に関数の型だけを宣言してあげて、実態のところは全てを満たす型を指定してあげます。
 
-次の場合は[number型]の場合は2倍にして返し、[string型]の場合は文字をつなげる処理の例です。
+次の例は以下のような関数になります。
 
-[any型]で引数を受けて、[typeof]を使用して処理の分岐を行います。
+* number型の引数を1つとる場合は、2倍して数値を返す
+* number型の引数を2つとる場合は、乗算して数値を返す
+* string型の引数を1つとる場合は、2つを連結して文字列を返す
 
-[any型]で引数を受けていますが、先に関数の型を定義しているため、指定していない型（ここではboolean型）を引数に指定するとコンパイルエラーになります。
-
-```ts:title=src/03_function-types.ts
-function sum7(a: number): number;
-function sum7(a: string): string;
-function sum7(a: any): any {
+```ts:title=src/03_function-types/037_overload.ts
+function sum(a: number): number;
+function sum(a: number, b: number): number;
+function sum(a: string): string;
+function sum(a: number | string, b?: number): number | string {
   if (typeof a === "number") {
-    return a * 2;
+    if (b) {
+      return a * b;
+    } else {
+      return a * 2;
+    }
   } else {
     return `${a} ${a}`;
   }
 }
-
-console.log(sum7(100)); //→200
-console.log(sum7("Hey")); //→Hey Hey
-console.log(sum7(false)); //→NG
+console.log(sum(100));
+console.log(sum(100, 3));
+console.log(sum("Hey"));
+console.log(sum("Hey",3)); // 型 'string' の引数を型 'number' のパラメーターに割り当てることはできません。
+console.log(sum(false));  // この呼び出しに一致するオーバーロードはありません。
 ```
 
+ちなみにオーバーロードは上記のように関数宣言文で書くのが正式な書き方らしいです。
+
+以下のようにアロー関数で書いた場合は以下のようにエラーになります。
+
+* 型 '(a: number | string, b?: number | undefined) => number | string' を型 'Type' に割り当てることはできません。
+* 型 'string | number' を型 'number' に割り当てることはできません。
+* 型 'string' を型 'number' に割り当てることはできません。
+
+```ts:title=src/03_function-types/037_overload.ts
+type Type = {
+  (a: number): number;
+  (a: number, b: number): number;
+  (a: string): string;
+}
+const sum2: Type = (a: number | string, b?:number): number | string => {
+  if (typeof a === "number") {
+    if(b){
+      return a * b;
+    }
+    else{
+    return a * 2;
+  }
+  } else {
+    return `${a} ${a}`;
+  }
+};
+
+console.log(sum2(100));
+console.log(sum2(100,3));
+console.log(sum2("Hey"));
+console.log(sum2("Hey",3));
+console.log(sum(false));
+```
+
+VSCodeで関数をホバーした時に関数宣言文だと**function sum(a: number): number (+2 overloads)**のようにオーバーロードと明記されますが、関数式だとオーバーロードと明記されません。
 
 ## まとめ
 
