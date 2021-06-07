@@ -1,8 +1,8 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Image from "gatsby-image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 import { rhythm } from "../utils/typography";
 
@@ -71,7 +71,7 @@ const Bio = () => {
             }}
           >
             {author.summary}
-            <a
+            {/* <a
               style={{
                 boxShadow: "none",
                 marginLeft: 5,
@@ -102,7 +102,7 @@ const Bio = () => {
                 color="#333"
                 icon={faGithub}
               />
-            </a>
+            </a> */}
           </p>
         </div>
       </div>

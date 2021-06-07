@@ -23,11 +23,12 @@ const Pagenation = ({ pageContext }) => {
   return (
     <div className={classes.root}>
       <Pagination
-        size="small"
+        size="medium"
         defaultPage={humanPageNumber}
         count={numberOfPages}
         color="primary"
         onChange={handleChange}
+        siblingCount={0}
       />
     </div>
   );

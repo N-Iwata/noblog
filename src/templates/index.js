@@ -72,7 +72,7 @@ const BlogIndex = ({ data, location, pageContext }) => {
                         to={node.fields.slug}
                         title={`${title}のページに移動します。`}
                       >
-                        READ MORE
+                        記事を読む
                       </Link>
                     </Button>
                   </div>
