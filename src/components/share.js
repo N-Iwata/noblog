@@ -13,7 +13,7 @@ import {
 } from "react-share";
 
 const Share = props => {
-  const articleTitle = props.title;
+  const articleTitle = `${props.title} @rpf_nob`;
   const articleUrl = props.url;
   const articleDescription = props.description;
   const iconSize = 32;

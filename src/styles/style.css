@@ -444,7 +444,7 @@ body {
 }
 
 .posts__more__a {
-  color: #fc1ab1;
+  color: #333;
   -webkit-box-shadow: none;
           box-shadow: none;
   height: 12px;
@@ -484,7 +484,7 @@ body {
 .tag__list {
   -webkit-box-shadow: none;
           box-shadow: none;
-  color: #fc1ab1;
+  color: #333;
   text-transform: none;
 }
 
@@ -531,6 +531,7 @@ body {
 
 .toc__content > ul > li {
   margin: 0;
+  margin-top: 6px;
 }
 
 .toc__content > ul > li > a {
@@ -566,6 +567,7 @@ body {
 
 .toc__content > ul > li > ul > li {
   margin: 0;
+  margin-top: 6px;
   color: black;
 }
 
@@ -596,10 +598,12 @@ body {
 
 .toc__content > ul > li > ul > li > ul {
   margin-left: 15px;
+  margin-top: 0;
 }
 
 .toc__content > ul > li > ul > li > ul > li {
   margin: 0;
+  margin-top: 6px;
   color: black;
 }
 
