@@ -9,7 +9,7 @@ export default function HTML(props) {
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <script
-          data-ad-client="ca-pub-5904636905001908"
+          // data-ad-client="ca-pub-5904636905001908"
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
         ></script>
