@@ -14,7 +14,7 @@ hero: ./hero.png
 
 今回はReactアプリケーションで簡単にレスポンシブ対応が実装できる**use-media**というReact Hooksの便利なライブラリを紹介します！！
 
-* 前提
+* 概要
 * use-mediaのインストール
 * use-mediaの使用方法
 * react-responsiveとの比較
@@ -29,7 +29,7 @@ CSSメディアクエリの状態を追跡するReactのフックです。
 
 以下公式のREADME.mdにフックの使用方法とテスト方法が説明されていますので詳細はこちらを見てください。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/streamich/use-media" data-iframely-url="//cdn.iframe.ly/u2VHAW7"></a></div></div>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/streamich/use-media" data-iframely-url="//cdn.iframe.ly/u2VHAW7?card=small"></a></div></div>
 
 ## use-mediaのインストール
 
