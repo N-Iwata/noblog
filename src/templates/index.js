@@ -84,6 +84,7 @@ const BlogIndex = ({ data, location, pageContext }) => {
         <Pagenation pageContext={pageContext} />
         <Bio />
         <Adsense />
+        <Adsense />
       </Layout>
     </div>
   );

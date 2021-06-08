@@ -105,6 +105,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         <TagList postList={postList} />
         <Bio />
         <Adsense />
+        <Adsense />
       </Layout>
     </div>
   );
