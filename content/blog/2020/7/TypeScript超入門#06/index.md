@@ -10,7 +10,7 @@ hero: ./hero.png
 ## はじめに 
 
 おはようございます！こんにちは！こんばんは！<br>
-麻雀と芝生大好きおじさんこと**のふのふ**(@rpf_nob)です！！
+麻雀と芝生大好きおじさんこと**のふのふ**([@rpf_nob](https://twitter.com/rpf_nob))です！！
 
 この記事はTypeScript超入門シリーズの第6回目として、TypeScriptの型推論の基礎についてまとめて解説していきます！
 
@@ -498,8 +498,6 @@ function a(num: any): "Taro" | undefined
 
 基本的には冗長にならないように型注釈をなるべくしないほうがいいので、型推論のルールを知っておくのが重要になりますのでしっかり勉強したいですね！！
 
-最後まで見ていただきありがとうございました！！
-
 TypeScript超入門シリーズの他の記事もご覧いただければうれしいので是非お願いします！！
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/2020-06-17/start-typescript-01/" data-iframely-url="//cdn.iframe.ly/tmxszMy?iframe=card-small"></a></div></div>
@@ -517,3 +515,9 @@ TypeScript超入門シリーズの他の記事もご覧いただければうれ�
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/2020-07-18/start-typescript-07/" data-iframely-url="//cdn.iframe.ly/zWpJ6LT?iframe=card-small"></a></div></div>
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/2020-07-26/start-typescript-08/" data-iframely-url="//cdn.iframe.ly/hyokrE0?iframe=card-small"></a></div></div>
+
+<br>
+<br>
+
+最後まで見ていただきありがとうございました！！  
+この記事が良かったと思ったらSHAREしていただけると泣いて喜びます🤣
