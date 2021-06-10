@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
-import _ from "lodash";
+import { kebabCase } from "lodash/string";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTag } from "@fortawesome/free-solid-svg-icons";
 
@@ -22,13 +22,12 @@ const Tag = props => {
         return (
           <Button key={index} variant="contained" color={"default"} className={classes.button}>
             <Link
-              to={`/tags/${_.kebabCase(tag)}/`}
+              to={`/tags/${kebabCase(tag)}/`}
               key={index}
               className="tag__list"
               title={`${tag}のtagページに移動します。`}
             >
-              <FontAwesomeIcon icon={faTag} />
-              　{tag}
+              <FontAwesomeIcon icon={faTag} />　{tag}
             </Link>
           </Button>
         );
