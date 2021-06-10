@@ -12,7 +12,7 @@
     padding: 10px 10px;
     position: relative;
     border: 1px solid #aaa;
-    border-left: 6px solid #fc1ab1;
+    border-left: 6px solid #ff86d7;
     font-size: 1.4em;
   }
 
@@ -22,7 +22,7 @@
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 1.3em;
-    border-left: 3px solid #fc1ab1;
+    border-left: 3px solid #ff86d7;
     border-bottom: 1px solid #777;
   }
 
@@ -33,7 +33,7 @@
     font-size: 1.2em;
     text-transform: none;
     letter-spacing: normal;
-    border-left: 2px solid #fc1ab1;
+    border-left: 2px solid #ff86d7;
     // font-weight: 600 !important;
   }
 
@@ -44,13 +44,13 @@
 
     & .under {
       border-bottom: 3px solid;
-      border-image: linear-gradient(to right, #f2f2f2 0%, #fc1ab1 100%);
+      border-image: linear-gradient(to right, #f2f2f2 0%, #ff86d7 100%);
       border-image-slice: 1;
     }
   }
 
   & strong {
-    background: linear-gradient(transparent 90%, #f86eca 60%) !important;
+    background: linear-gradient(transparent 90%, #ff86d7 60%) !important;
   }
 
   blockquote {
@@ -86,7 +86,7 @@
     margin-bottom: 10px;
     font-weight: bold;
     font-size: 1.2em;
-    color: #fc1ab1;
+    color: #111;
     text-align: center;
   }
   &__icon {
@@ -104,11 +104,11 @@
   }
   &__li {
     padding: 5px 10px;
-    background-color: #fc1ab1;
+    background-color: #ff86d7;
 
     & a {
       box-shadow: none;
-      color: #fff;
+      color: #111;
     }
   }
 }
@@ -131,11 +131,11 @@
   border: 1px solid #aaa;
 
   &__title {
-    background-color: #fc1ab1;
+    background-color: #ff86d7;
     margin: 0;
     padding: 5px;
     text-align: center;
-    color: #fff;
+    color: #111;
     text-transform: none;
   }
 
@@ -144,7 +144,7 @@
     padding: 10px 10px 0;
   }
   &__li {
-    border-bottom: 1px dotted #fc1ab1;
+    border-bottom: 1px dotted #ff86d7;
     & a {
       box-shadow: none;
       color: #000;
