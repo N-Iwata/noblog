@@ -14,6 +14,9 @@ const NavBar = () => {
       <span className="navbar__title">
         <Link to="/" title={"ブログトップに移動します。"}>
           のふのふろぐ
+          <span role="img" aria-label="mahjong">
+            🀄
+          </span>
         </Link>
       </span>
       <ul className="navbar__ul">

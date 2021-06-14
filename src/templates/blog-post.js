@@ -11,23 +11,20 @@ import SEO from "../components/seo";
 import Toc from "../components/toc";
 import Tag from "../components/tag";
 import Adsense from "../components/adsense";
-import Bio from "../components/bio";
 import Share from "../components/share";
 import Iframely from "../components/iframely";
 import { rhythm } from "../utils/typography";
-import NewPost from "../components/newPost";
-import TagList from "../components/tagList";
 
 config.autoAddCss = false;
 library.add(faClock);
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark;
-  const postList = data.allMarkdownRemark.edges;
   const siteTitle = data.site.siteMetadata.title;
   const siteUrl = data.site.siteMetadata.siteUrl;
   const author = data.site.siteMetadata.author.name;
-  const { slug, previous, next, new1, new2, new3, new4, new5 } = pageContext;
+  const { slug, previous, next, new1, new2, new3, new4, new5, tagList } = pageContext;
+  console.log("tagList: ", tagList);
 
   const hero = post.frontmatter.hero.childImageSharp.fluid.src;
   const image = `${siteUrl}${hero}`;
@@ -35,7 +32,17 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   return (
     <div>
       <Iframely />
-      <Layout location={location} title={siteTitle} author={author}>
+      <Layout
+        location={location}
+        title={siteTitle}
+        author={author}
+        new1={new1}
+        new2={new2}
+        new3={new3}
+        new4={new4}
+        new5={new5}
+        tagList={tagList}
+      >
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
@@ -101,9 +108,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </ul>
         </nav>
         <Adsense />
-        <NewPost new1={new1} new2={new2} new3={new3} new4={new4} new5={new5} />
-        <TagList postList={postList} />
-        <Bio />
         <Adsense />
         <Adsense />
       </Layout>

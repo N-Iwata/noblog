@@ -17,7 +17,7 @@ config.autoAddCss = false;
 library.add(faClock);
 
 const Tags = ({ pageContext, data, location }) => {
-  const { tag } = pageContext;
+  const { tag, new1, new2, new3, new4, new5, tagList } = pageContext;
   const { edges, totalCount } = data.allMarkdownRemark;
   const author = data.site.siteMetadata.author.name;
 
@@ -25,7 +25,16 @@ const Tags = ({ pageContext, data, location }) => {
 
   return (
     <div>
-      <Layout location={location} author={author}>
+      <Layout
+        location={location}
+        author={author}
+        new1={new1}
+        new2={new2}
+        new3={new3}
+        new4={new4}
+        new5={new5}
+        tagList={tagList}
+      >
         <SEO title={`Tag: ${tag}`} description={`${tag}タグを含む記事の一覧ページです`} />
         <h2 style={{ marginTop: 28 }}>{tagHeader}</h2>
         {edges.map(({ node }) => {

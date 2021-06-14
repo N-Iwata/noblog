@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   font-family: Helvetica Neue, Helvetica Sans, sans-serif !important;
 }
@@ -154,11 +153,9 @@ body {
 .new {
   background-color: #fdfdfd;
   margin: 10px auto;
-  border: 1px solid #aaa;
 }
 
 .new__title {
-  background-color: #ff86d7;
   margin: 0;
   padding: 5px;
   text-align: center;
@@ -169,6 +166,7 @@ body {
 .new__ul {
   list-style: none;
   padding: 10px 10px 0;
+  font-size: 0.8rem;
 }
 
 .new__li {
@@ -267,15 +265,51 @@ body {
   }
 }
 
-.layout {
-  margin-left: auto;
-  margin-right: auto;
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.contens {
   margin-top: 20px;
-  max-width: 800px;
+  width: 60%;
   padding: 30px;
   background-color: #fff;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar {
+  width: 33%;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  margin-top: 28px;
+  margin-left: 10px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contens {
+    width: 100%;
+  }
+  .sidebar {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 .navbar {
@@ -283,7 +317,6 @@ body {
   padding: 0;
   margin-bottom: 10px;
   background-color: #ff86d7;
-  max-width: 800px;
   height: 50px;
   width: 100%;
   top: 0;
@@ -297,7 +330,7 @@ body {
 
 .navbar .checkbtn {
   font-size: 30px;
-  color: white;
+  color: #444;
   float: right;
   line-height: 60px;
   margin-right: 40px;
@@ -378,6 +411,7 @@ body {
   }
   .navbar__li a {
     font-size: 20px;
+    color: #fff;
   }
   .navbar__li a:hover {
     background: none;
@@ -453,27 +487,13 @@ body {
   font-weight: bold;
 }
 
-.sidebar {
-  width: 100%;
-  -ms-flex-preferred-size: 25%;
-      flex-basis: 25%;
-  margin-top: 28px;
-}
-
 .adsense {
   background: #fff !important;
+  width: 100%;
 }
 
 .adsense ins {
   background: #fff !important;
-}
-
-@media screen and (min-width: 768px) {
-  /* デスクトップ用CSS */
-  .sidebar {
-    min-width: 300px;
-    margin-left: 30px;
-  }
 }
 
 .tag {
@@ -620,5 +640,9 @@ body {
   .toc__content {
     font-size: 0.9em;
   }
+}
+
+.twitter__title {
+  padding: 5px;
 }
 /*# sourceMappingURL=style.css.map */

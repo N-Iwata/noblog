@@ -3,7 +3,6 @@ import { graphql } from "gatsby";
 import Img from "gatsby-image";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import Bio from "../components/bio";
 
 const Aboutpage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
@@ -182,7 +181,6 @@ const Aboutpage = ({ data, location }) => {
           <Img fluid={image} alt="自宅の芝生(2019年8月撮影)" />
           <br />
         </div>
-        <Bio />
       </Layout>
     </div>
   );

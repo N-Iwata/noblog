@@ -128,10 +128,10 @@
 .new {
   background-color: #fdfdfd;
   margin: 10px auto;
-  border: 1px solid #aaa;
+  // border: 1px solid #aaa;
 
   &__title {
-    background-color: #ff86d7;
+    // background-color: #ff86d7;
     margin: 0;
     padding: 5px;
     text-align: center;
@@ -142,6 +142,7 @@
   &__ul {
     list-style: none;
     padding: 10px 10px 0;
+    font-size: 0.8rem;
   }
   &__li {
     border-bottom: 1px dotted #ff86d7;

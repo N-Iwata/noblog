@@ -1,9 +1,39 @@
-.layout {
-  margin-left: auto;
-  margin-right: auto;
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.contens {
+  // margin-left: auto;
+  // margin-right: auto;
   margin-top: 20px;
-  max-width: 800px;
+  // max-width: 768px;
+  width: 60%;
   padding: 30px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar {
+  width: 33%;
+  flex-basis: 25%;
+  margin-top: 28px;
+  margin-left: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .contens {
+    width: 100%;
+  }
+  .sidebar {
+    width: 100%;
+    margin-left: 0;
+  }
 }

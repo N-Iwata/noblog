@@ -39,8 +39,15 @@ exports.createPages = async ({ graphql, actions }) => {
     throw result.errors;
   }
 
-  // Create blog posts pages.
   const posts = result.data.posts.edges;
+  const tags = result.data.tags.group;
+
+  const new1 = posts[0].node;
+  const new2 = posts[1].node;
+  const new3 = posts[2].node;
+  const new4 = posts[3].node;
+  const new5 = posts[4].node;
+  const tagList = tags;
 
   paginate({
     createPage,
@@ -48,16 +55,19 @@ exports.createPages = async ({ graphql, actions }) => {
     itemsPerPage: 5,
     component: template,
     pathPrefix: ({ pageNumber }) => (pageNumber === 0 ? "/" : "/page"),
+    context: {
+      new1,
+      new2,
+      new3,
+      new4,
+      new5,
+      tagList,
+    },
   });
 
   posts.forEach((post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node;
     const next = index === 0 ? null : posts[index - 1].node;
-    const new1 = posts[0].node;
-    const new2 = posts[1].node;
-    const new3 = posts[2].node;
-    const new4 = posts[3].node;
-    const new5 = posts[4].node;
 
     createPage({
       path: `/${post.node.frontmatter.slug}/`,
@@ -71,11 +81,10 @@ exports.createPages = async ({ graphql, actions }) => {
         new3,
         new4,
         new5,
+        tagList,
       },
     });
   });
-
-  const tags = result.data.tags.group;
 
   tags.forEach(tag => {
     createPage({
@@ -83,6 +92,12 @@ exports.createPages = async ({ graphql, actions }) => {
       component: tagTemplate,
       context: {
         tag: tag.fieldValue,
+        new1,
+        new2,
+        new3,
+        new4,
+        new5,
+        tagList,
       },
     });
   });

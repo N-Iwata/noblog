@@ -3,7 +3,6 @@ import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import Bio from "../components/bio";
 
 const PrivacyPolicy = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
@@ -45,7 +44,6 @@ const PrivacyPolicy = ({ data, location }) => {
             当サイトに掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。
           </p>
         </div>
-        <Bio />
       </Layout>
     </div>
   );

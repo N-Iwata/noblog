@@ -3,7 +3,7 @@
   padding: 0;
   margin-bottom: 10px;
   background-color: #ff86d7;
-  max-width: 800px;
+  // max-width: 800px;
 
   height: 50px;
   width: 100%;
@@ -15,7 +15,7 @@
 
   .checkbtn {
     font-size: 30px;
-    color: white;
+    color: #444;
     float: right;
     line-height: 60px;
     margin-right: 40px;
@@ -90,7 +90,7 @@
     }
     &__li a {
       font-size: 20px;
-
+      color: #fff;
       &:hover {
         background: none;
         color: #0082e6;

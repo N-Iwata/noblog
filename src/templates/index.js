@@ -10,7 +10,6 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Tag from "../components/tag";
 import Adsense from "../components/adsense";
-import Bio from "../components/bio";
 import Pagenation from "../components/pagenation";
 
 config.autoAddCss = false;
@@ -20,10 +19,23 @@ const BlogIndex = ({ data, location, pageContext }) => {
   const siteTitle = data.site.siteMetadata.title;
   const author = data.site.siteMetadata.author.name;
   const posts = data.allMarkdownRemark.edges;
-
+  const postList = data.allMarkdownRemark.edges;
+  console.log("postList: ", postList);
+  const { new1, new2, new3, new4, new5, tagList } = pageContext;
+  console.log("tagList: ", tagList);
   return (
     <div>
-      <Layout location={location} title={siteTitle} author={author}>
+      <Layout
+        location={location}
+        title={siteTitle}
+        author={author}
+        new1={new1}
+        new2={new2}
+        new3={new3}
+        new4={new4}
+        new5={new5}
+        tagList={tagList}
+      >
         <SEO title="All posts" />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug;
@@ -82,7 +94,7 @@ const BlogIndex = ({ data, location, pageContext }) => {
           );
         })}
         <Pagenation pageContext={pageContext} />
-        <Bio />
+        {/* <Bio /> */}
         <Adsense />
         <Adsense />
       </Layout>

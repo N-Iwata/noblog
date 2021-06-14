@@ -14,36 +14,41 @@ const useStyles = makeStyles({
   },
 });
 
-const getTagList = postList => {
-  let retList = [];
+// const getTagList = postList => {
+//   let retList = [];
 
-  postList.forEach(data => {
-    const tags = data.node.frontmatter.tags;
-    tags.forEach(tag => {
-      retList.push(tag);
-    });
-  });
-  return Array.from(new Set(retList));
-};
+//   postList.forEach(data => {
+//     const tags = data.node.frontmatter.tags;
+//     tags.forEach(tag => {
+//       retList.push(tag);
+//     });
+//   });
+//   return Array.from(new Set(retList));
+// };
 
-const TagList = ({ postList }) => {
+const TagList = ({ tagList }) => {
+  console.log("tagList: ", tagList);
   const classes = useStyles();
-  const tagLists = getTagList(postList);
 
   return (
     <nav className={"new"}>
       <div className={"new__title"}>タグ一覧</div>
-      {tagLists &&
-        tagLists.map(tag => (
-          <Button key={tag} variant="contained" color={"default"} className={classes.button}>
+      {tagList &&
+        tagList.map(tag => (
+          <Button
+            key={tag.fieldValue}
+            variant="contained"
+            color={"default"}
+            className={classes.button}
+          >
             <Link
-              to={`/tags/${kebabCase(tag)}/`}
+              to={`/tags/${kebabCase(tag.fieldValue)}/`}
               key={tag}
               className="tag__list"
-              title={`${tag}のtagページに移動します。`}
+              title={`${tag.fieldValue}のtagページに移動します。`}
             >
               <FontAwesomeIcon icon={faTag} />
-              　{tag}
+              　{tag.fieldValue}
             </Link>
           </Button>
         ))}

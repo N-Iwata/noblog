@@ -3,7 +3,6 @@ import { useStaticQuery, graphql } from "gatsby";
 import Image from "gatsby-image";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
-
 import { rhythm } from "../utils/typography";
 
 const Bio = () => {
@@ -36,8 +35,8 @@ const Bio = () => {
       <div
         style={{
           marginBottom: rhythm(1.5),
-          padding: "20px 30px 40px 30px",
-          border: "#ccc 1px solid",
+          padding: "40px 15px 40px 15px",
+          // border: "#ccc 1px solid",
         }}
       >
         <div style={{ textAlign: "center" }}>
