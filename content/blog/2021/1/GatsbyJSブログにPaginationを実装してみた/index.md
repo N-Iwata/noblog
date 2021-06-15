@@ -1,5 +1,5 @@
 ---
-title: GatsbyJSブログにPaginationを実装してみた
+title: 【GatsbyJS】ブログにPaginationを実装してみた
 date: "2021-01-11"
 description: 今回はGatsbyJSブログに[gatsby-awesome-pagination]というパッケージを利用してPagenationを実装してみたので解説します！！
 slug: 2021-01-11/gatsby-awesome-pagination

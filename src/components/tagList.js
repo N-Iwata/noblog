@@ -14,20 +14,7 @@ const useStyles = makeStyles({
   },
 });
 
-// const getTagList = postList => {
-//   let retList = [];
-
-//   postList.forEach(data => {
-//     const tags = data.node.frontmatter.tags;
-//     tags.forEach(tag => {
-//       retList.push(tag);
-//     });
-//   });
-//   return Array.from(new Set(retList));
-// };
-
 const TagList = ({ tagList }) => {
-  console.log("tagList: ", tagList);
   const classes = useStyles();
 
   return (
@@ -47,8 +34,7 @@ const TagList = ({ tagList }) => {
               className="tag__list"
               title={`${tag.fieldValue}のtagページに移動します。`}
             >
-              <FontAwesomeIcon icon={faTag} />
-              　{tag.fieldValue}
+              <FontAwesomeIcon icon={faTag} />　{tag.fieldValue}
             </Link>
           </Button>
         ))}

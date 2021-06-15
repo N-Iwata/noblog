@@ -1,16 +1,57 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 import NavBar from "./navbar";
 import Footer from "./footer";
 import SideBar from "./sidebar";
 
-const Layout = ({ author, children, new1, new2, new3, new4, new5, tagList }) => {
+const Layout = ({ author, children }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 2000) {
+        edges {
+          node {
+            excerpt
+            fields {
+              slug
+            }
+            frontmatter {
+              date(formatString: "YYYY-MM-DD")
+              title
+              description
+              slug
+              tags
+              hero {
+                childImageSharp {
+                  fluid(maxWidth: 1280) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      tags: allMarkdownRemark(limit: 2000) {
+        group(field: frontmatter___tags) {
+          fieldValue
+        }
+      }
+    }
+  `);
+
   return (
     <div>
       <NavBar />
       <div className="container">
         <main className="contens">{children}</main>
-        <SideBar new1={new1} new2={new2} new3={new3} new4={new4} new5={new5} tagList={tagList} />
+        <SideBar
+          new1={data.allMarkdownRemark.edges[0].node}
+          new2={data.allMarkdownRemark.edges[2].node}
+          new3={data.allMarkdownRemark.edges[3].node}
+          new4={data.allMarkdownRemark.edges[4].node}
+          new5={data.allMarkdownRemark.edges[5].node}
+          tagList={data.tags.group}
+        />
       </div>
 
       <Footer author={author} />
@@ -19,44 +60,3 @@ const Layout = ({ author, children, new1, new2, new3, new4, new5, tagList }) => 
 };
 
 export default Layout;
-
-export const pageQuery = graphql`
-  query($skip: Int!, $limit: Int!) {
-    site {
-      siteMetadata {
-        title
-        author {
-          name
-        }
-      }
-    }
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      skip: $skip
-      limit: $limit
-    ) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "YYYY-MM-DD")
-            title
-            description
-            slug
-            tags
-            hero {
-              childImageSharp {
-                fluid(maxWidth: 1280) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`;

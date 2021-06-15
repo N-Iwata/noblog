@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-// import Image from "gatsby-image";
 import Img from "gatsby-image";
 import { config, library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -20,11 +19,9 @@ library.add(faClock);
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark;
-  const siteTitle = data.site.siteMetadata.title;
   const siteUrl = data.site.siteMetadata.siteUrl;
   const author = data.site.siteMetadata.author.name;
-  const { slug, previous, next, new1, new2, new3, new4, new5, tagList } = pageContext;
-  console.log("tagList: ", tagList);
+  const { slug, previous, next } = pageContext;
 
   const hero = post.frontmatter.hero.childImageSharp.fluid.src;
   const image = `${siteUrl}${hero}`;
@@ -32,17 +29,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   return (
     <div>
       <Iframely />
-      <Layout
-        location={location}
-        title={siteTitle}
-        author={author}
-        new1={new1}
-        new2={new2}
-        new3={new3}
-        new4={new4}
-        new5={new5}
-        tagList={tagList}
-      >
+      <Layout author={author}>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}

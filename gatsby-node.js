@@ -27,7 +27,7 @@ exports.createPages = async ({ graphql, actions }) => {
             }
           }
         }
-        tags: allMarkdownRemark(limit: 1000) {
+        tags: allMarkdownRemark(limit: 2000) {
           group(field: frontmatter___tags) {
             fieldValue
           }
@@ -42,27 +42,12 @@ exports.createPages = async ({ graphql, actions }) => {
   const posts = result.data.posts.edges;
   const tags = result.data.tags.group;
 
-  const new1 = posts[0].node;
-  const new2 = posts[1].node;
-  const new3 = posts[2].node;
-  const new4 = posts[3].node;
-  const new5 = posts[4].node;
-  const tagList = tags;
-
   paginate({
     createPage,
     items: posts,
-    itemsPerPage: 5,
+    itemsPerPage: 7,
     component: template,
     pathPrefix: ({ pageNumber }) => (pageNumber === 0 ? "/" : "/page"),
-    context: {
-      new1,
-      new2,
-      new3,
-      new4,
-      new5,
-      tagList,
-    },
   });
 
   posts.forEach((post, index) => {
@@ -76,12 +61,6 @@ exports.createPages = async ({ graphql, actions }) => {
         slug: post.node.fields.slug,
         previous,
         next,
-        new1,
-        new2,
-        new3,
-        new4,
-        new5,
-        tagList,
       },
     });
   });
@@ -92,12 +71,6 @@ exports.createPages = async ({ graphql, actions }) => {
       component: tagTemplate,
       context: {
         tag: tag.fieldValue,
-        new1,
-        new2,
-        new3,
-        new4,
-        new5,
-        tagList,
       },
     });
   });

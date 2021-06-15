@@ -1,5 +1,5 @@
 ---
-title: GatsbyJSブログのコードブロックにタイトルと指定行のハイライトを追加した
+title: 【GatsbyJS】ブログのコードブロックにタイトルと指定行のハイライトを追加した
 date: "2020-05-02"
 description: 今回はGatsbyJSブログの記事ページを、Qiitaのようにコードブロックにタイトルを付けられるようにして、さらに指定した行をハイライトできるようにします。
 slug: 2020-05-02/gatsby-code-title-highlight

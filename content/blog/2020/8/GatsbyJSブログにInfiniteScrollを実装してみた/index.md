@@ -1,5 +1,5 @@
 ---
-title: GatsbyJSブログにInfiniteScrollを実装してみた
+title: 【GatsbyJS】ブログにInfiniteScrollを実装してみた
 date: "2020-08-06"
 description: 今回はGatsbyJSブログにInfiniteScrollを実装してみたので解説します！！
 slug: 2020-08-06/gatsby-infinite-scroll

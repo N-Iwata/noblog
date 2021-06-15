@@ -1,5 +1,5 @@
 ---
-title: GatsbyJSブログのOGP画像を動的に生成した
+title: 【GatsbyJS】ブログのOGP画像を動的に生成した
 date: "2020-07-01"
 description: 今回はGatsbyJSブログのOGP画像を記事ごとに生成できるようにしたので解説していきます。twitterなどにリンクを張る時に記事のトップ画像を表示するだけで、まともな記事に見えるので絶対にやったほうがいいですよね！
 slug: 2020-07-01/gatsby-ogp-image

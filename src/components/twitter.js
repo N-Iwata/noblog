@@ -1,19 +1,6 @@
-import React, { useEffect } from "react";
-
-let isLoadwidgets = false;
+import React from "react";
 
 const Twitter = () => {
-  useEffect(() => {
-    const s = document.createElement("script");
-    if (!isLoadwidgets) {
-      s.setAttribute("src", "https://platform.twitter.com/widgets.js");
-      document.body.appendChild(s);
-      isLoadwidgets = true;
-    }
-    // return () => {
-    //   document.body.removeChild(s);
-    // };
-  }, []);
   return (
     <div className="twitter">
       <a

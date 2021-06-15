@@ -1,5 +1,5 @@
 ---
-title: GatsbyJSブログに自分のSNSへのリンクを追加した
+title: 【GatsbyJS】ブログに自分のSNSへのリンクを追加した
 date: "2020-05-15"
 description: 今回はGatsbyJSブログに自分のSNSへのリンクを追加します。さまざまな人にブログやツイッターを見てもらいたいです！
 slug: 2020-05-15/gatsby-sns-link

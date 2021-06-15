@@ -1,5 +1,5 @@
 ---
-title: GatsbyJSブログの記事にTwitterの投稿を埋め込んだ
+title: 【GatsbyJS】ブログの記事にTwitterの投稿を埋め込んだ
 date: "2020-07-07"
 description: 今回はGatsbyJSブログの記事にTwitterの投稿を埋め込めるようにしたので解説します。Twitterでつぶやいたことをそのままブログの記事にしたり、他の人がつぶやいたことを参考にしたりすることもあると思うので便利ですよね！！
 slug: 2020-07-07/gatsby-twitter

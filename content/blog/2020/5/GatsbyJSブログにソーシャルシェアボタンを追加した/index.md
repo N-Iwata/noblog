@@ -1,5 +1,5 @@
 ---
-title: GatsbyJSブログにソーシャルシェアボタンを追加した
+title: 【GatsbyJS】ブログにソーシャルシェアボタンを追加した
 date: "2020-05-11"
 description: 今回はGatsbyJSブログの記事ページにSNS等のシェアボタンを追加します。さまざまな人に見てもらいたいです！
 slug: 2020-05-11/gatsby-social-share

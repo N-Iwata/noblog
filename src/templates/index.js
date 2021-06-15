@@ -15,27 +15,13 @@ import Pagenation from "../components/pagenation";
 config.autoAddCss = false;
 library.add(faClock);
 
-const BlogIndex = ({ data, location, pageContext }) => {
-  const siteTitle = data.site.siteMetadata.title;
+const BlogIndex = ({ data, pageContext }) => {
   const author = data.site.siteMetadata.author.name;
   const posts = data.allMarkdownRemark.edges;
-  const postList = data.allMarkdownRemark.edges;
-  console.log("postList: ", postList);
-  const { new1, new2, new3, new4, new5, tagList } = pageContext;
-  console.log("tagList: ", tagList);
+
   return (
     <div>
-      <Layout
-        location={location}
-        title={siteTitle}
-        author={author}
-        new1={new1}
-        new2={new2}
-        new3={new3}
-        new4={new4}
-        new5={new5}
-        tagList={tagList}
-      >
+      <Layout author={author}>
         <SEO title="All posts" />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug;
