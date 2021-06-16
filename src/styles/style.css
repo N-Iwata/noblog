@@ -179,6 +179,10 @@ body {
   color: #000;
 }
 
+.new__li a:hover {
+  color: #ff86d7;
+}
+
 @media (max-width: 767px) {
   .blog-section h2 {
     font-size: 1.3em;
@@ -294,6 +298,7 @@ body {
   background-color: #fff;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 0 4px;
 }
 
 @media screen and (max-width: 768px) {
@@ -490,6 +495,7 @@ body {
 .adsense {
   background: #fff !important;
   width: 100%;
+  margin: 0 auto;
 }
 
 .adsense ins {

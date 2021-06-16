@@ -149,6 +149,10 @@
     & a {
       box-shadow: none;
       color: #000;
+
+      &:hover {
+        color: #ff86d7;
+      }
     }
   }
 }
