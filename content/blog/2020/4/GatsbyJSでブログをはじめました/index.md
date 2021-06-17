@@ -3,7 +3,7 @@ title: 【GatsbyJS】ブログを始めました（GitHubとNetlify使用）
 date: "2020-04-12T22:12:03.284Z"
 description: GatsbyJSとGitHubとNetlifyでブログを始めました。
 slug: start-blog
-tags: [GatsbyJS, Netlify, GitHub, gatsby-starter-blog, Google Domains]
+tags: [GatsbyJS]
 hero: ./hero.png
 ---
 

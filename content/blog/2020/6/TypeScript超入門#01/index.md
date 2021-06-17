@@ -3,7 +3,7 @@ title: 【初心者向け】TypeScript超入門#01 概要説明~環境構築編
 date: "2020-06-17"
 description: エンジニアの皆さん（特にフロントエンドエンジニア）、TypeScriptを使っていますか？？使っていない人はこんな疑問持ってませんか？？
 slug: 2020-06-17/start-typescript-01
-tags: [TypeScript,TypeScript入門]
+tags: [TypeScript,TypeScript超入門]
 hero: ./hero.png
 ---
 

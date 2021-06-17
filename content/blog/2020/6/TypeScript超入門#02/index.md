@@ -3,7 +3,7 @@ title: 【初心者向け】TypeScript超入門#02 基本的な型編
 date: "2020-06-22"
 description: この記事はTypeScript超入門シリーズの第2回目として、TypeScriptの基本的な型についてまとめて解説していきます！
 slug: 2020-06-22/start-typescript-02
-tags: [TypeScript,TypeScript入門]
+tags: [TypeScript,TypeScript超入門]
 hero: ./hero.png
 ---
 

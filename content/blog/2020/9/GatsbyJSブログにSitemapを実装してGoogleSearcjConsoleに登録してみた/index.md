@@ -3,7 +3,7 @@ title: 【GatsbyJS】ブログにSitemapを実装してGoogle Search Consoleに�
 date: "2020-09-22"
 description: 今回はGatsbyJSブログにSitemapを実装してGoogle Search Consoleに登録してみたので解説します！！
 slug: 2020-09-22/gatsby-sitemap-seach-console
-tags: [GatsbyJS,gatsby-starter-blog,gatsby-plugin-sitemap,GoogleSearchConsole]
+tags: [GatsbyJS]
 hero: ./hero.png
 ---
 

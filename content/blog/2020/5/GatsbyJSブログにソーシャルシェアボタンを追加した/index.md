@@ -3,7 +3,7 @@ title: 【GatsbyJS】ブログにソーシャルシェアボタンを追加し�
 date: "2020-05-11"
 description: 今回はGatsbyJSブログの記事ページにSNS等のシェアボタンを追加します。さまざまな人に見てもらいたいです！
 slug: 2020-05-11/gatsby-social-share
-tags: [GatsbyJS, gatsby-starter-blog, react-share]
+tags: [GatsbyJS]
 hero: ./hero.png
 ---
 

@@ -3,7 +3,7 @@ title: 【初心者向け】TypeScript超入門#07 型の互換性編
 date: "2020-07-18"
 description: この記事はTypeScript超入門シリーズの第7回目として、TypeScriptの型の互換性についてまとめて解説していきます！
 slug: 2020-07-18/start-typescript-07
-tags: [TypeScript, TypeScript入門, 型の互換性]
+tags: [TypeScript, TypeScript超入門]
 hero: ./hero.png
 ---
 

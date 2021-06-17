@@ -3,7 +3,7 @@ title: 【初心者向け】TypeScript超入門#04 クラス編
 date: "2020-06-28"
 description: この記事はTypeScript超入門シリーズの第4回目として、TypeScriptのクラスについてまとめて解説していきます！
 slug: 2020-06-28/start-typescript-04
-tags: [TypeScript,TypeScript入門]
+tags: [TypeScript,TypeScript超入門]
 hero: ./hero.png
 ---
 

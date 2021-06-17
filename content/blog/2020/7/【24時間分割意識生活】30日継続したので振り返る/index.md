@@ -3,7 +3,7 @@ title: 【24時間分割意識生活】30日継続したので振り返る
 date: "2020-07-10"
 description: 今回は24時間分割意識生活を開始して30日継続したのでやったことや感じたことを振り返っていきます！！
 slug: 2020-07-10/24hour-split-life-30day
-tags: [24時間分割意識生活,TypeScript,React,Redux]
+tags: [24時間分割意識生活]
 hero: ./hero.png
 ---
 
@@ -14,9 +14,9 @@ hero: ./hero.png
 
 今回は**24時間分割意識生活**を開始して30日継続したのでやったことや感じたことを振り返っていきます！！
 
-実行を決意表明した記事はこちら↓
+24時間分割意識生活の記事はこちら↓
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/2020-06-11/24hour-split-life-start/" data-iframely-url="//cdn.iframe.ly/EjpcRto?iframe=card-small"></a></div></div>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/tags/24-%25E6%2599%2582%25E9%2596%2593%25E5%2588%2586%25E5%2589%25B2%25E6%2584%258F%25E8%25AD%2598%25E7%2594%259F%25E6%25B4%25BB/" data-iframely-url="//cdn.iframe.ly/aoWazWg"></a></div></div>
 
 今回は以下4つで書いていきます！！
 
@@ -36,7 +36,7 @@ hero: ./hero.png
 
 詳細はこちら↓
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/2020-06-11/24hour-split-life-start/" data-iframely-url="//cdn.iframe.ly/EjpcRto?iframe=card-small"></a></div></div>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/2020-06-11/24hour-split-life-start/" data-iframely-url="//cdn.iframe.ly/BULtMcj?iframe=card-small"></a></div></div>
 
 
 ## 24時間分割意識生活中にやったこと

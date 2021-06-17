@@ -3,7 +3,7 @@ title: 【GatsbyJS】ブログにYouTubeを埋め込んでみた
 date: "2020-05-07"
 description: 今回はGatsbyJSブログの記事内にYouTubeを埋め込めるようにします。GatsbyJSの公式ページの内容通りやれば簡単にできます。
 slug: 2020-05-07/gatsby-youtube
-tags: [GatsbyJS, gatsby-starter-blog, gatsby-remark-embed-youtube, マコなり社長]
+tags: [GatsbyJS]
 hero: ./hero.png
 ---
 

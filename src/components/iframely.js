@@ -9,12 +9,9 @@ function Iframely() {
   }, []);
   return (
     <Helmet>
-      <script async src="https://cdn.iframe.ly/embed.js" />
+      <script async src="//cdn.iframe.ly/embed.js" charset="utf-8" />
+      {/* <script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script> */}
     </Helmet>
   );
 }
 export default Iframely;
-
-
-
-

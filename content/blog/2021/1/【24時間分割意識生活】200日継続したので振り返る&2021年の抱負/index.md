@@ -3,7 +3,7 @@ title: 【24時間分割意識生活】200日継続したので振り返る&2021
 date: "2021-01-02"
 description: 今回は24時間分割意識生活を開始して200日継続したのでやったことや感じたことの振り返りと2021年の抱負を書いていきたいと思います！！
 slug: 2021-01-02/24hour-split-life-200day
-tags: [24時間分割意識生活,今年の抱負,個人開発]
+tags: [24時間分割意識生活,今年の抱負]
 hero: ./hero.png
 ---
 
@@ -14,7 +14,7 @@ hero: ./hero.png
 
 今回は**24時間分割意識生活**を開始して200日継続したのでやったことや感じたことの振り返りと2021年の抱負を書いていきたいと思います！！
 
-過去の24時間分割意識生活の記事はこちら↓
+24時間分割意識生活の記事はこちら↓
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/tags/24-%25E6%2599%2582%25E9%2596%2593%25E5%2588%2586%25E5%2589%25B2%25E6%2584%258F%25E8%25AD%2598%25E7%2594%259F%25E6%25B4%25BB/" data-iframely-url="//cdn.iframe.ly/aoWazWg"></a></div></div>
 
@@ -38,7 +38,7 @@ hero: ./hero.png
 
 詳細はこちら↓
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/2020-06-11/24hour-split-life-start/" data-iframely-url="//cdn.iframe.ly/EjpcRto?iframe=card-small"></a></div></div>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/2020-06-11/24hour-split-life-start/" data-iframely-url="//cdn.iframe.ly/BULtMcj?iframe=card-small"></a></div></div>
 
 
 ## 24時間分割意識生活中（101日～200日まで）にやったこと

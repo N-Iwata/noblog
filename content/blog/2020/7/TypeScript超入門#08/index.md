@@ -3,7 +3,7 @@ title: 【初心者向け】TypeScript超入門#08 型安全編
 date: "2020-07-26"
 description: この記事はTypeScript超入門シリーズの第8回目として、TypeScriptの型安全についてまとめて解説していきます！
 slug: 2020-07-26/start-typescript-08
-tags: [TypeScript, TypeScript入門, 型安全]
+tags: [TypeScript, TypeScript超入門]
 hero: ./hero.png
 ---
 

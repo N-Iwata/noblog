@@ -3,7 +3,7 @@ title: 【初心者向け】TypeScript超入門#03 関数編
 date: "2020-06-25"
 description: この記事はTypeScript超入門シリーズの第3回目として、TypeScriptの関数についてまとめて解説していきます！
 slug: 2020-06-25/start-typescript-03
-tags: [TypeScript,TypeScript入門]
+tags: [TypeScript,TypeScript超入門]
 hero: ./hero.png
 ---
 
