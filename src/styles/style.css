@@ -301,6 +301,18 @@ body {
   padding: 0 4px;
 }
 
+.sidebar__container {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+}
+
+.twitter {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 45px;
+}
+
 @media screen and (max-width: 768px) {
   .container {
     -webkit-box-orient: vertical;

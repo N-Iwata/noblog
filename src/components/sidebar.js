@@ -15,10 +15,12 @@ const SideBar = ({ new1, new2, new3, new4, new5, tagList }) => {
         <NewPost new1={new1} new2={new2} new3={new3} new4={new4} new5={new5} />
       )}
       {tagList && <TagList tagList={tagList} />}
+
+      <Adsense />
+      <Adsense />
+      <Adsense />
+
       <Twitter />
-      <Adsense />
-      <Adsense />
-      <Adsense />
     </aside>
   );
 };
