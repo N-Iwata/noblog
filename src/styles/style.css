@@ -282,7 +282,7 @@ body {
 
 .contens {
   margin-top: 20px;
-  width: 60%;
+  width: 65%;
   padding: 30px;
   background-color: #fff;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -291,8 +291,6 @@ body {
 
 .sidebar {
   width: 33%;
-  -ms-flex-preferred-size: 25%;
-      flex-basis: 25%;
   margin-top: 28px;
   margin-left: 10px;
   background-color: #fff;
@@ -331,9 +329,9 @@ body {
 
 .navbar {
   position: fixed;
-  padding: 0;
   margin-bottom: 10px;
   background-color: #ff86d7;
+  max-width: 1190px;
   height: 50px;
   width: 100%;
   top: 0;
