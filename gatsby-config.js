@@ -42,6 +42,22 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: "gatsby-remark-custom-blocks",
+            options: {
+              blocks: {
+                info: {
+                  classes: "info",
+                },
+                warn: {
+                  classes: "warn",
+                },
+                question: {
+                  classes: "question",
+                },
+              },
+            },
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               // maxWidth: 590,

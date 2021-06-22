@@ -33,6 +33,7 @@
     "gatsby-plugin-typography": "^2.4.1",
     "gatsby-remark-autolink-headers": "^2.3.0",
     "gatsby-remark-copy-linked-files": "^2.2.1",
+    "gatsby-remark-custom-blocks": "^3.7.1",
     "gatsby-remark-embed-youtube": "0.0.7",
     "gatsby-remark-images": "^3.3.17",
     "gatsby-remark-prismjs": "^3.4.1",

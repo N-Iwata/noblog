@@ -3,7 +3,7 @@ title: 【React】useMediaで簡単にレスポンシブ対応
 date: "2021-01-17"
 description: 今回はReactアプリケーションで簡単にレスポンシブ対応が実装できるuse-mediaというReact Hooksの便利なライブラリを紹介します！！
 slug: 2021-01-17/react-hook-usemedia
-tags: [React,Reactパッケージ]
+tags: [React]
 hero: ./hero.png
 ---
 

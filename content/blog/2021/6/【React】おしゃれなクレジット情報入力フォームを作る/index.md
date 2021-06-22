@@ -1,9 +1,9 @@
 ---
-title: 【React】おしゃれなクレジット情報入力フォームを作る
+title: 【React】react-credit-cardsでおしゃれなクレジット情報入力フォームを作る
 date: "2021-06-08"
-description: 今回はReactアプリケーションにおしゃれなクレジット情報入力フォームを作ることができるReactCreditCardsという便利なライブラリを紹介します！！
+description: 今回はReactアプリケーションにおしゃれなクレジット情報入力フォームを作ることができるreact-credit-cardsという便利なライブラリを紹介します！！
 slug: 2021-06-08/react-credit-cards
-tags: [React,Reactパッケージ]
+tags: [React]
 hero: ./hero.png
 ---
 
@@ -12,7 +12,7 @@ hero: ./hero.png
 おはようございます！こんにちは！こんばんは！<br>
 麻雀と芝生大好きおじさんこと**のふのふ**([@rpf_nob](https://twitter.com/rpf_nob))です！！
 
-今回はReactアプリケーションにおしゃれなクレジット情報入力フォームを作ることができるReactCreditCardsという便利なライブラリを紹介します！！
+今回はReactアプリケーションにおしゃれなクレジット情報入力フォームを作ることができるreact-credit-cardsという便利なライブラリを紹介します！！
 
 * 概要
 * react-credit-cardsのインストール
@@ -187,7 +187,7 @@ export default function App() {
 
 ## まとめ
 
-今回はReactアプリケーションにおしゃれなクレジット情報入力フォームを作ることができるReactCreditCardsという便利なライブラリを紹介しました！！
+今回はReactアプリケーションにおしゃれなクレジット情報入力フォームを作ることができるreact-credit-cardsという便利なライブラリを紹介しました！！
 
 クレジットカード情報を入力する必要があった場合に今後使ってみたいと思います！
 

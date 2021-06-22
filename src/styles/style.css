@@ -50,7 +50,6 @@ body {
 .blog-section p {
   padding: 5px 10px;
   margin: 0;
-  margin-bottom: 10px;
 }
 
 .blog-section p .under {
@@ -64,6 +63,118 @@ body {
 .blog-section strong {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(90%, transparent), color-stop(60%, #ff86d7)) !important;
   background: linear-gradient(transparent 90%, #ff86d7 60%) !important;
+}
+
+.blog-section .custom-block {
+  position: relative;
+}
+
+.blog-section .info {
+  border-radius: 5px;
+  margin: 0 1rem;
+  margin-bottom: 2rem;
+}
+
+.blog-section .info > .custom-block-body {
+  position: relative;
+  margin: 1.5rem 0;
+  padding: 5px 15px 5px 40px;
+  border-radius: 6px;
+  background: #fff6e4;
+  color: #222;
+  font-size: 0.875em;
+  line-height: 1.6;
+}
+
+.blog-section .info > .custom-block-body::before {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  content: "!";
+  display: block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 13px;
+  text-align: center;
+  color: #fff;
+  background: #ffb84c;
+  font-weight: 700;
+  border-radius: 50%;
+}
+
+.blog-section .warn {
+  border-radius: 5px;
+  margin: 0 1rem;
+  margin-bottom: 2rem;
+}
+
+.blog-section .warn > .custom-block-body {
+  position: relative;
+  margin: 1.5rem 0;
+  padding: 5px 15px 5px 40px;
+  border-radius: 6px;
+  background: #ffeff2;
+  color: #222;
+  font-size: 0.875em;
+  line-height: 1.6;
+}
+
+.blog-section .warn > .custom-block-body::before {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  content: "!!";
+  display: block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 13px;
+  text-align: center;
+  color: #fff;
+  background: #ff7670;
+  font-weight: 700;
+  border-radius: 50%;
+}
+
+.blog-section .question {
+  border-radius: 5px;
+  margin: 0 1rem;
+  margin-bottom: 2rem;
+}
+
+.blog-section .question > .custom-block-body {
+  position: relative;
+  margin: 1.5rem 0;
+  padding: 5px 15px 5px 40px;
+  border-radius: 6px;
+  background: #dbf8dd;
+  color: #222;
+  font-size: 0.875em;
+  line-height: 1.6;
+}
+
+.blog-section .question > .custom-block-body::before {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  content: "?";
+  display: block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 13px;
+  text-align: center;
+  color: #fff;
+  background: #09c441;
+  font-weight: 700;
+  border-radius: 50%;
 }
 
 .blog-section blockquote {
