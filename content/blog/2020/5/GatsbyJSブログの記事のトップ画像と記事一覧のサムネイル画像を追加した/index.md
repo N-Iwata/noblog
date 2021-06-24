@@ -3,7 +3,7 @@ title: 【GatsbyJS】ブログの記事のトップ画像と記事一覧のサ�
 date: "2020-05-10"
 description: 今回はGatsbyJSブログの記事ページにヒーロー画像をつけて、記事一覧にもサムネイルとして画像を表示できるようにします。記事のトップや一覧のサムネイルに画像があるだけで、印象が変わりますからね。
 slug: 2020-05-10/gatsby-hero
-tags: [GatsbyJS]
+tags: [GatsbyJS,gatsby-starter-blog]
 hero: ./hero.png
 ---
 
