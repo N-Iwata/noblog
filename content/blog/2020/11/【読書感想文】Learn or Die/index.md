@@ -1,5 +1,5 @@
 ---
-title: 【読書感想文】Learn or Die 死ぬ気で学べ～プリファードネットワークスの挑戦
+title: 【読書感想文】Learn or Die 死ぬ気で学べ～プリファードネットワークスの挑戦【書評】
 date: "2020-11-08"
 description: 今回は「Learn or Die 死ぬ気で学べ～プリファードネットワークスの挑戦」という本を読んだので思ったことを書いていきます。
 slug: 2020-11-08/reading-learn-or-die
