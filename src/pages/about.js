@@ -14,11 +14,10 @@ const Aboutpage = ({ data, location }) => {
         <SEO title="About" />
         <div className="blog-section">
           <h1>About</h1>
+
           <p>おはようございます！こんにちは！こんばんは！</p>
           <p>
-            東京で働く名古屋生まれの麻雀と芝生と娘と妻を愛するアラフォーエンジニアの
-            <br />
-            麻雀と芝生大好きおじさんこと<b>のふのふ</b>(@rpf_nob)と申します！！
+            麻雀と芝生大好きおじさんこと<b>のふのふ</b>と申します！！
           </p>
           <h2>簡易プロフィール</h2>
           <ul>
@@ -28,34 +27,10 @@ const Aboutpage = ({ data, location }) => {
             <li>居住地：埼玉県三郷市</li>
             <li>血液型：AB型</li>
             <li>家族：妻と娘の3人家族</li>
-            <li>職業：会社員エンジニア</li>
-            <li>会社：某遊技機メーカー</li>
+            <li>職業：フロントエンドエンジニア</li>
+            <li>会社：都内のスタートアップ企業</li>
             <li>趣味①：麻雀（やるのも見るのも好き）</li>
             <li>趣味②：芝生管理（自宅の庭の芝生管理）</li>
-            <li>
-              Twitter：
-              <a href="https://twitter.com/rpf_nob" target="_blank" rel="noopener noreferrer">
-                rpf_nob
-              </a>
-            </li>
-            <li>
-              GitHub：
-              <a href="https://github.com/n-iwata" target="_blank" rel="noopener noreferrer">
-                n-iwata
-              </a>
-            </li>
-            <li>
-              Qiita：
-              <a href="https://qiita.com/rpf-nob" target="_blank" rel="noopener noreferrer">
-                rpf-nob
-              </a>
-            </li>
-            <li>
-              Zenn：
-              <a href="https://zenn.dev/rpf_nob" target="_blank" rel="noopener noreferrer">
-                rpf_nob
-              </a>
-            </li>
           </ul>
           <p>
             もともとはパチスロ開発のエンジニアとして仕事をしていましたが、2019年に新規事業創出を目的にweb開発やデータサイエンス（機械学習）方面に社内ジョブチェンジしました。
@@ -83,7 +58,7 @@ const Aboutpage = ({ data, location }) => {
           <ul>
             <li>React.js</li>
             <li>Gatsby.js（このブログ）</li>
-            <li>Next.js（勉強中）</li>
+            <li>Next.js</li>
           </ul>
           <h3>Python Library</h3>
           <ul>
@@ -99,7 +74,7 @@ const Aboutpage = ({ data, location }) => {
           <h3>UI Library</h3>
           <ul>
             <li>Material-UI</li>
-            <li>Chakra UI（触っただけ）</li>
+            <li>Chakra UI</li>
           </ul>
           <h3>Styling</h3>
           <ul>
@@ -109,6 +84,7 @@ const Aboutpage = ({ data, location }) => {
           <h3>API Layer</h3>
           <ul>
             <li>axios</li>
+            <li>ApolloClient</li>
             <li>Firebase</li>
           </ul>
           <h3>Build Environment</h3>
@@ -135,6 +111,7 @@ const Aboutpage = ({ data, location }) => {
           <h3>UI Design</h3>
           <ul>
             <li>XD</li>
+            <li>Figma</li>
           </ul>
           <h3>Firebase</h3>
           <ul>
@@ -173,8 +150,7 @@ const Aboutpage = ({ data, location }) => {
           </ul>
           <h2>このブログで発信すること</h2>
           <p>
-            このブログは<b>web開発やデータサイエンス関連で学んだことに関する技術やネタ</b>
-            をメインに発信し、趣味の麻雀と芝生管理の話や買ったもののレビューや時事ネタなどいろいろなものサブ的に発信していけたらと思います。
+            このブログはweb開発（特にフロントエンド）に関することをメインに書きますが、趣味や時事ネタなども雑記的に書いていきます。
           </p>
           <p>今後ともどうぞよろしくお願いします！！</p>
           <span>[自宅の芝生(2019年8月撮影)]</span>

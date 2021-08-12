@@ -388,7 +388,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1280px;
 }
 
 .contens {
@@ -422,7 +422,7 @@ body {
   top: 45px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 960px) {
   .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -442,7 +442,7 @@ body {
   position: fixed;
   margin-bottom: 10px;
   background-color: #ff86d7;
-  max-width: 1190px;
+  max-width: 1270px;
   height: 50px;
   width: 100%;
   top: 0;

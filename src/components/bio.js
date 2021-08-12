@@ -36,7 +36,6 @@ const Bio = () => {
         style={{
           marginBottom: rhythm(1.5),
           padding: "40px 15px 40px 15px",
-          // border: "#ccc 1px solid",
         }}
       >
         <div style={{ textAlign: "center" }}>
@@ -57,7 +56,7 @@ const Bio = () => {
             style={{
               fontSize: 18,
               textAlign: "center",
-              marginBottom: 5,
+              marginBottom: 8,
             }}
           >
             Written by <strong>{author.name}</strong>
@@ -65,43 +64,38 @@ const Bio = () => {
           <p
             style={{
               fontSize: 14,
-              // textAlign: "center",
-              marginBottom: 5,
+              textAlign: "center",
+              marginBottom: 8,
+              padding: "0 12px",
             }}
           >
             {author.summary}
-            {/* <a
-              style={{
-                boxShadow: "none",
-                marginLeft: 5,
-              }}
-              href="https://twitter.com/rpf_nob"
-            >
-              <FontAwesomeIcon
-                style={{
-                  height: "1.5em",
-                  width: "1.5em",
-                }}
-                color="#3eaded"
-                icon={faTwitter}
+          </p>
+          <p>
+            <a style={{ boxShadow: "none", marginRight: "4px" }} href="https://github.com/N-Iwata">
+              <img
+                alt="Github"
+                src="https://img.shields.io/badge/GitHub-%2312100E.svg?&style=for-the-badge&logo=Github&logoColor=white"
               />
             </a>
-            <a
-              style={{
-                boxShadow: "none",
-                marginLeft: 5,
-              }}
-              href="https://github.com/N-Iwata"
-            >
-              <FontAwesomeIcon
-                style={{
-                  height: "1.5em",
-                  width: "1.5em",
-                }}
-                color="#333"
-                icon={faGithub}
+            <a style={{ boxShadow: "none", marginRight: "4px" }} href="https://twitter.com/rpf_nob">
+              <img
+                alt="Twitter"
+                src="https://img.shields.io/badge/twitter-%231DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white"
               />
-            </a> */}
+            </a>
+            <a style={{ boxShadow: "none", marginRight: "4px" }} href="https://qiita.com/rpf-nob">
+              <img
+                alt="Medium"
+                src="https://img.shields.io/badge/qiita-55C500.svg?&style=for-the-badge&logo=qiita&logoColor=white"
+              />
+            </a>
+            <a style={{ boxShadow: "none", marginRight: "4px" }} href="https://zenn.dev/rpf_nob">
+              <img
+                alt="Zenn"
+                src="https://img.shields.io/badge/Zenn-3EA8FF.svg?&style=for-the-badge&logo=Zenn&logoColor=white"
+              />
+            </a>
           </p>
         </div>
       </div>
