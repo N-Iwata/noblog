@@ -1,9 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Image from "gatsby-image";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { rhythm } from "../utils/typography";
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -34,8 +31,8 @@ const Bio = () => {
     <div>
       <div
         style={{
-          marginBottom: rhythm(1.5),
-          padding: "40px 15px 40px 15px",
+          padding: "40px 15px 10px 15px",
+          backgroundColor: "#fff",
         }}
       >
         <div style={{ textAlign: "center" }}>
@@ -71,7 +68,7 @@ const Bio = () => {
           >
             {author.summary}
           </p>
-          <p>
+          <div style={{ textAlign: "center" }}>
             <a style={{ boxShadow: "none", marginRight: "4px" }} href="https://github.com/N-Iwata">
               <img
                 alt="Github"
@@ -96,7 +93,7 @@ const Bio = () => {
                 src="https://img.shields.io/badge/Zenn-3EA8FF.svg?&style=for-the-badge&logo=Zenn&logoColor=white"
               />
             </a>
-          </p>
+          </div>
         </div>
       </div>
     </div>

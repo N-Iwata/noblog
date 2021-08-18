@@ -9,8 +9,7 @@ const SideBar = ({ new1, new2, new3, new4, new5, tagList }) => {
   return (
     <aside className="sidebar">
       <Bio />
-      <Adsense />
-      <Adsense />
+
       {new1 && new2 && new3 && new4 && new5 && (
         <NewPost new1={new1} new2={new2} new3={new3} new4={new4} new5={new5} />
       )}
@@ -19,7 +18,8 @@ const SideBar = ({ new1, new2, new3, new4, new5, tagList }) => {
       <Adsense />
       <Adsense />
       <Adsense />
-
+      <Adsense />
+      <Adsense />
       <Twitter />
     </aside>
   );

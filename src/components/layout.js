@@ -43,7 +43,7 @@ const Layout = ({ author, children }) => {
     <div>
       <NavBar />
       <div className="container">
-        <main className="contens">{children}</main>
+        <main className="contents">{children}</main>
         <SideBar
           new1={data.allMarkdownRemark.edges[0].node}
           new2={data.allMarkdownRemark.edges[2].node}

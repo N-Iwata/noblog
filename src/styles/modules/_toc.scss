@@ -109,7 +109,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .toc {
     &__content {
       font-size: 0.9em;

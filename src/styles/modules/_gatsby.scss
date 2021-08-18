@@ -27,7 +27,7 @@
   background-color: #f2f2f2;
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .gatsby-highlight {
     font-size: 13px;
   }

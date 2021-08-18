@@ -60,13 +60,13 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               // maxWidth: 590,
-              maxWidth: 800,
+              maxWidth: 1000,
             },
           },
           {
             resolve: "gatsby-remark-embed-youtube",
             options: {
-              width: 800,
+              width: 1000,
               height: 400,
             },
           },
