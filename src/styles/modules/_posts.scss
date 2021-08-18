@@ -1,5 +1,4 @@
 .posts {
-  // padding: 20px;
   margin-bottom: 70px;
 
   &__title {
@@ -19,13 +18,11 @@
   }
   &__image {
     margin-bottom: 5px;
-
     position: absolute;
     overflow: hidden;
     top: 0;
     left: 0;
     width: 100%;
-    max-height: 350px;
     border: 1px solid #ccc;
 
     & img {
