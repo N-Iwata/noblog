@@ -69,26 +69,33 @@ const Bio = () => {
             {author.summary}
           </p>
           <div style={{ textAlign: "center" }}>
-            <a style={{ boxShadow: "none", marginRight: "4px" }} href="https://github.com/N-Iwata">
+            <a style={{ boxShadow: "none", marginRight: 4 }} href="https://github.com/N-Iwata">
               <img
+                style={{ margin: 0 }}
                 alt="Github"
                 src="https://img.shields.io/badge/GitHub-%2312100E.svg?&style=for-the-badge&logo=Github&logoColor=white"
               />
             </a>
-            <a style={{ boxShadow: "none", marginRight: "4px" }} href="https://twitter.com/rpf_nob">
+            <a style={{ boxShadow: "none", marginRight: 4 }} href="https://qiita.com/rpf-nob">
               <img
+                style={{ margin: 0 }}
+                alt="Qiita"
+                src="https://img.shields.io/badge/qiita-55C500.svg?&style=for-the-badge&logo=qiita&logoColor=white"
+              />
+            </a>
+          </div>
+          <div style={{ textAlign: "center" }}>
+            <a style={{ boxShadow: "none", marginRight: 4 }} href="https://twitter.com/rpf_nob">
+              <img
+                style={{ margin: 0 }}
                 alt="Twitter"
                 src="https://img.shields.io/badge/twitter-%231DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white"
               />
             </a>
-            <a style={{ boxShadow: "none", marginRight: "4px" }} href="https://qiita.com/rpf-nob">
+
+            <a style={{ boxShadow: "none", marginRight: 4 }} href="https://zenn.dev/rpf_nob">
               <img
-                alt="Medium"
-                src="https://img.shields.io/badge/qiita-55C500.svg?&style=for-the-badge&logo=qiita&logoColor=white"
-              />
-            </a>
-            <a style={{ boxShadow: "none", marginRight: "4px" }} href="https://zenn.dev/rpf_nob">
-              <img
+                style={{ margin: 0 }}
                 alt="Zenn"
                 src="https://img.shields.io/badge/Zenn-3EA8FF.svg?&style=for-the-badge&logo=Zenn&logoColor=white"
               />
