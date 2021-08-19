@@ -61,7 +61,13 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               durationFadeIn={100}
             />
           </div>
+
           <Toc data={data.markdownRemark.tableOfContents} />
+          <Share
+            title={post.frontmatter.title}
+            url={`${siteUrl}${slug}`}
+            description={post.excerpt}
+          />
           <Adsense />
           <section className="blog-section" dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr
