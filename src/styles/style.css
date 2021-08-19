@@ -258,7 +258,7 @@ body {
 .new {
   background-color: #fdfdfd;
   margin: 10px auto;
-  padding: 8px 0;
+  padding: 0 0 8px;
 }
 
 .new__title {
@@ -267,6 +267,9 @@ body {
   text-align: center;
   color: #111;
   text-transform: none;
+  font-size: 18px;
+  font-weight: normal;
+  background-color: #ff86d7;
 }
 
 .new__ul {

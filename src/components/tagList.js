@@ -19,7 +19,7 @@ const TagList = ({ tagList }) => {
 
   return (
     <nav className={"new"}>
-      <div className={"new__title"}>タグ一覧</div>
+      <h3 className={"new__title"}>タグ一覧</h3>
       {tagList &&
         tagList.map(tag => (
           <Button
@@ -34,7 +34,8 @@ const TagList = ({ tagList }) => {
               className="tag__list"
               title={`${tag.fieldValue}のtagページに移動します。`}
             >
-              <FontAwesomeIcon icon={faTag} />　{tag.fieldValue}
+              <FontAwesomeIcon icon={faTag} />
+              　{tag.fieldValue}
             </Link>
           </Button>
         ))}

@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 const NewPost = ({ new1, new2, new3, new4, new5 }) => {
   return (
     <nav className={"new"}>
-      <div className={"new__title"}>最近の記事</div>
+      <h3 className={"new__title"}>最近の記事</h3>
       <ul className={"new__ul"}>
         {new1 && (
           <li className={"new__li"}>
