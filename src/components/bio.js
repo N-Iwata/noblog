@@ -1,6 +1,8 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Image from "gatsby-image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -30,14 +32,15 @@ const Bio = () => {
   return (
     <div
       style={{
-        marginTop: 30,
+        marginTop: 40,
         backgroundColor: "#fff",
+        boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
       }}
     >
       <h3
         style={{
           margin: 0,
-          padding: 5,
+          padding: 10,
           textAlign: "center",
           color: "#111",
           textTransform: "none",
@@ -46,7 +49,7 @@ const Bio = () => {
           backgroundColor: "#ff86d7",
         }}
       >
-        プロフィール
+        <FontAwesomeIcon icon={faUserCircle} /> プロフィール
       </h3>
       <div style={{ marginTop: 16, textAlign: "center" }}>
         <Image

@@ -1,10 +1,14 @@
 import React from "react";
 import { Link } from "gatsby";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPencilAlt } from "@fortawesome/free-solid-svg-icons";
 
 const NewPost = ({ new1, new2, new3, new4, new5 }) => {
   return (
     <nav className={"new"}>
-      <h3 className={"new__title"}>最近の記事</h3>
+      <h3 className={"new__title"}>
+        <FontAwesomeIcon icon={faPencilAlt} /> 最近の記事
+      </h3>
       <ul className={"new__ul"}>
         {new1 && (
           <li className={"new__li"}>

@@ -257,13 +257,15 @@ body {
 
 .new {
   background-color: #fdfdfd;
-  margin: 10px auto;
+  margin: 20px auto;
   padding: 0 0 8px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .new__title {
   margin: 0;
-  padding: 5px;
+  padding: 10px;
   text-align: center;
   color: #111;
   text-transform: none;
@@ -280,7 +282,7 @@ body {
 }
 
 .new__li {
-  border-bottom: 1px dotted #ff86d7;
+  border-bottom: 2px solid #edf6ff;
   padding: 0;
 }
 

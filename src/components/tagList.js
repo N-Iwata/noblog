@@ -19,7 +19,9 @@ const TagList = ({ tagList }) => {
 
   return (
     <nav className={"new"}>
-      <h3 className={"new__title"}>タグ一覧</h3>
+      <h3 className={"new__title"}>
+        <FontAwesomeIcon icon={faTag} /> タグ一覧
+      </h3>
       {tagList &&
         tagList.map(tag => (
           <Button
