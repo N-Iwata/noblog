@@ -79,18 +79,9 @@ const Bio = () => {
             padding: "0 12px",
           }}
         >
-          都内のスタートアップ企業に勤務する麻雀と芝生管理が趣味の
+          {author.summary}
         </p>
-        <p
-          style={{
-            fontSize: 14,
-            textAlign: "center",
-            marginBottom: 8,
-            padding: "0 12px",
-          }}
-        >
-          フロントエンドエンジニア（？）
-        </p>
+
         <div style={{ textAlign: "center" }}>
           <a style={{ boxShadow: "none", marginRight: 4 }} href="https://github.com/N-Iwata">
             <img
