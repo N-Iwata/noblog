@@ -1,8 +1,9 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import NavBar from "./navbar";
-import Footer from "./footer";
-import SideBar from "./sidebar";
+import NavBar from "../navbar";
+import Footer from "../footer";
+import SideBar from "../sidebar";
+import styles from "./layout.module.css";
 
 const Layout = ({ author, children }) => {
   const data = useStaticQuery(graphql`
@@ -42,8 +43,8 @@ const Layout = ({ author, children }) => {
   return (
     <div>
       <NavBar />
-      <div className="container">
-        <main className="contents">{children}</main>
+      <div className={styles.container}>
+        <main className={styles.contents}>{children}</main>
         <SideBar
           new1={data.allMarkdownRemark.edges[0].node}
           new2={data.allMarkdownRemark.edges[2].node}
