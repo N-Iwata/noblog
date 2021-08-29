@@ -197,24 +197,6 @@ body {
   margin-bottom: 0px;
 }
 
-.social-links {
-  margin: 0 0 20px 0;
-  text-align: center;
-}
-
-.social-links__title {
-  margin-bottom: 10px;
-  font-weight: bold;
-  font-size: 1.2em;
-  color: #111;
-  text-align: center;
-}
-
-.social-links__icon {
-  display: inline;
-  margin-right: 10px;
-}
-
 .prevnext__ul {
   display: -webkit-box;
   display: -ms-flexbox;
