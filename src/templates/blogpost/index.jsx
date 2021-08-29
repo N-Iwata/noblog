@@ -5,14 +5,15 @@ import { config, library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import Toc from "../components/toc";
-import Tag from "../components/tag";
-import Adsense from "../components/adsense";
-import Share from "../components/share";
-import Iframely from "../components/iframely";
-import { rhythm } from "../utils/typography";
+import Layout from "../../components/layout";
+import SEO from "../../components/seo";
+import Toc from "../../components/toc";
+import Tag from "../../components/tag";
+import Adsense from "../../components/adsense";
+import Share from "../../components/share";
+import Iframely from "../../components/iframely";
+import { rhythm } from "../../utils/typography";
+import styles from "./blog.module.css";
 
 config.autoAddCss = false;
 library.add(faClock);
@@ -69,7 +70,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             description={post.excerpt}
           />
           <Adsense />
-          <section className="blog-section" dangerouslySetInnerHTML={{ __html: post.html }} />
+          <section
+            className={styles.blog__section}
+            dangerouslySetInnerHTML={{ __html: post.html }}
+          />
           <hr
             style={{
               marginBottom: rhythm(1),
@@ -82,17 +86,17 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           />
         </article>
 
-        <nav className={"prevnext"}>
-          <ul className={"prevnext__ul"}>
+        <nav className={styles.prevnext}>
+          <ul className={styles.prevnext__ul}>
             {previous && (
-              <li className={"prevnext__li"}>
+              <li className={styles.prevnext__li}>
                 <Link to={previous.fields.slug} rel="prev">
                   ← 前の記事
                 </Link>
               </li>
             )}
             {next && (
-              <li className={"prevnext__li"}>
+              <li className={styles.prevnext__li}>
                 <Link to={next.fields.slug} rel="next">
                   次の記事 →
                 </Link>

@@ -1,14 +1,13 @@
 const path = require(`path`);
 const { kebabCase } = require("lodash/string");
 const { paginate } = require("gatsby-awesome-pagination");
-// const { createFilePath } = require(`gatsby-source-filesystem`);
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
-  const blogPost = path.resolve(`./src/templates/blog-post.js`);
-  const tagTemplate = path.resolve(`./src/templates/tags.js`);
-  const template = path.resolve(`src/templates/index.js`);
+  const blogPost = path.resolve(`./src/templates/blogpost/index.jsx`);
+  const tagTemplate = path.resolve(`./src/templates/tagpage/index.jsx`);
+  const template = path.resolve(`src/templates/homepage/index.jsx`);
 
   const result = await graphql(
     `
@@ -75,17 +74,3 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
 };
-/*
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions;
-
-  if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode });
-    createNodeField({
-      name: `slug`,
-      node,
-      value,
-    });
-  }
-};
-*/

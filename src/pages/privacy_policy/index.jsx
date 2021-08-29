@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
+import styles from "../../templates/blogpost/blog.module.css";
 
 const PrivacyPolicy = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
@@ -11,7 +12,7 @@ const PrivacyPolicy = ({ data, location }) => {
     <div>
       <Layout location={location} title={siteTitle} author={author}>
         <SEO title="About" />
-        <div className="blog-section">
+        <div className={styles.blog__section}>
           <h1>Privacy Policy</h1>
           <h2>広告の配信について</h2>
           <p>

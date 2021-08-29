@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import Img from "gatsby-image";
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
+import styles from "../../templates/blogpost/blog.module.css";
 
 const Aboutpage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
@@ -12,7 +13,7 @@ const Aboutpage = ({ data, location }) => {
     <div>
       <Layout location={location} title={siteTitle} author={author}>
         <SEO title="About" />
-        <div className="blog-section">
+        <div className={styles.blog__section}>
           <h1>About</h1>
 
           <p>おはようございます！こんにちは！こんばんは！</p>

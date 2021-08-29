@@ -6,6 +6,7 @@ import Button from "@material-ui/core/Button";
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
 import styles from "./contact.module.css";
+import stylesBlog from "../../templates/blogpost/blog.module.css";
 
 const Contact = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
@@ -48,7 +49,7 @@ const Contact = ({ data, location }) => {
     <div>
       <Layout location={location} title={siteTitle} author={author}>
         <SEO title="Contact" />
-        <div className="blog-section">
+        <div className={stylesBlog.blog__section}>
           <h1>Contact</h1>
           <p>
             各種お問い合わせはこちらのフォームよりお願いいたします。

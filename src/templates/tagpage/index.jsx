@@ -1,16 +1,15 @@
 import React from "react";
-// import Image from "gatsby-image";
 import Img from "gatsby-image";
 import Button from "@material-ui/core/Button";
 import { config, library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import Tag from "../components/tag";
+import Layout from "../../components/layout";
+import SEO from "../../components/seo";
+import Tag from "../../components/tag";
+import styles from "../homepage/posts.module.css";
 
-// Components
 import { Link, graphql } from "gatsby";
 
 config.autoAddCss = false;
@@ -31,28 +30,28 @@ const Tags = ({ pageContext, data }) => {
         {edges.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug;
           return (
-            <div key={node.fields.slug} className="posts">
+            <div key={node.fields.slug} className={styles.posts}>
               <article>
                 <header>
-                  <h3 className="posts__title">
+                  <h3 className={styles.posts__title}>
                     <Link
-                      className="posts__title__a"
+                      className={styles.posts__title__a}
                       to={node.fields.slug}
                       title={`${title}のページに移動します。`}
                     >
                       {title}
                     </Link>
                   </h3>
-                  <small className="posts__date">
+                  <small className={styles.posts__date}>
                     <FontAwesomeIcon icon={faClock} />
                     <span style={{ marginLeft: 5 }}>{node.frontmatter.date}</span>
                   </small>
                 </header>
                 <Tag tags={node.frontmatter.tags} />
-                <div className="posts__image_container">
+                <div className={styles.posts__image_container}>
                   <Link to={node.fields.slug} title={`${title}のページに移動します。`}>
                     <Img
-                      className="posts__image"
+                      className={styles.posts__image}
                       fluid={node.frontmatter.hero.childImageSharp.fluid}
                       loading="eager"
                       durationFadeIn={100}
@@ -61,15 +60,15 @@ const Tags = ({ pageContext, data }) => {
                 </div>
                 <section>
                   <p
-                    className="posts__desc"
+                    className={styles.posts__desc}
                     dangerouslySetInnerHTML={{
                       __html: node.frontmatter.description || node.excerpt,
                     }}
                   />
-                  <div className="posts__more">
+                  <div className={styles.posts__more}>
                     <Button variant="contained" color={"default"}>
                       <Link
-                        className="posts__more__a"
+                        className={styles.posts__more__a}
                         to={node.fields.slug}
                         title={`${title}のページに移動します。`}
                       >
