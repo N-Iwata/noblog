@@ -1,0 +1,22 @@
+.tagList {
+  background-color: #fdfdfd;
+  margin: 20px auto;
+  padding: 0 0 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.tagList__title {
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  color: #111;
+  text-transform: none;
+  font-size: 18px;
+  font-weight: normal;
+  background-color: #ff86d7;
+}
+.tagList__list {
+  box-shadow: none;
+  color: #333;
+  font-size: 12px;
+  text-transform: none;
+}
