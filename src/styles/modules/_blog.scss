@@ -210,42 +210,7 @@
   }
 }
 
-.new {
-  background-color: #fdfdfd;
-  margin: 20px auto;
-  padding: 0 0 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
-  &__title {
-    margin: 0;
-    padding: 10px;
-    text-align: center;
-    color: #111;
-    text-transform: none;
-    font-size: 18px;
-    font-weight: normal;
-    background-color: #ff86d7;
-  }
-
-  &__ul {
-    list-style: none;
-    margin: 0 4px;
-    padding: 10px 10px 0;
-    font-size: 0.8rem;
-  }
-  &__li {
-    border-bottom: 2px solid #edf6ff;
-    padding: 0;
-    & a {
-      box-shadow: none;
-      color: #000;
-
-      &:hover {
-        color: #ff86d7;
-      }
-    }
-  }
-}
 
 @media screen and (max-width: 767px) {
   .blog-section {
