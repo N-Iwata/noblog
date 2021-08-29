@@ -1,8 +1,9 @@
 import React from "react";
 import AdSense from "react-adsense";
+import styles from "./adsense.module.css"
 
 const Adsense = () => (
-  <ins className="adsense">
+  <ins className={styles.adsense}>
     <AdSense.Google
       client="ca-pub-5904636905001908"
       slot=""

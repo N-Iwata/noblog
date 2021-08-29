@@ -5,11 +5,11 @@ import { makeStyles } from "@material-ui/core/styles";
 import { kebabCase } from "lodash/string";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTag } from "@fortawesome/free-solid-svg-icons";
+import styles from "./tag.module.css";
 
 const useStyles = makeStyles({
   button: {
-    fontSize: 12,
-    margin: "8px 8px 0px 0",
+    margin: "8px 8px 0 0",
     height: 24,
   },
 });
@@ -17,14 +17,14 @@ const useStyles = makeStyles({
 const Tag = props => {
   const classes = useStyles();
   return (
-    <div className="tag">
+    <div className={styles.tag}>
       {props.tags.map((tag, index) => {
         return (
           <Button key={index} variant="contained" color={"default"} className={classes.button}>
             <Link
               to={`/tags/${kebabCase(tag)}/`}
               key={index}
-              className="tag__list"
+              className={styles.tag__list}
               title={`${tag}のtagページに移動します。`}
             >
               <FontAwesomeIcon icon={faTag} />　{tag}
