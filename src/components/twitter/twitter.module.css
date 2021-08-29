@@ -1,0 +1,15 @@
+.twitter {
+  position: sticky;
+  top: 60px;
+}
+
+.twitter__title {
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  color: #111;
+  text-transform: none;
+  font-size: 18px;
+  font-weight: normal;
+  background-color: #ff86d7;
+}

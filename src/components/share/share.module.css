@@ -1,0 +1,15 @@
+.sociallinks {
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+.sociallinks__title {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #111;
+  text-align: center;
+}
+.sociallinks__icon {
+  display: inline;
+  margin-right: 10px;
+}
