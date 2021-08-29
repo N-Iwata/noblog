@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { graphql } from "gatsby";
-
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
+
+import Layout from "../../components/layout";
+import SEO from "../../components/seo";
+import styles from "./contact.module.css";
 
 const Contact = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
@@ -58,7 +58,7 @@ const Contact = ({ data, location }) => {
             <br></br>
             できる限り対応させていただきますが、内容によっては返信を控えさせて頂きますのでご了承ください。
           </p>
-          <div className="contact">
+          <div className={styles.contact}>
             <form
               name="contact"
               method="POST"
@@ -67,10 +67,10 @@ const Contact = ({ data, location }) => {
             >
               <input type="hidden" name="form-name" value="contact" />
               <input type="hidden" name="bot-field" />
-              <div className="contact__area">
+              <div className={styles.contact__area}>
                 <TextField
                   id="name"
-                  className="contact__field"
+                  className={styles.contact__field}
                   name="name"
                   label="お名前"
                   type="text"
@@ -79,10 +79,10 @@ const Contact = ({ data, location }) => {
                   onChange={handleChange}
                 />
               </div>
-              <div className="contact__area">
+              <div className={styles.contact__area}>
                 <TextField
                   id="email"
-                  className="contact__field"
+                  className={styles.contact__field}
                   name="email"
                   label="メールアドレス"
                   type="email"
@@ -91,10 +91,10 @@ const Contact = ({ data, location }) => {
                   onChange={handleChange}
                 />
               </div>
-              <div className="contact__area">
+              <div className={styles.contact__area}>
                 <TextField
                   id="subject"
-                  className="contact__field"
+                  className={styles.contact__field}
                   name="subject"
                   label="件名"
                   type="text"
@@ -103,10 +103,10 @@ const Contact = ({ data, location }) => {
                   onChange={handleChange}
                 />
               </div>
-              <div className="contact__area">
+              <div className={styles.contact__area}>
                 <TextField
                   id="message"
-                  className="contact__field"
+                  className={styles.contact__field}
                   name="message"
                   label="お問い合わせ内容"
                   multiline
@@ -116,17 +116,16 @@ const Contact = ({ data, location }) => {
                   onChange={handleChange}
                 />
               </div>
-              <div className="contact__btn">
-                <Button
-                  type="submit"
-                  variant="contained"
-                  color="primary"
-                  fullWidth
-                  disabled={canSubmit()}
-                >
-                  送信
-                </Button>
-              </div>
+
+              <Button
+                type="submit"
+                variant="contained"
+                color="primary"
+                fullWidth
+                disabled={canSubmit()}
+              >
+                送信
+              </Button>
             </form>
           </div>
         </div>
