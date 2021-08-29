@@ -1,0 +1,48 @@
+.bio {
+  margin-top: 40px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.bio__title {
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  color: #111;
+  text-transform: none;
+  font-size: 18px;
+  font-weight: normal;
+  background-color: #ff86d7;
+}
+
+.bio__image_wrapper {
+  margin-top: 16px;
+  text-align: center;
+}
+.bio__image {
+  min-width: 50px;
+  border-radius: 100%;
+}
+.bio__name {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.bio__description {
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+  padding: 0 12px;
+}
+.bio__icon_wrapper {
+  margin-top: 8px;
+  text-align: center;
+}
+.bio__icon {
+  box-shadow: none;
+  margin-right: 4px;
+}
+
+.bio__icon_image {
+  margin: 0;
+}
