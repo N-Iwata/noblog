@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "./toc.module.css";
 
 const Toc = props => {
   const [isOpen, setOpen] = useState(true);
@@ -8,9 +9,9 @@ const Toc = props => {
     setOpen(!isOpen);
   };
   return (
-    <div className="toc">
-      <div className="toc__top">
-        <h4 className="toc__title">
+    <div className={styles.toc}>
+      <div className={styles.toc__top}>
+        <h4 className={styles.toc__title}>
           Content
           <button className="toc__open" onClick={handleClick}>
             [{message}]
@@ -19,7 +20,7 @@ const Toc = props => {
       </div>
       {isOpen && (
         <div
-          className="toc__content"
+          className={styles.toc__content}
           dangerouslySetInnerHTML={{
             __html: props.data,
           }}

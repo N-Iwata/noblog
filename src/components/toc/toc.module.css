@@ -1,0 +1,110 @@
+.toc {
+  background-color: #fdfdfd;
+  margin: 10px auto;
+  border: 1px solid #aaa;
+}
+.toc__top {
+  background-color: #ff86d7;
+}
+.toc__title {
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  color: #111;
+  text-transform: none;
+}
+.toc__open {
+  margin-left: 10px;
+  cursor: pointer;
+  transition: 0.3s all ease;
+  font-size: 0.9em;
+  border: none;
+  background-color: #ff86d7;
+  color: #111;
+}
+.toc__open:focus {
+  outline: 0;
+}
+
+.toc__content {
+  margin-top: 10px;
+}
+.toc__content > ul {
+  margin-left: 30px;
+}
+.toc__content > ul > li {
+  margin: 0;
+  margin-top: 6px;
+}
+.toc__content > ul > li > a {
+  color: black;
+  box-shadow: none;
+  margin: 0;
+}
+.toc__content > ul > li > a:hover {
+  color: #ff86d7;
+}
+
+.toc__content > ul > li > p {
+  margin-bottom: 0;
+  color: black;
+}
+.toc__content > ul > li > p > a {
+  color: black;
+  box-shadow: none;
+}
+.toc__content > ul > li > p > a:hover {
+  color: #ff86d7;
+}
+
+.toc__content > ul > li > ul {
+  margin-left: 15px;
+  margin-top: 0;
+}
+.toc__content > ul > li > ul > li {
+  margin: 0;
+  margin-top: 6px;
+  color: black;
+}
+.toc__content > ul > li > ul > li > a {
+  color: black;
+  box-shadow: none;
+}
+.toc__content > ul > li > ul > li > a:hover {
+  color: #ff86d7;
+}
+
+.toc__content > ul > li > ul > li > p {
+  margin-bottom: 0;
+  color: black;
+}
+.toc__content > ul > li > ul > li > p > a {
+  color: black;
+  box-shadow: none;
+}
+.toc__content > ul > li > ul > li > p > a:hover {
+  color: #ff86d7;
+}
+
+.toc__content > ul > li > ul > li > ul {
+  margin-left: 15px;
+  margin-top: 0;
+}
+.toc__content > ul > li > ul > li > ul > li {
+  margin: 0;
+  margin-top: 6px;
+  color: black;
+}
+.toc__content > ul > li > ul > li > ul > li > a {
+  color: black;
+  box-shadow: none;
+}
+.toc__content > ul > li > ul > li > ul > li > a:hover {
+  color: #ff86d7;
+}
+
+@media screen and (max-width: 767px) {
+  .toc__content {
+    font-size: 0.9em;
+  }
+}
