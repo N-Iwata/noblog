@@ -2,11 +2,12 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "gatsby";
+import styles from "./footer.module.css";
 
 const Footer = props => {
   return (
-    <footer className="footer">
-      <div className="footer__home">
+    <footer className={styles.footer}>
+      <div className={styles.footer__home}>
         <Link to={"/"} title={"ブログトップに移動します。"}>
           <i>
             <FontAwesomeIcon icon={faHome} />
@@ -14,8 +15,9 @@ const Footer = props => {
           </i>
         </Link>
       </div>
-      {/* ©2020-{new Date().getFullYear()}.{author}All Rights Reserved. */}
-      <div>©2020 {props.author} All Rights Reserved.</div>
+      <div>
+        ©2020-{new Date().getFullYear()}.{props.author}All Rights Reserved.
+      </div>
     </footer>
   );
 };
