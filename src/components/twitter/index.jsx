@@ -6,7 +6,11 @@ const Twitter = () => {
     <>
       <div className={styles.twitter}>
         <h3 className={styles.twitter__title}>Twitter</h3>
-        <a data-height="600" href="https://twitter.com/rpf_nob?ref_src=twsrc%5Etfw">
+        <a
+          className="twitter-timeline"
+          data-height="600"
+          href="https://twitter.com/rpf_nob?ref_src=twsrc%5Etfw"
+        >
           Tweet by @rpf_nob
         </a>
       </div>
