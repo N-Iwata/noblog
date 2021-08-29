@@ -419,12 +419,6 @@ body {
   bottom: 0;
 }
 
-.twitter {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 45px;
-}
-
 @media screen and (max-width: 960px) {
   .container {
     -webkit-box-orient: vertical;
@@ -617,27 +611,6 @@ body {
   display: block;
   font-size: 14px;
   font-weight: bold;
-}
-
-.adsense {
-  background: none !important;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.adsense ins {
-  background: none !important;
-}
-
-.tag {
-  margin-bottom: 20px;
-}
-
-.tag__list {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  color: #333;
-  text-transform: none;
 }
 
 .toc {
