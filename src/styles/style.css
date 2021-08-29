@@ -346,20 +346,6 @@ body {
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.sidebar {
-  width: 450px;
-  margin-top: 28px;
-  margin-left: 10px;
-  background-color: #f2f2f2;
-  padding: 0;
-}
-
-.sidebar__container {
-  position: -webkit-sticky;
-  position: sticky;
-  bottom: 0;
-}
-
 @media screen and (max-width: 960px) {
   .container {
     -webkit-box-orient: vertical;
@@ -370,13 +356,6 @@ body {
   .contents {
     width: 100%;
     padding: 30px 10px;
-  }
-  .sidebar {
-    width: 100%;
-    margin-left: 0;
-  }
-  .sidebar__adsense {
-    display: none;
   }
 }
 
