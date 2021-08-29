@@ -48,7 +48,7 @@ const Contact = ({ data, location }) => {
     <div>
       <Layout location={location} title={siteTitle} author={author}>
         <SEO title="Contact" />
-        <div className={styles.contact}>
+        <div className="blog-section">
           <h1>Contact</h1>
           <p>
             各種お問い合わせはこちらのフォームよりお願いいたします。
