@@ -13,6 +13,9 @@
   "[graphql]": {
     "editor.formatOnSave": true
   },
+  "[markdown]": {
+    "editor.formatOnSave": true
+  },
   "[javascript]": {
     "editor.formatOnSave": true
   },
