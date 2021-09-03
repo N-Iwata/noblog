@@ -10,7 +10,7 @@
 npm install
 ```
 
-## start dev server
+### start dev server
 
 ```
 npm start
@@ -30,7 +30,7 @@ open http://localhost:8000/___graphql
 
 ## deploy
 
-deploy は master ブランチ に merge されると[Netfliy](https://www.netlify.com/)上で自動でデプロイされる
+deploy は master ブランチ に merge されると[Netfliy](https://www.netlify.com/)上で自動でデプロイされます
 
 ## Contribute
 
@@ -40,4 +40,4 @@ deploy は master ブランチ に merge されると[Netfliy](https://www.netli
 
 ### Issues
 
-サイト自体の不具合・改善要望や記事の内容修正依頼を常に受けつけています。気軽に Issue を作成ください。
+サイト自体の不具合・改善要望や記事の内容修正依頼を常に受けつけています。気軽に Issue を作成してください。
