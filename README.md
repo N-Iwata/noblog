@@ -2,6 +2,9 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/00c9f479-1c04-40eb-8ae6-2a15b372398b/deploy-status)](https://app.netlify.com/sites/rpf-noblog/deploys)
 
+このサイトは[gatsby-starter-blog](https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog)から作成した「のふのふろぐ」という名のブログです。
+
+
 ## Develop
 
 ### package install
