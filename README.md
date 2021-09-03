@@ -37,7 +37,7 @@ deploy は master ブランチ に merge されると[Netfliy](https://www.netli
 
 ## Contribute
 
-###　 Pull requests
+### Pull requests
 
 誤字脱字やリンク切れなどがあったら直接 master ブランチ に PR してください。
 
