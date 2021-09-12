@@ -3,11 +3,11 @@ title: 【GatsbyJS】ブログにPaginationを実装してみた
 date: "2021-01-11"
 description: 今回はGatsbyJSブログに[gatsby-awesome-pagination]というパッケージを利用してPagenationを実装してみたので解説します！！
 slug: 2021-01-11/gatsby-awesome-pagination
-tags: [GatsbyJS,gatsby-starter-blog]
+tags: [GatsbyJS, gatsby-starter-blog]
 hero: ./hero.png
 ---
 
-## はじめに 
+## はじめに
 
 おはようございます！こんにちは！こんばんは！<br>
 麻雀と芝生大好きおじさんこと**のふのふ**([@rpf_nob](https://twitter.com/rpf_nob))です！！
@@ -16,21 +16,25 @@ hero: ./hero.png
 
 公式ページに追加方法も記載されていますが、今回は**gatsby-awesome-pagination**というパッケージで簡単にできたので、こちらで解説します！！
 
-
-* 前提
-* パッケージのインストール
-* templatesフォルダ配下にpages/index.jsを移動
-* gatsby-node.jsの編集
-* pages/index.jsの編集
-* components/pagenation.jsの作成
-* まとめ
+- 前提
+- パッケージのインストール
+- templates フォルダ配下に pages/index.js を移動
+- gatsby-node.js の編集
+- pages/index.js の編集
+- components/pagenation.js の作成
+- まとめ
 
 ## 前提
 
-このブログはGatsbyJSの[gatsby-starter-blog](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/)のテンプレートから作成しています。
+このブログは GatsbyJS の[gatsby-starter-blog](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/)のテンプレートから作成しています。
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/" data-iframely-url="//cdn.iframe.ly/qjUJkBu?iframe=card-small"></a></div></div>
 
+<br/>
+
+ソースコードはこちら（参考になったという方は ⭐️ をポチッと押してください 🙇‍♂️）
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/N-Iwata/noblog" data-iframely-url="//cdn.iframe.ly/Q4tAo8y?card=small"></a></div></div>
 
 ## パッケージのインストール
 
@@ -45,29 +49,28 @@ $npm install --save gatsby-awesome-pagination
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.gatsbyjs.com/" data-iframely-url="//cdn.iframe.ly/57Mzcc6?iframe=card-small"></a></div></div>
 
-## templatesフォルダ配下にpages/index.jsを移動
+## templates フォルダ配下に pages/index.jsx を移動
 
-まず初めに**pages/index.js**をtemplatesフォルダ配下に移動します。
+まず初めに pages/index.jsx を src/templates/homepage フォルダ配下に移動します。
 
-## gatsby-node.jsの編集
+## gatsby-node.js の編集
 
-次にインストールした**gatsby-awesome-pagination**からpaginateをインポートします。
+次にインストールした**gatsby-awesome-pagination**から paginate をインポートします。
+
 ```js:title=gatsby-node.js
 const { paginate } = require("gatsby-awesome-pagination");
 ```
 
-そして以下のように、createPagesに追記します。  
+そして以下のように、createPages に追記します。
 
-templateに先ほど移動したpages/index.jsの編集を指定します。  
+template に先ほど移動した pages/index.js を指定します。
 
-pathPrefixに設定する値で、1ページ目は **ROOTURL/**で2ページ目以降は **ROOTURL/page/2**になるように設定します。
-
-
+pathPrefix に設定する値で、1 ページ目は **ROOTURL/**で 2 ページ目以降は **ROOTURL/page/2**になるように設定します。
 
 ```js{3,19-26}:title=gatsby-node.js
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
-  const template = path.resolve(`src/templates/index.js`);
+  const blogPost = path.resolve(`./src/templates/homepage/index.jsx`);
 
   const result = await graphql(
     `
@@ -80,7 +83,7 @@ exports.createPages = async ({ graphql, actions }) => {
   if (result.errors) {
     throw result.errors;
   }
- 
+
   const posts = result.data.posts.edges;
 
   paginate({
@@ -92,15 +95,15 @@ exports.createPages = async ({ graphql, actions }) => {
   });
 ```
 
-こちらでgatsby-node.jsの編集は完了です。
+こちらで gatsby-node.js の編集は完了です。
 
-## pages/index.jsの編集
+## src/templates/homepage/index.jsx の編集
 
-次にpages/index.jsを編集します。
+次に src/templates/homepage/index.jsx を編集します。
 
-まず始めにpageQueryでskipとlimitを取得できるようにします。
+まず始めに pageQuery で skip と limit を取得できるようにします。
 
-```js{2,8-9}:title=src/templates/index.js
+```js{2,8-9}:title=src/templates/homepage/index.jsx
 export const pageQuery = graphql`
   query($skip: Int!, $limit: Int!) {
     site {
@@ -119,9 +122,9 @@ export const pageQuery = graphql`
 `;
 ```
 
-次にテンプレートのコンポーネントにpageContextがわたってくるのでpropsとして受け取り、次で作成するPagenationコンポーネントをBioコンポーネントの上に設置して、同じようにpageContextをpropsで渡してあげます。
+次にテンプレートのコンポーネントに pageContext がわたってくるので props として受け取り、次で作成する Pagenation コンポーネントを設置して、同じように pageContext を props で渡してあげます。
 
-```js{1,10}:title=src/templates/index.js
+```js{1,11}:title=src/templates/homepage/index.jsx
 const BlogIndex = ({ data, location, pageContext }) => {
   const siteTitle = data.site.siteMetadata.title;
   const author = data.site.siteMetadata.author.name;
@@ -130,9 +133,10 @@ const BlogIndex = ({ data, location, pageContext }) => {
   return (
     <div>
       <Layout location={location} title={siteTitle} author={author}>
+        <SEO title="All posts" />
         ・・・
         <Pagenation pageContext={pageContext} />
-        <Bio />
+        <Adsense />
         <Adsense />
       </Layout>
     </div>
@@ -140,19 +144,19 @@ const BlogIndex = ({ data, location, pageContext }) => {
 };
 ```
 
-## components/pagenation.jsの作成
+## components/pagenation/index.jsx の作成
 
-最後にPagenationコンポーネントを作成します。  
+最後に Pagenation コンポーネントを作成します。
 
-今回はmaterial uiのページネーションコンポーネントを使います。
+今回は material ui のページネーションコンポーネントを使います。
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://material-ui.com/components/pagination/" data-iframely-url="//cdn.iframe.ly/7LXFBH0"></a></div></div>
-
 
 <br>
 
 ソース全文
-```js:title=src/components/pagenation.js
+
+```js:title=src/components/pagenation/index.jsx
 import React from "react";
 import { navigate } from "gatsby";
 import { makeStyles } from "@material-ui/core/styles";
@@ -188,27 +192,26 @@ const Pagenation = ({ pageContext }) => {
 };
 export default Pagenation;
 ```
-pageContextからnumberOfPagesとhumanPageNumberを取り出します。
 
-* numberOfPagesは総ページ数
-* humanPageNumberは現在のページ番号
+pageContext から numberOfPages と humanPageNumber を取り出します。
 
-material uiのPaginationコンポーネントを設置して以下渡します。
+- numberOfPages は総ページ数
+- humanPageNumber は現在のページ番号
 
-* defaultPageにhumanPageNumberを渡す
-* countにnumberOfPagesを渡す
-* onChangeにhandleChangeを渡す（後述）
+material ui の Pagination コンポーネントを設置して以下渡します。
 
-defaultPageを設定してあげないと、ページ遷移時に１ページに目に見た目だけ戻ってしまいます。
+- defaultPage に humanPageNumber を渡す
+- count に numberOfPages を渡す
+- onChange に handleChange を渡す（後述）
 
-handleChangeはページ番号クリック時の処理を記載します。  
+defaultPage を設定してあげないと、ページ遷移時に１ページに目に見た目だけ戻ってしまいます。
 
-valueにページ番号が渡ってくるので、それに対応したページに遷移してあげます。  
-ページ遷移にはgatsbyからnavigateをインポートしてこちらを使います。react-routerのhistory.pushみたいなものです。
+handleChange はページ番号クリック時の処理を記載します。
+
+value にページ番号が渡ってくるので、それに対応したページに遷移してあげます。
+ページ遷移には gatsby から navigate をインポートしてこちらを使います。react-router の history.push みたいなものです。
 
 これで次のようにページネーションがいい感じに実装できました！！
-
-
 
 ![img](img01.png)
 
@@ -218,18 +221,16 @@ valueにページ番号が渡ってくるので、それに対応したページ
 
 今回は**gatsby-awesome-pagination**というパッケージでページネーション実装をしたので方法を解説しました！！
 
-ページネーションがあるとちゃんとしたブログっぽくなりますね。  
-もっと記事数を増やしてページネーションが意味あるものにしていきたいと思います！！  
+ページネーションがあるとちゃんとしたブログっぽくなりますね。
+もっと記事数を増やしてページネーションが意味あるものにしていきたいと思います！！
 有用な記事数も増やせるようにしていきたいですね・・・
 
-他にもGatsbyJSのブログカスタマイズをいろいろやっているので、以下もあわせてご覧いただければと思います。
+他にも GatsbyJS のブログカスタマイズをいろいろやっているので、以下もあわせてご覧いただければと思います。
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/tags/gatsby-js/" data-iframely-url="//cdn.iframe.ly/5j7eIPT"></a></div></div>
 
-
 <br>
 <br>
 
-最後まで見ていただきありがとうございます！！  
-この記事が良かったと思ったらSHAREしていただけると泣いて喜びます🤣
-
+最後まで見ていただきありがとうございます！！
+この記事が良かったと思ったら SHARE していただけると泣いて喜びます 🤣
