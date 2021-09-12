@@ -3,29 +3,35 @@ title: 【GatsbyJS】ブログの記事のトップ画像と記事一覧のサ�
 date: "2020-05-10"
 description: 今回はGatsbyJSブログの記事ページにヒーロー画像をつけて、記事一覧にもサムネイルとして画像を表示できるようにします。記事のトップや一覧のサムネイルに画像があるだけで、印象が変わりますからね。
 slug: 2020-05-10/gatsby-hero
-tags: [GatsbyJS,gatsby-starter-blog]
+tags: [GatsbyJS, gatsby-starter-blog]
 hero: ./hero.png
 ---
 
-## はじめに 
+## はじめに
 
 おはようございます！こんにちは！こんばんは！<br>
 麻雀と芝生大好きおじさんこと**のふのふ**(@rpf_nob)です！！
 
-今回はGatsbyJSブログの記事ページにヒーロー画像をつけて、記事一覧にもサムネイルとして画像を表示できるようにします。<br>
+今回は GatsbyJS ブログの記事ページにヒーロー画像をつけて、記事一覧にもサムネイルとして画像を表示できるようにします。<br>
 記事のトップや一覧のサムネイルに画像があるだけで、印象が変わりますからね。
 
 ## 前提
 
-このブログはGatsbyJSの[gatsby-starter-blog](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/)のテンプレートから作成しています。
+このブログは GatsbyJS の[gatsby-starter-blog](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/)のテンプレートから作成しています。
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/" data-iframely-url="//cdn.iframe.ly/qjUJkBu?iframe=card-small"></a></div></div>
+
+<br/>
+
+ソースコードはこちら（参考になったという方は ⭐️ をポチッと押していただけると嬉しいです〜 🙇‍♂️）
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/N-Iwata/noblog" data-iframely-url="//cdn.iframe.ly/Q4tAo8y?card=small"></a></div></div>
 
 ## プラグインのインストール
 
 以下コマンドで[gatsby-image]をインストールします。<br>
 
-[公式サイト](https://www.gatsbyjs.org/docs/gatsby-image/)によると[gatsby-image]は、GraphQLと[gatsby-plugin-sharp]が提供するGatsbyのネイティブ画像処理機能とシームレスに連携して、サイトの画像読み込みを簡単かつ完全に最適化するように設計されたReactコンポーネントです。
+[公式サイト](https://www.gatsbyjs.org/docs/gatsby-image/)によると[gatsby-image]は、GraphQL と[gatsby-plugin-sharp]が提供する Gatsby のネイティブ画像処理機能とシームレスに連携して、サイトの画像読み込みを簡単かつ完全に最適化するように設計された React コンポーネントです。
 
 [gatsby-plugin-sharp]と[gatsby-transformer-sharp]も必要なので、インストールされていなかったらインストールしてください。<br>
 今回はインストールされていたので、省略しています。
@@ -47,17 +53,17 @@ description: 今回はGatsbyJSブログの記事ページにヒーロー画像�
 slug: 2020-05-10/gatsby-hero
 tags: [GatsbyJS, gatsby-starter-blog, gatsby-image]
 hero: ./hero.png
----　
+---
 ```
 
 ## 記事にヒーロー画像を追加する
 
-### GraphQLのクエリ追加
+### GraphQL のクエリ追加
 
-[src/templates/blog-posts.js]にGraphQLのクエリを以下のように追加します。<br>
-heroで指定した画像を[fluid]で抽出することで、画像のサイズを最適化（srcset）できるようにしてくれます。
+[src/templates/blogposts/index.jsx]に GraphQL のクエリを以下のように追加します。<br>
+hero で指定した画像を[fluid]で抽出することで、画像のサイズを最適化（srcset）できるようにしてくれます。
 
-```js{9-15}:title=src/templates/blog-posts.js
+```js{9-15}:title=src/templates/blogposts/index.jsx
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     ・・・省略
@@ -79,21 +85,19 @@ export const pageQuery = graphql`
 `;
 ```
 
-### BlogPostTemplateに抽出した画像を挿入
+### BlogPostTemplate に抽出した画像を挿入
 
 まず、[gatsby-image]をインポートします。
 
-```js:title=src/templates/blog-posts.js
+```js:title=src/templates/blogposts/index.jsx
 import Image from "gatsby-image";
 ```
 
 次に、画像を挿入したい場所に以下を追記します。<br>
 今回はタグの下に挿入しています。
 
-```js:title=src/templates/blog-posts.js
-<Image
-  fluid={data.markdownRemark.frontmatter.hero.childImageSharp.fluid}
-/>
+```js:title=src/templates/blogposts/index.jsx
+<Image fluid={data.markdownRemark.frontmatter.hero.childImageSharp.fluid} />
 ```
 
 すると以下のように挿入されます。
@@ -104,9 +108,9 @@ import Image from "gatsby-image";
 
 基本的にはヒーロー追加と同じです。
 
-### GraphQLのクエリ追加
+### GraphQL のクエリ追加
 
-[src/pages/index.js]にGraphQLのクエリを以下のように追加します。<br>
+[src/pages/index.js]に GraphQL のクエリを以下のように追加します。<br>
 サムネイルでも[fluid]で抽出します。
 
 ```js{11-17}:title=src/pages/index.js
@@ -135,7 +139,7 @@ export const pageQuery = graphql`
 `;
 ```
 
-### BlogIndexに抽出した画像を挿入
+### BlogIndex に抽出した画像を挿入
 
 まず、[gatsby-image]をインポートします。
 
@@ -164,10 +168,7 @@ const BlogIndex = ({ data, location }) => {
               <article key={node.fields.slug}>
                 <header>
                   <h3 className="posts__title">
-                    <Link
-                      className="posts__title__a"
-                      to={node.frontmatter.slug}
-                    >
+                    <Link className="posts__title__a" to={node.frontmatter.slug}>
                       {title}
                     </Link>
                   </h3>
@@ -209,7 +210,7 @@ const BlogIndex = ({ data, location }) => {
 
 今回は以下のようにスタイル調整しています。
 
-```scss:title=src/styles/style.scss
+```scss
 .posts {
   border: 2px dotted #eee;
   border-radius: 20px;
@@ -270,14 +271,13 @@ const BlogIndex = ({ data, location }) => {
 
 ## まとめ
 
-今回はGatsbyJSブログの記事ページにヒーロー画像をつけて、記事一覧にもサムネイルとして画像を表示できるようにしました。
+今回は GatsbyJS ブログの記事ページにヒーロー画像をつけて、記事一覧にもサムネイルとして画像を表示できるようにしました。
 
 かなり印象が変わりましたね！！
 
-他にもGatsbyJSのブログカスタマイズをいろいろやっているので、以下もあわせてご覧いただければと思います。
+他にも GatsbyJS のブログカスタマイズをいろいろやっているので、以下もあわせてご覧いただければと思います。
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/tags/gatsby-js/" data-iframely-url="//cdn.iframe.ly/5j7eIPT"></a></div></div>
-
 
 <br>
 <br>
