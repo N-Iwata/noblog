@@ -3,16 +3,16 @@ title: 【GatsbyJS】ブログにGoogleAnalyticsを導入した
 date: "2020-05-05"
 description: 今回はGatsbyJSブログにGoogleAnalyticsを導入して、訪問者数などの情報を取得してみたいと思います。せっかくブログやるなら訪問者数とか意識していきたいですよね。
 slug: 2020-05-05/gatsby-google-analytics
-tags: [GatsbyJS,gatsby-starter-blog]
+tags: [GatsbyJS, gatsby-starter-blog]
 hero: ./hero.png
 ---
 
-## はじめに 
+## はじめに
 
 おはようございます！こんにちは！こんばんは！<br>
 麻雀と芝生大好きおじさんこと**のふのふ**(@rpf_nob)です！！
 
-今回はGatsbyJSブログにGoogleAnalyticsを導入して、訪問者数などの情報を取得してみたいと思います。<br>
+今回は GatsbyJS ブログに GoogleAnalytics を導入して、訪問者数などの情報を取得してみたいと思います。<br>
 せっかくブログやるなら訪問者数とか意識していきたいですよね。
 
 基本的には[公式ページ](https://www.gatsbyjs.org/docs/adding-analytics/)の内容通りやればできます。
@@ -21,31 +21,37 @@ hero: ./hero.png
 
 ## 前提
 
-このブログはGatsbyJSの[gatsby-starter-blog](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/)のテンプレートから作成しています。
+このブログは GatsbyJS の[gatsby-starter-blog](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/)のテンプレートから作成しています。
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/" data-iframely-url="//cdn.iframe.ly/qjUJkBu?iframe=card-small"></a></div></div>
 
-## GoogleAnalyticsのセットアップ
+<br/>
 
-### GoogleAnalyticsのサイトへアクセス
+ソースコードはこちら（参考になったという方は ⭐️ をポチッと押してください 🙇‍♂️）
 
-[GooglaAnalyticsのサイト](https://analytics.google.com/)へアクセスすると以下のような画面になるので、[無料で設定]ボタンをクリックします。
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/N-Iwata/noblog" data-iframely-url="//cdn.iframe.ly/Q4tAo8y?card=small"></a></div></div>
+
+## GoogleAnalytics のセットアップ
+
+### GoogleAnalytics のサイトへアクセス
+
+[GooglaAnalytics のサイト](https://analytics.google.com/)へアクセスすると以下のような画面になるので、[無料で設定]ボタンをクリックします。
 
 ![img1.png](img1.png)
 
-### GoogleAnalyticsのアカウント作成
+### GoogleAnalytics のアカウント作成
 
-Googleアカウントにログインしている状態で、サイトにアクセスすると以下5ステップで設定していきます。
+Google アカウントにログインしている状態で、サイトにアクセスすると以下 5 ステップで設定していきます。
 
-* アカウントの設定
-* 測定の対象を指定する
-* プロパティの設定
-* 利用規約の同意
-* GoogleAnalyticsの情報をメールに配信するかの設定
+- アカウントの設定
+- 測定の対象を指定する
+- プロパティの設定
+- 利用規約の同意
+- GoogleAnalytics の情報をメールに配信するかの設定
 
 #### アカウントの設定
 
-以下のような画面になるので、GoogleAnalyticsのアカウント名を設定します。<br>
+以下のような画面になるので、GoogleAnalytics のアカウント名を設定します。<br>
 一般的には、アカウント名は会社名をつけることが多いらしいけど、今回は個人ブログなので、ブログで使っている名前で設定しました。
 
 ![img2.png](img2.png)
@@ -70,16 +76,16 @@ Googleアカウントにログインしている状態で、サイトにアク�
 
 ![img5.png](img5.png)
 
-#### GoogleAnalyticsの情報をメールに配信するかの設定
+#### GoogleAnalytics の情報をメールに配信するかの設定
 
-GoogleAnalyticsの情報をメールに配信するかの設定ができます。<br>
+GoogleAnalytics の情報をメールに配信するかの設定ができます。<br>
 こちらは後からも変更できるので、一旦全てチェックしました。
 
 ![img6.png](img6.png)
 
-## Gatsbyの設定
+## Gatsby の設定
 
-次にページビューをGoogleAnalyticsアカウントに送信するようにGatsby側の設定をしていきます。
+次にページビューを GoogleAnalytics アカウントに送信するように Gatsby 側の設定をしていきます。
 
 ### プラグインのインストール
 
@@ -93,7 +99,7 @@ npm install --save gatsby-plugin-google-analytics
 ### プラグインの適用
 
 インストールしたら、[gatsby-config.js]にプラグインを追加します。<br>
-こちらももともとほぼ記載されていたので、トラッキングIDを変更するだけでした。
+こちらももともとほぼ記載されていたので、トラッキング ID を変更するだけでした。
 
 ```js:title=gatsby-config.js
 module.exports = {
@@ -106,23 +112,22 @@ module.exports = {
       },
     },
   ],
-}
+};
 ```
 
-### GoogleAnalyticsを確認する
+### GoogleAnalytics を確認する
 
 これで適用できているはずなので、確認してみましょう。<br>
-まだ、始めたばかりなのでアクティブユーザーが0人・・・頑張ります！！
+まだ、始めたばかりなのでアクティブユーザーが 0 人・・・頑張ります！！
 
 ## まとめ
 
-今回はGoogleAnalyticsを導入しました。<br>
+今回は GoogleAnalytics を導入しました。<br>
 今後訪問者が増えていくように、いろいろ試行錯誤したいと思います！！
 
-他にもGatsbyJSのブログカスタマイズをいろいろやっているので、以下もあわせてご覧いただければと思います。
+他にも GatsbyJS のブログカスタマイズをいろいろやっているので、以下もあわせてご覧いただければと思います。
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/tags/gatsby-js/" data-iframely-url="//cdn.iframe.ly/5j7eIPT"></a></div></div>
-
 
 <br>
 <br>
