@@ -3,25 +3,31 @@ title: 【GatsbyJS】ブログにタグページを追加した
 date: "2020-05-04"
 description: 今回はGatsbyJSブログにタグページを追加して、タグごとに記事一覧が表示できるようにします。
 slug: 2020-05-04/gatsby-tag
-tags: [GatsbyJS,gatsby-starter-blog]
+tags: [GatsbyJS, gatsby-starter-blog]
 hero: ./hero.png
 ---
 
-## はじめに 
+## はじめに
 
 おはようございます！こんにちは！こんばんは！<br>
 麻雀と芝生大好きおじさんこと**のふのふ**(@rpf_nob)です！！
 
-今回はGatsbyJSブログにタグページを追加して、タグごとに記事一覧が表示できるようにします。<br>
+今回は GatsbyJS ブログにタグページを追加して、タグごとに記事一覧が表示できるようにします。<br>
 基本的には[公式ページ](https://www.gatsbyjs.org/docs/adding-tags-and-categories-to-blog-posts/)の内容通りやればできます。
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.gatsbyjs.org/docs/adding-tags-and-categories-to-blog-posts/" data-iframely-url="//cdn.iframe.ly/IVg9xer"></a></div></div>
 
 ## 前提
 
-このブログはGatsbyJSの[gatsby-starter-blog](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/)のテンプレートから作成しています。
+このブログは GatsbyJS の[gatsby-starter-blog](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/)のテンプレートから作成しています。
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/" data-iframely-url="//cdn.iframe.ly/qjUJkBu?iframe=card-small"></a></div></div>
+
+<br/>
+
+ソースコードはこちら（参考になったという方は ⭐️ をポチッと押してください 🙇‍♂️）
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/N-Iwata/noblog" data-iframely-url="//cdn.iframe.ly/Q4tAo8y?card=small"></a></div></div>
 
 ## 記事のマークダウンファイルにタグを追加する
 
@@ -37,10 +43,10 @@ tags: [GatsbyJS]
 ---
 ```
 
-## GraphQLのクエリを記述して投稿記事のタグを全て取得する
+## GraphQL のクエリを記述して投稿記事のタグを全て取得する
 
-[GraphiQL(http://localhost:8000/___graphql)](http://localhost:8000/___graphql)にアクセスして次のクエリを実行すれば、
-下のような結果が返ってくるはずです。投稿記事を[tags]でグループ化して、各tagの投稿数が[totalCount]として返ってきます。
+[GraphiQL(http://localhost:8000/\_\_\_graphql)](http://localhost:8000/___graphql)にアクセスして次のクエリを実行すれば、
+下のような結果が返ってくるはずです。投稿記事を[tags]でグループ化して、各 tag の投稿数が[totalCount]として返ってきます。
 
 ```GraphQL:title=GraphiQL
 {
@@ -94,11 +100,11 @@ tags: [GatsbyJS]
 
 ## タグページのテンプレートを作成する
 
-[src/templates/tags.js]を新規作成し、タグページのテンプレートを作成していきます。<br>
+[src/templates/tagpage/index.js]を新規作成し、タグページのテンプレートを作成していきます。<br>
 基本的にはトップページと同じような見た目にしたいので、ソースコードもほとんど同じになります。<br>
 コンポーネント化して共通化したいですね・・・
 
-```js:title=src/templates/tags.js
+```js:title=src/templates/tagpage.index.jsx
 import React from "react";
 
 import Bio from "../components/bio";
@@ -119,10 +125,7 @@ const Tags = ({ pageContext, data, location }) => {
   return (
     <div>
       <Layout location={location} author={author}>
-        <SEO
-          title={`Tag: ${tag}`}
-          description={`${tag}タグを含む記事の一覧ページです`}
-        />
+        <SEO title={`Tag: ${tag}`} description={`${tag}タグを含む記事の一覧ページです`} />
         <Bio />
         <h2>{tagHeader}</h2>
         {edges.map(({ node }) => {
@@ -135,10 +138,7 @@ const Tags = ({ pageContext, data, location }) => {
                     marginBottom: rhythm(1 / 4),
                   }}
                 >
-                  <Link
-                    style={{ boxShadow: `none` }}
-                    to={node.frontmatter.slug}
-                  >
+                  <Link style={{ boxShadow: `none` }} to={node.frontmatter.slug}>
                     {title}
                   </Link>
                 </h3>
@@ -193,12 +193,11 @@ export const pageQuery = graphql`
     }
   }
 `;
-
 ```
 
 ## ページをレンダリングする
 
-[gatsby-node.js]に↑で作成したテンプレートを使用して、ページをレンダリングするように変更します。<br>
+[gatsby-node.js]に ↑ で作成したテンプレートを使用して、ページをレンダリングするように変更します。<br>
 以下のように変更すれば、[/tags/タグ名]に各タグの記事一覧ページが作成されます。
 
 ```js{8,10,56-67}:title=gatsby-node.js
@@ -208,15 +207,12 @@ const _ = require("lodash");
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
-  const blogPost = path.resolve(`./src/templates/blog-post.js`);
-  const tagTemplate = path.resolve(`./src/templates/tags.js`);
+  const tagTemplate = path.resolve(`./src/templates/tagpage/index.jsx`);
+
   const result = await graphql(
     `
       {
-        posts: allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
-        ) {
+        posts: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 1000) {
           edges {
             node {
               fields {
@@ -240,24 +236,6 @@ exports.createPages = async ({ graphql, actions }) => {
   if (result.errors) {
     throw result.errors;
   }
-
-  const posts = result.data.posts.edges;
-
-  posts.forEach((post, index) => {
-    const previous = index === posts.length - 1 ? null : posts[index + 1].node;
-    const next = index === 0 ? null : posts[index - 1].node;
-
-    createPage({
-      path: `/${post.node.frontmatter.slug}/`,
-      component: blogPost,
-      context: {
-        slug: post.node.fields.slug,
-        previous,
-        next,
-      },
-    });
-  });
-
   const tags = result.data.tags.group;
 
   tags.forEach(tag => {
@@ -270,7 +248,6 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
 };
-
 ```
 
 これで以下のようなタグページが作成されます。
@@ -282,9 +259,9 @@ exports.createPages = async ({ graphql, actions }) => {
 
 ### タグ表示用のコンポーネントを作成する
 
-propsで記事のタグのリストを渡してもらい、それを使ってタグページにジャンプできるようにします。
+props で記事のタグのリストを渡してもらい、それを使ってタグページにジャンプできるようにします。
 
-```js:title=src/components/tag.js
+```js:title=src/components/tag/index.jsx
 import React from "react";
 import { Link } from "gatsby";
 import _ from "lodash";
@@ -294,11 +271,7 @@ const Tag = props => {
     <div className="tag">
       {props.tags.map((tag, index) => {
         return (
-          <Link
-            to={`/tags/${_.kebabCase(tag)}/`}
-            key={index}
-            className="tag__list"
-          >
+          <Link to={`/tags/${_.kebabCase(tag)}/`} key={index} className="tag__list">
             {tag}
           </Link>
         );
@@ -308,15 +281,14 @@ const Tag = props => {
 };
 
 export default Tag;
-
 ```
 
 ### 作成したタグコンポーネントを目次の前に挿入
 
-[src/templates/blog-post.js]の目次の前に上で作ったTagコンポーネントを挿入します。<br>
-GraphQLで取得したdata.frontmatter.tagsをpropsとして渡します。
+[src/templates/blogpost/index.jsx]の目次の前に上で作った Tag コンポーネントを挿入します。<br>
+GraphQL で取得した data.frontmatter.tags を props として渡します。
 
-```js:title=src/templates/blog-post.js
+```js:title=src/templates/blogpost/index.jsx
 <header>
 ・・・省略
 </header>
@@ -329,7 +301,7 @@ GraphQLで取得したdata.frontmatter.tagsをpropsとして渡します。
 
 あとは好きなスタイルを付けて完成となります。<br>
 
-```scss:title=src/styles/style.scss
+```scss
 .tag {
   margin-bottom: 20px;
 
@@ -349,13 +321,12 @@ GraphQLで取得したdata.frontmatter.tagsをpropsとして渡します。
 
 ## まとめ
 
-今回はGatsbyJSブログにタグページを追加して、タグごとに記事一覧が表示できるようにしました。<br>
+今回は GatsbyJS ブログにタグページを追加して、タグごとに記事一覧が表示できるようにしました。<br>
 記事が増えてきたときに、タグページがあると読みたいタグを一気に見れるのでいいですよね。
 
-他にもGatsbyJSのブログカスタマイズをいろいろやっているので、以下もあわせてご覧いただければと思います。
+他にも GatsbyJS のブログカスタマイズをいろいろやっているので、以下もあわせてご覧いただければと思います。
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/tags/gatsby-js/" data-iframely-url="//cdn.iframe.ly/5j7eIPT"></a></div></div>
-
 
 <br>
 <br>
