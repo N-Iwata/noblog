@@ -1,35 +1,41 @@
 ---
 title: 【GatsbyJS】ブログにAboutページとナビゲーションバーを作る
 date: "2020-04-29"
-description: このブログはGatsbyJSで作成していますが、gatsby-starter-blogのテンプレートから作成しているので、ナビゲーションバーとかAboutページとかタグページとかの機能もなく最低限しかないんですよね。なので今回はAboutページとそこに遷移するためのナビゲーションバーを作成したので実装した部分を書いていきたいと思います。
+description: 今回は About ページとそこに遷移するためのナビゲーションバーを作成したので、実装した部分を書いていきたいと思います。
 slug: 2020-04-29/gatsby-about-navbar
-tags: [GatsbyJS,gatsby-starter-blog]
+tags: [GatsbyJS, gatsby-starter-blog]
 hero: ./hero.png
 ---
 
-## はじめに 
+## はじめに
 
 おはようございます！こんにちは！こんばんは！<br>
 麻雀と芝生大好きおじさんこと**のふのふ**(@rpf_nob)です！！
 
-このブログはGatsbyJSで作成していますが、[gatsby-starter-blog](https://gatsby-starter-blog-demo.netlify.app/)のテンプレートから作成しているので、
-結構見た目は普通な感じだし、ナビゲーションバーとかAboutページとかタグページとかの機能もなく最低限しかないんですよね。
-なので、少しずつ見た目や機能を改善していけたらと思っています！まあ、もともとReactやGraphQLなどの勉強のために最低限の機能のテンプレートにしようと思ってたんですけどね。
+今回は About ページとそこに遷移するためのナビゲーションバーを作成したので、実装した部分を書いていきたいと思います。
 
-で、今回はAboutページとそこに遷移するためのナビゲーションバーを作成したので、実装した部分を書いていきたいと思います。
+## 前提
 
-![](img1.png)
+このブログは GatsbyJS の[gatsby-starter-blog](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/)のテンプレートから作成しています。
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/" data-iframely-url="//cdn.iframe.ly/qjUJkBu?iframe=card-small"></a></div></div>
+
+<br/>
+
+ソースコードはこちら（参考になったという方は ⭐️ をポチッと押していただけると嬉しいです〜 🙇‍♂️）
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/N-Iwata/noblog" data-iframely-url="//cdn.iframe.ly/Q4tAo8y?card=small"></a></div></div>
 
 ## 新しいページを作る方法
 
-すげー簡単です。[src/pages]ディレクトリに追加したいページのコンポーネントを作成したファイルを追加するだけでした。
-これはGatsbyJSのもともとの機能なのですが、AboutページとかContactページとかの固定ページはこちらの方法でページ作成するといいです。
+すげー簡単です。[src/pages]ディレクトリに追加したいページのコンポーネントを作成したファイルを追加するだけです。
+これは GatsbyJS のもともとの機能なのですが、About ページとか Contact ページとかの固定ページはこちらの方法でページ作成するといいと思います。
 
 他にもプログラムでページを作成することもできるので、こちらはタグページの追加時にまた書いていければと思います。
 
-## src/pages/about.jsを作成する
+## src/pages/about/index.jsx を作成する
 
-```javascript:title=src/pages/about.js
+```javascript:title=src/pages/about/index.jsx
 import React from "react";
 import { Link, graphql } from "gatsby";
 
@@ -64,17 +70,16 @@ export const pageQuery = graphql`
     }
   }
 `;
-
 ```
 
-これだけでAboutページが作成できましたので、[localhost:8000/about]に移動して確認すると問題なくできていますね！！
+これだけで About ページが作成できましたので、[localhost:8000/about]に移動して確認すると問題なくできていますね！！
 あとは、内容を書いていけばページは完成です。
 
 ![](img2.png)
 
 ## ナビゲーションバーを作成する
 
-Aboutページができたので、こちらにジャンプできるようにリンクが必要なので、ナビゲーションバーを上部に作って、そこからジャンプできるようにしたいと思います。
+About ページができたので、こちらにジャンプできるようにリンクが必要なので、ナビゲーションバーを上部に作って、そこからジャンプできるようにしたいと思います。
 
 ### ナビゲーションバーコンポーネントを作成する
 
@@ -82,7 +87,7 @@ Aboutページができたので、こちらにジャンプできるようにリ
 
 今回は[Home]と[About]の二つの遷移だけ作りました。（今後コンタクトページとかタグページなどのリンクを増やしていく予定です。）
 
-[src/components/navbar.js]を新規作成して、[src/styles/style.scss]に以下追記します。
+[src/components/navbar/index.jsx]を新規作成していきます。
 
 ```javascript:title=src/components/navbar.js
 import React from "react";
@@ -105,75 +110,23 @@ const NavBar = () => {
 
 export default NavBar;
 ```
-```scss:title=src/styles/style.scss
-.navbar {
-  position: fixed;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 10px;
-  background: white;
-  height: 60px;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-
-  &__ul {
-    float: right;
-    margin-right: 20px;
-  }
-  &__li {
-    display: inline-block;
-    line-height: 60px;
-    margin: 0 5px;
-
-    & a {
-      color: black;
-      padding: 7px 13px;
-      padding-bottom: 1px;
-      transition: all 0.5s ease;
-
-      &:hover {
-        color: red;
-        transition: 0.5s;
-      }
-    }
-  }
-}
-```
-
-<br>
 
 ### 作ったナビゲーションバーコンポーネントをレイアウトコンポーネントに追加する
 
-ナビゲーションバーはすべてのページに設置したいので、[src/components/layout.js]の[Layout]コンポーネントに↑で作った[NavBar]コンポーネントを設置します。
-[NavBar]コンポーネントは画面の上部に固定しているので、marginTopを少し大きくとるように修正しました。
+ナビゲーションバーはすべてのページに設置したいので、[src/components/layout/index.jsx]の[Layout]コンポーネントに ↑ で作った[NavBar]コンポーネントを設置します。
 
-```javascript{18}:title=src/components/layout.js
+```javascript{18}:title=src/components/layout/index.jsx
 import NavBar from "../components/navbar";
 
 const Layout = ({ location, title, author, children }) => {
-
   // 省略
   return (
-    <div
-      style={{
-        marginLeft: `auto`,
-        marginRight: `auto`,
-        marginTop: 80,
-        maxWidth: rhythm(30),
-        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        backgroundColor: `#fff`,
-        boxShadow: `0 0 10px rgba(0,0,0,0.2)`,
-      }}
-    >
+    <div>
       <NavBar />
-      <header>{header}</header>
-      <main>{children}</main>
-      <footer>
-        ©2020 {author} All Rights Reserved.
-      </footer>
+      <div className={styles.container}>
+        <main className={styles.contents}>{children}</main>
+      </div>
+      <Footer author={author} />
     </div>
   );
 };
@@ -185,8 +138,5 @@ const Layout = ({ location, title, author, children }) => {
 
 ## まとめ
 
-今回はAboutページとそこに遷移するためのナビゲーションバーを作成しました。<br>
+今回は About ページとそこに遷移するためのナビゲーションバーを作成しました。<br>
 このあたりはそれほど難しくなく簡単にできますね。
-
-
-

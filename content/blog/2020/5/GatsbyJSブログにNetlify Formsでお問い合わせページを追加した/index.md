@@ -26,7 +26,7 @@ hero: ./hero.png
 
 <br/>
 
-ソースコードはこちら（参考になったという方は ⭐️ をポチッと押してください 🙇‍♂️）
+ソースコードはこちら（参考になったという方は ⭐️ をポチッと押していただけると嬉しいです〜 🙇‍♂️）
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/N-Iwata/noblog" data-iframely-url="//cdn.iframe.ly/Q4tAo8y?card=small"></a></div></div>
 
