@@ -3,23 +3,29 @@ title: 【GatsbyJS】ブログのコードブロックにタイトルと指定�
 date: "2020-05-02"
 description: 今回はGatsbyJSブログの記事ページを、Qiitaのようにコードブロックにタイトルを付けられるようにして、さらに指定した行をハイライトできるようにします。
 slug: 2020-05-02/gatsby-code-title-highlight
-tags: [GatsbyJS,gatsby-starter-blog]
+tags: [GatsbyJS, gatsby-starter-blog]
 hero: ./hero.png
 ---
 
-## はじめに 
+## はじめに
 
 おはようございます！こんにちは！こんばんは！<br>
 麻雀と芝生大好きおじさんこと**のふのふ**(@rpf_nob)です！！
 
-今回はGatsbyJSブログの記事ページを、Qiitaのようにコードブロックにタイトルを付けられるようにして、さらに指定した行をハイライトできるようにします。<br>
+今回は GatsbyJS ブログの記事ページを、Qiita のようにコードブロックにタイトルを付けられるようにして、さらに指定した行をハイライトできるようにします。<br>
 タイトル付与や指定行のハイライトができると、今後書きやすくなりそうです。
 
 ## 前提
 
-このブログはGatsbyJSの[gatsby-starter-blog](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/)のテンプレートから作成しています。
+このブログは GatsbyJS の[gatsby-starter-blog](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/)のテンプレートから作成しています。
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/" data-iframely-url="//cdn.iframe.ly/qjUJkBu?iframe=card-small"></a></div></div>
+
+<br/>
+
+ソースコードはこちら（参考になったという方は ⭐️ をポチッと押していただけると嬉しいです〜 🙇‍♂️）
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/N-Iwata/noblog" data-iframely-url="//cdn.iframe.ly/Q4tAo8y?card=small"></a></div></div>
 
 ## コードブロックにタイトルを付けられるようにする
 
@@ -27,8 +33,7 @@ hero: ./hero.png
 
 今回は[gatsby-remark-prismjs-title]を使用しました。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.gatsbyjs.org/packages/gatsby-remark-prismjs-title/" data-iframely-url="//cdn.iframe.ly/CDtvhZL"></a></div></div>
-
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.gatsbyjs.com/plugins/gatsby-remark-prismjs-title/" data-iframely-url="//cdn.iframe.ly/Y0uCRzn?card=small"></a></div></div>
 
 [gatsby-remark-code-titles]と迷いましたが、行番号を追加で表示したい時に使えないらしいのでこちらは使用しないことにしました。
 
@@ -52,16 +57,18 @@ module.exports = {
   },
 }
 ```
+
 ### スタイル調整
 
 以下のような形でブロックが作られるので、[.gatsby-code-title]に対してスタイルを適用していきます。
+
 ```html
 <div class="gatsby-code-title">
   <span>src/styles/style.scss</span>
 </div>
 ```
 
-```scss:title=src/styles/style.scss
+```scss
 .gatsby-code-title {
   background: #555;
   color: #fff;
@@ -77,18 +84,20 @@ module.exports = {
 
 言語の後ろに[:title=タイトル名]を付けるだけで完了です。
 
-以下のようにすれば、↓のように表示できます。
-```markdown:title=Markdown
+以下のようにすれば、↓ のように表示できます。
+
+````markdown:title=Markdown
 ```javascript:title=src/index.js
 const a = 0;
 console.log(a);
-```　
 ```
+````
 
 ```javascript:title=src/index.js
 const a = 0;
 console.log(a);
 ```
+
 こんな感じにタイトルが付けることができました！
 
 ## コードブロックの指定行をハイライトできるようにする
@@ -124,13 +133,15 @@ module.exports = {
 ### スタイル調整
 
 以下のような形でブロックが作られるので、[.gatsby-highlight-code-line]に対してスタイルを適用していきます。
+
 ```html
 <span class="gatsby-highlight-code-line">
   <span class="token selector">.gatsby-highlight-code-line </span>
   <span class="token punctuation">{</span>
 </span>
 ```
-```scss:title=src/styles/style.scss
+
+```scss
 .gatsby-highlight-code-line {
   background-color: #444444;
   display: block;
@@ -146,8 +157,9 @@ module.exports = {
 
 言語の後ろに[:title=タイトル名]を付けるだけで完了です。
 
-以下のようにすれば、↓のように表示できます。
-```markdown:title=Markdown
+以下のようにすれば、↓ のように表示できます。
+
+````markdown:title=Markdown
 ```javascript{1}:title=src/index.js
 const a = 0;
 const b = 0;
@@ -155,8 +167,8 @@ const c = 0;
 console.log(a);
 console.log(b);
 console.log(c);
-```　
 ```
+````
 
 ```javascript{1}:title=src/index.js
 const a = 0;
@@ -169,7 +181,7 @@ console.log(c);
 
 複数行指定したい場合は以下のように[-]や[,]でつなげて記載します。
 
-```markdown:title=Markdown
+````markdown:title=Markdown
 ```javascript{1-3,6}:title=src/index.js
 const a = 0;
 const b = 0;
@@ -177,8 +189,8 @@ const c = 0;
 console.log(a);
 console.log(b);
 console.log(c);
-```　
 ```
+````
 
 ```javascript{1-3,6}:title=src/index.js
 const a = 0;
@@ -194,10 +206,9 @@ console.log(c);
 今回はコードブロックに関して修正しました。<br>
 タイトルと指定行のハイライトがあると説明したい時に便利になりますよね。
 
-他にもGatsbyJSのブログカスタマイズをいろいろやっているので、以下もあわせてご覧いただければと思います。
+他にも GatsbyJS のブログカスタマイズをいろいろやっているので、以下もあわせてご覧いただければと思います。
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/tags/gatsby-js/" data-iframely-url="//cdn.iframe.ly/5j7eIPT"></a></div></div>
-
 
 <br>
 <br>
