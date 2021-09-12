@@ -3,27 +3,33 @@ title: 【GatsbyJS】ブログにYouTubeを埋め込んでみた
 date: "2020-05-07"
 description: 今回はGatsbyJSブログの記事内にYouTubeを埋め込めるようにします。GatsbyJSの公式ページの内容通りやれば簡単にできます。
 slug: 2020-05-07/gatsby-youtube
-tags: [GatsbyJS,gatsby-starter-blog]
+tags: [GatsbyJS, gatsby-starter-blog]
 hero: ./hero.png
 ---
 
-## はじめに 
+## はじめに
 
 おはようございます！こんにちは！こんばんは！<br>
 麻雀と芝生大好きおじさんこと**のふのふ**(@rpf_nob)です！！
 
-今回はGatsbyJSブログの記事内にYouTubeを埋め込めるようにします。<br>
+今回は GatsbyJS ブログの記事内に YouTube を埋め込めるようにします。<br>
 
-基本的には[GatsbyJSの公式ページ](https://www.gatsbyjs.org/packages/gatsby-remark-embed-youtube/)の内容通りやれば簡単にできます。<br>
-自分のYouTubeチャンネル（ないけど・・・そのうちポチりたい）の動画をブログに埋め込んだり、好きな動画やブログの参考にした動画などを埋め込んだりできるのでおススメです！
+基本的には[GatsbyJS の公式ページ](https://www.gatsbyjs.org/packages/gatsby-remark-embed-youtube/)の内容通りやれば簡単にできます。<br>
+自分の YouTube チャンネル（ないけど・・・そのうちポチりたい）の動画をブログに埋め込んだり、好きな動画やブログの参考にした動画などを埋め込んだりできるのでおススメです！
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.gatsbyjs.org/packages/gatsby-remark-embed-youtube/" data-iframely-url="//cdn.iframe.ly/Ze9WqwN"></a></div></div>
 
 ## 前提
 
-このブログはGatsbyJSの[gatsby-starter-blog](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/)のテンプレートから作成しています。
+このブログは GatsbyJS の[gatsby-starter-blog](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/)のテンプレートから作成しています。
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/" data-iframely-url="//cdn.iframe.ly/qjUJkBu?iframe=card-small"></a></div></div>
+
+<br/>
+
+ソースコードはこちら（参考になったという方は ⭐️ をポチッと押してください 🙇‍♂️）
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/N-Iwata/noblog" data-iframely-url="//cdn.iframe.ly/Q4tAo8y?card=small"></a></div></div>
 
 ## プラグインのインストール
 
@@ -39,7 +45,7 @@ npm install --save gatsby-remark-embed-youtube
 
 ```javascript{7-13,15}:title=gatsby-config.js
 module.exports = {
-  plugins: [      
+  plugins: [
     {
       resolve: "gatsby-transformer-remark",
       options: {
@@ -48,8 +54,8 @@ module.exports = {
             resolve: "gatsby-remark-embed-youtube",
             options: {
               width: 800,
-              height: 400
-            }
+              height: 400,
+            },
           },
           {
             resolve: `gatsby-remark-responsive-iframe`,
@@ -57,11 +63,11 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-        ]
-      }
+        ],
+      },
     },
-  ]
-}
+  ],
+};
 ```
 
 注意点として、[gatsby-remark-responsive-iframe]を使っている場合はその前に必ず定義する必要があります。
@@ -69,7 +75,7 @@ module.exports = {
 ## 記事に埋め込む
 
 以下のようにマークダウンファイルに記載します。<br>
-[QNw6Q0VTkEQ]の部分は動画のURLの　https://www.youtube.com/watch?v=QNw6Q0VTkEQ　の一番後ろの部分の文字列の部分です。
+[QNw6Q0VTkEQ]の部分は動画の URL の　https://www.youtube.com/watch?v=QNw6Q0VTkEQ　の一番後ろの部分の文字列の部分です。
 
 ```markdown:title=Markdown
 `youtube:https://www.youtube.com/embed/QNw6Q0VTkEQ`
@@ -78,7 +84,7 @@ module.exports = {
 `youtube:https://www.youtube.com/embed/QNw6Q0VTkEQ`
 
 このブログを始めるきっかけとなった**マコなり社長の動画**です。<br>
-10年前にこの動画に出会いたかった・・・
+10 年前にこの動画に出会いたかった・・・
 
 人生を変えるアクションプラン＝**「ポチる」**こと
 
@@ -90,16 +96,15 @@ module.exports = {
 
 ## まとめ
 
-今回はGatsbyJSブログの記事内にYouTubeを埋め込めるようにしました。<br>
+今回は GatsbyJS ブログの記事内に YouTube を埋め込めるようにしました。<br>
 結構簡単に埋め込めるので今後多用するかもしれません。
 
-また、YouTubeチャンネルとかも挑戦して（ポチって）、人生を変えていくループを作っていきたいです。<br>
+また、YouTube チャンネルとかも挑戦して（ポチって）、人生を変えていくループを作っていきたいです。<br>
 あと、マコなり社長のかなりの信者なので、おススメとかまとめとかしたいですね！！
 
-他にもGatsbyJSのブログカスタマイズをいろいろやっているので、以下もあわせてご覧いただければと思います。
+他にも GatsbyJS のブログカスタマイズをいろいろやっているので、以下もあわせてご覧いただければと思います。
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/tags/gatsby-js/" data-iframely-url="//cdn.iframe.ly/5j7eIPT"></a></div></div>
-
 
 <br>
 <br>
