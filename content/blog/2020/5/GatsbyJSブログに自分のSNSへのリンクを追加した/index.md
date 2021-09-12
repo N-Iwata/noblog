@@ -1,7 +1,7 @@
 ---
-title: 【GatsbyJS】ブログに自分のSNSへのリンクを追加した
+title: 【GatsbyJS】ブログに自分のSNSへのリンクをプロフィールに追加した
 date: "2020-05-15"
-description: 今回はGatsbyJSブログに自分のSNSへのリンクを追加します。さまざまな人にブログやツイッターを見てもらいたいです！
+description: 今回はGatsbyJSブログに自分のSNSへのリンクをプロフィールに追加します。
 slug: 2020-05-15/gatsby-sns-link
 tags: [GatsbyJS, gatsby-starter-blog]
 hero: ./hero.png
@@ -12,10 +12,9 @@ hero: ./hero.png
 おはようございます！こんにちは！こんばんは！<br>
 麻雀と芝生大好きおじさんこと**のふのふ**(@rpf_nob)です！！
 
-今回は GatsbyJS ブログに自分の SNS へのリンクを追加します。<br>
-さまざまな人にブログやツイッターを見てもらいたいです！
+今回は GatsbyJS ブログに自分の SNS へのリンクをプロフィールに追加します。
 
-Twitter と GitHub と Qiita へのリンクアイコンを作りたいと思います。
+Twitter と GitHub と Qiita と Zenn へのリンクアイコンを作りたいと思います。
 
 ## 前提
 
@@ -29,73 +28,63 @@ Twitter と GitHub と Qiita へのリンクアイコンを作りたいと思い
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/N-Iwata/noblog" data-iframely-url="//cdn.iframe.ly/Q4tAo8y?card=small"></a></div></div>
 
-## パッケージのインストール
+## Bio コンポーネントを編集する
 
-以下コマンドで必要なパッケージをインストールします。<br>
+[src/components/bio/index.jsx]を編集していきます。
 
-Twitter と GitHub は[fortawesome]のアイコンを使用して、Qiita に関してはいい感じに画像を拾ってきて作成します。
-
-```
-npm install --save @fortawesome/react-fontawesome
-npm install --save @fortawesome/free-brands-svg-icons
-```
-
-## Bio コンポーネントにアイコンを設置する
-
-[src/components/bio/index.jsx]に追記していきます。
-
-まずインポートする
+自己紹介文の後ろに[shields.io](https://shields.io/)のバッジを設置します。
 
 ```js:title=src/components/bio/index.jsx
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
-import image from "../images/qiita.png";
-```
-
-自己紹介文の後ろにアイコンを設置
-
-```js:title=src/components/bio/index.jsx
-class Bio extends React.Component {
-  render() {
-    return (
-      //--省略--
-      <div style={{ position: "relative", marginTop: "10px" }}>
-        <div style={{ position: "absolute", width: "100%", top: "0", left: "0" }}>
-          <a style={{ boxShadow: "none" }} href="https://twitter.com/rpf_nob">
-            <FontAwesomeIcon
-              style={{ height: "1.5em", width: "1.5em", marginRight: "5" }}
-              color="#3eaded"
-              icon={faTwitter}
-            />
-          </a>
-          <a style={{ boxShadow: "none" }} href="https://github.com/N-Iwata">
-            <FontAwesomeIcon
-              style={{ height: "1.5em", width: "1.5em", marginRight: "5" }}
-              color="#333"
-              icon={faGithub}
-            />
-          </a>
-        </div>
-        <div style={{ position: "absolute", width: "32px", top: "-4px", left: "56px" }}>
-          <a style={{ boxShadow: "none" }} href="https://qiita.com/rpf-nob">
-            <img src={image} alt="Qiita" style={{ height: "2em", width: "2em" }} />
-          </a>
-        </div>
+const Bio = () => {
+  ・・・
+  return (
+    <div className={styles.bio}>
+      ・・・
+      <div className={styles.bio__icon_wrapper}>
+        <a className={styles.bio__icon} href="https://github.com/N-Iwata">
+          <img
+            className={styles.bio__icon_image}
+            alt="Github"
+            src="https://img.shields.io/badge/GitHub-%2312100E.svg?&style=for-the-badge&logo=Github&logoColor=white"
+          />
+        </a>
+        <a className={styles.bio__icon} href="https://qiita.com/rpf-nob">
+          <img
+            className={styles.bio__icon_image}
+            alt="Qiita"
+            src="https://img.shields.io/badge/qiita-55C500.svg?&style=for-the-badge&logo=qiita&logoColor=white"
+          />
+        </a>
+        <a className={styles.bio__icon} href="https://twitter.com/rpf_nob">
+          <img
+            className={styles.bio__icon_image}
+            alt="Twitter"
+            src="https://img.shields.io/badge/twitter-%231DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white"
+          />
+        </a>
+        <a className={styles.bio__icon} href="https://zenn.dev/rpf_nob">
+          <img
+            className={styles.bio__icon_image}
+            alt="Zenn"
+            src="https://img.shields.io/badge/Zenn-3EA8FF.svg?&style=for-the-badge&logo=Zenn&logoColor=white"
+          />
+        </a>
       </div>
-      //--省略--
-    );
-  }
-}
+    </div>
+  );
+};
 ```
 
-これで SNS リンクアイコンが実装できました！！
+これで SNS リンクアイコンが設置できました！！
 
 ![img](img1.png)
 
 ## まとめ
 
-今回は GatsbyJS ブログに自分の SNS へのリンクを追加しました。<br>
-さまざまな人にブログやツイッターを見てもらいたいので、情報発信できるように頑張っていきます！！
+今回は GatsbyJS ブログに自分の SNS へのリンクを追加しました。
+shields.io を使うとおしゃれなバッジになるのでおすすめです 👍
+
+<br>
 
 他にも GatsbyJS のブログカスタマイズをいろいろやっているので、以下もあわせてご覧いただければと思います。
 
