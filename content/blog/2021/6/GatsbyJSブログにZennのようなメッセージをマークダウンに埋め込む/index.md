@@ -3,34 +3,39 @@ title: 【GatsbyJS】ブログにZennのようなメッセージを記事に埋�
 date: "2021-06-23"
 description: 今回はGatsbyJSブログに[gatsby-remark-custom-blocks]というパッケージを利用してZennのようなメッセージを記事に埋め込めるようにしたので実装方法を解説します！！
 slug: 2021-06-23/gatsby-remark-custom-blocks
-tags: [GatsbyJS,gatsby-starter-blog]
+tags: [GatsbyJS, gatsby-starter-blog]
 hero: ./hero.png
 ---
 
-## はじめに 
+## はじめに
 
 おはようございます！こんにちは！こんばんは！<br>
 麻雀と芝生大好きおじさんこと**のふのふ**([@rpf_nob](https://twitter.com/rpf_nob))です！！
 
-今回はGatsbyJSブログに[gatsby-remark-custom-blocks]というパッケージを利用してZennのようなメッセージを記事に埋め込めるようにしたので実装方法を解説します！！
+今回は GatsbyJS ブログに[gatsby-remark-custom-blocks]というパッケージを利用して Zenn のようなメッセージを記事に埋め込めるようにしたので実装方法を解説します！！
 
-* 前提
-* パッケージのインストール
-* gatsby-config.jsの編集
-* 記事を作成するマークダウンファイルに埋め込む
-* スタイリング
-* まとめ
+- 前提
+- パッケージのインストール
+- gatsby-config.js の編集
+- 記事を作成するマークダウンファイルに埋め込む
+- スタイリング
+- まとめ
 
 ## 前提
 
-このブログはGatsbyJSの[gatsby-starter-blog](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/)のテンプレートから作成しています。
+このブログは GatsbyJS の[gatsby-starter-blog](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/)のテンプレートから作成しています。
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/" data-iframely-url="//cdn.iframe.ly/qjUJkBu?iframe=card-small"></a></div></div>
 
+<br/>
+
+ソースコードはこちら（参考になったという方は ⭐️ をポチッと押してください 🙇‍♂️）
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/N-Iwata/noblog" data-iframely-url="//cdn.iframe.ly/Q4tAo8y?card=small"></a></div></div>
 
 ## パッケージのインストール
 
-今回は**gatsby-remark-custom-blocks**を使って実装します。  
+今回は**gatsby-remark-custom-blocks**を使って実装します。
 基本的には公式ページのままやれば簡単にできます。
 
 ```
@@ -41,11 +46,11 @@ $npm install --save gatsby-remark-custom-blocks
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.gatsbyjs.com/plugins/gatsby-remark-custom-blocks/" data-iframely-url="//cdn.iframe.ly/CEXLHRq?iframe=card-small"></a></div></div>
 
-## gatsby-config.jsの編集
+## gatsby-config.js の編集
 
-インストールした**gatsby-remark-custom-blocks**をpluginsのgatsby-transformer-remarkのoptionsのpluginsに設定していきます。
+インストールした**gatsby-remark-custom-blocks**を plugins の gatsby-transformer-remark の options の plugins に設定していきます。
 
-今回は**infoとwarnとquestion**というブロックを作りました。classesと別にtitleというオプションもありますが、今回はタイトルはつけないのでclassesだけにしています。
+今回は**info と warn と question**というブロックを作りました。classes と別に title というオプションもありますが、今回はタイトルはつけないので classes だけにしています。
 
 ```js:title=gatsby-config.js
 plugins: [
@@ -69,17 +74,17 @@ plugins: [
             },
           },
         },
-      ]
-    }
-  }
-]
+      ],
+    },
+  },
+];
 ```
 
 ## 記事を作成するマークダウンファイルに埋め込む
 
 埋め込み方は以下のとおりです。マークダウンファイルに以下のように記載します。
 
-``` 
+```
 [[info]]
 | ここに情報文を書く
 
@@ -90,7 +95,7 @@ plugins: [
 | ここに質問文を書く
 ```
 
-すると次のようなHTMLが記事内に埋め込まれます。
+すると次のような HTML が記事内に埋め込まれます。
 
 ```html
 <div class="custom-block info">
@@ -112,7 +117,7 @@ plugins: [
 </div>
 ```
 
-ちなみにtitleオプションを設定して、以下のようにタイトルを書いてあげれば次のようなHTMLにもなります。
+ちなみに title オプションを設定して、以下のようにタイトルを書いてあげれば次のような HTML にもなります。
 
 ```
 [[info] タイトル]
@@ -130,7 +135,7 @@ plugins: [
 
 ## スタイリング
 
-あとはスタイリングをするだけなのでCSSを書いていきます。  
+あとはスタイリングをするだけなので CSS を書いていきます。
 
 ```css
 .info {
@@ -167,9 +172,9 @@ plugins: [
 }
 ```
 
-warnとquestionは色とマークの変更だけなので割愛します。
+warn と question は色とマークの変更だけなので割愛します。
 
-結果以下のようにZennのメッセージのようなブロックが作成できました。
+結果以下のように Zenn のメッセージのようなブロックが作成できました。
 
 [[info]]
 | ここに情報文を書く
@@ -180,21 +185,18 @@ warnとquestionは色とマークの変更だけなので割愛します。
 [[question]]
 | ここに質問文を書く
 
-
 ## まとめ
 
-今回はGatsbyJSブログに[gatsby-remark-custom-blocks]というパッケージを利用してZennのようなメッセージを記事に埋め込めるようにしたので実装方法を解説しました！！
+今回は GatsbyJS ブログに[gatsby-remark-custom-blocks]というパッケージを利用して Zenn のようなメッセージを記事に埋め込めるようにしたので実装方法を解説しました！！
 
 ブログによくある吹き出しみたいなブロックもこれで作成できると思うので、追加したい方は実装してみてください。
 
-他にもGatsbyJSのブログカスタマイズをいろいろやっているので、以下もあわせてご覧いただければと思います。
+他にも GatsbyJS のブログカスタマイズをいろいろやっているので、以下もあわせてご覧いただければと思います。
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/tags/gatsby-js/" data-iframely-url="//cdn.iframe.ly/5j7eIPT"></a></div></div>
 
-
 <br>
 <br>
 
-最後まで見ていただきありがとうございます！！  
-この記事が良かったと思ったらSHAREしていただけると泣いて喜びます🤣
-
+最後まで見ていただきありがとうございます！！
+この記事が良かったと思ったら SHARE していただけると泣いて喜びます 🤣
