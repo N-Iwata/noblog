@@ -13,7 +13,7 @@ const Toc = props => {
       <div className={styles.toc__top}>
         <h4 className={styles.toc__title}>
           Content
-          <button className="toc__open" onClick={handleClick}>
+          <button className={styles.toc__open} onClick={handleClick}>
             [{message}]
           </button>
         </h4>
