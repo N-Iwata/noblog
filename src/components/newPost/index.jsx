@@ -2,11 +2,11 @@ import React from "react";
 import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencilAlt } from "@fortawesome/free-solid-svg-icons";
-import styles from "./newPost.module.css";
+import * as styles from "./newPost.module.css";
 
 const NewPost = ({ new1, new2, new3, new4, new5 }) => {
   return (
-    <nav className={styles.new}>
+    <nav className={styles.new_post}>
       <h3 className={styles.new__title}>
         <FontAwesomeIcon icon={faPencilAlt} /> 最近の記事
       </h3>

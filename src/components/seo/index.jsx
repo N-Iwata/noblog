@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby";
 
 import ogp_image from "../../images/RPF_NoBlog.png";
 
-const SEO = ({ description, lang, meta, title, image }) => {
+const Seo = ({ description, lang, meta, title, image }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -48,14 +48,14 @@ const SEO = ({ description, lang, meta, title, image }) => {
   );
 };
 
-SEO.defaultProps = {
+Seo.defaultProps = {
   lang: `ja`,
   meta: [],
   description: ``,
   image: null,
 };
 
-SEO.propTypes = {
+Seo.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
@@ -63,4 +63,4 @@ SEO.propTypes = {
   image: PropTypes.string,
 };
 
-export default SEO;
+export default Seo;

@@ -11,7 +11,7 @@ import {
   LinkedinIcon,
   HatenaIcon,
 } from "react-share";
-import styles from "./share.module.css";
+import * as styles from "./share.module.css";
 
 const Share = props => {
   const articleTitle = `${props.title} @rpf_nob`;

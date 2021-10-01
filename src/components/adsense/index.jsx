@@ -1,6 +1,6 @@
 import React from "react";
 import AdSense from "react-adsense";
-import styles from "./adsense.module.css"
+import * as styles from "./adsense.module.css"
 
 const Adsense = () => (
   <ins className={styles.adsense}>

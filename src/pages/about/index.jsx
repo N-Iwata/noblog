@@ -2,8 +2,8 @@ import React from "react";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
 import Layout from "../../components/layout";
-import SEO from "../../components/seo";
-import styles from "../../templates/blogpost/blog.module.css";
+import Seo from "../../components/seo";
+import * as styles from "../../templates/blogpost/blog.module.css";
 
 const Aboutpage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
@@ -12,7 +12,7 @@ const Aboutpage = ({ data, location }) => {
   return (
     <div>
       <Layout location={location} title={siteTitle} author={author}>
-        <SEO title="About" />
+        <Seo title="About" />
         <div className={styles.blog__section}>
           <h1>About</h1>
 

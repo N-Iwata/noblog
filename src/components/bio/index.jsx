@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import Image from "gatsby-image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
-import styles from "./bio.module.css";
+import * as styles from "./bio.module.css";
 
 const Bio = () => {
   const data = useStaticQuery(graphql`

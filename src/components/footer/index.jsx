@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "gatsby";
-import styles from "./footer.module.css";
+import * as styles from "./footer.module.css";
 
 const Footer = props => {
   return (

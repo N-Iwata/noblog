@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import NavBar from "../navbar";
 import Footer from "../footer";
 import SideBar from "../sidebar";
-import styles from "./layout.module.css";
+import * as styles from "./layout.module.css";
 
 const Layout = ({ author, children }) => {
   const data = useStaticQuery(graphql`
