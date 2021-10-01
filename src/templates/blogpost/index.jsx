@@ -6,14 +6,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 
 import Layout from "../../components/layout";
-import SEO from "../../components/seo";
+import Seo from "../../components/seo";
 import Toc from "../../components/toc";
 import Tag from "../../components/tag";
 import Adsense from "../../components/adsense";
 import Share from "../../components/share";
 import Iframely from "../../components/iframely";
 import { rhythm } from "../../utils/typography";
-import styles from "./blog.module.css";
+import * as styles from "./blog.module.css";
 
 config.autoAddCss = false;
 library.add(faClock);
@@ -31,7 +31,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
     <div>
       <Iframely />
       <Layout author={author}>
-        <SEO
+        <Seo
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
           image={image}
@@ -86,7 +86,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           />
         </article>
 
-        <nav className={styles.prevnext}>
+        <nav>
           <ul className={styles.prevnext__ul}>
             {previous && (
               <li className={styles.prevnext__li}>

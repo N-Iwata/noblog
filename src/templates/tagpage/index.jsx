@@ -6,9 +6,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 
 import Layout from "../../components/layout";
-import SEO from "../../components/seo";
+import Seo from "../../components/seo";
 import Tag from "../../components/tag";
-import styles from "../homepage/posts.module.css";
+import * as styles from "../homepage/posts.module.css";
 
 import { Link, graphql } from "gatsby";
 
@@ -25,7 +25,7 @@ const Tags = ({ pageContext, data }) => {
   return (
     <div>
       <Layout author={author}>
-        <SEO title={`Tag: ${tag}`} description={`${tag}タグを含む記事の一覧ページです`} />
+        <Seo title={`Tag: ${tag}`} description={`${tag}タグを含む記事の一覧ページです`} />
         <h2 style={{ marginTop: 28 }}>{tagHeader}</h2>
         {edges.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug;
@@ -42,7 +42,7 @@ const Tags = ({ pageContext, data }) => {
                       {title}
                     </Link>
                   </h3>
-                  <small className={styles.posts__date}>
+                  <small>
                     <FontAwesomeIcon icon={faClock} />
                     <span style={{ marginLeft: 5 }}>{node.frontmatter.date}</span>
                   </small>

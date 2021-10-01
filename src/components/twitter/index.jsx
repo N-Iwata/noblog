@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./twitter.module.css";
+import * as styles from "./twitter.module.css";
 
 const Twitter = () => {
   return (

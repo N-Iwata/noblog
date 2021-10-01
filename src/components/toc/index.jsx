@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./toc.module.css";
+import * as styles from "./toc.module.css";
 
 const Toc = props => {
   const [isOpen, setOpen] = useState(true);

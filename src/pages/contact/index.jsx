@@ -4,9 +4,9 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 
 import Layout from "../../components/layout";
-import SEO from "../../components/seo";
-import styles from "./contact.module.css";
-import stylesBlog from "../../templates/blogpost/blog.module.css";
+import Seo from "../../components/seo";
+import * as styles from "./contact.module.css";
+import * as stylesBlog from "../../templates/blogpost/blog.module.css";
 
 const Contact = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
@@ -48,7 +48,7 @@ const Contact = ({ data, location }) => {
   return (
     <div>
       <Layout location={location} title={siteTitle} author={author}>
-        <SEO title="Contact" />
+        <Seo title="Contact" />
         <div className={stylesBlog.blog__section}>
           <h1>Contact</h1>
           <p>

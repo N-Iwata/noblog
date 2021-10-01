@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import Layout from "../../components/layout";
-import SEO from "../../components/seo";
+import Seo from "../../components/seo";
 
 const NotFoundPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
@@ -10,7 +10,7 @@ const NotFoundPage = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle} author={author}>
-      <SEO title="404: Not Found" />
+      <Seo title="404: Not Found" />
       <h1>Not Found</h1>
       <p>お探しのページが見つかりません。</p>
     </Layout>

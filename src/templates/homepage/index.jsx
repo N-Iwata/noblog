@@ -7,11 +7,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 
 import Layout from "../../components/layout";
-import SEO from "../../components/seo";
+import Seo from "../../components/seo";
 import Tag from "../../components/tag";
 import Adsense from "../../components/adsense";
 import Pagenation from "../../components/pagenation";
-import styles from "./posts.module.css";
+import * as styles from "./posts.module.css";
 
 config.autoAddCss = false;
 library.add(faClock);
@@ -23,7 +23,7 @@ const BlogIndex = ({ data, pageContext }) => {
   return (
     <div>
       <Layout author={author}>
-        <SEO title="All posts" />
+        <Seo title="All posts" />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug;
           return (
@@ -40,7 +40,7 @@ const BlogIndex = ({ data, pageContext }) => {
                     </Link>
                   </h3>
 
-                  <small className={styles.posts__date}>
+                  <small>
                     <FontAwesomeIcon icon={faClock} />
                     <span style={{ marginLeft: 5 }}>{node.frontmatter.date}</span>
                   </small>

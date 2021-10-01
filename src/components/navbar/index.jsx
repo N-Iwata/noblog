@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import styles from "./navbar.module.css";
+import * as styles from "./navbar.module.css";
 
 const NavBar = () => {
   return (

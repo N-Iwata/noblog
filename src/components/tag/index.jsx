@@ -5,7 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { kebabCase } from "lodash/string";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTag } from "@fortawesome/free-solid-svg-icons";
-import styles from "./tag.module.css";
+import * as styles from "./tag.module.css";
 
 const useStyles = makeStyles({
   button: {
