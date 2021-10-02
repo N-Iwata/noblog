@@ -56,7 +56,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <Tag tags={post.frontmatter.tags} />
           <div>
             <Img
-              className="blog__hero"
+              className={styles.blog__hero}
               fluid={data.markdownRemark.frontmatter.hero.childImageSharp.fluid}
               loading="eager"
               durationFadeIn={100}
