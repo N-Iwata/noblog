@@ -10,7 +10,7 @@ hero: ./hero.png
 ## はじめに
 
 おはようございます！こんにちは！こんばんは！<br>
-麻雀と芝生大好きおじさんこと**のふのふ**([@rpf_nob](https://twitter.com/rpf_nob))です！！
+**のふのふ**([@rpf_nob](https://twitter.com/rpf_nob))と申します！！都内のスタートアップでフロントエンドエンジニアとして働いています。
 
 今回は GatsbyJS ブログに[gatsby-remark-custom-blocks]というパッケージを利用して Zenn のようなメッセージを記事に埋め込めるようにしたので実装方法を解説します！！
 
