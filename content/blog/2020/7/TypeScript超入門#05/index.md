@@ -3,16 +3,16 @@ title: 【初心者向け】TypeScript超入門#05 ジェネリクス編
 date: "2020-07-05"
 description: この記事はTypeScript超入門シリーズの第5回目として、TypeScriptのジェネリクスについてまとめて解説していきます！
 slug: 2020-07-05/start-typescript-05
-tags: [TypeScript,TypeScript超入門]
+tags: [TypeScript, TypeScript超入門]
 hero: ./hero.png
 ---
 
-## はじめに 
+## はじめに
 
-おはようございます！こんにちは！こんばんは！  
-麻雀と芝生大好きおじさんこと**のふのふ**([@rpf_nob](https://twitter.com/rpf_nob))です！！
+おはようございます！こんにちは！こんばんは！
+**のふのふ**([@rpf_nob](https://twitter.com/rpf_nob))と申します！！都内のスタートアップでフロントエンドエンジニアとして働いています。
 
-この記事はTypeScript超入門シリーズの第5回目として、TypeScriptのジェネリクスについてまとめて解説していきます！
+この記事は TypeScript 超入門シリーズの第 5 回目として、TypeScript のジェネリクスについてまとめて解説していきます！
 
 [TypeScript 超入門#01 概要説明~環境構築編](https://rpf-noblog.com/2020-06-17/start-typescript-01)<br>
 [TypeScript 超入門#02 基本的な型編](https://rpf-noblog.com/2020-06-22/start-typescript-02)<br>
@@ -23,13 +23,14 @@ hero: ./hero.png
 [TypeScript 超入門#07 型の互換性編](https://rpf-noblog.com/2020-07-18/start-typescript-07)<br>
 [TypeScript 超入門#08 型安全編](https://rpf-noblog.com/2020-07-26/start-typescript-08)<br>
 
-* ジェネリクスとは
-* 関数のジェネリクス
-* 関数のジェネリクス
-* クラスのジェネリクス
-* インターフェースのジェネリクス
+- ジェネリクスとは
+- 関数のジェネリクス
+- 関数のジェネリクス
+- クラスのジェネリクス
+- インターフェースのジェネリクス
 
-ソースコードは以下GitHubを参照してください。
+ソースコードは以下 GitHub を参照してください。
+
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/N-Iwata/start-typescript" data-iframely-url="//cdn.iframe.ly/mWiO3U9"></a></div></div>
 
 ## ジェネリクスとは
@@ -42,7 +43,7 @@ hero: ./hero.png
 
 ### 基本的な書き方
 
-まず、値を受け取りそのまま値を返す関数を作るとすると、以下のように[string型]・[number型]・[boolean型]をそれぞれ作る必要がありますよね？
+まず、値を受け取りそのまま値を返す関数を作るとすると、以下のように[string 型]・[number 型]・[boolean 型]をそれぞれ作る必要がありますよね？
 
 ```ts:title=src/05_generics-types.ts
 const echoString = (prm: string): string => {
@@ -60,7 +61,7 @@ console.log(echoNumber(32));  //32
 console.log(echoBoolean(false));  //false
 ```
 
-ジェネリクスを使うとこのように同じような処理を1つの関数で汎用的な関数を作ることができます。
+ジェネリクスを使うとこのように同じような処理を 1 つの関数で汎用的な関数を作ることができます。
 
 以下のように、`<T>`の部分で呼び出し元から型を受け取って、その関数内で使用できるようにできるのがジェネリクスの仕組みです。
 
@@ -97,11 +98,11 @@ console.log(echo2<number>(32)); //32
 console.log(echo2<boolean>(false)); //false
 ```
 
-### extendsによる制約
+### extends による制約
 
 **extends**を付与することで、ジェネリクスに指定できる型を制約することができます。
 
-次の例ではジェネリクスに指定できる型を**string型**のみに制約をつけているため、**number型**や**boolean型**は指定できません。
+次の例ではジェネリクスに指定できる型を**string 型**のみに制約をつけているため、**number 型**や**boolean 型**は指定できません。
 
 ```ts:title=src/05_generics-types.ts
 const echo3 = <T extends string>(prm: T): T => {
@@ -123,7 +124,7 @@ console.log(echo4<number>(32)); //32
 console.log(echo4<boolean>(false)); //NG→型 'number' は制約 'string' を満たしていません。
 ```
 
-### keyofを使ってオブジェクトのキーの共用型を作る
+### keyof を使ってオブジェクトのキーの共用型を作る
 
 第二引数のジェネリクスを第一引数のジェネリクスと関連付けることもできます。
 次の場合は、第一引数のオブジェクトのキーを第二引数の型として定義しています。
@@ -140,7 +141,7 @@ console.log(echo5({ message: "Hello", id: 32 }, "message"));  //{ message: 'Hell
 
 関数定義にジェネリクスが含まれていても、実行時の型指定は必須ではなく、省略していてもパラメータの値から推論されて実行することができます。
 
-以下のように、直接文字列をパラメータとして渡すと、**echo**関数はその文字列リテラル型に型推論され、オブジェクトとしてパラメータを渡すと、**string型**に型推論されていることがわかります。
+以下のように、直接文字列をパラメータとして渡すと、**echo**関数はその文字列リテラル型に型推論され、オブジェクトとしてパラメータを渡すと、**string 型**に型推論されていることがわかります。
 
 ```ts:title=src/05_generics-types.ts
 console.log(echo("Hello")); //Hello
@@ -158,7 +159,7 @@ console.log(echo({ value: "Hello" }));
 
 ## クラスのジェネリクス
 
-クラスの宣言にジェネリクスを使用すると、コンストラクターの引数の型を制約することができます。次の例ではインスタンス生成時に**string型**と**number型**の引数をしていできます。
+クラスの宣言にジェネリクスを使用すると、コンストラクターの引数の型を制約することができます。次の例ではインスタンス生成時に**string 型**と**number 型**の引数をしていできます。
 
 ```ts:title=src/05_generics-types.ts
 class Echo<T extends string | number> {
@@ -194,13 +195,13 @@ console.log({ message: 32 });
 
 ## まとめ
 
-今回はTypeScriptのジェネリクスについて解説を行いました。<br>
+今回は TypeScript のジェネリクスについて解説を行いました。<br>
 
 はじめてジェネリクスという名前を聞くと一見難しそうですが、一個ずつ順を追って理解していけばそんなに難しくないですよね！！
 
 次回は型推論についてまとめていきたいと思います。
 
-TypeScript超入門シリーズの他の記事もご覧いただければうれしいので是非お願いします！！
+TypeScript 超入門シリーズの他の記事もご覧いただければうれしいので是非お願いします！！
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/2020-06-17/start-typescript-01/" data-iframely-url="//cdn.iframe.ly/tmxszMy?iframe=card-small"></a></div></div>
 
@@ -218,9 +219,8 @@ TypeScript超入門シリーズの他の記事もご覧いただければうれ�
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/2020-07-26/start-typescript-08/" data-iframely-url="//cdn.iframe.ly/hyokrE0?iframe=card-small"></a></div></div>
 
-
 <br>
 <br>
 
-最後まで見ていただきありがとうございました！！  
-この記事が良かったと思ったらSHAREしていただけると泣いて喜びます🤣
+最後まで見ていただきありがとうございました！！
+この記事が良かったと思ったら SHARE していただけると泣いて喜びます 🤣

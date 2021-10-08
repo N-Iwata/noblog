@@ -3,16 +3,16 @@ title: 【初心者向け】TypeScript超入門#03 関数編
 date: "2020-06-25"
 description: この記事はTypeScript超入門シリーズの第3回目として、TypeScriptの関数についてまとめて解説していきます！
 slug: 2020-06-25/start-typescript-03
-tags: [TypeScript,TypeScript超入門]
+tags: [TypeScript, TypeScript超入門]
 hero: ./hero.png
 ---
 
-## はじめに 
+## はじめに
 
 おはようございます！こんにちは！こんばんは！<br>
-麻雀と芝生大好きおじさんこと**のふのふ**(@rpf_nob)です！！
+**のふのふ**([@rpf_nob](https://twitter.com/rpf_nob))と申します！！都内のスタートアップでフロントエンドエンジニアとして働いています。
 
-この記事はTypeScript超入門シリーズの第3回目として、TypeScriptの関数についてまとめて解説していきます！
+この記事は TypeScript 超入門シリーズの第 3 回目として、TypeScript の関数についてまとめて解説していきます！
 
 [TypeScript 超入門#01 概要説明~環境構築編](https://rpf-noblog.com/2020-06-17/start-typescript-01)<br>
 [TypeScript 超入門#02 基本的な型編](https://rpf-noblog.com/2020-06-22/start-typescript-02)<br>
@@ -23,16 +23,17 @@ hero: ./hero.png
 [TypeScript 超入門#07 型の互換性編](https://rpf-noblog.com/2020-07-18/start-typescript-07)<br>
 [TypeScript 超入門#08 型安全編](https://rpf-noblog.com/2020-07-26/start-typescript-08)<br>
 
-* 関数の基本的な書き方
-* パラメータ関連
-* オーバーロード
+- 関数の基本的な書き方
+- パラメータ関連
+- オーバーロード
 
-ソースコードは以下GitHubを参照してください。
+ソースコードは以下 GitHub を参照してください。
+
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/N-Iwata/start-typescript" data-iframely-url="//cdn.iframe.ly/mWiO3U9"></a></div></div>
 
 ## 関数の基本的な書き方
 
-基本的にはJavaScriptの関数に引数と戻り値に型を指定してあげるだけです。
+基本的には JavaScript の関数に引数と戻り値に型を指定してあげるだけです。
 
 ### function
 
@@ -64,7 +65,7 @@ const sum2: (a: number, b: number) => number = function (
 console.log(sum2(3, 4));  //→7
 ```
 
-VSCodeだとsum2のところにカーソルを合わすと↓の画像のように推論されるので、これの型の部分を変数につけてあげれば終わりです。
+VSCode だと sum2 のところにカーソルを合わすと ↓ の画像のように推論されるので、これの型の部分を変数につけてあげれば終わりです。
 
 ![画像1](./img1.png)
 
@@ -81,7 +82,7 @@ console.log(sum(5, 6));  //→11
 
 ### 値を返さない関数
 
-前回の**void型**の時に少し解説しましたが、値を返さない関数には**void型**を指定します。
+前回の**void 型**の時に少し解説しましたが、値を返さない関数には**void 型**を指定します。
 
 ```ts:title=src/02_basic-types/033_void-function.ts
 function logger(message: string): void {
@@ -90,7 +91,7 @@ function logger(message: string): void {
 logger("Hello World!");
 ```
 
-また、前回の**never型**の時に少し解説しましたが、エラーを投げるだけの関数など、戻り値を得られない関数には**never型**を指定します。
+また、前回の**never 型**の時に少し解説しましたが、エラーを投げるだけの関数など、戻り値を得られない関数には**never 型**を指定します。
 
 ```ts:title=src/02_basic-types/033_void-function.ts
 function error(message: string): never {
@@ -107,7 +108,7 @@ error("Error!");
 
 指定していない引数は**undefined**になります。
 
-次の場合は**isLog**が**undefined**になるため、if文ではじかれてコンソールに表示されません。
+次の場合は**isLog**が**undefined**になるため、if 文ではじかれてコンソールに表示されません。
 
 ```ts:title=src/03_function-types/034_optional-paramete/.ts
 const sum = (a: number, b: number, isLog?: boolean): number => {
@@ -123,7 +124,7 @@ sum(7, 8);       　//→何も表示されない
 
 ### デフォルトパラメータ
 
-基本的にはJavaScriptと同じ書き方です。
+基本的には JavaScript と同じ書き方です。
 
 引数を指定しない場合のデフォルトの値を関数宣言時に記載すれば、引数を指定しない場合のその値を使用して結果を返します。
 
@@ -137,11 +138,11 @@ console.log(sum(500, 500, 1.05));  //→1050
 console.log(sum(500, 500));  //→1100
 ```
 
-### Restパラメータ
+### Rest パラメータ
 
 [Rest]パラメータを引数にする場合は、配列で型付けしてあげます。
 
-次の場合は引数を1~10までRestパラメータで受け取って、合計値を[reduce]を使用して求めています。
+次の場合は引数を 1~10 まで Rest パラメータで受け取って、合計値を[reduce]を使用して求めています。
 
 ```ts:title=src/03_function-types/036_rest-parameter.ts
 const sum = (...values: number[]): number => {
@@ -157,15 +158,15 @@ console.log(sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));　//→55
 
 ## オーバーロード
 
-c++やJavaなど他の静的型付け言語にもある関数のオーバーロードの機能はTypeScriptにもあります。
+c++や Java など他の静的型付け言語にもある関数のオーバーロードの機能は TypeScript にもあります。
 
 先に関数の型だけを宣言してあげて、実態のところは全てを満たす型を指定してあげます。
 
 次の例は以下のような関数になります。
 
-* number型の引数を1つとる場合は、2倍して数値を返す
-* number型の引数を2つとる場合は、乗算して数値を返す
-* string型の引数を1つとる場合は、2つを連結して文字列を返す
+- number 型の引数を 1 つとる場合は、2 倍して数値を返す
+- number 型の引数を 2 つとる場合は、乗算して数値を返す
+- string 型の引数を 1 つとる場合は、2 つを連結して文字列を返す
 
 ```ts:title=src/03_function-types/037_overload.ts
 function sum(a: number): number;
@@ -193,9 +194,9 @@ console.log(sum(false));  // この呼び出しに一致するオーバーロー
 
 以下のようにアロー関数で書いた場合は以下のようにエラーになります。
 
-* 型 '(a: number | string, b?: number | undefined) => number | string' を型 'Type' に割り当てることはできません。
-* 型 'string | number' を型 'number' に割り当てることはできません。
-* 型 'string' を型 'number' に割り当てることはできません。
+- 型 '(a: number | string, b?: number | undefined) => number | string' を型 'Type' に割り当てることはできません。
+- 型 'string | number' を型 'number' に割り当てることはできません。
+- 型 'string' を型 'number' に割り当てることはできません。
 
 ```ts:title=src/03_function-types/037_overload.ts
 type Type = {
@@ -223,19 +224,19 @@ console.log(sum2("Hey",3));
 console.log(sum(false));
 ```
 
-VSCodeで関数をホバーした時に関数宣言文だと**function sum(a: number): number (+2 overloads)**のようにオーバーロードと明記されますが、関数式だとオーバーロードと明記されません。
+VSCode で関数をホバーした時に関数宣言文だと**function sum(a: number): number (+2 overloads)**のようにオーバーロードと明記されますが、関数式だとオーバーロードと明記されません。
 
 ## まとめ
 
-今回はTypeScriptの関数について解説を行いました。<br>
+今回は TypeScript の関数について解説を行いました。<br>
 
-関数についてもJavaScriptとそんなに変わらないので、すぐ覚えられそうですね。
+関数についても JavaScript とそんなに変わらないので、すぐ覚えられそうですね。
 
 次回はクラスについてまとめていきたいと思います。
 
 最後まで見ていただきありがとうございました！！
 
-TypeScript超入門シリーズの他の記事もご覧いただければうれしいので是非お願いします！！
+TypeScript 超入門シリーズの他の記事もご覧いただければうれしいので是非お願いします！！
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/2020-06-17/start-typescript-01/" data-iframely-url="//cdn.iframe.ly/tmxszMy?iframe=card-small"></a></div></div>
 

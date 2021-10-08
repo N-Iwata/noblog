@@ -10,9 +10,9 @@ hero: ./hero.png
 ## はじめに
 
 おはようございます！こんにちは！こんばんは！<br>
-麻雀と芝生大好きおじさんこと**のふのふ**([@rpf_nob](https://twitter.com/rpf_nob))です！！
+**のふのふ**([@rpf_nob](https://twitter.com/rpf_nob))と申します！！都内のスタートアップでフロントエンドエンジニアとして働いています。
 
-この記事はTypeScript超入門シリーズの第8回目として、TypeScriptの型安全についてまとめて解説していきます！
+この記事は TypeScript 超入門シリーズの第 8 回目として、TypeScript の型安全についてまとめて解説していきます！
 
 [TypeScript 超入門#01 概要説明~環境構築編](https://rpf-noblog.com/2020-06-17/start-typescript-01)<br>
 [TypeScript 超入門#02 基本的な型編](https://rpf-noblog.com/2020-06-22/start-typescript-02)<br>
@@ -26,25 +26,26 @@ hero: ./hero.png
 - 型安全について
 - 関数のオプショナルパラメータ
 - 関数のデフォルトパラメータ
-- 関数にNullable型のパラメータを使う
-- readonlyで読み込み専用にする
+- 関数に Nullable 型のパラメータを使う
+- readonly で読み込み専用にする
 - オブジェクトにリテラル型をつける
 - オブジェクトに動的に値を追加する
 - typeof タイプガード
 - in タイプガード
 - instanceof タイプガード
-- タグ付きUnion Types
+- タグ付き Union Types
 
-ソースコードは以下GitHubを参照してください。
+ソースコードは以下 GitHub を参照してください。
+
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/N-Iwata/start-typescript" data-iframely-url="//cdn.iframe.ly/mWiO3U9"></a></div></div>
 
 ## 型安全について
 
-TypeScriptは、制約をつけたり絞り込んだりすることにより、型安全を実現しバグを減らすことを目的としています。この安全性はJavaScriptでも必要なことですが、TypeSctiptを使いこなすことで型の安全性が実現するので、解説していきます。
+TypeScript は、制約をつけたり絞り込んだりすることにより、型安全を実現しバグを減らすことを目的としています。この安全性は JavaScript でも必要なことですが、TypeSctipt を使いこなすことで型の安全性が実現するので、解説していきます。
 
 ## 関数のオプショナルパラメータ
 
-まず次のように、パラメータを2つ受け取り文字列を返す関数に1つしかパラメーターを渡さなければ、エラーになります。
+まず次のように、パラメータを 2 つ受け取り文字列を返す関数に 1 つしかパラメーターを渡さなければ、エラーになります。
 
 ```ts:title=src/08_type-safety.ts
 function introduce(age: number, name: string) {
@@ -64,22 +65,22 @@ console.log(introduce(20, "Taro")); //私はTaroです。20歳です。
 console.log(introduce(20)); //私はundefinedです。20歳です。
 ```
 
-しかし、オプショナルパラメータにすることによってnameにundefined型も付与されていることがわかります。そのため、引数を渡さないとundefinedとなります。
+しかし、オプショナルパラメータにすることによって name に undefined 型も付与されていることがわかります。そのため、引数を渡さないと undefined となります。
 
 ```ts
-function introduce(age: number, name?: string | undefined): string
+function introduce(age: number, name?: string | undefined): string;
 ```
 
-また、以下のように**toUpperCase**を使用すると、undifined型である可能性があるため、エラーになります。
+また、以下のように**toUpperCase**を使用すると、undifined 型である可能性があるため、エラーになります。
 
 ```ts:title=src/08_type-safety.ts
 function introduce(age: number, name?: string) {
-  return `私は${name.toUpperCase()}です。${age}歳です。`; 
+  return `私は${name.toUpperCase()}です。${age}歳です。`;
   //NG→オブジェクト'undefined' である可能性があります。
 }
 ```
 
-ですので、次のようにnameがあるかないかの分岐をつけてやることで、toUpperCaseが使用することができます。
+ですので、次のように name があるかないかの分岐をつけてやることで、toUpperCase が使用することができます。
 
 ```ts:title=src/08_type-safety.ts
 function introduce(age: number, name?: string) {
@@ -105,23 +106,23 @@ console.log(introduce("Taro", 20)); //私はTaroです。20歳です。
 console.log(introduce("Taro")); //私はTaroです。10歳です。
 ```
 
-この時のintroduceの型推論を見ると次のようになっており、デフォルトパラメータの値から、引数の型推論がされており、ここではnumber型が推論されていることになります。
+この時の introduce の型推論を見ると次のようになっており、デフォルトパラメータの値から、引数の型推論がされており、ここでは number 型が推論されていることになります。
 
 ```ts
-function introduce(name: string, age?: number): string
+function introduce(name: string, age?: number): string;
 ```
 
-なので、次のようにstring型の値["20"]を渡すとエラーになります。
+なので、次のように string 型の値["20"]を渡すとエラーになります。
 
 ```ts:title=src/08_type-safety.ts
 console.log(introduce("Taro", "20")); //NG
 ```
 
-## 関数にNullable型のパラメータを使う
+## 関数に Nullable 型のパラメータを使う
 
-関数に引数を渡す時に、まだAPIからデータが取得できていなくて、nullを許容したい場合があります。この時にNullable型を使用します。
+関数に引数を渡す時に、まだ API からデータが取得できていなくて、null を許容したい場合があります。この時に Nullable 型を使用します。
 
-次の場合はnullを許容していないため、nullを引数に渡すとエラーになります。
+次の場合は null を許容していないため、null を引数に渡すとエラーになります。
 
 ```ts:title=src/08_type-safety.ts
 function getAge(age: number) {
@@ -131,7 +132,7 @@ console.log(getAge(20)); //20歳です
 console.log(getAge(null));  //NG
 ```
 
-ですので、**number | null** にようにnullを含めた共用型にすることでエラーを回避しています。number型のメソッドを使いたい場合も、型を絞り込むことによって安全に使用できます。
+ですので、**number | null** にように null を含めた共用型にすることでエラーを回避しています。number 型のメソッドを使いたい場合も、型を絞り込むことによって安全に使用できます。
 
 ```ts:title=src/08_type-safety.ts
 function getAge(age: number | null) {
@@ -145,11 +146,11 @@ console.log(getAge(20)); //20歳です
 console.log(getAge(null)); //年齢がわかりません
 ```
 
-## readonlyで読み込み専用にする
+## readonly で読み込み専用にする
 
 オブジェクトやクラスのメンバなどに**readonly**をつけることによって、読み込み専用のプロパティにして、安全性を高めることができます。
 
-次の例ではnameにreadonlyをつけることで、nameの書き換えを禁止しています。
+次の例では name に readonly をつけることで、name の書き換えを禁止しています。
 
 ```ts:title=src/08_type-safety.ts
 type Profile = {
@@ -166,7 +167,7 @@ taro.name = "Jiro"; //NG
 taro.age = 30; //OK
 ```
 
-また、**Readonly型**を使用することで、一括で読み込み専用にできます。
+また、**Readonly 型**を使用することで、一括で読み込み専用にできます。
 
 ```ts:title=src/08_type-safety.ts
 type Profile = {
@@ -200,11 +201,12 @@ const taro = {
   age: 20,
 };
 ```
+
 ```ts
 const taro: {
   name: string;
   age: number;
-}
+};
 ```
 
 これをリテラル型にして安全性を高めるには以下のようにします。
@@ -227,7 +229,7 @@ const taro = {
 const taro: {
   name: "Taro";
   age: 20;
-}
+};
 ```
 
 ちなみに次のようにオブジェクトの最後に[as const]をつけると、**readonly**が付与されます。
@@ -238,6 +240,7 @@ const taro = {
   age: 20,
 } as const;
 ```
+
 ```ts
 const taro: {
   readonly name: "Taro";
@@ -247,7 +250,7 @@ const taro: {
 
 ## オブジェクトに動的に値を追加する
 
-TypeScriptでは次のようなProfile型の変数に、定義されていないプロパティに代入をするとエラーになります。
+TypeScript では次のような Profile 型の変数に、定義されていないプロパティに代入をするとエラーになります。
 
 ```ts:title=src/08_type-safety.ts
 type Profile = {
@@ -259,10 +262,10 @@ const taro: Profile = {
 };
 ```
 
-JavaScriptと同じように、TypeScriptでも動的にオブジェクトのプロパティを追加することが可能です。
+JavaScript と同じように、TypeScript でも動的にオブジェクトのプロパティを追加することが可能です。
 
 インデックスシグネチャというものを使うことで可能になります。<br>
-次の例ではstring型のプロパティのみ追加できるので、number型を追加するとエラーになります。
+次の例では string 型のプロパティのみ追加できるので、number 型を追加するとエラーになります。
 
 **[index: string]: string;**の部分がインデックスシグネチャといいます。
 
@@ -278,7 +281,7 @@ const taro: Profile = {
 };
 ```
 
-しかし、次の場合は固定のnameの型とインデックスシグネチャの型が一致していないためエラーになります。
+しかし、次の場合は固定の name の型とインデックスシグネチャの型が一致していないためエラーになります。
 
 ```ts:title=src/08_type-safety.ts
 type Profile = {
@@ -300,7 +303,7 @@ const taro: Profile = {
 };
 ```
 
-この場合はnameは明示的にstring型になりますが、追加したプロパティは共用型になります。
+この場合は name は明示的に string 型になりますが、追加したプロパティは共用型になります。
 
 ```ts:title=src/08_type-safety.ts
 const a = taro.age;
@@ -309,9 +312,9 @@ const a = taro.age;
 
 ### プロパティの型を制限
 
-次の例では、プロパティ[work]に文字列リテラル型のWork型のみを含むことができます。
+次の例では、プロパティ[work]に文字列リテラル型の Work 型のみを含むことができます。
 
-undefinedを含めている理由は、存在しない可能性があるプロパティの参照もWork型として推論されてしまうからです。
+undefined を含めている理由は、存在しない可能性があるプロパティの参照も Work 型として推論されてしまうからです。
 
 ```ts:title=src/08_type-safety.ts
 type Work = "engineer" | "desighner" | "director" | undefined;
@@ -334,7 +337,7 @@ console.log(y); //undefined
 
 ### プロパティ自体の名称を制限
 
-次の例では、**[index in Kind]?**とすることで、Kind型で定義していない[test]を作成するとエラーになります。inキーワードを使う場合、オプショナルの?を使用することができるためundefinedの付与は不要となります。
+次の例では、**[index in Kind]?**とすることで、Kind 型で定義していない[test]を作成するとエラーになります。in キーワードを使う場合、オプショナルの?を使用することができるため undefined の付与は不要となります。
 
 ```ts:title=src/08_type-safety.ts
 type Work = "engineer" | "desighner" | "director";
@@ -361,7 +364,7 @@ console.log(y);
 
 ## typeof タイプガード
 
-次の例では、typeofを使うことで、その条件分岐内では型が絞り込まれているので、安全に算術できます。
+次の例では、typeof を使うことで、その条件分岐内では型が絞り込まれているので、安全に算術できます。
 
 ```ts:title=src/08_type-safety.ts
 function sum(a: number | string) {
@@ -381,9 +384,9 @@ console.log(sum(false)); //NG
 
 ## in タイプガード
 
-次の例では、2つのinterfaceからなる型を引数に受け取る関数内で、in演算子を使うことで型を絞りこんでいます。
+次の例では、2 つの interface からなる型を引数に受け取る関数内で、in 演算子を使うことで型を絞りこんでいます。
 
-nameは両方のinterfaceに含まれるため、どこからでもアクセスできますが、aveとeraはin演算子で絞り込んだ条件分岐内でしかアクセスができません。
+name は両方の interface に含まれるため、どこからでもアクセスできますが、ave と era は in 演算子で絞り込んだ条件分岐内でしかアクセスができません。
 
 ```ts:title=src/08_type-safety.ts
 interface Batter {
@@ -397,8 +400,8 @@ interface Pitcher {
 type TwoWay = Batter | Pitcher;
 
 function taroProfile(twoWay: TwoWay) {
-  console.log(twoWay.name);  
-  console.log(twoWay.ave);  
+  console.log(twoWay.name);
+  console.log(twoWay.ave);
   // プロパティ 'ave' は型 'TwoWay' に存在しません。
   // プロパティ 'ave' は型 'Pitcher' に存在しません。
 
@@ -416,7 +419,7 @@ taroProfile({ name: "taro", ave: 0.33, era: 2.15 });
 
 ## instanceof タイプガード
 
-instanceofを使うことでクラスのインスタンスに関しても絞り込みを行うことができます。
+instanceof を使うことでクラスのインスタンスに関しても絞り込みを行うことができます。
 
 ```ts:title=src/08_type-safety.ts
 class Batter {
@@ -432,10 +435,10 @@ class Pitcher {
 type TwoWay = Batter | Pitcher;
 
 function twoWay(value: TwoWay) {
-  value.batting(); 
+  value.batting();
   // プロパティ 'batting' は型 'TwoWay' に存在しません。
   // プロパティ 'batting' は型 'Pitcher' に存在しません。
-  
+
   if (value instanceof Batter) {
     value.batting();
     value.pitching(); //プロパティ 'pitching' は型 'Batter' に存在しません。
@@ -449,9 +452,9 @@ twoWay(new Batter());
 twoWay(new Pitcher());
 ```
 
-## タグ付きUnion Types
+## タグ付き Union Types
 
-次の例のように、全てにnameプロパティを持ち、型がリテラル型の場合には条件分岐で絞り込みが可能です。
+次の例のように、全てに name プロパティを持ち、型がリテラル型の場合には条件分岐で絞り込みが可能です。
 
 ```ts:title=src/08_type-safety.ts
 class Batter {
@@ -484,14 +487,13 @@ twoWay(new Batter());
 twoWay(new Pitcher());
 ```
 
-
 ## まとめ
 
-今回はTypeScriptの型安全について解説を行いました。<br>
+今回は TypeScript の型安全について解説を行いました。<br>
 
-結局はTypeScriptはバグを少なくするためなので、しっかりTypeScriptを理解して安全にコードを書きたいですね。
+結局は TypeScript はバグを少なくするためなので、しっかり TypeScript を理解して安全にコードを書きたいですね。
 
-TypeScript超入門シリーズの他の記事もご覧いただければうれしいので是非お願いします！！
+TypeScript 超入門シリーズの他の記事もご覧いただければうれしいので是非お願いします！！
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/2020-06-17/start-typescript-01/" data-iframely-url="//cdn.iframe.ly/tmxszMy?iframe=card-small"></a></div></div>
 
@@ -512,5 +514,5 @@ TypeScript超入門シリーズの他の記事もご覧いただければうれ�
 <br>
 <br>
 
-最後まで見ていただきありがとうございました！！  
-この記事が良かったと思ったらSHAREしていただけると泣いて喜びます🤣
+最後まで見ていただきありがとうございました！！
+この記事が良かったと思ったら SHARE していただけると泣いて喜びます 🤣

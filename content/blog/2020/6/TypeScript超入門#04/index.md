@@ -3,16 +3,16 @@ title: 【初心者向け】TypeScript超入門#04 クラス編
 date: "2020-06-28"
 description: この記事はTypeScript超入門シリーズの第4回目として、TypeScriptのクラスについてまとめて解説していきます！
 slug: 2020-06-28/start-typescript-04
-tags: [TypeScript,TypeScript超入門]
+tags: [TypeScript, TypeScript超入門]
 hero: ./hero.png
 ---
 
-## はじめに 
+## はじめに
 
 おはようございます！こんにちは！こんばんは！<br>
-麻雀と芝生大好きおじさんこと**のふのふ**(@rpf_nob)です！！
+**のふのふ**([@rpf_nob](https://twitter.com/rpf_nob))と申します！！都内のスタートアップでフロントエンドエンジニアとして働いています。
 
-この記事はTypeScript超入門シリーズの第4回目として、TypeScriptのクラスについてまとめて解説していきます！
+この記事は TypeScript 超入門シリーズの第 4 回目として、TypeScript のクラスについてまとめて解説していきます！
 
 [TypeScript 超入門#01 概要説明~環境構築編](https://rpf-noblog.com/2020-06-17/start-typescript-01)<br>
 [TypeScript 超入門#02 基本的な型編](https://rpf-noblog.com/2020-06-22/start-typescript-02)<br>
@@ -23,21 +23,22 @@ hero: ./hero.png
 [TypeScript 超入門#07 型の互換性編](https://rpf-noblog.com/2020-07-18/start-typescript-07)<br>
 [TypeScript 超入門#08 型安全編](https://rpf-noblog.com/2020-07-26/start-typescript-08)<br>
 
-* 基本的なクラスの書き方
-* クラスメンバー修飾子（アクセシビリティ）
-* getterとsetter
-* static(静的メンバ)
-* 継承
-* 抽象クラス
+- 基本的なクラスの書き方
+- クラスメンバー修飾子（アクセシビリティ）
+- getter と setter
+- static(静的メンバ)
+- 継承
+- 抽象クラス
 
-ソースコードは以下GitHubを参照してください。
+ソースコードは以下 GitHub を参照してください。
+
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/N-Iwata/start-typescript" data-iframely-url="//cdn.iframe.ly/mWiO3U9"></a></div></div>
 
 ## 基本的なクラスの書き方
 
-基本的にはJavaScriptのクラスにコンストラクタで受け取る引数とメンバー変数やメソッドの戻り値に型を指定してあげるだけです。
+基本的には JavaScript のクラスにコンストラクタで受け取る引数とメンバー変数やメソッドの戻り値に型を指定してあげるだけです。
 
-コンストラクタはメソッドですが、戻り値の型を指定する必要はありません。TypeScriptの言語仕様です。
+コンストラクタはメソッドですが、戻り値の型を指定する必要はありません。TypeScript の言語仕様です。
 
 ```ts:title=src/04_class-types.ts
 class Person {
@@ -82,13 +83,13 @@ console.log(tanaka.introduce()); // →私の名前は田中次郎です。年�
 
 基本的には他の言語と同じように**public・private・protected**修飾子を付与することができます。
 
-* public→どこからでも参照・実行が可能
-* private→同一クラス内のみ参照・実行が可能
-* protected→継承されたサブクラス内でも参照・実行が可能
+- public→ どこからでも参照・実行が可能
+- private→ 同一クラス内のみ参照・実行が可能
+- protected→ 継承されたサブクラス内でも参照・実行が可能
 
-次の場合は**age**に**private**を付与しているので、**age**には**Person1クラス**からしか直接アクセスはできません。継承している**Person2クラス**からもアクセスできません。
+次の場合は**age**に**private**を付与しているので、**age**には**Person1 クラス**からしか直接アクセスはできません。継承している**Person2 クラス**からもアクセスできません。
 
-**gender**には**protected**を付与しているので、継承している**Person2クラス**からもアクセスできます。
+**gender**には**protected**を付与しているので、継承している**Person2 クラス**からもアクセスできます。
 
 修飾子を付与しない場合は**public**と同じになります。基本的には**public**は書かないのが普通のようです。
 
@@ -114,7 +115,7 @@ class Person2 extends Person1 {
   }
 
   introduce(): string {
-    return `私の名前は${this.name}です。${this.age}歳の${this.gender}です。`;  
+    return `私の名前は${this.name}です。${this.age}歳の${this.gender}です。`;
     //→NG 親クラス(Person1)のageがprivateなので[age]にアクセスできない
   }
 }
@@ -131,13 +132,13 @@ console.log(suzuki.gender); //→NG(genderはprotectedなのでアクセスで�
 console.log(suzuki.introduce());  //→NG(ageがprivateなのでメソッド自体がエラー)
 ```
 
-## getterとsetter
+## getter と setter
 
-オブジェクト指向プログラミングの定石である**getterとsetter**はTypeScriptにもあります。getterとsetterについては他の言語でもいろいろと賛否があるみたいですが、言語仕様としてあるので理解はしておいたほうがいいです。
+オブジェクト指向プログラミングの定石である**getter と setter**は TypeScript にもあります。getter と setter については他の言語でもいろいろと賛否があるみたいですが、言語仕様としてあるので理解はしておいたほうがいいです。
 
-getterとsetterの必要性を知りたい方は[オブジェクト指向プログラムでgetter/setterメソッドを使わなければならない10の理由](http://fukumori.org/oo/why_use_getters_and_setters_j.html)が参考になると思います。
+getter と setter の必要性を知りたい方は[オブジェクト指向プログラムで getter/setter メソッドを使わなければならない 10 の理由](http://fukumori.org/oo/why_use_getters_and_setters_j.html)が参考になると思います。
 
-とりあえず簡単に言うと、getterとsetterを使うことによって、アクセス制御ができるようにして、どこでメンバ変数の参照や書き換えをしているかをコード中で見やすくするようなことです。
+とりあえず簡単に言うと、getter と setter を使うことによって、アクセス制御ができるようにして、どこでメンバ変数の参照や書き換えをしているかをコード中で見やすくするようなことです。
 
 それでは簡単な例を見てみましょう。
 
@@ -169,8 +170,8 @@ yamada.age = 30;  //→OK
 
 この場合、以下のようなアクセス制御になっています。
 
-* メンバ変数の[_name]には直接参照できないが、[getter]を通して[_name]にアクセスしている。
-* メンバ変数の[_age]は直接書き換えできないが、[setter]を通して[_age]を書き換えている。
+- メンバ変数の[_name]には直接参照できないが、[getter]を通して[_name]にアクセスしている。
+- メンバ変数の[_age]は直接書き換えできないが、[setter]を通して[_age]を書き換えている。
 
 このように、直接外部からアクセスできないようにして、[getter]や[setter]を介すことによって、アクセスの追跡をしやすくできます。
 
@@ -201,11 +202,11 @@ console.log(Person.introduce()); //→私の名前は山田太郎です。18歳�
 
 ## 継承
 
-クラスの継承に関しては基本的にはJavaScriptと同じになります。
-子クラス内のconstructerで**super**メソッドを呼んであげれば、親クラスのメンバ変数を初期化できます。
+クラスの継承に関しては基本的には JavaScript と同じになります。
+子クラス内の constructer で**super**メソッドを呼んであげれば、親クラスのメンバ変数を初期化できます。
 
 また、親クラスのメソッドを子クラスでも使用できます。<br>
-次の例ではDogクラス(子クラス)でAnimalクラス(親クラス)の**cry**メソッドを**super.cry()**で実行しています。
+次の例では Dog クラス(子クラス)で Animal クラス(親クラス)の**cry**メソッドを**super.cry()**で実行しています。
 
 ```ts:title=src/04_class-types/044_Inheritance.ts
 class Animal {
@@ -248,8 +249,8 @@ class Dog extends Animal {
 }
 ```
 
->非抽象クラス 'Dog' はクラス 'Animal' からの継承抽象メンバー 'cry' を実装しません。ts(2515)<br>
-非抽象クラス 'Dog' はクラス 'Animal' からの継承抽象メンバー 'name' を実装しません。ts(2515)
+> 非抽象クラス 'Dog' はクラス 'Animal' からの継承抽象メンバー 'cry' を実装しません。ts(2515)<br>
+> 非抽象クラス 'Dog' はクラス 'Animal' からの継承抽象メンバー 'name' を実装しません。ts(2515)
 
 なので、次のように実装してあげます。
 
@@ -287,16 +288,15 @@ otani.pitching(); //→ピッチング！
 
 上の例で**TwoWay**クラス内に**batting**メソッドを書き忘れていた場合には以下のようにエラーがでます。
 
->クラス 'TwoWay' はインターフェイス 'Batter' を正しく実装していません。<br>プロパティ 'batting' は型 'TwoWay' にありませんが、型'Batter' では必須です。ts(2420)
+> クラス 'TwoWay' はインターフェイス 'Batter' を正しく実装していません。<br>プロパティ 'batting' は型 'TwoWay' にありませんが、型'Batter' では必須です。ts(2420)
 
-こういうエラーが実装中に出るのが、TypeScriptのメリットですね！
-
+こういうエラーが実装中に出るのが、TypeScript のメリットですね！
 
 ## まとめ
 
-今回はTypeScriptのクラスについて解説を行いました。<br>
+今回は TypeScript のクラスについて解説を行いました。<br>
 
-クラスについてはJavaScriptにはない概念があったりするので、少し難しいですが、実際にコードを書いてみるとエラーが出るタイミングとか理由が何となく理解できると思います！！
+クラスについては JavaScript にはない概念があったりするので、少し難しいですが、実際にコードを書いてみるとエラーが出るタイミングとか理由が何となく理解できると思います！！
 
 クラスはオブジェクト指向プログラミングの柱みたいなものなので、しっかり理解したいですね！！
 
@@ -304,7 +304,7 @@ otani.pitching(); //→ピッチング！
 
 最後まで見ていただきありがとうございました！！
 
-TypeScript超入門シリーズの他の記事もご覧いただければうれしいので是非お願いします！！
+TypeScript 超入門シリーズの他の記事もご覧いただければうれしいので是非お願いします！！
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/2020-06-17/start-typescript-01/" data-iframely-url="//cdn.iframe.ly/tmxszMy?iframe=card-small"></a></div></div>
 

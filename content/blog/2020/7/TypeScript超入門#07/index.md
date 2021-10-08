@@ -10,9 +10,9 @@ hero: ./hero.png
 ## はじめに
 
 おはようございます！こんにちは！こんばんは！<br>
-麻雀と芝生大好きおじさんこと**のふのふ**([@rpf_nob](https://twitter.com/rpf_nob))です！！
+**のふのふ**([@rpf_nob](https://twitter.com/rpf_nob))と申します！！都内のスタートアップでフロントエンドエンジニアとして働いています。
 
-この記事はTypeScript超入門シリーズの第7回目として、TypeScriptの型の互換性についてまとめて解説していきます！
+この記事は TypeScript 超入門シリーズの第 7 回目として、TypeScript の型の互換性についてまとめて解説していきます！
 
 [TypeScript 超入門#01 概要説明~環境構築編](https://rpf-noblog.com/2020-06-17/start-typescript-01)<br>
 [TypeScript 超入門#02 基本的な型編](https://rpf-noblog.com/2020-06-22/start-typescript-02)<br>
@@ -24,14 +24,15 @@ hero: ./hero.png
 [TypeScript 超入門#08 型安全編](https://rpf-noblog.com/2020-07-26/start-typescript-08)<br>
 
 - 型の互換性とは
-- any型とプリミティブ型
-- プリミティブ型←プリミティブ型
+- any 型とプリミティブ型
+- プリミティブ型 ← プリミティブ型
 - プリミティブ型とプリミティブリテラル型
-- enum型とnumber型
-- 関数←関数
-- クラス←クラス
+- enum 型と number 型
+- 関数 ← 関数
+- クラス ← クラス
 
-ソースコードは以下GitHubを参照してください。
+ソースコードは以下 GitHub を参照してください。
+
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/N-Iwata/start-typescript" data-iframely-url="//cdn.iframe.ly/mWiO3U9"></a></div></div>
 
 ## 型の互換性とは
@@ -42,13 +43,13 @@ hero: ./hero.png
 
 基本的なものから解説していきます。
 
-## any型とプリミティブ型
+## any 型とプリミティブ型
 
-### any型←プリミティブ型
+### any 型 ← プリミティブ型
 
-まずany型の変数にプリミティブ型の変数を代入する場合ですが、以下の通り全て問題ないです。any型が絡んだ場合はJavaScriptの概念に戻るようなイメージです。
+まず any 型の変数にプリミティブ型の変数を代入する場合ですが、以下の通り全て問題ないです。any 型が絡んだ場合は JavaScript の概念に戻るようなイメージです。
 
-それぞれの型の変数を代入した後に**typeof**で型を確認すると、any型からそれぞれの型に変化していきます。
+それぞれの型の変数を代入した後に**typeof**で型を確認すると、any 型からそれぞれの型に変化していきます。
 
 ```ts:title=src/07_type-compatibility.ts
 let targetAny: any;
@@ -63,11 +64,11 @@ targetAny = sourceBoolean; //OK
 console.log(typeof targetAny); //boolean
 ```
 
-### プリミティブ型←any型
+### プリミティブ型 ←any 型
 
-次のプリミティブ型の変数にany型の変数を代入する場合も同じように、any型が絡むので、全て問題ありません。
+次のプリミティブ型の変数に any 型の変数を代入する場合も同じように、any 型が絡むので、全て問題ありません。
 
-最初にany型に文字列を入れて、それぞれの型の変数を代入した後に**typeof**で型を確認すると、any型からstring型に変化していきます。
+最初に any 型に文字列を入れて、それぞれの型の変数を代入した後に**typeof**で型を確認すると、any 型から string 型に変化していきます。
 
 ```ts:title=src/07_type-compatibility.ts
 let targetString: string;
@@ -83,7 +84,7 @@ targetBoolean = sourceAny; //OK
 console.log(typeof targetBoolean); //string
 ```
 
-## プリミティブ型←プリミティブ型
+## プリミティブ型 ← プリミティブ型
 
 次にプリミティブ型の変数にプリミティブ型の変数を代入する場合ですが、こちらは当たり前ですが、同じ型であれば代入できます。
 
@@ -100,8 +101,10 @@ targetNumber = sourceNumber; //OK
 targetBoolean = sourceBoolean; //OK
 targetString = sourceNumber; //NG
 ```
+
 ## プリミティブ型とプリミティブリテラル型
-### プリミティブ型←プリミティブリテラル型
+
+### プリミティブ型 ← プリミティブリテラル型
 
 次にプリミティブ型の変数にプリミティブリテラル型の変数を代入する場合ですが、リテラル型はそれぞれのプリミティブ型の派生型であるため互換性があります。
 
@@ -118,9 +121,9 @@ targetNumber = sourceNumberLiteral; //OK
 targetBoolean = sourceBooleanLiteral; //OK
 ```
 
-### プリミティブリテラル型←プリミティブ型
+### プリミティブリテラル型 ← プリミティブ型
 
-次にプリミティブリテラル型の変数にプリミティブ型の変数を代入する場合ですが、こちらは完全にNGとなります。詳細な型（リテラル型）に抽象的な型（プリミティブ型）を代入するのは構造的部分型の概念からもNGです。
+次にプリミティブリテラル型の変数にプリミティブ型の変数を代入する場合ですが、こちらは完全に NG となります。詳細な型（リテラル型）に抽象的な型（プリミティブ型）を代入するのは構造的部分型の概念からも NG です。
 
 ```ts:title=src/07_type-compatibility.ts
 let targetStringLiteral: "Jiro" = "Jiro";
@@ -135,11 +138,11 @@ targetNumberLiteral = sourceNumber; //NG
 targetBooleanLiteral = sourceBoolean; //NG
 ```
 
-## enum型とnumber型
+## enum 型と number 型
 
-### enum型←number型
+### enum 型 ←number 型
 
-次にenum型の変数にnumber型の変数を代入する場合ですが、こちらは互換性があるため代入可能です。
+次に enum 型の変数に number 型の変数を代入する場合ですが、こちらは互換性があるため代入可能です。
 
 ```ts:title=src/07_type-compatibility.ts
 enum Color {
@@ -153,16 +156,16 @@ let sourceNumber: number = 0;
 tagetEnum = sourceNumber; //OK
 ```
 
-以下のように代入する値が、enum型で定義している範囲を超えていても問題ありません。
+以下のように代入する値が、enum 型で定義している範囲を超えていても問題ありません。
 
 ```ts:title=src/07_type-compatibility.ts
 sourceNumber = 100;
 tagetEnum = sourceNumber; //OK
 ```
 
-### number型←enum型
+### number 型 ←enum 型
 
-次にnumber型の変数にenum型の変数を代入する場合ですが、こちらも互換性があるため代入可能です。
+次に number 型の変数に enum 型の変数を代入する場合ですが、こちらも互換性があるため代入可能です。
 
 ```ts:title=src/07_type-compatibility.ts
 enum Color {
@@ -175,9 +178,9 @@ let sourceEnum = Color.RED;
 tagetNumber = sourceEnum; //OK
 ```
 
-### enum型←enum型
+### enum 型 ←enum 型
 
-次にenum型の変数にenum型の変数を代入する場合ですが、こちらは互換性がないため代入不可能でNGとなります。
+次に enum 型の変数に enum 型の変数を代入する場合ですが、こちらは互換性がないため代入不可能で NG となります。
 
 ```ts:title=src/07_type-compatibility.ts
 enum Color {
@@ -196,7 +199,7 @@ let sourceEnum = Size.MEDIUM;
 targetEnum = sourceEnum;  //NG
 ```
 
-## 関数←関数
+## 関数 ← 関数
 
 ### 引数が一つの場合
 
@@ -216,7 +219,7 @@ targetFunction1 = sourceFunction1; //OK
 
 引数が複数の場合は一つの場合と少し変わります。
 
-以下の例では**targetFunction2**は**sourceFunction2**の引数を部分的に満たしているため代入が可能ですが、**targetFunction3**は**sourceFunction3**の引数を満たしていないため代入が不可能なためNGとなります。
+以下の例では**targetFunction2**は**sourceFunction2**の引数を部分的に満たしているため代入が可能ですが、**targetFunction3**は**sourceFunction3**の引数を満たしていないため代入が不可能なため NG となります。
 
 ```ts:title=src/07_type-compatibility.ts
 let targetFunction2 = function (a: string, b: string) {};
@@ -228,7 +231,7 @@ let sourceFunction3 = function (a: string, b: string) {};
 targetFunction3 = sourceFunction3;  //NG
 ```
 
-## クラス←クラス
+## クラス ← クラス
 
 クラス同士の互換性のチェックはインスタンスメンバのみ（変数やメソッド）が比較対象となります。静的メンバやコンストラクターは比較対象となりません。
 
@@ -252,7 +255,7 @@ targetClass1 = sourceClass1; //OK
 
 インスタンスのメンバが異なる場合は構造的部分型の概念に基づいて、互換性を決定しています。
 
-**Animal2クラス**に**age**がないため互換性がないためtargetClass2にsourceClass2を代入するとエラーとなります。
+**Animal2 クラス**に**age**がないため互換性がないため targetClass2 に sourceClass2 を代入するとエラーとなります。
 
 ```ts:title=src/07_type-compatibility.ts
 class Person2 {
@@ -267,7 +270,7 @@ let sourceClass2 = new Animal2();
 targetClass2 = sourceClass2; //NG
 ```
 
-逆に**Animal3クラス**に**age**がある場合は互換性があることになるためtargetClass3にsourceClass3を代入することが可能です。
+逆に**Animal3 クラス**に**age**がある場合は互換性があることになるため targetClass3 に sourceClass3 を代入することが可能です。
 
 ```ts:title=src/07_type-compatibility.ts
 class Person3 {
@@ -298,14 +301,13 @@ let sourceClass4 = new Animal4();
 targetClass4 = sourceClass4; //NG
 ```
 
-
 ## まとめ
 
-今回はTypeScriptの型の互換性について解説を行いました。<br>
+今回は TypeScript の型の互換性について解説を行いました。<br>
 
-TypeScriptは全体的に構造的部分型という概念が重要な気がします。しっかり理解しておきたいですね！！
+TypeScript は全体的に構造的部分型という概念が重要な気がします。しっかり理解しておきたいですね！！
 
-TypeScript超入門シリーズの他の記事もご覧いただければうれしいので是非お願いします！！
+TypeScript 超入門シリーズの他の記事もご覧いただければうれしいので是非お願いします！！
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/2020-06-17/start-typescript-01/" data-iframely-url="//cdn.iframe.ly/tmxszMy?iframe=card-small"></a></div></div>
 
@@ -326,5 +328,5 @@ TypeScript超入門シリーズの他の記事もご覧いただければうれ�
 <br>
 <br>
 
-最後まで見ていただきありがとうございました！！  
-この記事が良かったと思ったらSHAREしていただけると泣いて喜びます🤣
+最後まで見ていただきありがとうございました！！
+この記事が良かったと思ったら SHARE していただけると泣いて喜びます 🤣

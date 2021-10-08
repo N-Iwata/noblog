@@ -10,7 +10,7 @@ hero: ./hero.png
 ## はじめに
 
 おはようございます！こんにちは！こんばんは！<br>
-麻雀と芝生大好きおじさんこと**のふのふ**([@rpf_nob](https://twitter.com/rpf_nob))です！！
+**のふのふ**([@rpf_nob](https://twitter.com/rpf_nob))と申します！！都内のスタートアップでフロントエンドエンジニアとして働いています。
 
 今回は GatsbyJS ブログに**InfiniteScroll**を実装してみたので解説します！！
 

@@ -10,7 +10,7 @@ hero: ./hero.png
 ## はじめに
 
 おはようございます！こんにちは！こんばんは！<br>
-麻雀と芝生大好きおじさんこと**のふのふ**(@rpf_nob)です！！
+**のふのふ**([@rpf_nob](https://twitter.com/rpf_nob))と申します！！都内のスタートアップでフロントエンドエンジニアとして働いています。
 
 今回は GatsbyJS ブログにタグページを追加して、タグごとに記事一覧が表示できるようにします。<br>
 基本的には[公式ページ](https://www.gatsbyjs.org/docs/adding-tags-and-categories-to-blog-posts/)の内容通りやればできます。
