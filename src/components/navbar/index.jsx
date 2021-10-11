@@ -7,7 +7,7 @@ import * as styles from "./navbar.module.css";
 const NavBar = () => {
   return (
     <nav className={styles.navbar}>
-      <input type="checkbox" className={styles.check} />
+      <input type="checkbox" id="check" className={styles.check} />
       <label htmlFor="check" className={styles.checkbtn}>
         <FontAwesomeIcon icon={faBars} />
       </label>
