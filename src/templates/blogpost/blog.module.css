@@ -3,47 +3,28 @@
   margin-bottom: 5px;
 }
 .blog__section h2 {
-  background-color: #f2f2f2;
   color: black;
   padding: 10px 10px;
-  position: relative;
-  border: 1px solid #aaa;
-  border-left: 6px solid #ff86d7;
-  font-size: 1.4em;
+  font-size: 1.8em;
 }
 
 .blog__section h3 {
   padding: 5px 10px;
-  margin: 0;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px 0;
   font-size: 1.3em;
-  border-left: 3px solid #ff86d7;
-  border-bottom: 1px solid #777;
 }
 
 .blog__section h4 {
   padding: 5px 10px;
-  margin: 0;
-  margin-bottom: 5px;
+  margin: 0 0 5px;
   font-size: 1.2em;
   text-transform: none;
   letter-spacing: normal;
-  border-left: 2px solid #ff86d7;
 }
 
 .blog__section p {
   padding: 5px 10px;
   margin: 0;
-}
-.blog__section p .under {
-  border-bottom: 3px solid;
-  border-image: linear-gradient(to right, #f2f2f2 0%, #ff86d7 100%);
-  border-image-slice: 1;
-}
-
-.blog__section strong {
-  background: linear-gradient(transparent 90%, #ff86d7 60%) !important;
 }
 
 blockquote {
@@ -78,11 +59,13 @@ blockquote {
 }
 .prevnext__li {
   padding: 5px 10px;
-  background-color: #ff86d7;
 }
 .prevnext__li a {
-  box-shadow: none;
   color: #111;
+}
+
+.prevnext__li a:hover {
+  color: #ff86d7;
 }
 
 @media screen and (max-width: 480px) {

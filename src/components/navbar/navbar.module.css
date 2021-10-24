@@ -1,8 +1,7 @@
 .navbar {
   position: fixed;
   margin-bottom: 10px;
-  background-color: #ff86d7;
-  max-width: 1266px;
+  background-color: #fff;
   height: 50px;
   width: 100%;
   top: 0;
@@ -57,9 +56,8 @@
   vertical-align: middle;
 }
 .navbar__li a:hover {
-  color: #111;
-  transition: 0.5s;
-  background-color: #fff;
+  color: #ff86d7;
+  transition: 0.1s;
 }
 
 @media screen and (max-width: 767px) {

@@ -6,11 +6,12 @@
 }
 
 .contents {
-  margin-top: 20px;
+  margin-top: 70px;
   width: calc(98% - 450px);
   padding: 30px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
 }
 
 @media screen and (max-width: 960px) {
@@ -21,5 +22,4 @@
     width: 100%;
     padding: 30px 10px;
   }
-
 }

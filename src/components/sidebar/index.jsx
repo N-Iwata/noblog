@@ -10,18 +10,18 @@ const SideBar = ({ new1, new2, new3, new4, new5, tagList }) => {
   return (
     <aside className={styles.sidebar}>
       <Bio />
-
-      {new1 && new2 && new3 && new4 && new5 && (
-        <NewPost new1={new1} new2={new2} new3={new3} new4={new4} new5={new5} />
-      )}
-      {tagList && <TagList tagList={tagList} />}
-
       <Adsense />
       <Adsense />
       <Adsense />
       <Adsense />
       <Adsense />
-      <Twitter />
+      <div className={styles.sticky}>
+        <Twitter />
+        {new1 && new2 && new3 && new4 && new5 && (
+          <NewPost new1={new1} new2={new2} new3={new3} new4={new4} new5={new5} />
+        )}
+        {tagList && <TagList tagList={tagList} />}
+      </div>
     </aside>
   );
 };

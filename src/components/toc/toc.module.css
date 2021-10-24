@@ -2,9 +2,7 @@
   background-color: #fdfdfd;
   margin: 10px auto;
   border: 1px solid #aaa;
-}
-.toc__top {
-  background-color: #ff86d7;
+  border-radius: 16px;
 }
 .toc__title {
   margin: 0;
@@ -16,14 +14,14 @@
 .toc__open {
   margin-left: 10px;
   cursor: pointer;
-  transition: 0.3s all ease;
+  transition: 0.1s all ease;
   font-size: 0.9em;
   border: none;
-  background-color: #ff86d7;
+  background-color: #fff;
   color: #111;
 }
-.toc__open:focus {
-  outline: 0;
+.toc__open:hover {
+  color: #ff86d7;
 }
 
 .toc__content {

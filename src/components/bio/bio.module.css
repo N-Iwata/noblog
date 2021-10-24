@@ -2,17 +2,18 @@
   margin-top: 40px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  padding-bottom: 16px;
 }
 
 .bio__title {
   margin: 0;
-  padding: 10px;
+  padding: 20px 10px 10px;
   text-align: center;
   color: #111;
   text-transform: none;
   font-size: 18px;
   font-weight: normal;
-  background-color: #ff86d7;
 }
 
 .bio__image_wrapper {

@@ -6,6 +6,11 @@
   padding: 0;
 }
 
+.sticky {
+  position: sticky;
+  top: 60px;
+}
+
 @media screen and (max-width: 960px) {
   .sidebar {
     width: 100%;

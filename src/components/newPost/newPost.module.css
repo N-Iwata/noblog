@@ -1,8 +1,9 @@
 .new_post {
   background-color: #fdfdfd;
   margin: 20px auto;
-  padding: 0 0 8px;
+  padding: 12px 0 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
 }
 .new__title {
   margin: 0;
@@ -12,7 +13,6 @@
   text-transform: none;
   font-size: 18px;
   font-weight: normal;
-  background-color: #ff86d7;
 }
 
 .new__ul {

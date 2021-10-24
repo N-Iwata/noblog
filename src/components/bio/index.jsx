@@ -46,7 +46,8 @@ const Bio = () => {
       <p className={styles.bio__name}>
         Written by <strong>{author.name}</strong>
       </p>
-      <p className={styles.bio__description}>{author.summary}</p>
+      <p className={styles.bio__description}>このブログは{author.summary}の雑記ブログです。</p>
+
       <div className={styles.bio__icon_wrapper}>
         <a className={styles.bio__icon} href="https://github.com/N-Iwata">
           <img
