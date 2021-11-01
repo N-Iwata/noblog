@@ -1,0 +1,104 @@
+---
+title: 【個人振り返り】2021年10月を振り返る
+date: "2021-11-01"
+description: 2021年10月の振り返りをします。
+slug: 2021-11-01/personal-review
+tags: [個人振り返り]
+hero: ./hero.png
+---
+
+## はじめに
+
+おはようございます！こんにちは！こんばんは！<br>
+**のふのふ**([@rpf_nob](https://twitter.com/rpf_nob))と申します！！都内のスタートアップでフロントエンドエンジニアとして働いています。
+
+2021 年 10 月の振り返りをします。
+
+## 個人としてやったこと
+
+### アウトプット
+
+#### 今週印象に残った記事まとめ
+
+今週から印象に残った記事のまとめを始めました。
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/2021-10-31/impressive-article" data-iframely-url="//cdn.iframe.ly/pLqq9bt?card=small"></a></div></div>
+
+<br>
+
+#### 読書感想文
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/2021-10-24/reading-think-about-changing-jobs" data-iframely-url="//cdn.iframe.ly/mKKRPND?card=small"></a></div></div>
+
+<br>
+
+#### 技術記事
+
+今月は書いていない・・・😅
+
+### インプット
+
+あんまインプットもできてない・・・😅
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.amazon.co.jp/dp/B094HZTRMG" data-iframely-url="//cdn.iframe.ly/5UsZwvH?card=small"></a></div></div>
+
+転職の思考法は社会人として読んでおいて損はないですね。自身早めに読んでおけばよかったと思いました。
+
+<br>
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.amazon.co.jp/dp/4873119227" data-iframely-url="//cdn.iframe.ly/1twW6qp?card=small"></a></div></div>
+
+ハンズオン JavaScript は今月で読み切る予定であったが、まだ４章読んでる途中 😅
+20 章まであるので少しずつ読んでいきたい。
+
+<br>
+
+### 所感
+
+10 月は仕事に多めに時間をとってしまったので、個人でのアウトプット・インプットが少なめなので
+
+## KPT
+
+### Keep
+
+- 個人振り返りを今月も継続
+- 今週印象に残った記事まとめを開始
+- 業務に慣れてきた
+- コロナワクチン ×2、インフルエンザワクチンの接種完了
+- リモートワークがメインなので朝晩娘と食事できている
+
+### Problem
+
+- レビューがなかなかできていない（質・量ともに）
+- 夜型の改善や、運動する習慣を作れなかった
+- OSS ライセンス周りの知見が足りない
+- インプット・アウトプットが共に少ない
+
+### Try
+
+- プロダクトコードをもっとキャッチアップ → ここからレビューの精度も向上させる
+- 個人振り返り毎月継続
+- 今週印象に残った記事まとめ毎週継続
+- OSS ライセンス周りを勉強する → 勉強会とか
+- インプット・アウトプットを共に増やす、習慣化させる
+- ハンズオン JavaScript を読む → 早く読み切りたい
+- 運動する習慣を作る → 散歩とか
+
+### 所感
+
+10 月から M リーグが始まり、ABEMA プレミアムにも入ったことで確実にインプット・アウトプットの時間を削ってしまっている。
+趣味なので仕方ないがうまく時間を使って少しでも捻出できるようにしていかなければと思います。
+
+## まとめ
+
+2021 年の 10 月の個人振り返りをしました。
+
+まだ２回目なのでこれからも続けていければと思います。
+
+次回は 2021 年の 11 月の振り返りします 👍
+
+<br>
+<br>
+
+最後まで読んでいただきありがとうございます！！
+この記事が良かったと思ったら SHARE していただけると泣いて喜びます 🤣
