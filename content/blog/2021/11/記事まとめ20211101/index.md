@@ -1,0 +1,89 @@
+---
+title: 【感想】今週読んで印象に残った記事（2021101週）
+date: "2021-11-07"
+description: 2021/11/01週の今週読んで印象に残った記事のまとめと所感です。
+slug: 2021-11-07/impressive-article
+tags: [今週読んで印象に残った記事]
+hero: ./hero.png
+---
+
+## はじめに
+
+おはようございます！こんにちは！こんばんは！<br>
+**のふのふ**([@rpf_nob](https://twitter.com/rpf_nob))と申します！！都内のスタートアップでフロントエンドエンジニアとして働いています。
+
+2021/11/01 週の今週読んで印象に残った記事のまとめと所感です。
+
+### できないエンジニアの特徴
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://qiita.com/sagae_twins_developper/items/399c233ea6b00c8f5734" data-iframely-url="//cdn.iframe.ly/17hqHC3?card=small"></a></div></div>
+
+自分では問題ないと思っていても客観的に見るとできていないこともあると思う。結局報連相が大事。
+
+現状一つのタスクに対して細かく納期を定めないような会社で仕事しているので、自分でしっかり見積もって消化していく必要がある。
+
+タスクの分解や進捗の見える化はしっかりやっていきたいと思う。
+
+### なぜ、ソフトウェアプロジェクトは人数を増やしても上手くいかないのか
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://qiita.com/hirokidaichi/items/7f7f7881acba9302301f" data-iframely-url="//cdn.iframe.ly/3h38sZa?card=small"></a></div></div>
+
+人数を増やしても上手くいかないっていうのは経験上だったりイメージだったりでわかるが、計算式だったり法則で説明しているので勉強になった記事。
+
+> 効率的なコストパフォーマンスを得たいのであれば、大人数の大型プロジェクトではなく、如何に小さなプロジェクトに分解しながら進めていくことが重要であることが見て取れました。
+
+このあたりはすごい納得した。タスクの分解と同じような話で小さくしておいたほうが何事も有利なんだと思いました。
+
+### 色々書き比べた結果 Tailwind CSS にしたという話
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://qiita.com/Takazudo/items/78ee15564bfefdea844c" data-iframely-url="//cdn.iframe.ly/EqdVWPf?card=small"></a></div></div>
+
+直接 className に tailwind の class を書いていくのが微妙（ごちゃつくイメージ）だと思っていたけど、@apply 使って CSS Modules で書くならありな気がしてきた 🤔
+
+でも CSS のプロパティでそのまま書くのとそんなに変わらないんだよな〜。短くかけるのはいいと思うけどこれなら CSS のプロパティもっとちゃんと覚えなきゃって思ってしまう。
+
+### 【外貨を稼ぐ】 OSS きっかけでオーストリアの会社と仕事した話
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://zenn.dev/hand_dot/articles/82dc55c0cb27e3" data-iframely-url="//cdn.iframe.ly/s0sl2H4?card=small"></a></div></div>
+
+OSS だったり個人サービスだったりを常にアウトプットすることでどこかにチャンスがあるんだなと思いました。
+
+最近個人開発のサービスが買収されたニュースをよくみますが、結局は一つだけではなくてたくさんやり続けている人がチャンスを掴んでいる印象があるので、「夢あるよね」って思う前に「お前もやり続けろよ」って言い聞かせたいです 😅
+
+### Deno のフロントエンド開発の動向【2021 年秋】
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://zenn.dev/uki00a/articles/frontend-development-in-deno-2021-autumn" data-iframely-url="//cdn.iframe.ly/RLcBBi8?card=small"></a></div></div>
+
+Deno についてはほとんどキャッチアップできていないので、こういった記事は大変ありがたい。実践投入するにはまだまだっぽいけど近い将来（？）にキャッチアップする必要が出てくる可能性あるので少しだけ触っておく必要がありそう。
+
+### プログラムの文字列表現、あるいはクォーテーションの使い分けの話
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://zenn.dev/nobokko/articles/idea_programming_string_literal_or_quote" data-iframely-url="//cdn.iframe.ly/oa2izNV?card=small"></a></div></div>
+
+自分はダブル派。
+
+これってキーボードが英字配列か日本語配列かによるものだと思ってる。新しいキーボード届いたら英字配列になるのでシングル派になりそう。
+会社だとシングルクォート使っているけど、prettier が勝手に直してくれるので普段まあんまり気にせずダブルで書いている。
+
+それにしてもいろんな言語のドキュメントまで調べているのですごい 😀
+
+### ドキュメントを改善するためのはじめの一歩
+
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.1972%;"><iframe src="https://speakerdeck.com/player/d3b2caeb90a64dbda88352b70132d48a" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
+
+まったく知見のない分野の企業に転職したので用語集があったら良かったなとは思いますが、メンテが大変だったりするのでしょうがないかなと。
+Slack でチャンネル作って決定事項をピン留めするのは、議論の過程が後から追えるしすごいいいなと思った。
+
+個人的には各ドキュメントにメンテナを決めてちゃんと更新していくようにしたほうがいいかなと思うけど、なかなかこれでも難しいですよね。
+
+## まとめ
+
+2021/11/01 週の今週読んで印象に残った記事のまとめと所感でした。
+
+気になる記事があったら読んでみてください〜😀
+
+<br>
+<br>
+
+最後まで読んでいただきありがとうございます！！
+この記事が良かったと思ったら SHARE していただけると泣いて喜びます 🤣
