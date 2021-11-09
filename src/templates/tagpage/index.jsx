@@ -3,7 +3,7 @@ import Img from "gatsby-image";
 import Button from "@material-ui/core/Button";
 import { config, library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock } from "@fortawesome/free-solid-svg-icons";
+import { faClock, faSyncAlt } from "@fortawesome/free-solid-svg-icons";
 
 import Layout from "../../components/layout";
 import Seo from "../../components/seo";
@@ -46,6 +46,13 @@ const Tags = ({ pageContext, data }) => {
                     <FontAwesomeIcon icon={faClock} />
                     <span style={{ marginLeft: 5 }}>{node.frontmatter.date}</span>
                   </small>
+
+                  {node.frontmatter.updated && node.frontmatter.date !== node.frontmatter.updated && (
+                    <small style={{ marginLeft: 5 }}>
+                      <FontAwesomeIcon icon={faSyncAlt} />
+                      <span style={{ marginLeft: 5 }}>{node.frontmatter.updated}</span>
+                    </small>
+                  )}
                 </header>
                 <Tag tags={node.frontmatter.tags} />
                 <div className={styles.posts__image_container}>
@@ -89,7 +96,7 @@ const Tags = ({ pageContext, data }) => {
 export default Tags;
 
 export const pageQuery = graphql`
-  query($tag: String) {
+  query ($tag: String) {
     site {
       siteMetadata {
         title
@@ -112,6 +119,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             date(formatString: "YYYY-MM-DD")
+            updated(formatString: "YYYY-MM-DD")
             description
             slug
             tags

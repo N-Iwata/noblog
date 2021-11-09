@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby";
 import Img from "gatsby-image";
 import { config, library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock } from "@fortawesome/free-solid-svg-icons";
+import { faClock, faSyncAlt } from "@fortawesome/free-solid-svg-icons";
 
 import Layout from "../../components/layout";
 import Seo from "../../components/seo";
@@ -52,6 +52,12 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               <FontAwesomeIcon icon={faClock} />
               <span style={{ marginLeft: 5 }}>{post.frontmatter.date}</span>
             </small>
+            {post.frontmatter.updated && post.frontmatter.date !== post.frontmatter.updated && (
+              <small style={{ marginLeft: 5 }}>
+                <FontAwesomeIcon icon={faSyncAlt} />
+                <span style={{ marginLeft: 5 }}>{post.frontmatter.updated}</span>
+              </small>
+            )}
           </header>
           <Tag tags={post.frontmatter.tags} />
           <div>
@@ -133,6 +139,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "YYYY-MM-DD")
+        updated(formatString: "YYYY-MM-DD")
         description
         slug
         tags
@@ -155,6 +162,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             date(formatString: "YYYY-MM-DD")
+            updated(formatString: "YYYY-MM-DD")
             description
             slug
             tags

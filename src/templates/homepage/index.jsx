@@ -4,7 +4,7 @@ import Img from "gatsby-image";
 import Button from "@material-ui/core/Button";
 import { config, library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock } from "@fortawesome/free-solid-svg-icons";
+import { faClock, faSyncAlt } from "@fortawesome/free-solid-svg-icons";
 
 import Layout from "../../components/layout";
 import Seo from "../../components/seo";
@@ -44,6 +44,12 @@ const BlogIndex = ({ data, pageContext }) => {
                     <FontAwesomeIcon icon={faClock} />
                     <span style={{ marginLeft: 5 }}>{node.frontmatter.date}</span>
                   </small>
+                  {node.frontmatter.updated && node.frontmatter.date !== node.frontmatter.updated && (
+                    <small style={{ marginLeft: 5 }}>
+                      <FontAwesomeIcon icon={faSyncAlt} />
+                      <span style={{ marginLeft: 5 }}>{node.frontmatter.updated}</span>
+                    </small>
+                  )}
                 </header>
                 <Tag tags={node.frontmatter.tags} />
                 <div className={styles.posts__image_container}>
@@ -91,7 +97,7 @@ const BlogIndex = ({ data, pageContext }) => {
 export default BlogIndex;
 
 export const pageQuery = graphql`
-  query($skip: Int!, $limit: Int!) {
+  query ($skip: Int!, $limit: Int!) {
     site {
       siteMetadata {
         title
@@ -113,6 +119,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             date(formatString: "YYYY-MM-DD")
+            updated(formatString: "YYYY-MM-DD")
             title
             description
             slug
