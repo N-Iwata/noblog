@@ -14,7 +14,7 @@ import Pagenation from "../../components/pagenation";
 import * as styles from "./posts.module.css";
 
 config.autoAddCss = false;
-library.add(faClock);
+library.add([faClock, faSyncAlt]);
 
 const BlogIndex = ({ data, pageContext }) => {
   const author = data.site.siteMetadata.author.name;

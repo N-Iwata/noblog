@@ -16,7 +16,7 @@ import { rhythm } from "../../utils/typography";
 import * as styles from "./blog.module.css";
 
 config.autoAddCss = false;
-library.add(faClock);
+library.add([faClock, faSyncAlt]);
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark;

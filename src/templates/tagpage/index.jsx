@@ -13,7 +13,7 @@ import * as styles from "../homepage/posts.module.css";
 import { Link, graphql } from "gatsby";
 
 config.autoAddCss = false;
-library.add(faClock);
+library.add([faClock, faSyncAlt]);
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext;
