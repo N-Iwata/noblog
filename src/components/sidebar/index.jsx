@@ -5,11 +5,13 @@ import Twitter from "../twitter";
 import NewPost from "../newPost";
 import TagList from "../tagList";
 import * as styles from "./sidebar.module.css";
+import Activity from "../activity";
 
 const SideBar = ({ new1, new2, new3, new4, new5, tagList }) => {
   return (
     <aside className={styles.sidebar}>
       <Bio />
+      <Activity />
       <Adsense />
       <Adsense />
       <Adsense />
