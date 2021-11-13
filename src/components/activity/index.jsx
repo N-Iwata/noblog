@@ -19,7 +19,7 @@ const Activity = () => {
       <h3 className={styles.activity__title}>
         <FontAwesomeIcon icon={faHistory} /> 活動履歴
       </h3>
-      <div className={styles.activity__heatmap}>
+      <div>
         <a
           href="https://blog-friends.com/users/rpf-nob/"
           class="js-blog-friends"

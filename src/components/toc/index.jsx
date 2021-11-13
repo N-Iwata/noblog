@@ -10,7 +10,7 @@ const Toc = (props) => {
   };
   return (
     <div className={styles.toc}>
-      <div className={styles.toc__top}>
+      <div>
         <h4 className={styles.toc__title}>
           Content
           <button className={styles.toc__open} onClick={handleClick}>

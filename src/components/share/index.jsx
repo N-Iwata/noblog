@@ -13,8 +13,8 @@ import {
 } from "react-share";
 import * as styles from "./share.module.css";
 
-const Share = props => {
-  const articleTitle = `${props.title} @rpf_nob`;
+const Share = (props) => {
+  const articleTitle = `${props.title} @rpf_nob #のふのふろぐ`;
   const articleUrl = props.url;
   const articleDescription = props.description;
   const iconSize = 32;
