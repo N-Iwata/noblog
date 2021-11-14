@@ -40,11 +40,9 @@ hero: ./hero.png
 
 TypeScript は Microsoft 社によって開発され、2012 年 10 月頃に外部公開された、JavaScript を拡張して作られたプログラミング言語です。
 
-[公式サイト](https://www.typescriptlang.org)には以下のように書かれています。
+公式サイトには以下のように書かれています。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.typescriptlang.org" data-iframely-url="//cdn.iframe.ly/Dlsd1vH"></a></div></div>
-
-<br>
+https://www.typescriptlang.org
 
 > TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
 
@@ -71,7 +69,7 @@ TypeScript は Microsoft 社によって開発され、2012 年 10 月頃に外�
 
 まず、個人開発時におけるメリットですが、何といっても**型の概念**でしょう。
 
-[公式サイト](https://www.typescriptlang.org/index.html)にも以下のように書かれています。
+公式サイトにも以下のように書かれています。
 
 > Types enable JavaScript developers to use highly-productive development tools and practices like static checking and code refactoring when developing JavaScript applications.
 
@@ -126,9 +124,7 @@ JavaScript は動的型付け言語なので、数値が入っている変数に
 
 このことからもかなり将来性がある言語ということがわかりますね。
 
-[→ 参考にしたサイト](https://www.publickey1.jp/blog/17/googletypescriptng-conf_2017.html)
-
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.publickey1.jp/blog/17/googletypescriptng-conf_2017.html" data-iframely-url="//cdn.iframe.ly/iDzidf8?iframe=card-small"></a></div></div>
+https://www.publickey1.jp/blog/17/googletypescriptng-conf_2017.html
 
 ### 世界的にアクティブユーザーの伸びがやばい
 

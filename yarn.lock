@@ -5779,15 +5779,6 @@ gatsby-remark-images@5.11.0:
     unist-util-select "^3.0.4"
     unist-util-visit-parents "^3.1.1"
 
-gatsby-remark-link-unfurl@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-link-unfurl/-/gatsby-remark-link-unfurl-1.0.4.tgz#7d25a5cdf9a39a757c2ca5b7db6a2de83a6cfd6e"
-  integrity sha512-QOtUQCBhblu5lvEJdyYVbc48UB9uwwHyi19D/gXsgmLE7ZXwk5ualFua8ZZqk83zVQ2iCleCXsMEBPk/jhSRUA==
-  dependencies:
-    mustache "^4.0.1"
-    unfurl.js "^5.1.0"
-    unist-util-select "^3.0.1"
-
 gatsby-remark-prismjs-title@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/gatsby-remark-prismjs-title/-/gatsby-remark-prismjs-title-1.0.0.tgz#6df0be4e75acadc497c7ffffba6589d1abd8a445"
@@ -5824,6 +5815,14 @@ gatsby-remark-smartypants@4.11.0:
     retext "^7.0.1"
     retext-smartypants "^4.0.0"
     unist-util-visit "^2.0.3"
+
+gatsby-simple-blog-card@./plugins/gatsby-simple-blog-card:
+  version "1.0.4"
+  dependencies:
+    mustache "^4.0.1"
+    typescript "^4.4.4"
+    unfurl.js "^5.1.0"
+    unist-util-select "^3.0.1"
 
 gatsby-source-filesystem@3.14.0:
   version "3.14.0"
@@ -11699,6 +11698,11 @@ typeface-montserrat@1.1.13:
   version "1.1.13"
   resolved "https://registry.yarnpkg.com/typeface-montserrat/-/typeface-montserrat-1.1.13.tgz#2a16729c174dd1a8c3fec05a851b7725412606cc"
   integrity sha512-Pklkyj0e+K+6I/t0M6JBDBphpfJkF1k+3qd8qDnp9aVtCC7oGBQWTAcL6+5eArfGe7h73uPwyal73hEkf9YCUA==
+
+typescript@^4.4.4:
+  version "4.4.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.4.4.tgz#2cd01a1a1f160704d3101fd5a58ff0f9fcb8030c"
+  integrity sha512-DqGhF5IKoBl8WNf8C1gu8q0xZSInh9j1kJJMqT3a94w1JzVaBU4EXOSMrz9yDqMT0xt3selp83fuFMQ0uzv6qA==
 
 typography-breakpoint-constants@^0.16.19:
   version "0.16.19"

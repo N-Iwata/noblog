@@ -17,7 +17,7 @@ hero: ./hero.png
 
 ### React ベストプラクティスの宝庫！「bulletproof-react」が勉強になりすぎる件
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://zenn.dev/meijin/articles/bulletproof-react-is-best-architecture" data-iframely-url="//cdn.iframe.ly/KmJ8clI?card=small"></a></div></div>
+https://zenn.dev/meijin/articles/bulletproof-react-is-best-architecture
 
 最近ディレクトリ構造やコンポーネント設計等の記事が多いなと思っていましたがやっぱりこの辺は重要ですね。
 
@@ -34,7 +34,7 @@ features の中でさらに routes でルーティングするより、最初の
 
 ### フロントエンドエンジニアはこれを理解しておいて欲しいの集合知
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/euxn23/frontend-wants" data-iframely-url="//cdn.iframe.ly/kLDlbSu?card=small"></a></div></div>
+https://github.com/euxn23/frontend-wants
 
 フロントエンジニアだけではなく、エンジニアならみんなが読んでおいたほうがいいと思いました。
 
@@ -42,7 +42,7 @@ features の中でさらに routes でルーティングするより、最初の
 
 ### How to be a Bad Developer!?
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://dev.to/thenomadevel/how-to-be-a-bad-developer-51ej" data-iframely-url="//cdn.iframe.ly/pQ0H9ZQ?card=small"></a></div></div>
+https://dev.to/thenomadevel/how-to-be-a-bad-developer-51ej
 
 タイトル見ただけで印象に残った記事。
 中身はよく言われている内容です。
@@ -51,7 +51,7 @@ features の中でさらに routes でルーティングするより、最初の
 
 ### any 禁止 絶対に型付けを諦めないための便利なユーティリティ関数
 
-<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.1972%;"><iframe src="https://speakerdeck.com/player/980a6d0293a1410ba11359787dcee41c" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
+https://speakerdeck.com/okunokentaro/techstand6
 
 このスライドを見る直前に**as T**を使って解決しようとしていたので即やめました 😅
 
@@ -59,7 +59,7 @@ Conditional Types はなかなか普段使っていないので、この辺し�
 
 ### API 設計スキルを次のレベルに引き上げるベストプラクティス 22 選
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://qiita.com/baby-degu/items/6f516189445d98ddbb7d" data-iframely-url="//cdn.iframe.ly/xKvCmJQ?card=small"></a></div></div>
+https://qiita.com/baby-degu/items/6f516189445d98ddbb7d
 
 「Web を支える技術」を読んでいたので大体は既知の内容だったが、改めて勉強になった。
 
@@ -67,7 +67,7 @@ Conditional Types はなかなか普段使っていないので、この辺し�
 
 ### コンポーネント ライブラリとは？なぜ UI 開発に使う必要がある？
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.uxpin.com/studio/jp/blog-jp/ui-component-library/" data-iframely-url="//cdn.iframe.ly/bH5y5mz?card=small"></a></div></div>
+https://www.uxpin.com/studio/jp/blog-jp/ui-component-library/
 
 UI ライブラリのメリットについての質問を見かけたので、気になって調べたらこの記事がものすごくわかりやすくまとめてあった。
 
@@ -77,8 +77,7 @@ UI ライブラリのメリットについての質問を見かけたので、�
 
 ### 高校生が作った有料サービスがちょっと儲かったのでいろいろ書く
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://zenn.dev/sizumita/
-articles/b7dcf43d64dead" data-iframely-url="//cdn.iframe.ly/pMGXFy6?card=small"></a></div></div>
+https://zenn.dev/sizumita/articles/b7dcf43d64dead
 
 ただただすげーと思った。
 

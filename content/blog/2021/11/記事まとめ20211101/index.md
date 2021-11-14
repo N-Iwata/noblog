@@ -17,7 +17,7 @@ hero: ./hero.png
 
 ### できないエンジニアの特徴
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://qiita.com/sagae_twins_developper/items/399c233ea6b00c8f5734" data-iframely-url="//cdn.iframe.ly/17hqHC3?card=small"></a></div></div>
+https://qiita.com/sagae_twins_developper/items/399c233ea6b00c8f5734
 
 自分では問題ないと思っていても客観的に見るとできていないこともあると思う。結局報連相が大事。
 
@@ -27,7 +27,7 @@ hero: ./hero.png
 
 ### なぜ、ソフトウェアプロジェクトは人数を増やしても上手くいかないのか
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://qiita.com/hirokidaichi/items/7f7f7881acba9302301f" data-iframely-url="//cdn.iframe.ly/3h38sZa?card=small"></a></div></div>
+https://qiita.com/hirokidaichi/items/7f7f7881acba9302301f
 
 人数を増やしても上手くいかないっていうのは経験上だったりイメージだったりでわかるが、計算式だったり法則で説明しているので勉強になった記事。
 
@@ -37,7 +37,7 @@ hero: ./hero.png
 
 ### 色々書き比べた結果 Tailwind CSS にしたという話
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://qiita.com/Takazudo/items/78ee15564bfefdea844c" data-iframely-url="//cdn.iframe.ly/EqdVWPf?card=small"></a></div></div>
+https://qiita.com/Takazudo/items/78ee15564bfefdea844c
 
 直接 className に tailwind の class を書いていくのが微妙（ごちゃつくイメージ）だと思っていたけど、@apply 使って CSS Modules で書くならありな気がしてきた 🤔
 
@@ -45,7 +45,7 @@ hero: ./hero.png
 
 ### 【外貨を稼ぐ】 OSS きっかけでオーストリアの会社と仕事した話
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://zenn.dev/hand_dot/articles/82dc55c0cb27e3" data-iframely-url="//cdn.iframe.ly/s0sl2H4?card=small"></a></div></div>
+https://zenn.dev/hand_dot/articles/82dc55c0cb27e3
 
 OSS だったり個人サービスだったりを常にアウトプットすることでどこかにチャンスがあるんだなと思いました。
 
@@ -53,13 +53,13 @@ OSS だったり個人サービスだったりを常にアウトプットする�
 
 ### Deno のフロントエンド開発の動向【2021 年秋】
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://zenn.dev/uki00a/articles/frontend-development-in-deno-2021-autumn" data-iframely-url="//cdn.iframe.ly/RLcBBi8?card=small"></a></div></div>
+https://zenn.dev/uki00a/articles/frontend-development-in-deno-2021-autumn
 
 Deno についてはほとんどキャッチアップできていないので、こういった記事は大変ありがたい。実践投入するにはまだまだっぽいけど近い将来（？）にキャッチアップする必要が出てくる可能性あるので少しだけ触っておく必要がありそう。
 
 ### プログラムの文字列表現、あるいはクォーテーションの使い分けの話
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://zenn.dev/nobokko/articles/idea_programming_string_literal_or_quote" data-iframely-url="//cdn.iframe.ly/oa2izNV?card=small"></a></div></div>
+https://zenn.dev/nobokko/articles/idea_programming_string_literal_or_quote
 
 自分はダブル派。
 
@@ -70,7 +70,7 @@ Deno についてはほとんどキャッチアップできていないので、
 
 ### ドキュメントを改善するためのはじめの一歩
 
-<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.1972%;"><iframe src="https://speakerdeck.com/player/d3b2caeb90a64dbda88352b70132d48a" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe></div>
+https://speakerdeck.com/soracom/dokiyumentowogai-shan-surutamefalsehazimefalse-bu
 
 まったく知見のない分野の企業に転職したので用語集があったら良かったなとは思いますが、メンテが大変だったりするのでしょうがないかなと。
 Slack でチャンネル作って決定事項をピン留めするのは、議論の過程が後から追えるしすごいいいなと思った。
