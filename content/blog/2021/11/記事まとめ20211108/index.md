@@ -59,7 +59,7 @@ Conditional Types はなかなか普段使っていないので、この辺し�
 
 ### API 設計スキルを次のレベルに引き上げるベストプラクティス 22 選
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://qiita.com/baby-degu/items/6f516189445d98ddbb7d" data-iframely-url="//cdn.iframe.ly/xKvCmJQ?card=small"></a></div>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://qiita.com/baby-degu/items/6f516189445d98ddbb7d" data-iframely-url="//cdn.iframe.ly/xKvCmJQ?card=small"></a></div></div>
 
 「Web を支える技術」を読んでいたので大体は既知の内容だったが、改めて勉強になった。
 
