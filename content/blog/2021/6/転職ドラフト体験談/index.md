@@ -25,8 +25,6 @@ hero: ./hero.png
 
 https://job-draft.jp/articles/251
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://job-draft.jp/articles/251" data-iframely-url="//cdn.iframe.ly/97Vsqvb?card=small"></a></div></div>
-
 ## スペックと経歴
 
 簡単にスペックと経歴を書くと以下のような感じです。

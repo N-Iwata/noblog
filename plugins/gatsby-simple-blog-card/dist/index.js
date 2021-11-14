@@ -99,7 +99,7 @@ var processNode = function (node, options, processedUrl) { return __awaiter(void
                         url: node.url,
                         image: ((_k = (_j = metaData.twitter_card) === null || _j === void 0 ? void 0 : _j.images) === null || _k === void 0 ? void 0 : _k[0].url) ||
                             ((_m = (_l = metaData.open_graph) === null || _l === void 0 ? void 0 : _l.images) === null || _m === void 0 ? void 0 : _m[0].url) ||
-                            undefined,
+                            "https://rpf-noblog.com/noimage.png",
                         logo: metaData.favicon,
                         site: ((_o = metaData.oEmbed) === null || _o === void 0 ? void 0 : _o.provider_name) || ((_p = metaData.twitter_card) === null || _p === void 0 ? void 0 : _p.site) || undefined,
                     };

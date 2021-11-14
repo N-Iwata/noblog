@@ -63,7 +63,7 @@ const processNode = async (
         image:
           metaData.twitter_card?.images?.[0].url ||
           metaData.open_graph?.images?.[0].url ||
-          undefined,
+          "https://rpf-noblog.com/noimage.png",
         logo: metaData.favicon,
         site: metaData.oEmbed?.provider_name || metaData.twitter_card?.site || undefined,
       };
