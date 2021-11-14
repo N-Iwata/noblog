@@ -1,9 +1,9 @@
 ---
 title: 【感想】今週読んで印象に残った記事（20211108週）
-date: "2021-11-15"
-updated: "2021-11-15"
+date: "2021-11-14"
+updated: "2021-11-14"
 description: 2021/11/08週の今週読んで印象に残った記事のまとめと所感です。
-slug: 2021-11-15/impressive-article
+slug: 2021-11-14/impressive-article
 tags: [今週読んで印象に残った記事]
 hero: ./hero.png
 ---
@@ -19,13 +19,35 @@ hero: ./hero.png
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://zenn.dev/meijin/articles/bulletproof-react-is-best-architecture" data-iframely-url="//cdn.iframe.ly/KmJ8clI?card=small"></a></div></div>
 
+最近ディレクトリ構造やコンポーネント設計等の記事が多いなと思っていましたがやっぱりこの辺は重要ですね。
+
+> src 以下に入れるのは本リポジトリが意図的に行っているディレクトリ構造といえます。
+
+src 配下にすべておいているのは意図的というか create-react-app で作られている（書いてある）のでデフォルトだと src 配下しかダメだったと思うのでこうなっている気がしますね。ただ個人的にも Next.js でも src 配下にすべて（pages も）あったほうが好きなので共感しました。
+
+features ディレクトリに関しては個人的には pages にして各ページのルートのコンポーネントがわかりやすいほうが好みかなと思った 🤔
+features の中でさらに routes でルーティングするより、最初の features ディレクトリで大体のページ構成がわかるような配置のほうが検索しやすかったりするのでいいと思う。
+
+> 外部ライブラリのコンポーネントをラップしたコンポーネントを内製する
+
+これに関しては最近めっちゃやる必要があると感じていたので共感しまくり。MUI の V4⇨V5 対応の中でラップしたコンポーネントにしておけば差分も少なくなるしかなり楽だったのではないかと思った。
+
 ### フロントエンドエンジニアはこれを理解しておいて欲しいの集合知
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/euxn23/frontend-wants" data-iframely-url="//cdn.iframe.ly/kLDlbSu?card=small"></a></div></div>
 
+フロントエンジニアだけではなく、エンジニアならみんなが読んでおいたほうがいいと思いました。
+
+こういうのって人事考課と同じで自分では出来ている思っていても、客観的に見ると物足りないと思われることも多いので、常に自分はまだまだと思って仕事していこうと思いました。
+
 ### How to be a Bad Developer!?
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://dev.to/thenomadevel/how-to-be-a-bad-developer-51ej" data-iframely-url="//cdn.iframe.ly/pQ0H9ZQ?card=small"></a></div></div>
+
+タイトル見ただけで印象に残った記事。
+中身はよく言われている内容です。
+
+リーダブルコードとか読むのが一番いいかなと思います。
 
 ### any 禁止 絶対に型付けを諦めないための便利なユーティリティ関数
 
@@ -33,24 +55,35 @@ hero: ./hero.png
 
 このスライドを見る直前に**as T**を使って解決しようとしていたので即やめました 😅
 
-Conditional Types はなかなか普段使っていないので、この辺しっかり理解してかけるようになれば 自分の TypeScript レベルも１段上がるんじゃないかなと思いました。
+Conditional Types はなかなか普段使っていないので、この辺しっかり理解してかけるようになれば 自分の TypeScript レベルも１段上がるんじゃないかなと思いました。どういう時に使うのがいいのかまだあまり理解していなかったりする。。。
 
 ### API 設計スキルを次のレベルに引き上げるベストプラクティス 22 選
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://qiita.com/baby-degu/items/6f516189445d98ddbb7d" data-iframely-url="//cdn.iframe.ly/xKvCmJQ?card=small"></a></div>
 
+「Web を支える技術」を読んでいたので大体は既知の内容だったが、改めて勉強になった。
+
+バックエンド側を最近ほとんど携わっていないので何か作ってもっと理解を深めなきゃなと思っています。
+
 ### コンポーネント ライブラリとは？なぜ UI 開発に使う必要がある？
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.uxpin.com/studio/jp/blog-jp/ui-component-library/" data-iframely-url="//cdn.iframe.ly/bH5y5mz?card=small"></a></div></div>
+
+UI ライブラリのメリットについての質問を見かけたので、気になって調べたらこの記事がものすごくわかりやすくまとめてあった。
+
+個人的にはデザインの一貫性とスピードの部分にメリットを感じていたのですが、アクセシビリティや重複コードの削減などは頭になかったので勉強になった。デザイナーが不在だったり個人開発だと物凄く重宝されている印象があります。
+
+エンジニアやデザイナーの人的リソースが確保できそうなら smarthr-ui みたいな独自の UI ライブラリを作っていくのが一番良いんじゃないかと思いました。
 
 ### 高校生が作った有料サービスがちょっと儲かったのでいろいろ書く
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://zenn.dev/sizumita/
 articles/b7dcf43d64dead" data-iframely-url="//cdn.iframe.ly/pMGXFy6?card=small"></a></div></div>
 
-### 5 UI Tips to Become a Better Front End Developer
+ただただすげーと思った。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://dev.to/ruppysuppy/5-ui-tips-to-become-a-better-front-end-developer-1ae1" data-iframely-url="//cdn.iframe.ly/kRAGwxh?card=small"></a></div></div>
+課題の発見から解決まで実現し収益まで発生させているので、高校生とか関係なく行動力が一番必要なんだと思いました。
+自分にはこういう行動力が足りていないので、刺激を受ける内容でした。
 
 ## まとめ
 
