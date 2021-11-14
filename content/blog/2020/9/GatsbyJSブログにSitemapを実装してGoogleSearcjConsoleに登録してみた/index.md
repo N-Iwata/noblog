@@ -114,7 +114,6 @@ $gatsby build && gatsby serve
 最後にサイトマップを送信します。
 
 以下のように新しいサイトマップの追加から自身のサイトのサイトマップの URL を入力して送信ボタンを押せば完了です。
-自分の場合は**https://rpf-noblog.com/sitemap.xml**で送信しました。
 
 ![img](img03.png)
 

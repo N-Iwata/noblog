@@ -1,0 +1,29 @@
+{
+  "name": "gatsby-simple-blog-card",
+  "version": "1.0.4",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "homepage": "https://github.com/hgezim/gatsby-remark-link-unfurl",
+  "repository": "https://github.com/hgezim/gatsby-remark-link-unfurl",
+  "scripts": {
+    "prepublish": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gezim Hoxha",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "mustache": "^4.0.1",
+    "typescript": "^4.4.4",
+    "unfurl.js": "^5.1.0",
+    "unist-util-select": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^13.13.2",
+    "@types/unist": "^2.0.3"
+  }
+}

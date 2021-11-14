@@ -39,13 +39,21 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
+        // CommonMark mode (default: true)
+        commonmark: true,
+        // Footnotes mode (default: true)
+        footnotes: true,
+        // Pedantic mode (default: true)
+        pedantic: true,
+        // GitHub Flavored Markdown mode (default: true)
+        gfm: true,
         plugins: [
-          // {
-          //   resolve: `gatsby-remark-link-unfurl`,
-          //   options: {
-          //     processedUrlsFile: `${__dirname}/link-cache/cache.json`,
-          //   },
-          // },
+          {
+            resolve: `gatsby-simple-blog-card`,
+            options: {
+              processedUrlsFile: `${__dirname}/link-cache/cache.json`,
+            },
+          },
           {
             resolve: "gatsby-remark-custom-blocks",
             options: {
