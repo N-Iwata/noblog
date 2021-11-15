@@ -154,7 +154,7 @@ body {
 
 .gatsby-remark-link-unfurl__media {
   width: 30%;
-  min-width: 170px;
+  min-width: 125px;
   overflow: hidden;
   border-radius: 16px 0 0 16px;
 }
@@ -177,14 +177,12 @@ body {
 .gatsby-remark-link-unfurl__title {
   text-align: left;
   font-weight: bold;
-  margin: 0;
   width: 100%;
   flex-grow: 1.2;
   font-size: 16px;
 }
 
 .gatsby-remark-link-unfurl__title p {
-  margin: 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -193,16 +191,17 @@ body {
 .gatsby-remark-link-unfurl__description {
   text-align: left;
   font-size: 14px;
+  width: 100%;
   flex-grow: 2;
-  margin: auto 0;
   line-height: 18px;
 }
 
 .gatsby-remark-link-unfurl__description p {
-  margin: 0;
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  max-height: 2.5rem;
 }
 
 .gatsby-remark-link-unfurl__container footer {
@@ -225,6 +224,7 @@ body {
 
 .gatsby-remark-link-unfurl__container footer p {
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
@@ -237,8 +237,5 @@ body {
   }
   .gatsby-remark-link-unfurl__description {
     font-size: 12px;
-  }
-  .gatsby-remark-link-unfurl__container footer {
-    font-size: 10px;
   }
 }
