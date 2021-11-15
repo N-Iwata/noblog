@@ -22,13 +22,13 @@ hero: ./hero.png
 
 今週から印象に残った記事のまとめを始めました。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/2021-10-31/impressive-article" data-iframely-url="//cdn.iframe.ly/pLqq9bt?card=small"></a></div></div>
+https://rpf-noblog.com/2021-10-31/impressive-article/
 
 <br>
 
 #### 読書感想文
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/2021-10-24/reading-think-about-changing-jobs" data-iframely-url="//cdn.iframe.ly/mKKRPND?card=small"></a></div></div>
+https://rpf-noblog.com/2021-10-24/reading-think-about-changing-jobs/
 
 <br>
 

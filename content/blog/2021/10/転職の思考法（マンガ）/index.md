@@ -14,7 +14,7 @@ hero: ./hero.png
 
 今回は漫画版の転職の思考法を読んだので感想を書いていきたいと思います。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.amazon.co.jp/dp/B094HZTRMG/ref=dp-kindle-redirect?_encoding=UTF8&amp;btkr=1" data-iframely-url="//cdn.iframe.ly/yUXLnqv?card=small"></a></div></div>
+<div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 52.5%; padding-top: 120px;"><a href="https://www.amazon.co.jp/dp/B094HZTRMG" data-iframely-url="//cdn.iframe.ly/5UsZwvH"></a></div></div>
 
 ## 本書の目次
 
@@ -94,7 +94,7 @@ hero: ./hero.png
 
 <br>
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/2020-11-08/reading-learn-or-die" data-iframely-url="//cdn.iframe.ly/qpjUQwG?card=small"></a></div></div>
+https://rpf-noblog.com/2020-11-08/reading-learn-or-die/
 
 ## まとめ
 
@@ -104,7 +104,9 @@ hero: ./hero.png
 
 自分は転職してから読みましたが、転職することを考えていない人も読んでおいて損はないと思いますので読んでみてはいかがでしょうか？？
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.amazon.co.jp/dp/B07DCLSV6H" data-iframely-url="//cdn.iframe.ly/3tMiQ0I?card=small"></a></div></div>
+<div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 52.5%; padding-top: 120px;"><a href="https
+
+://www.amazon.co.jp/dp/B07DCLSV6H" data-iframely-url="//cdn.iframe.ly/3tMiQ0I"></a></div></div>
 
 <br>
 <br>

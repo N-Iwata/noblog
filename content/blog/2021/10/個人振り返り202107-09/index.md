@@ -22,9 +22,7 @@ hero: ./hero.png
 
 VSCode の拡張機能開発を初めてやってみて、簡単なものをリリースしてみました。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/N-Iwata/vscode-extension-js-console" data-iframely-url="//cdn.iframe.ly/UmN8fah?card=small"></a></div></div>
-
-インストールは[こちら](https://marketplace.visualstudio.com/items?itemName=N-Iwata.vscode-extention-js-console)からできますのでよかったらどうぞ 🙇‍♂️
+https://github.com/N-Iwata/vscode-extension-js-console
 
 <br>
 
@@ -34,11 +32,11 @@ VSCode の拡張機能開発を初めてやってみて、簡単なものをリ�
 
 <br>
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://zenn.dev/rpf_nob/articles/vscode-extension-js-console" data-iframely-url="//cdn.iframe.ly/PyNwruJ?card=small"></a></div></div>
+https://zenn.dev/rpf_nob/articles/vscode-extension-js-console
 
 <br>
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://qiita.com/rpf-nob/items/454ff6cf135cee3dcab4" data-iframely-url="//cdn.iframe.ly/I9S2Plf?card=small"></a></div></div>
+https://qiita.com/rpf-nob/items/454ff6cf135cee3dcab4
 
 ### インプット
 

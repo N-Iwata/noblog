@@ -17,7 +17,7 @@ hero: ./hero.png
 そこで今回は「ソフトウェア品質を高める開発者テスト」についての読書感想文を書いていきます。
 この感想文で誰かのお役に立てたら幸いです。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.shoeisha.co.jp/book/detail/9784798165035" data-iframely-url="//cdn.iframe.ly/iQNbJPl?iframe=card-small"></a></div></div>
+<div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 52.5%; padding-top: 120px;"><a href="https://www.shoeisha.co.jp/book/detail/9784798165035" data-iframely-url="//cdn.iframe.ly/iQNbJPl"></a></div></div>
 
 ## 本書の目次
 
