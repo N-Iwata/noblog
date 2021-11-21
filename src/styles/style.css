@@ -142,21 +142,18 @@ body {
 .gatsby-remark-link-unfurl {
   text-decoration: none;
   color: #000;
-  border-radius: 16px;
 }
 .gatsby-remark-link-unfurl__container {
   display: flex;
   border: solid 1px #e1e8ed;
   max-height: 120px;
   margin: 0 auto;
-  border-radius: 16px;
 }
 
 .gatsby-remark-link-unfurl__media {
   width: 30%;
   min-width: 125px;
   overflow: hidden;
-  border-radius: 16px 0 0 16px;
 }
 .gatsby-remark-link-unfurl__media img {
   width: 100%;
