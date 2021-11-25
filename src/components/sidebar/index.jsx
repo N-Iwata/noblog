@@ -11,11 +11,13 @@ const SideBar = ({ new1, new2, new3, new4, new5, tagList }) => {
   return (
     <aside className={styles.sidebar}>
       <Bio />
-      <Adsense />
-      <Adsense />
-      <Adsense />
-      <Adsense />
-      <Adsense />
+      <div className={styles.adsense}>
+        <Adsense />
+        <Adsense />
+        <Adsense />
+        <Adsense />
+        <Adsense />
+      </div>
       <div className={styles.sticky}>
         <Twitter />
         {new1 && new2 && new3 && new4 && new5 && (

@@ -47,10 +47,10 @@ const Layout = ({ author, children }) => {
         <main className={styles.contents}>{children}</main>
         <SideBar
           new1={data.allMarkdownRemark.edges[0].node}
-          new2={data.allMarkdownRemark.edges[2].node}
-          new3={data.allMarkdownRemark.edges[3].node}
-          new4={data.allMarkdownRemark.edges[4].node}
-          new5={data.allMarkdownRemark.edges[5].node}
+          new2={data.allMarkdownRemark.edges[1].node}
+          new3={data.allMarkdownRemark.edges[2].node}
+          new4={data.allMarkdownRemark.edges[3].node}
+          new5={data.allMarkdownRemark.edges[4].node}
           tagList={data.tags.group}
         />
       </div>

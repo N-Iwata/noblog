@@ -9,7 +9,6 @@ import { faClock, faSyncAlt } from "@fortawesome/free-solid-svg-icons";
 import Layout from "../../components/layout";
 import Seo from "../../components/seo";
 import Tag from "../../components/tag";
-import Adsense from "../../components/adsense";
 import Pagenation from "../../components/pagenation";
 import * as styles from "./posts.module.css";
 
@@ -87,8 +86,6 @@ const BlogIndex = ({ data, pageContext }) => {
           );
         })}
         <Pagenation pageContext={pageContext} />
-        <Adsense />
-        <Adsense />
       </Layout>
     </div>
   );

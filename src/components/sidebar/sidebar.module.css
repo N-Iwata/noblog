@@ -1,9 +1,17 @@
 .sidebar {
   width: 450px;
   margin-top: 28px;
-  margin-left: 10px;
+  margin-left: 16px;
   background-color: #f2f2f2;
   padding: 0;
+}
+
+.adsense {
+  background-color: #fff;
+  margin: 16px 0 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  padding: 8px;
 }
 
 .sticky {
