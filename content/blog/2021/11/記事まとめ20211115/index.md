@@ -15,7 +15,7 @@ hero: ./hero.png
 
 2021/11/15 週の今週読んで印象に残った記事のまとめと所感です。
 
-## Top Node.js Development Trends in 2021
+### Top Node.js Development Trends in 2021
 
 https://javascript.plainenglish.io/top-node-js-development-trends-in-2021-807f27fdf1b8
 
@@ -27,7 +27,7 @@ https://javascript.plainenglish.io/top-node-js-development-trends-in-2021-807f27
 
 リアルタイムアプリケーションとかサーバーレスアプリなどにはよく使われている印象。この辺り習得しておきたいですね。
 
-## 有益な React ライブラリまとめ
+### 有益な React ライブラリまとめ
 
 https://qiita.com/ozora/items/33e00dcaca372db04560
 
@@ -39,7 +39,7 @@ https://qiita.com/ozora/items/33e00dcaca372db04560
 
 このあたりはほとんど触ったことがなかったのです。今後業務で使うかわからないですがブログとかで使ってみて触っておくだけはしておきたい。
 
-## ソフトウェアエンジニアと技術力
+### ソフトウェアエンジニアと技術力
 
 https://speakerdeck.com/soudai/developer-lifework
 
@@ -56,7 +56,7 @@ https://speakerdeck.com/soudai/developer-lifework
 - 100 から 10000 にする
 - 10000 を維持する
 
-## I created a terminal style website.
+### I created a terminal style website.
 
 https://dev.to/m4tt72/i-created-a-terminal-style-website-1jb2
 
@@ -64,7 +64,7 @@ https://dev.to/m4tt72/i-created-a-terminal-style-website-1jb2
 
 発想力もすごいですが、技術力があるからアイデアが出てくることもあるので、まずいろんなものを勉強して作ってみることが大事なんだと感じました。
 
-## Bad ReactJs practices to avoid
+### Bad ReactJs practices to avoid
 
 https://dev.to/bornfightcompany/bad-reactjs-practices-to-avoid-a1b
 
