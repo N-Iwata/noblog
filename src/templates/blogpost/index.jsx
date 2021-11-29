@@ -110,6 +110,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             )}
           </ul>
         </nav>
+        <Adsense />
       </Layout>
     </div>
   );

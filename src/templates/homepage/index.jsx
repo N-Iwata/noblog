@@ -11,6 +11,7 @@ import Seo from "../../components/seo";
 import Tag from "../../components/tag";
 import Pagenation from "../../components/pagenation";
 import * as styles from "./posts.module.css";
+import Adsense from "../../components/adsense";
 
 config.autoAddCss = false;
 library.add([faClock, faSyncAlt]);
@@ -86,6 +87,7 @@ const BlogIndex = ({ data, pageContext }) => {
           );
         })}
         <Pagenation pageContext={pageContext} />
+        <Adsense />
       </Layout>
     </div>
   );

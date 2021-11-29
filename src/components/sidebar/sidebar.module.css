@@ -8,7 +8,7 @@
 
 .adsense {
   background-color: #fff;
-  margin: 16px 0 16px;
+  margin: 0 0 16px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 16px;
   padding: 8px;
@@ -23,5 +23,8 @@
   .sidebar {
     width: 100%;
     margin-left: 0;
+  }
+  .adsense {
+    display: none;
   }
 }

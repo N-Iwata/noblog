@@ -11,6 +11,7 @@ import Tag from "../../components/tag";
 import * as styles from "../homepage/posts.module.css";
 
 import { Link, graphql } from "gatsby";
+import Adsense from "../../components/adsense";
 
 config.autoAddCss = false;
 library.add([faClock, faSyncAlt]);
@@ -88,6 +89,7 @@ const Tags = ({ pageContext, data }) => {
             </div>
           );
         })}
+        <Adsense />
       </Layout>
     </div>
   );
