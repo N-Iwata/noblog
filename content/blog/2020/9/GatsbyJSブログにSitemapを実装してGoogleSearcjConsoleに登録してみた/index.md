@@ -27,19 +27,21 @@ hero: ./hero.png
 
 ## 前提
 
-このブログは GatsbyJS の[gatsby-starter-blog](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/)のテンプレートから作成しています。
+このブログは GatsbyJS の gatsby-starter-blog のテンプレートから作成しています。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/" data-iframely-url="//cdn.iframe.ly/qjUJkBu?iframe=card-small"></a></div></div>
+https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog
 
 <br/>
 
 ソースコードはこちら（参考になったという方は ⭐️ をポチッと押していただけると嬉しいです〜 🙇‍♂️）
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/N-Iwata/noblog" data-iframely-url="//cdn.iframe.ly/Q4tAo8y?card=small"></a></div></div>
+https://github.com/N-Iwata/noblog
 
 ## Google Search Console とは？
 
-[公式ページ](https://support.google.com/webmasters/answer/9128668?hl=ja)には以下のように記載されています。
+公式ページには以下のように記載されています。
+
+https://www.gatsbyjs.com/plugins/gatsby-plugin-sitemap/
 
 > Google Search Console は、Google 検索結果でのサイトの掲載順位を監視、管理、改善するのに役立つ Google の無料サービスです。Search Console に登録しなくても Google 検索結果にサイトが表示されるようにすることはできますが、Search Console に登録することで、Google のサイトに対する認識を理解し、改善できるようになります。
 
@@ -56,7 +58,7 @@ Google Search Console は、検索結果から自分のサイトがどれくら�
 ## パッケージのインストール
 
 今回は**gatsby-plugin-sitemap**を使って実装します。
-基本的には[公式ページ](https://www.gatsbyjs.com/plugins/gatsby-plugin-sitemap/)の内容通りやれば簡単にできます。
+基本的には公式ページの内容通りやれば簡単にできます。
 
 ```
 $npm install --save gatsby-plugin-sitemap
@@ -130,7 +132,7 @@ $gatsby build && gatsby serve
 
 他にも GatsbyJS のブログカスタマイズをいろいろやっているので、以下もあわせてご覧いただければと思います。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/tags/gatsby-js/" data-iframely-url="//cdn.iframe.ly/5j7eIPT"></a></div></div>
+https://rpf-noblog.com/tags/gatsby-js/
 
 <br>
 <br>

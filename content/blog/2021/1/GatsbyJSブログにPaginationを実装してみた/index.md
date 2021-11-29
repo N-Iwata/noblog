@@ -26,15 +26,15 @@ hero: ./hero.png
 
 ## 前提
 
-このブログは GatsbyJS の[gatsby-starter-blog](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/)のテンプレートから作成しています。
+このブログは GatsbyJS の gatsby-starter-blog のテンプレートから作成しています。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/" data-iframely-url="//cdn.iframe.ly/qjUJkBu?iframe=card-small"></a></div></div>
+https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog
 
 <br/>
 
 ソースコードはこちら（参考になったという方は ⭐️ をポチッと押していただけると嬉しいです〜 🙇‍♂️）
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/N-Iwata/noblog" data-iframely-url="//cdn.iframe.ly/Q4tAo8y?card=small"></a></div></div>
+https://github.com/N-Iwata/noblog
 
 ## パッケージのインストール
 
@@ -47,7 +47,7 @@ $npm install --save gatsby-awesome-pagination
 <br>
 こちらのパッケージで簡単にページネーションを実装できます。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.gatsbyjs.com/" data-iframely-url="//cdn.iframe.ly/57Mzcc6?iframe=card-small"></a></div></div>
+https://www.gatsbyjs.com/plugins/gatsby-awesome-pagination/
 
 ## templates フォルダ配下に pages/index.jsx を移動
 
@@ -150,7 +150,7 @@ const BlogIndex = ({ data, location, pageContext }) => {
 
 今回は material ui のページネーションコンポーネントを使います。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://material-ui.com/components/pagination/" data-iframely-url="//cdn.iframe.ly/7LXFBH0"></a></div></div>
+https://v4.mui.com/components/pagination/
 
 <br>
 
@@ -227,7 +227,7 @@ value にページ番号が渡ってくるので、それに対応したペー�
 
 他にも GatsbyJS のブログカスタマイズをいろいろやっているので、以下もあわせてご覧いただければと思います。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/tags/gatsby-js/" data-iframely-url="//cdn.iframe.ly/5j7eIPT"></a></div></div>
+https://rpf-noblog.com/tags/gatsby-js/
 
 <br>
 <br>

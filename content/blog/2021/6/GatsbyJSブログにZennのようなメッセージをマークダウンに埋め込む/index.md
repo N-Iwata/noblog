@@ -23,15 +23,15 @@ hero: ./hero.png
 
 ## 前提
 
-このブログは GatsbyJS の[gatsby-starter-blog](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/)のテンプレートから作成しています。
+このブログは GatsbyJS の gatsby-starter-blog のテンプレートから作成しています。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/" data-iframely-url="//cdn.iframe.ly/qjUJkBu?iframe=card-small"></a></div></div>
+https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog
 
 <br/>
 
 ソースコードはこちら（参考になったという方は ⭐️ をポチッと押していただけると嬉しいです〜 🙇‍♂️）
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/N-Iwata/noblog" data-iframely-url="//cdn.iframe.ly/Q4tAo8y?card=small"></a></div></div>
+https://github.com/N-Iwata/noblog
 
 ## パッケージのインストール
 
@@ -44,7 +44,7 @@ $npm install --save gatsby-remark-custom-blocks
 
 <br>
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.gatsbyjs.com/plugins/gatsby-remark-custom-blocks/" data-iframely-url="//cdn.iframe.ly/CEXLHRq?iframe=card-small"></a></div></div>
+https://www.gatsbyjs.com/plugins/gatsby-remark-custom-blocks/
 
 ## gatsby-config.js の編集
 
@@ -193,7 +193,7 @@ warn と question は色とマークの変更だけなので割愛します。
 
 他にも GatsbyJS のブログカスタマイズをいろいろやっているので、以下もあわせてご覧いただければと思います。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/tags/gatsby-js/" data-iframely-url="//cdn.iframe.ly/5j7eIPT"></a></div></div>
+https://rpf-noblog.com/tags/gatsby-js/
 
 <br>
 <br>

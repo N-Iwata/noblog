@@ -14,21 +14,23 @@ hero: ./hero.png
 
 今回は GatsbyJS ブログに Netlify Forms でお問い合わせページを追加します。<br>
 
-基本的には[GatsbyJS の公式ページ](https://www.gatsbyjs.org/docs/building-a-contact-form/)と[netlify のドキュメント](https://docs.netlify.com/forms/setup/)の内容通りやれば簡単にできるのでおススメです！
+基本的には GatsbyJS の公式ページと netlify の公式ドキュメントの内容通りやれば簡単にできるのでおススメです！
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.gatsbyjs.org/docs/building-a-contact-form/" data-iframely-url="//cdn.iframe.ly/ELouhRU"></a></div></div>
+https://www.gatsbyjs.com/docs/building-a-contact-form/
+
+https://docs.netlify.com/forms/setup/
 
 ## 前提
 
-このブログは GatsbyJS の[gatsby-starter-blog](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/)のテンプレートから作成しています。
+このブログは GatsbyJS の gatsby-starter-blog のテンプレートから作成しています。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/" data-iframely-url="//cdn.iframe.ly/qjUJkBu?iframe=card-small"></a></div></div>
+https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog
 
 <br/>
 
 ソースコードはこちら（参考になったという方は ⭐️ をポチッと押していただけると嬉しいです〜 🙇‍♂️）
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/N-Iwata/noblog" data-iframely-url="//cdn.iframe.ly/Q4tAo8y?card=small"></a></div></div>
+https://github.com/N-Iwata/noblog
 
 ## Netlify Forms とは
 
@@ -305,7 +307,7 @@ GatsbyJS + Netlify でブログを構築している方にはかなりのおス�
 
 他にも GatsbyJS のブログカスタマイズをいろいろやっているので、以下もあわせてご覧いただければと思います。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/tags/gatsby-js/" data-iframely-url="//cdn.iframe.ly/5j7eIPT"></a></div></div>
+https://rpf-noblog.com/tags/gatsby-js/
 
 <br>
 <br>

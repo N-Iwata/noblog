@@ -1,6 +1,7 @@
 ---
 title: 【GatsbyJS】ブログの記事にiframelyで良い感じに外部リンクを埋め込んだ
 date: "2020-07-08"
+updated: "2021-11-30"
 description: 今回はGatsbyJSブログの記事にiframeryで良い感じに外部リンクを埋め込めるようにしたので解説します。外部リンクが良い感じになるだけで良い感じのブログになりますね！！
 slug: 2020-07-08/gatsby-iframely
 tags: [GatsbyJS, gatsby-starter-blog]
@@ -25,27 +26,28 @@ hero: ./hero.png
 - 確認
 - まとめ
 
+[[warn]]
+| 現在 iframely は Amazon や Udemy などのリンクにおいて使用してますが、基本的には別のものを使用しています。
+
 ## 前提
 
-このブログは GatsbyJS の[gatsby-starter-blog](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/)のテンプレートから作成しています。
+このブログは GatsbyJS の gatsby-starter-blog のテンプレートから作成しています。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/" data-iframely-url="//cdn.iframe.ly/qjUJkBu?iframe=card-small"></a></div></div>
+https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog
 
 <br/>
 
 ソースコードはこちら（参考になったという方は ⭐️ をポチッと押していただけると嬉しいです〜 🙇‍♂️）
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/N-Iwata/noblog" data-iframely-url="//cdn.iframe.ly/Q4tAo8y?card=small"></a></div></div>
+https://github.com/N-Iwata/noblog
 
 ## iframely とは
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://iframely.com/" data-iframely-url="//cdn.iframe.ly/KGpjY3"></a></div></div>
+https://iframely.com/
 
 埋め込みコードをまとめて生成してくれるサービスです。
 
 前回までの記事で YouTube や Twitter は独自の埋め込みコードがあるのでそちらの利用方法を解説しましたが、その他の多くのサイトでは埋め込み用のコードが用意されていないので、独自で設定する必要があります。
-
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/2020-07-07/gatsby-twitter/" data-iframely-url="//cdn.iframe.ly/WoteZmC?iframe=card-small"></a></div></div>
 
 そこで Iframely を使うことで、外部リンクの埋め込みができるようになります。
 
@@ -123,7 +125,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 
 他にも GatsbyJS のブログカスタマイズをいろいろやっているので、以下もあわせてご覧いただければと思います。
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://rpf-noblog.com/tags/gatsby-js/" data-iframely-url="//cdn.iframe.ly/5j7eIPT"></a></div></div>
+https://rpf-noblog.com/tags/gatsby-js/
 
 <br>
 <br>

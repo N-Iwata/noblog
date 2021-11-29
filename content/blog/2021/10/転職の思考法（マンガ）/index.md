@@ -104,9 +104,7 @@ https://rpf-noblog.com/2020-11-08/reading-learn-or-die/
 
 自分は転職してから読みましたが、転職することを考えていない人も読んでおいて損はないと思いますので読んでみてはいかがでしょうか？？
 
-<div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 52.5%; padding-top: 120px;"><a href="https
-
-://www.amazon.co.jp/dp/B07DCLSV6H" data-iframely-url="//cdn.iframe.ly/3tMiQ0I"></a></div></div>
+<div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 52.5%; padding-top: 120px;"><a href="https://www.amazon.co.jp/dp/B07DCLSV6H" data-iframely-url="//cdn.iframe.ly/3tMiQ0I"></a></div></div>
 
 <br>
 <br>
