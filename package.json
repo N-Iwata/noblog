@@ -58,7 +58,8 @@
     "typeface-merriweather": "1.1.13",
     "typeface-montserrat": "1.1.13",
     "typography": "0.16.21",
-    "typography-theme-wordpress-2016": "0.16.19"
+    "typography-theme-wordpress-2016": "0.16.19",
+    "use-media": "^1.4.0"
   },
   "devDependencies": {
     "prettier": "2.4.1"

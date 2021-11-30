@@ -2,8 +2,9 @@ import React from "react";
 import { navigate } from "gatsby";
 import { makeStyles } from "@material-ui/core/styles";
 import { Pagination } from "@material-ui/lab";
+import useMedia from "use-media";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     display: `flex`,
     flexWrap: `wrap`,
@@ -14,6 +15,7 @@ const useStyles = makeStyles(theme => ({
 
 const Pagenation = ({ pageContext }) => {
   const classes = useStyles();
+  const isWide = useMedia({ minWidth: "480px" });
   const { numberOfPages, humanPageNumber } = pageContext;
 
   const handleChange = (event, value) => {
@@ -23,12 +25,13 @@ const Pagenation = ({ pageContext }) => {
   return (
     <div className={classes.root}>
       <Pagination
-        size="medium"
+        size={isWide ? "large" : "small"}
         defaultPage={humanPageNumber}
         count={numberOfPages}
         color="primary"
         onChange={handleChange}
-        siblingCount={0}
+        siblingCount={1}
+        boundaryCount={2}
       />
     </div>
   );
