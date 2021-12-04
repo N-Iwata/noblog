@@ -24,17 +24,11 @@ VSCode の拡張機能開発を初めてやってみて、簡単なものをリ�
 
 https://github.com/N-Iwata/vscode-extension-js-console
 
-<br>
-
 #### 技術記事
 
 ほとんど書けていないので継続的に書くようにしたいですね。
 
-<br>
-
 https://zenn.dev/rpf_nob/articles/vscode-extension-js-console
-
-<br>
 
 https://qiita.com/rpf-nob/items/454ff6cf135cee3dcab4
 

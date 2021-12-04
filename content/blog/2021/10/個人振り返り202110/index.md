@@ -24,13 +24,9 @@ hero: ./hero.png
 
 https://rpf-noblog.com/2021-10-31/impressive-article/
 
-<br>
-
 #### 読書感想文
 
 https://rpf-noblog.com/2021-10-24/reading-think-about-changing-jobs/
-
-<br>
 
 #### 技術記事
 
@@ -40,22 +36,22 @@ https://rpf-noblog.com/2021-10-24/reading-think-about-changing-jobs/
 
 あんまインプットもできてない・・・😅
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.amazon.co.jp/dp/B094HZTRMG" data-iframely-url="//cdn.iframe.ly/5UsZwvH?card=small"></a></div></div>
+#### 転職の思考法漫画版
 
 転職の思考法は社会人として読んでおいて損はないですね。自身早めに読んでおけばよかったと思いました。
 
-<br>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.amazon.co.jp/dp/B094HZTRMG" data-iframely-url="//cdn.iframe.ly/5UsZwvH?card=small"></a></div></div>
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.amazon.co.jp/dp/4873119227" data-iframely-url="//cdn.iframe.ly/1twW6qp?card=small"></a></div></div>
+#### ハンズオン JavaScript
 
 ハンズオン JavaScript は今月で読み切る予定であったが、まだ４章読んでる途中 😅
 20 章まであるので少しずつ読んでいきたい。
 
-<br>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.amazon.co.jp/dp/4873119227" data-iframely-url="//cdn.iframe.ly/1twW6qp?card=small"></a></div></div>
 
 ### 所感
 
-10 月は仕事に多めに時間をとってしまったので、個人でのアウトプット・インプットが少なめなので
+10 月は仕事に多めに時間をとってしまったので、個人でのアウトプット・インプットが少なめだったので、仕事に余裕が出てきたらもう少しアウトプットやインプットにも時間を割きたい。
 
 ## KPT
 
