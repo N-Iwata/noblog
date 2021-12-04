@@ -3,27 +3,34 @@
   margin-bottom: 5px;
 }
 .blog__section h2 {
+  background-color: #f2f2f2;
   color: black;
   padding: 10px 10px;
-  font-size: 1.8em;
+  position: relative;
+  border: 1px solid #aaa;
+  border-left: 6px solid #ff86d7;
+  font-size: 1.5em;
 }
 
 .blog__section h3 {
   padding: 5px 10px;
   margin: 20px 0;
-  font-size: 1.3em;
+  font-size: 1.4em;
+  border-left: 3px solid #ff86d7;
 }
 
 .blog__section h4 {
   padding: 5px 10px;
   margin: 0 0 5px;
-  font-size: 1.2em;
+  font-size: 1.3em;
   text-transform: none;
+  text-decoration: underline;
   letter-spacing: normal;
+  font-weight: normal;
 }
 
 .blog__section p {
-  padding: 5px 10px;
+  padding: 4px 10px;
   margin: 0;
 }
 
