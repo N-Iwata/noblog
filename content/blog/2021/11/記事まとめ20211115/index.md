@@ -15,6 +15,8 @@ hero: ./hero.png
 
 2021/11/15 週の今週読んで印象に残った記事のまとめと所感です。
 
+## 記事と所感
+
 ### Top Node.js Development Trends in 2021
 
 https://javascript.plainenglish.io/top-node-js-development-trends-in-2021-807f27fdf1b8

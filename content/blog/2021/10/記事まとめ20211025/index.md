@@ -14,6 +14,8 @@ hero: ./hero.png
 
 今週読んで印象に残った記事のまとめと所感を今週から書いていきたいと思います。
 
+## 記事と所感
+
 ### スクラム開発の現場に Join して失敗した俺が悪い話
 
 https://qiita.com/dummydialect/items/4d3a9da5fe58c34764e2

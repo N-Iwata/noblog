@@ -15,6 +15,8 @@ hero: ./hero.png
 
 2021/11/08 週の今週読んで印象に残った記事のまとめと所感です。
 
+## 記事と所感
+
 ### React ベストプラクティスの宝庫！「bulletproof-react」が勉強になりすぎる件
 
 https://zenn.dev/meijin/articles/bulletproof-react-is-best-architecture

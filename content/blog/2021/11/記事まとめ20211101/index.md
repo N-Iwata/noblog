@@ -15,6 +15,8 @@ hero: ./hero.png
 
 2021/11/01 週の今週読んで印象に残った記事のまとめと所感です。
 
+## 記事と所感
+
 ### できないエンジニアの特徴
 
 https://qiita.com/sagae_twins_developper/items/399c233ea6b00c8f5734
