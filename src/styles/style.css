@@ -146,7 +146,7 @@ body {
 .gatsby-remark-link-unfurl__container {
   display: flex;
   border: solid 1px #e1e8ed;
-  max-height: 120px;
+  max-height: 150px;
   margin: 0 auto;
 }
 
