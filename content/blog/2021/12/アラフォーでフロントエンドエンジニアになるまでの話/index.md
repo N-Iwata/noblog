@@ -133,6 +133,8 @@ React の勉強ははむさんの「フロントエンドエンジニアのた�
 
 あとはひたすらフロントエンドエンジニアとして転職するために必要な知識を補うような勉強をしていました。こちらのブログも React の知識を得るために Gatsby（starter ですが）で作ったりしています。
 
+すべてではないですが、良かったと思うものを羅列しておきます。
+
 ### フロントエンド全般
 
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.amazon.co.jp/-/en/%E5%AE%89%E9%81%94%E7%A8%9C-ebook/dp/B08SQQWPDW" data-iframely-url="//cdn.iframe.ly/35mt8C4?card=small"></a></div></div>
