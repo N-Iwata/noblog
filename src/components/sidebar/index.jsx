@@ -22,10 +22,8 @@ const SideBar = ({ new1, new2, new3, new4, new5, tagList }) => {
           <NewPost new1={new1} new2={new2} new3={new3} new4={new4} new5={new5} />
         )}
         {tagList && <TagList tagList={tagList} />}
-        <Activity />
-        <div className={styles.adsense}>
-          <Adsense />
-          <Adsense />
+        <div className={styles.activity}>
+          <Activity />
         </div>
       </div>
     </aside>
