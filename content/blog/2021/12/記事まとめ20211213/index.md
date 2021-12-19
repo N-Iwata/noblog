@@ -29,6 +29,8 @@ https://speakerdeck.com/uhyo/typescriptwozhen-rihui-se
 
 型はドキュメントと言われることも多いですが、こういうことだと思いました。
 
+例３の無いかもしれないデータのパターンは結構やりがちなので注意したいですね。
+
 ### github で人生を管理する
 
 https://zenn.dev/hand_dot/articles/85c9640b7dcc66
@@ -75,8 +77,7 @@ https://qiita.com/gonjyu121/items/d2140dc0537bd61f5ee7
 
 https://blog.devgenius.io/why-programming-is-easy-but-software-engineering-is-hard-90019fd78ed5
 
-コードを書いている時間よりも考えている時間のほうが圧倒的に長いですよね。ほんとにエンジニアリング的思考が必要だと思う。
-文書化するところを含めてエンジニアリングであるのはその通りだと思います。
+コードを書いている時間よりも考えている時間のほうが圧倒的に長いですよね。ほんとにこういったエンジニアリング的思考が必要だと思う。文書化するところを含めてエンジニアリングであるのはその通りですね。このあたりのドキュメントをしっかり書けるのもエンジニアリングの必要な部分だと思います。
 
 ## まとめ
 
