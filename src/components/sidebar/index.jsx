@@ -11,9 +11,9 @@ const SideBar = ({ new1, new2, new3, new4, new5, tagList }) => {
   return (
     <aside className={styles.sidebar}>
       <Bio />
-      <div className={styles.activity}>
+      {/* <div className={styles.activity}>
         <Activity />
-      </div>
+      </div> */}
       <div className={styles.adsense}>
         <Adsense />
         <Adsense />
