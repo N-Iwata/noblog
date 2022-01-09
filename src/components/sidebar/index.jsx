@@ -4,7 +4,7 @@ import Bio from "../bio";
 import Twitter from "../twitter";
 import NewPost from "../newPost";
 import TagList from "../tagList";
-import Activity from "../activity";
+// import Activity from "../activity";
 import * as styles from "./sidebar.module.css";
 
 const SideBar = ({ new1, new2, new3, new4, new5, tagList }) => {
