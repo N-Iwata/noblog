@@ -1,11 +1,17 @@
 ---
 title: 【GatsbyJS】ブログのOGP画像を動的に生成した
 date: "2020-07-01"
+updated: "2022-02-02"
 description: 今回はGatsbyJSブログのOGP画像を記事ごとに生成できるようにしたので解説していきます。twitterなどにリンクを張る時に記事のトップ画像を表示するだけで、まともな記事に見えるので絶対にやったほうがいいですよね！
 slug: 2020-07-01/gatsby-ogp-image
 tags: [GatsbyJS, gatsby-starter-blog]
 hero: ./hero.png
 ---
+
+[[warn]]
+| この記事は、ブログの記事ごとに作成し設定したヒーロー画像をそのまま OGP 画像にするという内容です。
+|
+| 記事のタイトルから動的に OGP 画像を生成するという内容ではありませんのでご注意ください。
 
 ## はじめに
 
