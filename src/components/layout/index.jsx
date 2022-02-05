@@ -39,20 +39,16 @@ const Layout = ({ author, children }) => {
       }
     }
   `);
+  const newPosts = data.allMarkdownRemark.edges
+    .filter((_, index) => index < 10)
+    .map((edge) => edge.node);
 
   return (
     <div>
       <NavBar />
       <div className={styles.container}>
         <main className={styles.contents}>{children}</main>
-        <SideBar
-          new1={data.allMarkdownRemark.edges[0].node}
-          new2={data.allMarkdownRemark.edges[1].node}
-          new3={data.allMarkdownRemark.edges[2].node}
-          new4={data.allMarkdownRemark.edges[3].node}
-          new5={data.allMarkdownRemark.edges[4].node}
-          tagList={data.tags.group}
-        />
+        <SideBar newPosts={newPosts} tagList={data.tags.group} />
       </div>
 
       <Footer author={author} />
