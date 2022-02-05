@@ -20,3 +20,27 @@
   font-size: 12px;
   text-transform: none;
 }
+
+.tag__ul {
+  list-style: none;
+  margin: 0 4px;
+  padding: 10px 10px 0;
+  font-size: 0.8rem;
+}
+.tag__li {
+  border-bottom: 2px solid #edf6ff;
+  padding: 0;
+}
+.tag__li a {
+  box-shadow: none;
+  color: #000;
+}
+.tag__li a:hover {
+  color: #ff86d7;
+}
+
+@media screen and (max-width: 767px) {
+  .tag__ul {
+    padding: 10px 0 0;
+  }
+}

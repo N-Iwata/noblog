@@ -16,6 +16,7 @@ const useStyles = makeStyles({
 });
 
 const TagList = ({ tagList }) => {
+  console.log("%c tagList: ", "color: #23d541", tagList);
   const classes = useStyles();
 
   return (
@@ -23,24 +24,18 @@ const TagList = ({ tagList }) => {
       <h3 className={styles.tagList__title}>
         <FontAwesomeIcon icon={faTag} /> タグ一覧
       </h3>
-      {tagList &&
-        tagList.map(tag => (
-          <Button
-            key={tag.fieldValue}
-            variant="contained"
-            color={"default"}
-            className={classes.button}
-          >
-            <Link
-              to={`/tags/${kebabCase(tag.fieldValue)}/`}
-              key={tag}
-              className={styles.tagList__list}
-              title={`${tag.fieldValue}のtagページに移動します。`}
-            >
-              <FontAwesomeIcon icon={faTag} />　{tag.fieldValue}
-            </Link>
-          </Button>
-        ))}
+      <ul className={styles.tag__ul}>
+        {tagList &&
+          tagList.map((tag) => (
+            <>
+              <li className={styles.tag__li} key={tag.fieldValue}>
+                <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                  <FontAwesomeIcon icon={faTag} />　{`${tag.fieldValue}（${tag.totalCount}）`}
+                </Link>
+              </li>
+            </>
+          ))}
+      </ul>
     </nav>
   );
 };

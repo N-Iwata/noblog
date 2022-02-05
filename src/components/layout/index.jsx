@@ -35,6 +35,7 @@ const Layout = ({ author, children }) => {
       tags: allMarkdownRemark(limit: 2000) {
         group(field: frontmatter___tags) {
           fieldValue
+          totalCount
         }
       }
     }
@@ -42,7 +43,6 @@ const Layout = ({ author, children }) => {
   const newPosts = data.allMarkdownRemark.edges
     .filter((_, index) => index < 10)
     .map((edge) => edge.node);
-
   return (
     <div>
       <NavBar />
