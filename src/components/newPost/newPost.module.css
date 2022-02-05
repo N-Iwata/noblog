@@ -17,13 +17,16 @@
 
 .new__ul {
   list-style: none;
-  margin: 0 4px;
+  margin: 0 8px;
   padding: 10px 10px 0;
   font-size: 0.8rem;
 }
 .new__li {
   border-bottom: 2px solid #edf6ff;
   padding: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .new__li a {
   box-shadow: none;

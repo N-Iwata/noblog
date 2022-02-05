@@ -13,7 +13,9 @@ const NewPost = ({ newPosts }) => {
       <ul className={styles.new__ul}>
         {newPosts.map((post) => (
           <li className={styles.new__li} key={post.fields.slug}>
-            <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
+            <Link to={post.fields.slug}>
+              <FontAwesomeIcon icon={faPencilAlt} />　{post.frontmatter.title}
+            </Link>
           </li>
         ))}
       </ul>
