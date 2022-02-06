@@ -31,13 +31,14 @@
 
 .blog__section p {
   padding: 4px 10px;
-  margin: 0;
+  margin: 8px 0;
+  font-size: 1.1em;
 }
 
 blockquote {
   margin: 5px 0 5px 10px;
   padding-left: 5px;
-  font-size: 1em;
+  font-size: 1.1em;
   border-left: 0.32813rem solid rgba(0, 0, 0, 0.2);
 }
 
@@ -47,6 +48,7 @@ blockquote {
 .blog__section ol li {
   margin-left: 30px;
   margin-bottom: 0px;
+  font-size: 1.1em;
 }
 .blog__section ul {
   padding: 5px;
@@ -55,6 +57,7 @@ blockquote {
 .blog__section ul li {
   margin-left: 30px;
   margin-bottom: 0px;
+  font-size: 1.1em;
 }
 
 .prevnext__ul {
@@ -90,7 +93,6 @@ blockquote {
   .blog__section h2 {
     font-size: 1.3em;
   }
-
   .blog__section h3 {
     font-size: 1.2em;
   }
