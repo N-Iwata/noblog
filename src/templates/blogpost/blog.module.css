@@ -3,43 +3,36 @@
   margin-bottom: 5px;
 }
 .blog__section h2 {
-  background-color: #f2f2f2;
   color: black;
-  padding: 10px 10px;
   position: relative;
-  border: 1px solid #aaa;
-  border-left: 6px solid #ff86d7;
+  text-decoration: underline;
   font-size: 1.5em;
 }
 
 .blog__section h3 {
-  padding: 5px 10px;
-  margin: 20px 0;
-  font-size: 1.4em;
-  border-left: 3px solid #ff86d7;
+  font-size: 1.3em;
+  font-weight: bold;
 }
 
 .blog__section h4 {
-  padding: 5px 10px;
-  margin: 20px 0 5px;
-  font-size: 1.3em;
+  font-size: 1.1em;
   text-transform: none;
-  text-decoration: underline;
   letter-spacing: normal;
   font-weight: normal;
 }
 
 .blog__section p {
   padding: 4px 10px;
-  margin: 8px 0;
-  font-size: 1.1em;
+  margin: 8px 4px;
+  font-size: 1em;
 }
 
-blockquote {
+.blog__section blockquote {
   margin: 5px 0 5px 10px;
   padding-left: 5px;
-  font-size: 1.1em;
+  font-size: 1em;
   border-left: 0.32813rem solid rgba(0, 0, 0, 0.2);
+  font-style: normal;
 }
 
 .blog__section ol {
@@ -48,7 +41,7 @@ blockquote {
 .blog__section ol li {
   margin-left: 30px;
   margin-bottom: 0px;
-  font-size: 1.1em;
+  font-size: 1em;
 }
 .blog__section ul {
   padding: 5px;
@@ -57,7 +50,7 @@ blockquote {
 .blog__section ul li {
   margin-left: 30px;
   margin-bottom: 0px;
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
 .prevnext__ul {
@@ -98,5 +91,14 @@ blockquote {
   }
   .blog__section h4 {
     font-size: 1.1em;
+  }
+  .blog__section p {
+    font-size: 0.9em;
+  }
+  .blog__section ul li {
+    font-size: 0.9em;
+  }
+  .blog__section ol li {
+    font-size: 0.9em;
   }
 }

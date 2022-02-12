@@ -56,7 +56,7 @@ issue のやりとりのままで要件がドキュメントとしてまとま�
 
 https://techtekt.persol-career.co.jp/entry/tech/211116_01
 
-最後の`[Q6] async/await`だけ外れてしまった。
+最後の**[Q6] async/await**だけ外れてしまった。
 
 Promise（非同期）周りが弱い・・・
 
