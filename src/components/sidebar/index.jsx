@@ -9,15 +9,15 @@ import * as styles from "./sidebar.module.css";
 const SideBar = ({ newPosts, tagList }) => {
   return (
     <aside className={styles.sidebar}>
-      <Bio />
-      <div className={styles.adsense}>
-        <Adsense />
-        <Adsense />
-      </div>
       <div className={styles.sticky}>
-        <Twitter />
+        <Bio />
+        <div className={styles.adsense}>
+          <Adsense />
+        </div>
+
         {newPosts && <NewPost newPosts={newPosts} />}
         {tagList && <TagList tagList={tagList} />}
+        <Twitter />
         <div className={styles.adsense}>
           <Adsense />
         </div>
