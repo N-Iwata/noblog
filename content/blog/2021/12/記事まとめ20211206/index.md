@@ -109,6 +109,10 @@ https://engineering.mercari.com/blog/entry/20211207-removing-sensitive-data-from
 
 気になる記事があったら読んでみてください〜😀
 
+↓↓↓ 前回はこちら ↓↓↓
+
+https://rpf-noblog.com/2021-12-05/impressive-article/
+
 <br>
 <br>
 

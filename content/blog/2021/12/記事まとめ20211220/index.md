@@ -90,6 +90,10 @@ https://thenewstack.io/predictions-for-the-jamstack-in-2022/
 
 気になる記事があったら読んでみてください〜😀
 
+↓↓↓ 前回はこちら ↓↓↓
+
+https://rpf-noblog.com/2021-12-19/impressive-article/
+
 <br>
 <br>
 

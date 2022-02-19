@@ -82,6 +82,10 @@ https://dev.to/bornfightcompany/bad-reactjs-practices-to-avoid-a1b
 
 気になる記事があったら読んでみてください〜😀
 
+↓↓↓ 前回はこちら ↓↓↓
+
+https://rpf-noblog.com/2021-11-14/impressive-article/
+
 <br>
 <br>
 

@@ -103,6 +103,10 @@ https://speakerdeck.com/takefumiyoshii/story-of-re-architect-with-nextjs
 
 気になる記事があったら読んでみてください〜😀
 
+↓↓↓ 前回はこちら ↓↓↓
+
+https://rpf-noblog.com/2021-11-28/impressive-article/
+
 <br>
 <br>
 

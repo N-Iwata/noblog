@@ -85,6 +85,10 @@ https://blog.devgenius.io/why-programming-is-easy-but-software-engineering-is-ha
 
 気になる記事があったら読んでみてください〜😀
 
+↓↓↓ 前回はこちら ↓↓↓
+
+https://rpf-noblog.com/2021-12-12/impressive-article/
+
 <br>
 <br>
 
