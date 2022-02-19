@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "gatsby";
-import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import { kebabCase } from "lodash/string";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -16,9 +15,6 @@ const useStyles = makeStyles({
 });
 
 const TagList = ({ tagList }) => {
-  console.log("%c tagList: ", "color: #23d541", tagList);
-  const classes = useStyles();
-
   return (
     <nav className={styles.tagList}>
       <h3 className={styles.tagList__title}>
