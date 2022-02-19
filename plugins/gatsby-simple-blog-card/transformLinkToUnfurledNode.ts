@@ -8,7 +8,6 @@ export const tranformsLinkNodeToUnfurledNode = (node: Node, card: MetadataInterf
     <a
       class="gatsby-remark-link-unfurl"
       href="{{card.url}}"
-      target="_blank"
       title="{{card.title}}"
     >
       <div class="gatsby-remark-link-unfurl__container">
