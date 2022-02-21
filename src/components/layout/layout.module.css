@@ -14,7 +14,7 @@
   border-radius: 16px;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1050px) {
   .container {
     flex-direction: column;
   }

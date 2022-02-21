@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Pagenation = ({ pageContext }) => {
   const classes = useStyles();
-  const isWide = useMedia({ minWidth: "480px" });
+  const isWide = useMedia({ minWidth: "520px" });
   const { numberOfPages, humanPageNumber } = pageContext;
 
   const handleChange = (event, value) => {
