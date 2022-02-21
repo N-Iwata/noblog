@@ -44,7 +44,7 @@ exports.createPages = async ({ graphql, actions }) => {
   paginate({
     createPage,
     items: posts,
-    itemsPerPage: 7,
+    itemsPerPage: 10,
     component: template,
     pathPrefix: ({ pageNumber }) => (pageNumber === 0 ? "/" : "/page"),
   });
@@ -64,7 +64,7 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
 
-  tags.forEach(tag => {
+  tags.forEach((tag) => {
     createPage({
       path: `/tags/${kebabCase(tag.fieldValue)}/`,
       component: tagTemplate,
