@@ -1,18 +1,9 @@
 import React from "react";
 import { Link } from "gatsby";
-import { makeStyles } from "@material-ui/core/styles";
 import { kebabCase } from "lodash/string";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTag } from "@fortawesome/free-solid-svg-icons";
 import * as styles from "./tagList.module.css";
-
-const useStyles = makeStyles({
-  button: {
-    fontSize: 12,
-    margin: "8px",
-    height: 24,
-  },
-});
 
 const TagList = ({ tagList }) => {
   return (
