@@ -23,7 +23,7 @@
   top: 60px;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1050px) {
   .sidebar {
     width: 100%;
     margin-left: 0;
