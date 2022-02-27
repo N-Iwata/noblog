@@ -13,6 +13,7 @@ const SideBar = ({ newPosts, tagList }) => {
         <Bio />
         <div className={styles.adsense}>
           <Adsense />
+          <Adsense />
         </div>
 
         {newPosts && <NewPost newPosts={newPosts} />}
