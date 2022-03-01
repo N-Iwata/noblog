@@ -37,7 +37,7 @@ const Tags = ({ pageContext, data }) => {
                   <h3 className={styles.posts__title}>
                     <Link
                       className={styles.posts__title__a}
-                      to={node.fields.slug}
+                      to={`${node.fields.slug}/`}
                       title={`${title}のページに移動します。`}
                     >
                       {title}
@@ -57,7 +57,7 @@ const Tags = ({ pageContext, data }) => {
                 </header>
                 <Tag tags={node.frontmatter.tags} />
                 <div className={styles.posts__image_container}>
-                  <Link to={node.fields.slug} title={`${title}のページに移動します。`}>
+                  <Link to={`${node.fields.slug}/`} title={`${title}のページに移動します。`}>
                     <Img
                       className={styles.posts__image}
                       fluid={node.frontmatter.hero.childImageSharp.fluid}
@@ -77,7 +77,7 @@ const Tags = ({ pageContext, data }) => {
                     <Button variant="contained" color={"default"}>
                       <Link
                         className={styles.posts__more__a}
-                        to={node.fields.slug}
+                        to={`${node.fields.slug}/`}
                         title={`${title}のページに移動します。`}
                       >
                         記事を読む

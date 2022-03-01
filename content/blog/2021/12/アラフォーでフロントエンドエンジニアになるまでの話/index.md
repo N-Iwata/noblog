@@ -205,7 +205,7 @@ https://youtu.be/lZD1MIHwMBY
 
 転職ドラフト体験談はこちら
 
-https://rpf-noblog.com/2021-06-07/experiences-job-draft
+https://rpf-noblog.com/2021-06-07/experiences-job-draft/
 
 Findy も使いましたが、いいねでのマッチングではほとんど意味がないので、結構無駄な時間を使ってしまいました。やはり転職ドラフトのように指名を受けてからのほうがスムーズに採用活動が進むので、個人的には転職ドラフトが一番いいのではないかと思います。
 

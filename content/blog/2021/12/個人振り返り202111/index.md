@@ -25,13 +25,13 @@ hero: ./hero.png
 
 ブックマークがてらメモを書いておくことができるので今後も継続していく。
 
-https://rpf-noblog.com/2021-11-07/impressive-article
+https://rpf-noblog.com/2021-11-07/impressive-article/
 
-https://rpf-noblog.com/2021-11-14/impressive-article
+https://rpf-noblog.com/2021-11-14/impressive-article/
 
-https://rpf-noblog.com/2021-11-21/impressive-article
+https://rpf-noblog.com/2021-11-21/impressive-article/
 
-https://rpf-noblog.com/2021-11-28/impressive-article
+https://rpf-noblog.com/2021-11-28/impressive-article/
 
 #### 読書感想文
 

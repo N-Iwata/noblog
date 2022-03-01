@@ -23,27 +23,27 @@ const Share = (props) => {
     <div className={styles.sociallinks}>
       <p className={styles.sociallinks__title}>／ SHARE!! ＼</p>
       <div className={styles.sociallinks__icon}>
-        <TwitterShareButton url={articleUrl} title={articleTitle}>
+        <TwitterShareButton url={`${articleUrl}/`} title={articleTitle}>
           <TwitterIcon round size={iconSize} />
         </TwitterShareButton>
       </div>
       <div className={styles.sociallinks__icon}>
-        <FacebookShareButton url={articleUrl} quote={articleDescription}>
+        <FacebookShareButton url={`${articleUrl}/`} quote={articleDescription}>
           <FacebookIcon round size={iconSize} />
         </FacebookShareButton>
       </div>
       <div className={styles.sociallinks__icon}>
-        <LineShareButton url={articleUrl} quote={articleDescription}>
+        <LineShareButton url={`${articleUrl}/`} quote={articleDescription}>
           <LineIcon round size={iconSize} />
         </LineShareButton>
       </div>
       <div className={styles.sociallinks__icon}>
-        <LinkedinShareButton url={articleUrl} quote={articleDescription}>
+        <LinkedinShareButton url={`${articleUrl}/`} quote={articleDescription}>
           <LinkedinIcon round size={iconSize} />
         </LinkedinShareButton>
       </div>
       <div className={styles.sociallinks__icon}>
-        <HatenaShareButton url={articleUrl} title={articleTitle}>
+        <HatenaShareButton url={`${articleUrl}/`} title={articleTitle}>
           <HatenaIcon round size={iconSize} />
         </HatenaShareButton>
       </div>

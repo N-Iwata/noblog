@@ -96,14 +96,14 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <ul className={styles.prevnext__ul}>
             {previous && (
               <li className={styles.prevnext__li}>
-                <Link to={previous.fields.slug} rel="prev">
+                <Link to={`${previous.fields.slug}/`} rel="prev">
                   ← 前の記事
                 </Link>
               </li>
             )}
             {next && (
               <li className={styles.prevnext__li}>
-                <Link to={next.fields.slug} rel="next">
+                <Link to={`${next.fields.slug}/`} rel="next">
                   次の記事 →
                 </Link>
               </li>

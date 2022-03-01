@@ -26,17 +26,17 @@ const NavBar = () => {
           </Link>
         </li>
         <li className={styles.navbar__li}>
-          <Link to="/about" title={"Aboutページに移動します。"}>
+          <Link to="/about/" title={"Aboutページに移動します。"}>
             About
           </Link>
         </li>
         <li className={styles.navbar__li}>
-          <Link to="/contact" title={"お問い合わせページに移動します。"}>
+          <Link to="/contact/" title={"お問い合わせページに移動します。"}>
             Contact
           </Link>
         </li>
         <li className={styles.navbar__li}>
-          <Link to="/privacy_policy" title={"PrivacyPolicyページに移動します。"}>
+          <Link to="/privacy_policy/" title={"PrivacyPolicyページに移動します。"}>
             Privacy Policy
           </Link>
         </li>
