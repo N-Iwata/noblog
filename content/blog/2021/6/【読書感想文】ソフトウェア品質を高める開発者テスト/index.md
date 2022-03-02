@@ -14,7 +14,7 @@ hero: ./hero.png
 
 皆さんはソフトウェアエンジニアとして働いていて開発者テストって重要だと認識していると思います。しかし、しっかり勉強したことありますか？私自身あまりしっかりと勉強したことがなかったということもあったので、「ソフトウェア品質を高める開発者テスト」という書籍を手に取り勉強しようと思いました。
 
-そこで今回は「ソフトウェア品質を高める開発者テスト」についての読書感想文を書いていきます。
+そこで今回は「ソフトウェア品質を高める開発者テスト」についての読書感想文・レビューを書いていきます。
 この感想文で誰かのお役に立てたら幸いです。
 
 <div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 52.5%; padding-top: 120px;"><a href="https://www.shoeisha.co.jp/book/detail/9784798165035" data-iframely-url="//cdn.iframe.ly/iQNbJPl"></a></div></div>

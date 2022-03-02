@@ -1,7 +1,7 @@
 ---
 title: 【読書感想文】転職の思考法（漫画版）【書評】
 date: "2021-10-24"
-description: 今回は漫画版の転職の思考法を読んだので感想を書いていきたいと思います。
+description: 今回は漫画版の転職の思考法を読んだので感想・レビューを書いていきたいと思います。
 slug: 2021-10-24/reading-think-about-changing-jobs
 tags: [読書感想文]
 hero: ./hero.png
@@ -12,7 +12,7 @@ hero: ./hero.png
 おはようございます！こんにちは！こんばんは！<br>
 **のふのふ**([@rpf_nob](https://twitter.com/rpf_nob))と申します！！都内のスタートアップでフロントエンドエンジニアとして働いています。
 
-今回は漫画版の転職の思考法を読んだので感想を書いていきたいと思います。
+今回は漫画版の転職の思考法を読んだので感想・レビューを書いていきたいと思います。
 
 <div class="iframely-embed"><div class="iframely-responsive" style="padding-bottom: 52.5%; padding-top: 120px;"><a href="https://www.amazon.co.jp/dp/B094HZTRMG" data-iframely-url="//cdn.iframe.ly/5UsZwvH"></a></div></div>
 
