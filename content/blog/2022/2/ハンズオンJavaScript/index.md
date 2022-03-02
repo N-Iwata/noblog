@@ -1,5 +1,5 @@
 ---
-title: 【読書感想文】ハンズオンJavaScript【書評・レビュー】
+title: 【読書感想文】ハンズオンJavaScript【書評】
 date: "2022-02-28"
 updated: "2022-02-28"
 description: 今回はハンズオンJavaScriptを読んだので感想・レビューを書いていきたいと思います。
