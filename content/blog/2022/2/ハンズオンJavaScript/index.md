@@ -1,8 +1,8 @@
 ---
-title: 【読書感想文】ハンズオンJavaScript【書評】
+title: 【読書感想文】ハンズオンJavaScript【書評・レビュー】
 date: "2022-02-28"
 updated: "2022-02-28"
-description: 今回はハンズオンJavaScriptを読んだので感想を書いていきたいと思います。
+description: 今回はハンズオンJavaScriptを読んだので感想・レビューを書いていきたいと思います。
 slug: 2022-02-28/hands-on-javascript
 tags: [読書感想文, JavaScript]
 hero: ./hero.png
@@ -13,7 +13,7 @@ hero: ./hero.png
 おはようございます！こんにちは！こんばんは！<br>
 **のふのふ**([@rpf_nob](https://twitter.com/rpf_nob))と申します！！都内のスタートアップでフロントエンドエンジニアとして働いています。
 
-今回はハンズオン JavaScript を読んだので感想を書いていきたいと思います。
+今回はハンズオン JavaScript を読んだので感想・レビューを書いていきたいと思います。
 
 https://www.oreilly.co.jp/books/9784873119229/
 
