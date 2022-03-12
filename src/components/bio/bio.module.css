@@ -32,11 +32,11 @@
 .bio__description {
   font-size: 14px;
   text-align: center;
-  margin: 0;
+  margin: 32px 0;
   padding: 0 12px;
 }
 .bio__icon_wrapper {
-  margin-top: 8px;
+  margin-top: 16px;
   text-align: center;
 }
 .bio__icon {
@@ -46,4 +46,6 @@
 
 .bio__icon_image {
   margin: 0;
+  width: 85px;
+  height: 30px;
 }

@@ -56,18 +56,18 @@ const Bio = () => {
             src="https://img.shields.io/badge/GitHub-%2312100E.svg?&style=for-the-badge&logo=Github&logoColor=white"
           />
         </a>
-        <a className={styles.bio__icon} href="https://qiita.com/rpf-nob">
-          <img
-            className={styles.bio__icon_image}
-            alt="Qiita"
-            src="https://img.shields.io/badge/qiita-55C500.svg?&style=for-the-badge&logo=qiita&logoColor=white"
-          />
-        </a>
         <a className={styles.bio__icon} href="https://twitter.com/rpf_nob">
           <img
             className={styles.bio__icon_image}
             alt="Twitter"
             src="https://img.shields.io/badge/twitter-%231DA1F2.svg?&style=for-the-badge&logo=twitter&logoColor=white"
+          />
+        </a>
+        <a className={styles.bio__icon} href="https://qiita.com/rpf-nob">
+          <img
+            className={styles.bio__icon_image}
+            alt="Qiita"
+            src="https://img.shields.io/badge/qiita-55C500.svg?&style=for-the-badge&logo=qiita&logoColor=white"
           />
         </a>
         <a className={styles.bio__icon} href="https://zenn.dev/rpf_nob">
