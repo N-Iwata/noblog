@@ -109,12 +109,9 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: "gatsby-plugin-google-gtag",
+      resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingIds: ["G-W8F8PPTN91"],
-        pluginConfig: {
-          head: true,
-        },
+        trackingId: `UA-165563468-1`,
       },
     },
     {
