@@ -123,7 +123,7 @@ export const pageQuery = graphql`
             tags
             hero {
               childImageSharp {
-                gatsbyImageData(width: 1000, formats: [AUTO, WEBP, AVIF])
+                gatsbyImageData(width: 1000, formats: [AUTO, WEBP, AVIF], placeholder: BLURRED)
               }
             }
           }

@@ -177,7 +177,7 @@ export const pageQuery = graphql`
     }
     file(relativePath: { eq: "about.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 1000, formats: [AUTO, WEBP, AVIF])
+        gatsbyImageData(width: 1000, formats: [AUTO, WEBP, AVIF], placeholder: BLURRED)
       }
     }
   }
