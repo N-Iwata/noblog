@@ -23,9 +23,7 @@ const Layout = ({ author, children }) => {
               tags
               hero {
                 childImageSharp {
-                  fluid(maxWidth: 1280) {
-                    ...GatsbyImageSharpFluid
-                  }
+                  gatsbyImageData(width: 1000, formats: [AUTO, WEBP, AVIF], placeholder: BLURRED)
                 }
               }
             }
