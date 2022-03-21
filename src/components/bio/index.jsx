@@ -1,6 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
+import Image from "gatsby-image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import * as styles from "./bio.module.css";
@@ -10,7 +10,9 @@ const Bio = () => {
     query BioQuery {
       avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
         childImageSharp {
-          gatsbyImageData(layout: FIXED, formats: [AUTO, WEBP, AVIF], placeholder: TRACED_SVG)
+          fixed(width: 50, height: 50) {
+            ...GatsbyImageSharpFixed
+          }
         }
       }
       site {
@@ -33,12 +35,13 @@ const Bio = () => {
       <h3 className={styles.bio__title}>
         <FontAwesomeIcon icon={faUserCircle} /> プロフィール
       </h3>
-
-      <GatsbyImage
-        image={data.avatar.childImageSharp.gatsbyImageData}
-        alt={author.name}
-        className={styles.bio__image}
-      />
+      <div className={styles.bio__image_wrapper}>
+        <Image
+          fixed={data.avatar.childImageSharp.fixed}
+          alt={author.name}
+          className={styles.bio__image}
+        />
+      </div>
 
       <p className={styles.bio__name}>
         Written by <strong>{author.name}</strong>

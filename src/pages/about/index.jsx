@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
+import Img from "gatsby-image";
 import Layout from "../../components/layout";
 import Seo from "../../components/seo";
 import * as styles from "../../templates/blogpost/blog.module.css";
@@ -8,7 +8,7 @@ import * as styles from "../../templates/blogpost/blog.module.css";
 const Aboutpage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
   const author = data.site.siteMetadata.author.name;
-  const image = data.file.childImageSharp.gatsbyImageData;
+  const image = data.file.childImageSharp.fluid;
   return (
     <div>
       <Layout location={location} title={siteTitle} author={author}>
@@ -155,7 +155,7 @@ const Aboutpage = ({ data, location }) => {
           </p>
           <p>今後ともどうぞよろしくお願いします！！</p>
           <span>[自宅の芝生(2019年8月撮影)]</span>
-          <GatsbyImage image={image} alt="自宅の芝生(2019年8月撮影)" />
+          <Img fluid={image} alt="自宅の芝生(2019年8月撮影)" />
           <br />
         </div>
       </Layout>
@@ -177,7 +177,9 @@ export const pageQuery = graphql`
     }
     file(relativePath: { eq: "about.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 1000, formats: [AUTO, WEBP, AVIF], placeholder: BLURRED)
+        fluid(maxWidth: 1000, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
   }

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
+import Img from "gatsby-image";
 import Button from "@material-ui/core/Button";
 import { config, library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -54,9 +54,11 @@ const BlogIndex = ({ data, pageContext }) => {
                 <Tag tags={node.frontmatter.tags} />
                 <div className={styles.posts__image_container}>
                   <Link to={`${node.fields.slug}/`} title={`${title}のページに移動します。`}>
-                    <GatsbyImage
-                      image={node.frontmatter.hero.childImageSharp.gatsbyImageData}
+                    <Img
                       className={styles.posts__image}
+                      fluid={node.frontmatter.hero.childImageSharp.fluid}
+                      loading="eager"
+                      durationFadeIn={100}
                     />
                   </Link>
                 </div>
@@ -123,7 +125,9 @@ export const pageQuery = graphql`
             tags
             hero {
               childImageSharp {
-                gatsbyImageData(width: 1000, formats: [AUTO, WEBP, AVIF], placeholder: BLURRED)
+                fluid(maxWidth: 1280) {
+                  ...GatsbyImageSharpFluid
+                }
               }
             }
           }
