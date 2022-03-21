@@ -71,6 +71,10 @@
   color: #ff86d7;
 }
 
+.about {
+  width: 200px;
+}
+
 @media screen and (max-width: 480px) {
   .prevnext__ul {
     display: flex;

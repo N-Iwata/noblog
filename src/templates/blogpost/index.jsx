@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import { config, library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faSyncAlt } from "@fortawesome/free-solid-svg-icons";
@@ -24,7 +24,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const author = data.site.siteMetadata.author.name;
   const { slug, previous, next } = pageContext;
 
-  const hero = post.frontmatter.hero.childImageSharp.fluid.src;
+  const hero = post.frontmatter.hero.childImageSharp.gatsbyImageData;
   const image = `${siteUrl}${hero}`;
 
   return (
@@ -61,11 +61,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </header>
           <Tag tags={post.frontmatter.tags} />
           <div>
-            <Img
+            <GatsbyImage
+              image={data.markdownRemark.frontmatter.hero.childImageSharp.gatsbyImageData}
               className={styles.blog__hero}
-              fluid={data.markdownRemark.frontmatter.hero.childImageSharp.fluid}
-              loading="eager"
-              durationFadeIn={100}
             />
           </div>
 
@@ -143,9 +141,7 @@ export const pageQuery = graphql`
         tags
         hero {
           childImageSharp {
-            fluid(maxWidth: 1280) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(width: 1000, formats: [AUTO, WEBP, AVIF])
           }
         }
       }
@@ -166,9 +162,7 @@ export const pageQuery = graphql`
             tags
             hero {
               childImageSharp {
-                fluid(maxWidth: 1280) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(width: 1000, formats: [AUTO, WEBP, AVIF])
               }
             }
           }
