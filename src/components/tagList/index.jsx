@@ -6,6 +6,7 @@ import { faTag } from "@fortawesome/free-solid-svg-icons";
 import * as styles from "./tagList.module.css";
 
 const TagList = ({ tagList }) => {
+  console.log("%c tagList: ", "color: #23d541", tagList);
   return (
     <nav className={styles.tagList}>
       <h3 className={styles.tagList__title}>
@@ -14,13 +15,11 @@ const TagList = ({ tagList }) => {
       <ul className={styles.tag__ul}>
         {tagList &&
           tagList.map((tag) => (
-            <>
-              <li className={styles.tag__li} key={tag.fieldValue}>
-                <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                  <FontAwesomeIcon icon={faTag} />　{`${tag.fieldValue}（${tag.totalCount}）`}
-                </Link>
-              </li>
-            </>
+            <li className={styles.tag__li} key={tag.fieldValue}>
+              <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                <FontAwesomeIcon icon={faTag} />　{`${tag.fieldValue}（${tag.totalCount}）`}
+              </Link>
+            </li>
           ))}
       </ul>
     </nav>
