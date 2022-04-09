@@ -1,7 +1,7 @@
 ---
 title: 【感想】今週読んで印象に残った記事（20220328週）
 date: "2022-04-03"
-updated: "2022-03-03"
+updated: "2022-04-03"
 description: 2022/03/28週の今週読んで印象に残った記事のまとめと所感です。
 slug: 2022-04-03/impressive-article
 tags: [今週読んで印象に残った記事]
@@ -85,7 +85,7 @@ https://zenn.dev/kondo_script/articles/07bff4dc4796ad
 
 ↓↓↓ 前回はこちら ↓↓↓
 
-https://rpf-noblog.com/2022-03-20/impressive-article/
+https://rpf-noblog.com/2022-03-27/impressive-article/
 
 <br>
 <br>
