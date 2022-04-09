@@ -6,7 +6,6 @@ import { faTag } from "@fortawesome/free-solid-svg-icons";
 import * as styles from "./tagList.module.css";
 
 const TagList = ({ tagList }) => {
-  console.log("%c tagList: ", "color: #23d541", tagList);
   return (
     <nav className={styles.tagList}>
       <h3 className={styles.tagList__title}>
