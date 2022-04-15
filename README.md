@@ -4,7 +4,6 @@
 
 このサイトは[gatsby-starter-blog](https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog)から作成した「のふのふろぐ」という名のブログです。
 
-
 ## Develop
 
 ### package install
