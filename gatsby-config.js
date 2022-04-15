@@ -49,6 +49,12 @@ module.exports = {
         gfm: true,
         plugins: [
           {
+            resolve: `gatsby-simple-blog-card`,
+            options: {
+              processedUrlsFile: `${__dirname}/link-cache/cache.json`,
+            },
+          },
+          {
             resolve: "gatsby-remark-custom-blocks",
             options: {
               blocks: {
