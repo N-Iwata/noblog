@@ -23,6 +23,9 @@ hero: ./hero.png
 
 ## 前提
 
+[[warn]]
+| gatsby-transformer-remark が v3.2.0 までしか互換性がないので注意してください。
+
 このブログは GatsbyJS の gatsby-starter-blog のテンプレートから作成しています。
 
 https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog
