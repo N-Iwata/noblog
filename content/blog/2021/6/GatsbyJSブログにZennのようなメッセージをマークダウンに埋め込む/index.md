@@ -1,6 +1,7 @@
 ---
 title: 【GatsbyJS】ブログにZennのようなメッセージを記事に埋め込む
 date: "2021-06-23"
+updated: "2022-04-22"
 description: 今回はGatsbyJSブログに[gatsby-remark-custom-blocks]というパッケージを利用してZennのようなメッセージを記事に埋め込めるようにしたので実装方法を解説します！！
 slug: 2021-06-23/gatsby-remark-custom-blocks
 tags: [GatsbyJS, gatsby-starter-blog]
