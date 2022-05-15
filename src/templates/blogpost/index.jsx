@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage, getSrc } from "gatsby-plugin-image";
 import { config, library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faSyncAlt } from "@fortawesome/free-solid-svg-icons";
@@ -23,7 +23,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const siteUrl = data.site.siteMetadata.siteUrl;
   const author = data.site.siteMetadata.author.name;
   const { slug, previous, next } = pageContext;
-  const hero = post.frontmatter.hero.childImageSharp.gatsbyImageData.images.fallback.src;
+  const hero = getSrc(post.frontmatter.hero);
   const image = `${siteUrl}${hero}`;
 
   return (

@@ -52,15 +52,15 @@ const BlogIndex = ({ data, pageContext }) => {
                   )}
                 </header>
                 <Tag tags={node.frontmatter.tags} />
-                <div className={styles.posts__image_container}>
-                  <Link to={`${node.fields.slug}/`} title={`${title}のページに移動します。`}>
-                    <GatsbyImage
-                      image={node.frontmatter.hero.childImageSharp.gatsbyImageData}
-                      alt="hero画像"
-                      className={styles.posts__image}
-                    />
-                  </Link>
-                </div>
+
+                <Link to={`${node.fields.slug}/`} title={`${title}のページに移動します。`}>
+                  <GatsbyImage
+                    image={node.frontmatter.hero.childImageSharp.gatsbyImageData}
+                    alt="hero画像"
+                    className={styles.posts__image}
+                  />
+                </Link>
+
                 <section>
                   <p
                     className={styles.posts__desc}
