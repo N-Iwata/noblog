@@ -16,13 +16,10 @@
   font-weight: normal;
 }
 
-.bio__image_wrapper {
-  margin-top: 16px;
-  text-align: center;
-}
 .bio__image {
   min-width: 50px;
   border-radius: 100%;
+  margin: 16px auto;
 }
 .bio__name {
   font-size: 18px;

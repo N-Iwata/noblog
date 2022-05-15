@@ -21,13 +21,6 @@ const Layout = ({ author, children }) => {
               description
               slug
               tags
-              hero {
-                childImageSharp {
-                  fluid(maxWidth: 1280) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
             }
           }
         }

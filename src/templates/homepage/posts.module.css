@@ -12,19 +12,6 @@
   color: black;
 }
 
-.posts__image_container {
-  position: relative;
-  overflow: hidden;
-}
-.posts__image {
-  margin-bottom: 5px;
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-  width: 100%;
-  border: 1px solid #ccc;
-}
 .posts__image img {
   transition: all ease-in 0.3s !important;
 }
