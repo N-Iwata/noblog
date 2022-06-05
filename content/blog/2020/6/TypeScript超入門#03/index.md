@@ -221,6 +221,10 @@ VSCode で関数をホバーした時に関数宣言文だと**function sum(a: n
 
 次回はクラスについてまとめていきたいと思います。
 
-最後まで見ていただきありがとうございました！！
+https://rpf-noblog.com/tags/type-script%E8%B6%85%E5%85%A5%E9%96%80/
 
-https://rpf-noblog.com/2020-06-28/start-typescript-04/
+<br>
+<br>
+
+最後まで見ていただきありがとうございました！！
+この記事が良かったと思ったら SHARE していただけると泣いて喜びます 🤣

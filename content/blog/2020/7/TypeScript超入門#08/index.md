@@ -472,6 +472,8 @@ twoWay(new Pitcher());
 
 結局は TypeScript はバグを少なくするためなので、しっかり TypeScript を理解して安全にコードを書きたいですね。
 
+https://rpf-noblog.com/tags/type-script%E8%B6%85%E5%85%A5%E9%96%80/
+
 <br>
 <br>
 

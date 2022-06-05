@@ -186,7 +186,7 @@ console.log({ message: 32 });
 
 次回は型推論についてまとめていきたいと思います。
 
-https://rpf-noblog.com/2020-07-15/start-typescript-06/
+https://rpf-noblog.com/tags/type-script%E8%B6%85%E5%85%A5%E9%96%80/
 
 <br>
 <br>

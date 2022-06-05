@@ -290,7 +290,7 @@ targetClass4 = sourceClass4; //NG
 
 TypeScript は全体的に構造的部分型という概念が重要な気がします。しっかり理解しておきたいですね！！
 
-https://rpf-noblog.com/2020-07-26/start-typescript-08/
+https://rpf-noblog.com/tags/type-script%E8%B6%85%E5%85%A5%E9%96%80/
 
 <br>
 <br>

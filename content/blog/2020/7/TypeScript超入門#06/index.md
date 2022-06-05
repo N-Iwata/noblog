@@ -490,7 +490,7 @@ function a(num: any): "Taro" | undefined;
 
 基本的には冗長にならないように型注釈をなるべくしないほうがいいので、型推論のルールを知っておくのが重要になりますのでしっかり勉強したいですね！！
 
-https://rpf-noblog.com/2020-07-18/start-typescript-07/
+https://rpf-noblog.com/tags/type-script%E8%B6%85%E5%85%A5%E9%96%80/
 
 <br>
 <br>

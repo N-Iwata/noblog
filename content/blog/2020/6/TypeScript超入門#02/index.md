@@ -463,6 +463,10 @@ console.log(Day3.Sun);  //→日曜日
 
 次回は関数についてまとめていきたいと思います。
 
-最後まで見ていただきありがとうございました！！
+https://rpf-noblog.com/tags/type-script%E8%B6%85%E5%85%A5%E9%96%80/
 
-https://rpf-noblog.com/2020-06-25/start-typescript-03/
+<br>
+<br>
+
+最後まで見ていただきありがとうございました！！
+この記事が良かったと思ったら SHARE していただけると泣いて喜びます 🤣
