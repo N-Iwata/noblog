@@ -9,13 +9,13 @@
 ### package install
 
 ```
-npm install
+yarn install
 ```
 
 ### start dev server
 
 ```
-npm start
+yarn start
 ```
 
 ### open page
