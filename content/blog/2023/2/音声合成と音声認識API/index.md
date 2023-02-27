@@ -2,7 +2,7 @@
 title: 【JavaScript】Web Speech APIで音声合成と音声認識を試す
 date: "2023-02-26"
 updated: "2023-02-26"
-description: 2022年の個人の振り返りを一応しておきます。
+description: 今回は Web Speech API を試してみたので、実装方法のまとめと試してみた感想を残しておきたいと思います。
 slug: 2023-02-26/speech-synthesis-recognition
 tags: [JavaScript]
 hero: ./hero.png
